@@ -1,0 +1,43 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: #241b29;
+}
+
+.debug {
+	border: 1px solid #000;
+}
+
+h1.hello {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 3.8em;
+	text-align: center;
+	letter-spacing: .05em;
+	margin-top: 160px;
+}
+
+h1.hello > span {
+	color: #ed1a4b;
+	font-weight: 700;
+}
+
+.my {
+	background: url(../img/breno-polanski.png) no-repeat;
+	width: 130px;
+	height: 130px;
+	margin-top: 30px;
+}
+
+h4.description {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.3em;
+	text-align: justify;
+	letter-spacing: .08em;
+	margin-top: 45px;
+}
+
+h4.description > span {
+	font-style: italic;
+	font-weight: 700;	
+}
