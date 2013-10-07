@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-size: 16px;
+	font-size: 18px;
 	color: #241b29;
 }
 
@@ -9,35 +9,46 @@ body {
 	border: 1px solid #000;
 }
 
-h1.hello {
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 3.8em;
-	text-align: center;
-	letter-spacing: .05em;
-	margin-top: 160px;
+/* my :) */
+
+.my {
+	position: relative;
+	background: url(../img/breno-polanski.png) no-repeat;
+	width: 130px;
+	height: 130px;
+	margin: 80px auto;
+	bottom: -40px;
 }
 
-h1.hello > span {
+.my:hover {
+	opacity: 0.9;
+}
+
+/* text hello */
+
+.hello {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 3.5em;
+	text-align: center;
+	letter-spacing: .05em;
+}
+
+.hello > span {
 	color: #ed1a4b;
 	font-weight: 700;
 }
 
-.my {
-	background: url(../img/breno-polanski.png) no-repeat;
-	width: 130px;
-	height: 130px;
-	margin-top: 30px;
-}
+/* text description */
 
-h4.description {
+.description {
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 1.3em;
-	text-align: justify;
+	text-align: center;
 	letter-spacing: .08em;
-	margin-top: 45px;
+	margin-top: 50px;
 }
 
-h4.description > span {
+.description > span {
 	font-style: italic;
 	font-weight: 700;	
 }
