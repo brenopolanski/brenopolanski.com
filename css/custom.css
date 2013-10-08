@@ -55,6 +55,23 @@ body {
 	color: #ed1a4b;
 }
 
+/* more */
+
+.more {
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+}
+
+.more > a {
+	font-size: 1.5em;
+	color: #3498db;
+}
+
+.more > a:hover {
+	color: #2980b9;
+}
+
 /* my :) */
 
 #intro {
