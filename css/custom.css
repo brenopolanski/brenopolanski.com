@@ -10,6 +10,41 @@ body {
 	border: 1px solid #000;
 }
 
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+
+/* menu */
+
+.menu {
+	position: fixed;
+	background-color: #ed1a4b;
+	width: 50px;
+	height: 100%;
+}
+
+.menu > ul {
+	position: inherit;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu > ul > li {
+	display: block;
+	text-align: center;
+	width: 50px;
+	height: 40px;
+}
+
+.menu > ul > li > a {
+	position: relative;
+	color: #fff;
+	top: 20%;
+}
+
 /* my :) */
 
 #intro {
@@ -68,7 +103,7 @@ body {
 
 .description {
 	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 1.1em;
+	font-size: 1.2em;
 	text-align: center;
 	letter-spacing: .08em;
 	margin-top: 30px;
