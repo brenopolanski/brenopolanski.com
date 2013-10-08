@@ -23,6 +23,8 @@ body {
 	background-color: #ed1a4b;
 	width: 50px;
 	height: 100%;
+	top: 0;
+	left: 0;
 }
 
 .menu > ul {
@@ -37,12 +39,20 @@ body {
 	text-align: center;
 	width: 50px;
 	height: 40px;
+	margin-top: 13px;
+	cursor: pointer;
 }
 
 .menu > ul > li > a {
+	padding: 16px;
 	position: relative;
 	color: #fff;
 	top: 20%;
+}
+
+.menu > ul > li > a:hover {
+	background: url(../img/bg.png) repeat;
+	color: #ed1a4b;
 }
 
 /* my :) */
