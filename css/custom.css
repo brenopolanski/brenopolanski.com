@@ -67,33 +67,25 @@ body {
 	bottom: 14px; /* add */
 }
 
-/*.menu > .social > li {
-	display: block;
-	text-align: center;
-	width: 50px;
-	height: 40px;
-	margin-top: 13px;
-	cursor: pointer;
-}
-
-.menu > .social > li > a {
-	padding: 16px;
-	position: relative;
-	color: #fff;
-	top: 20%;
-}
-
-.menu > .social > li > a:hover {
-	background: url(../img/bg.png) repeat;
-	color: #ed1a4b;
-}*/
-
 /* more */
+
+@keyframes blink {
+    0%,49% {
+    	color: #3498db;
+    }
+    50%,100% {
+    	color: #2980b9;
+    }
+}
 
 .more {
 	position: absolute;
 	left: 50%;
-	bottom: 50px;
+	bottom: 50px;  
+}
+
+.glyphicon-chevron-down {
+	animation: blink 3s linear infinite;
 }
 
 .more > a {
@@ -102,7 +94,7 @@ body {
 }
 
 .more > a:hover {
-	color: #2980b9;
+	/*color: #2980b9;*/
 }
 
 /* my :) */
