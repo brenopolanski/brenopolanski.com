@@ -27,14 +27,15 @@ body {
 	left: 0;
 }
 
-.menu > ul {
+.menu > .misc {
 	position: inherit;
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
 
-.menu > ul > li {
+.menu > .misc > li,
+.menu > .social > li {
 	display: block;
 	text-align: center;
 	width: 50px;
@@ -43,17 +44,49 @@ body {
 	cursor: pointer;
 }
 
-.menu > ul > li > a {
+.menu > .misc > li > a,
+.menu > .social > li > a {
 	padding: 16px;
 	position: relative;
 	color: #fff;
 	top: 20%;
 }
 
-.menu > ul > li > a:hover {
+.menu > .misc > li > a:hover,
+.menu > .social > li > a:hover {
 	background: url(../img/bg.png) repeat;
 	color: #ed1a4b;
 }
+
+.menu > .social {
+	position: inherit;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	bottom: 14px; /* add */
+}
+
+/*.menu > .social > li {
+	display: block;
+	text-align: center;
+	width: 50px;
+	height: 40px;
+	margin-top: 13px;
+	cursor: pointer;
+}
+
+.menu > .social > li > a {
+	padding: 16px;
+	position: relative;
+	color: #fff;
+	top: 20%;
+}
+
+.menu > .social > li > a:hover {
+	background: url(../img/bg.png) repeat;
+	color: #ed1a4b;
+}*/
 
 /* more */
 
@@ -64,7 +97,7 @@ body {
 }
 
 .more > a {
-	font-size: 1.5em;
+	font-size: 1.3em;
 	color: #3498db;
 }
 
