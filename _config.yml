@@ -1,0 +1,9 @@
+baseurl: /
+
+name: Breno Polanski
+description:
+email: breno.polanski@gmail.com
+github-username: brenopolanski
+
+markdown: redcarpet
+pygments: true
