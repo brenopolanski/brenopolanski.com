@@ -1,6 +1,8 @@
 name: Breno Polanski
 description: Blog
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+meta_description: 'A developer who loves to learn new programming languages​​, build Open Source projects and play video game :)'
+
+github: https://github.com/brenopolanski/
 
 markdown: redcarpet
 pygments: true
@@ -8,5 +10,5 @@ logo: false
 paginate: 15
 
 # Details for the RSS feed generator
-url:            'blog url'
-author:         'Your Name'
+url: 'http://brenopolanski.com'
+author: 'Breno Polanski'

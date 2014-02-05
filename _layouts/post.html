@@ -13,10 +13,10 @@ archive: false
                     <img src="{{site.logo}}" alt="{{ site.name }}" />
                 {% else %}
                     <span class="blog-title">{{ site.name }}</span>
-                {%endif%} 
+                {%endif%}
             </a>
         </header>
-        
+
         <span class="post-meta">
         	<time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
         	{% if page.categories %}
@@ -39,7 +39,7 @@ archive: false
     		<ul>
     			{% for post in site.posts %}
     				<li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
-    			{% endfor %}	
+    			{% endfor %}
     		</ul>
         </section>
         {% endif %}
@@ -53,11 +53,14 @@ archive: false
                 		<!-- Author Name -->
                     	<h4> {{ site.author }} </h4>
                     	<!-- Author Bio -->
-                    	<p> 
-                    		Here goes the author description. You might want to place some links too in here
+                    	<p>
+                    		A developer who loves to learn new programming languages​​, build Open Source projects and play video game :)
+                    	</p>
+                    	<p>
+                    		<a href="{{site.github}}">GitHub</a>
                     	</p>
                     </article>
-                </section>                
+                </section>
             {% endif %}
 
             <section class="share">
@@ -71,17 +74,17 @@ archive: false
                     <span class="hidden">Facebook</span>
                 </a>
                 <a class="icon-google-plus" href="https://plus.google.com/share?url={{site.url}}{{page.url}}"
-                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
             </section>
-            
+
             {% if page.disqus %}
             <section class="disqus">
             	<div id="disqus_thread"></div>
             	<script type="text/javascript">
 
-            	    var disqus_shortname = ''; 
+            	    var disqus_shortname = '';
             		var disqus_developer = 0; // developer mode is on
             	    (function() {
             	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -93,7 +96,7 @@ archive: false
             	<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
             </section>
             {% endif %}
-        	
+
         </footer>
 
     </article>
