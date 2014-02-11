@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Resolvendo Problemas do Hyper-V no Windows 8.1"
+title: "Resolvendo problemas do Hyper-V no Windows 8.1"
 date: 2014-02-11 09:35:00
 ---
 
