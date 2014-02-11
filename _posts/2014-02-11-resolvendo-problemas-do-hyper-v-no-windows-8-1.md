@@ -6,7 +6,7 @@ date: 2014-02-11 09:35:00
 
 Essa semana eu tive um problema em meu notebook ao instalar o [Visual Studio 2013][vs2013]. Para se criar Apps para Windows Phone 8, é preciso instalar juntamente com o VS 2013 o [Hyper-V][hyper-v], que fornece serviços e ferramentas de gerenciamento para criação e a execução de máquinas virtuais.
 
-O Hyper-V desabilitou todas as portas USB do meu notebook, então foi preciso acessar os Recursos do Windows e desamarcar a caixa de seleção "Hyper-V", como aparece na imagem abaixo:
+O Hyper-V desabilitou todas as portas USB do meu notebook, então foi preciso acessar os Recursos do Windows e desmarcar a caixa de seleção "Hyper-V", como aparece na imagem abaixo:
 
 ![post page](/assets/images/posts/desabilitar-hyper-v.gif)
 
