@@ -10,7 +10,7 @@ O Hyper-V desabilitou todas as portas USB do meu notebook, então foi preciso ac
 
 ![post page](/assets/images/posts/desabilitar-hyper-v.gif)
 
-Portanto quando você for desenvolver sua App para Windows Phone 8, é preciso repetir o processo descrito acima, marcando a caixa de seleção "Hyper-V" e reiniciar o sistema operacional.
+Quando você for desenvolver sua App para Windows Phone 8, é preciso repetir o processo descrito acima, marcando a caixa de seleção "Hyper-V" e reiniciar o sistema operacional.
 
 [vs2013]: http://www.visualstudio.com/downloads/download-visual-studio-vs
 [hyper-v]: http://pt.wikipedia.org/wiki/Hyper-V
