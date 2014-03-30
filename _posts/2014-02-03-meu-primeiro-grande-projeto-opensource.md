@@ -12,7 +12,7 @@ O projeto está sendo estruturado utilizando o conceito de módulos [AMD][wiki-a
 
 Link do projeto: [CactusJS HTML5 Game Framework][cactusjs-gh]
 
-[cactusjs-gh]: http://cactusjs.github.io/cactusjs-website/
+[cactusjs-gh]: http://cactusjs.github.io/cactusjs-site/
 [wiki-amd]: http://en.wikipedia.org/wiki/Asynchronous_module_definition
 [requirejs]: http://requirejs.org/
 [jasmine]: http://pivotal.github.io/jasmine/
