@@ -291,6 +291,11 @@ hr {
 	background: #eee;
 }
 
+code {
+	background-color: rgba(0,0,0,0.04);
+	padding: 0.2em 0;
+}
+
 span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
 
 pre	{
