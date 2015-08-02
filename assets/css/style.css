@@ -627,6 +627,29 @@ h2.month {
   margin-left: 2px;
 }
 
+/* Video Border */
+
+.video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 96%;
+  height: 96%;
+  padding: 1%;
+  border: 1px solid #DBDBDB !important;
+  background: #E9E9E9;
+  border-radius: 6px;
+}
+
 /* Media Queries */
 @media screen and (max-width: 540px) {
 	#wrapper { padding:20px 20px 20px 20px;}
