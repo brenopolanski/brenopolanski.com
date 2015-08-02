@@ -1,6 +1,6 @@
 name: Breno Polanski
 description: Front-End Software Engineer at Meteorite BI
-meta_description: "Breno Polanski's blog"
+meta_description: "Breno Polanski's blog | A developer who loves to learn new programming languages​​, build Open Source projects and play video game :)"
 
 aboutPage: true
 
@@ -11,8 +11,7 @@ paginate: 20
 baseurl: /
 domain_name: 'http://brenopolanski.com'
 google_analytics: 'UA-65891833-1'
-disqus: false
-disqus_shortname: 'your-disqus-shortname'
+disqus_shortname: 'brenopolanski'
 
 # Details for the RSS feed generator
 url:            'http://brenopolanski.com'
@@ -34,9 +33,4 @@ defaults:
             type: posts
         values:
             layout: post
-    -
-        scope:
-            path: ""
-            type: drafts
-        values:
-            layout: post
+            disqus: true
