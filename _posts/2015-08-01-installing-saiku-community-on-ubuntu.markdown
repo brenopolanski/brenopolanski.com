@@ -1,12 +1,12 @@
 ---
-title: Installing Saiku Community on Ubuntu
+title: Installing Saiku Community in Linux
 date: 2015-08-01
-description: A guide to installing Saiku CE version on Ubuntu 14.04 LTS.
+description: A guide to installing Saiku CE in Linux.
 ---
 
 ## [Saiku](http://www.meteorite.bi/products/saiku) allows business users to explore complex data sources, using a familiar drag and drop interface and easy to understand business terminology, all within a browser. Select the data you are interested in, look at it from different perspectives, drill into the detail. Once you have your answer, save your results, share them, export them to Excel or PDF, all straight from the browser.
 
-In this post I will explain how you can install the Saiku Community version in Ubuntu 14.04 LTS.
+In this post I will explain how you can install the Saiku Community Edition in Linux.
 
 > **Important:** *You need have Java 7 installed and configured your on machine.*
 
@@ -49,7 +49,7 @@ $ sudo chmod +x start-saiku.sh
 $ sh start-saiku.sh
 ```
 
-## Open Saiku in browser
+## Open Saiku in your browser
 
 Saiku run in port 8080, enter in your browser **http://localhost:8080** for access.
 
