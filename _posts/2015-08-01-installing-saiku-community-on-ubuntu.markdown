@@ -1,12 +1,12 @@
 ---
-title: Installing Saiku Community in Linux
+title: Installing Saiku Community on Linux
 date: 2015-08-01
-description: A guide to installing Saiku CE in Linux.
+description: A guide to installing Saiku CE on Linux.
 ---
 
 ## [Saiku](http://www.meteorite.bi/products/saiku) allows business users to explore complex data sources, using a familiar drag and drop interface and easy to understand business terminology, all within a browser. Select the data you are interested in, look at it from different perspectives, drill into the detail. Once you have your answer, save your results, share them, export them to Excel or PDF, all straight from the browser.
 
-In this post I will explain how you can install the Saiku Community Edition in Linux.
+In this post I will explain how you can install the Saiku Community Edition on Linux.
 
 > **Important:** *You need have Java 7 installed and configured your on machine.*
 
