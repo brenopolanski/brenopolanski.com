@@ -11,6 +11,7 @@ paginate: 20
 baseurl: /
 domain_name: 'http://brenopolanski.com'
 google_analytics: 'UA-65891833-1'
+disqus: true
 disqus_shortname: 'brenopolanski'
 
 # Details for the RSS feed generator
@@ -33,4 +34,9 @@ defaults:
             type: posts
         values:
             layout: post
-            disqus: true
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post
