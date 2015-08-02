@@ -40,13 +40,12 @@ $ sudo mv saiku-server/ /usr/local/saiku/
 
 ## Running Saiku
 
-Among within the folder `saiku-server/` and typing the following commands in your terminal:
+Go to the folder `saiku-server/` and type the following commands in your terminal:
 
 ```sh
-$ cd /usr/local/saiku/saiku-server/
-
+# add execute permission
 $ sudo chmod +x start-saiku.sh
-
+# execute saiku
 $ sh start-saiku.sh
 ```
 
