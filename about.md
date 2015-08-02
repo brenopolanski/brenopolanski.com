@@ -4,6 +4,6 @@ permalink: about/
 profile: true
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+A developer who loves to learn new programming languages​​, build Open Source projects and play video game. Just wanting to change the world through the web ♥
 
 {% include footer.html %}
