@@ -1,6 +1,7 @@
 ---
 title: App The Coffee Club
 date: 2015-12-20
+description: App para controlar cápsulas de café no escritório.
 ---
 
 A algum tempo atrás no [CG Hackspace](http://www.cghackspace.org), adquirimos uma excelente máquina de [café expresso](https://www.nespresso.com/br/pt/). Durante o primeiro mês, o controle do consumo das cápsulas era por meio de anotações feito individualmente em post-it, como na imagem abaixo:
@@ -10,7 +11,7 @@ A algum tempo atrás no [CG Hackspace](http://www.cghackspace.org), adquirimos u
 	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/nespresso.gif" style="width: 450px;" />
 </p>
 
-Então pensei que isso estava errado e que poderíamos melhorar a forma de controlar o consumo, precisávamos desenvolver uma simples web app mobile para cada membro registrar o seu café.
+Então pensei que isso estava errado e que poderíamos melhorar a forma de controlar o consumo, precisávamos desenvolver uma simples web app mobile para cada [membro](http://www.cghackspace.org/members) registrar o seu café.
 
 Eu já estava querendo estudar algumas novas tecnologias, nada melhor que colocar o conhecimento em prática. Então comecei primeiramente criando alguns mockups para a app (eu gosto muito de fazer alguns sketches no papel para depois finalmente usar alguma [ferramenta](https://balsamiq.com)).
 
@@ -22,9 +23,9 @@ Eu já estava querendo estudar algumas novas tecnologias, nada melhor que coloca
 
 No início a aplicação tinha o seguinte fluxo:
 
-1 - O usuário fazia login na app usando sua conta do GitHub; <br />
-2 - Adicionava um café; <br />
-3 - Era criado uma issue no repositório.
+1 - O usuário faz login na app usando sua conta do GitHub; <br />
+2 - Adiciona um café; <br />
+3 - É criado uma issue no repositório.
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/brenopolanski/brenopolanski.github.io/master/assets/images/posts/app-coffee-club-issue.png" />
@@ -52,9 +53,9 @@ Até agora esse fluxo está fucionando bem, novas fucionalidades serão inserida
 ### Tecnologias utilizadas:
 
 - [NodeJS](https://nodejs.org/en/) para o back-end;
-- [Express](http://expressjs.com/en/) Framework para o Node.js;
+- [Express](http://expressjs.com/en/) Framework para Node.js;
 - [MongoDB](https://www.mongodb.org) banco de dados NoSQL;
-- [GulpJS](http://gulpjs.com/) para o Runner Tasks;
-- [Stylus](http://stylus-lang.com/) processador CSS;
+- [GulpJS](http://gulpjs.com) automatizador tarefas;
+- [Stylus](http://stylus-lang.com) processador CSS;
 - Para organização do layout um pouco de [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/);
-- Hospedagem da aplicação no [Heroku](https://heroku.com/deploy).
+- Deploy da aplicação no [Heroku](https://heroku.com/deploy).
