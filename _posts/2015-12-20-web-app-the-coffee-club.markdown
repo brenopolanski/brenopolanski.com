@@ -7,8 +7,8 @@ description: App para controlar cápsulas de café no escritório.
 A algum tempo atrás no [CG Hackspace](http://www.cghackspace.org), adquirimos uma excelente máquina de [café expresso](https://www.nespresso.com/br/pt/). Durante o primeiro mês, o controle do consumo das cápsulas era por meio de anotações feito individualmente em post-it, como na imagem abaixo:
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/post-it.jpg" style="width: 450px;" height="390" />
-	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/nespresso.gif" style="width: 450px;" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/post-it.jpg" style="width: 450px;" height="390" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/nespresso.gif" style="width: 450px;" />
 </p>
 
 Então pensei que isso estava errado e que poderíamos melhorar a forma de controlar o consumo, precisávamos desenvolver uma simples web app mobile para cada [membro](http://www.cghackspace.org/members) registrar o seu café.
@@ -40,10 +40,10 @@ Então o novo fluxo é:
 3 - Visualizar relatório do mês.
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/mobile1.jpg" style="width: 200px;" />
-	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/mobile2.jpg" style="width: 200px;" />
-	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/mobile3.jpg" style="width: 200px;" />
-	<img src="https://raw.githubusercontent.com/brenopolanski/coffee-club/assets/mobile4.jpg" style="width: 200px;" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile1.jpg" style="width: 200px;" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile2.jpg" style="width: 200px;" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile3.jpg" style="width: 200px;" />
+	<img src="https://raw.githubusercontent.com/coffee-club/coffee-club/assets/mobile4.jpg" style="width: 200px;" />
 </p>
 
 Até agora esse fluxo está fucionando bem, novas fucionalidades serão inseridas com o passar do tempo, faça um fork do nosso projeto:
