@@ -4,10 +4,10 @@
   "description": "My personal website",
   "author": "Breno Polanski <breno.polanski@gmail.com>",
   "private": true,
-  "homepage": "https://github.com/brenopolanski/brenopolanski.com#readme",
+  "homepage": "https://github.com/brenopolanski/brenopolanski.github.io#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brenopolanski/brenopolanski.com.git"
+    "url": "git+https://github.com/brenopolanski/brenopolanski.github.io.git"
   },
   "license": "MIT",
   "keywords": [
@@ -17,7 +17,7 @@
     "gatsby-site"
   ],
   "bugs": {
-    "url": "https://github.com/brenopolanski/brenopolanski.com/issues"
+    "url": "https://github.com/brenopolanski/brenopolanski.github.io/issues"
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,json,md}": [
@@ -27,7 +27,8 @@
   },
   "scripts": {
     "dev": "gatsby develop -p 4000",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "deploy": "gh-pages --dist public --repo git@github.com:brenopolanski/brenopolanski.github.io.git --branch gh-pages"
   },
   "dependencies": {
     "@emotion/core": "^10.0.15",
