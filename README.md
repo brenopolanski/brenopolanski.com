@@ -21,7 +21,7 @@ $ yarn dev (or npm run dev)
 
 ## Contributing
 
-If you want to help, please read the [Contributing](https://github.com/brenopolanski/brenopolanski.github.io/blob/master/CONTRIBUTING.md) guide.
+If you want to help, please read the [Contributing](https://github.com/brenopolanski/brenopolanski.github.io/blob/development/CONTRIBUTING.md) guide.
 
 ## License
 
