@@ -1,10 +1,10 @@
-import { Global } from '@emotion/core'
-import { graphql, useStaticQuery } from 'gatsby'
-import React from 'react'
-import Helmet from 'react-helmet'
-import { Styled } from 'theme-ui'
-import 'typeface-inter'
-import Container from '../components/container'
+import { Global } from '@emotion/core';
+import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
+import Helmet from 'react-helmet';
+import { Styled } from 'theme-ui';
+import 'typeface-inter';
+import Container from '../components/container';
 
 function Layout({ children }) {
   const data = useStaticQuery(graphql`
@@ -16,11 +16,9 @@ function Layout({ children }) {
         }
       }
     }
-  `)
+  `);
 
-  const { title, description } = data.site.siteMetadata
-
-  console.log(title);
+  const { title, description } = data.site.siteMetadata;
 
   return (
     <Styled.root>
@@ -36,7 +34,7 @@ function Layout({ children }) {
       <Global styles={{ body: { margin: 0 } }} />
       <Container>{children}</Container>
     </Styled.root>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
