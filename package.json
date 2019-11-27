@@ -28,7 +28,7 @@
   "scripts": {
     "dev": "gatsby develop -p 4000",
     "build": "gatsby build",
-    "deploy": "gh-pages --dist public --repo git@github.com:brenopolanski/brenopolanski.github.io.git --branch gh-pages"
+    "deploy": "gh-pages --dist public --repo git@github.com:brenopolanski/brenopolanski.github.io.git --branch master"
   },
   "dependencies": {
     "@emotion/core": "^10.0.15",
