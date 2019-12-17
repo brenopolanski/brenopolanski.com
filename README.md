@@ -25,4 +25,4 @@ If you want to help, please read the [Contributing](https://github.com/brenopola
 
 ## License
 
-[MIT License](http://brenopolanski.mit-license.org/) © Breno Polanski
+[MIT License](https://brenopolanski.mit-license.org/) © Breno Polanski
