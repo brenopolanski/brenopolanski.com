@@ -7,9 +7,11 @@ declare global {
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: string): void => {
-  window.gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID, {
-    page_path: url,
-  });
+  if (typeof window !== 'undefined') {
+    window.gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID, {
+      page_path: url,
+    });
+  }
 };
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
@@ -22,9 +24,11 @@ type Event = {
 };
 
 export const gaEvent = ({ action, category, label, value }: Event): void => {
-  window.gtag('event', action, {
-    event_category: category,
-    event_label: label,
-    value: value,
-  });
+  if (typeof window !== 'undefined') {
+    window.gtag('event', action, {
+      event_category: category,
+      event_label: label,
+      value: value,
+    });
+  }
 };

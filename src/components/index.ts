@@ -6,6 +6,8 @@ export * from './Heading';
 export * from './SectionAbout';
 export * from './SectionExperiences';
 export * from './SectionFindMe';
+export * from './SectionPortfolio';
+export * from './SectionPortfolioItem';
 export * from './SectionProjects';
 export * from './SectionPublications';
 export * from './Title';
