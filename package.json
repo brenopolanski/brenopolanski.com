@@ -24,10 +24,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*": [
-      "yarn lint --fix",
-      "yarn test --findRelatedTests --bail"
-    ]
+    "src/**/*": ["yarn lint --fix"]
   },
   "dependencies": {
     "@react-hook/window-size": "^3.0.7",

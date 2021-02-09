@@ -1,18 +1,14 @@
-import { ExternalLink, Heading, SectionPortfolioItem, Title } from 'components';
+import { Heading, SectionPortfolioItem, Title } from 'components';
 import { data } from 'data';
 import Link from 'next/link';
 
 export const SectionPortfolio = () => (
   <>
-    <Title title="Hey, I'm Breno Polanski 👋" />
-
-    <div className="mt-5">
-      <Link href="/" passHref>
-        <ExternalLink className="text-xl font-semibold bg-theme-highlight" isExternal={false}>
-          ← Back
-        </ExternalLink>
-      </Link>
-    </div>
+    <Link href="/">
+      <a>
+        <Title title="Hey, I'm Breno Polanski 👋" />
+      </a>
+    </Link>
 
     <div className="mt-16">
       <Heading title="Portfolio" />

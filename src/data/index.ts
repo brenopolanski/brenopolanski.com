@@ -178,7 +178,7 @@ export const data = {
       slug: 'react-beer',
     },
     {
-      title: 'React Beer',
+      title: 'Saiku Community',
       description: 'Website for Saiku Community.',
       preview: 'preview.png',
       content: '',
