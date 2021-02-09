@@ -1,54 +1,75 @@
 {
   "name": "brenopolanski.com",
-  "version": "0.1.0",
   "description": "My personal website",
   "author": "Breno Polanski <breno.polanski@gmail.com>",
   "private": true,
-  "homepage": "https://github.com/brenopolanski/brenopolanski.github.io#readme",
+  "homepage": "https://github.com/brenopolanski/brenopolanski.com#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brenopolanski/brenopolanski.github.io.git"
+    "url": "git+https://github.com/brenopolanski/brenopolanski.com.git"
   },
   "license": "MIT",
-  "keywords": [
-    "blog",
-    "personal-blog",
-    "gatsbyjs",
-    "gatsby-site"
-  ],
   "bugs": {
-    "url": "https://github.com/brenopolanski/brenopolanski.github.io/issues"
-  },
-  "lint-staged": {
-    "./src/**/*.{js,jsx,json,md}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "url": "https://github.com/brenopolanski/brenopolanski.com/issues"
   },
   "scripts": {
-    "dev": "gatsby develop -p 4000",
-    "build": "gatsby build",
-    "deploy": "gh-pages --dist public --repo git@github.com:brenopolanski/brenopolanski.github.io.git --branch master"
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src --max-warnings=0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
+    ]
   },
   "dependencies": {
-    "@emotion/core": "^10.0.15",
-    "@mdx-js/mdx": "^1.1.0",
-    "@mdx-js/react": "^1.0.27",
-    "gatsby": "^2.13.33",
-    "gatsby-plugin-mdx": "^1.0.15",
-    "gatsby-plugin-react-helmet": "^3.1.2",
-    "gatsby-plugin-theme-ui": "^0.2.6",
-    "gh-pages": "^2.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "theme-ui": "^0.2.16",
-    "typeface-barlow": "0.0.71",
-    "typeface-inter": "^3.7.0"
+    "@react-hook/window-size": "^3.0.7",
+    "autoprefixer": "^10.0.4",
+    "next": "10.0.3",
+    "next-pwa": "^3.1.5",
+    "nprogress": "^0.2.0",
+    "postcss": "^8.1.10",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "styled-components": "5.2.1",
+    "tailwindcss": "^2.0.1",
+    "twin.macro": "^2.0.4"
   },
   "devDependencies": {
-    "husky": "^2.4.0",
-    "lint-staged": "^8.1.0",
-    "prettier": "^1.15.3"
+    "@babel/core": "^7.12.9",
+    "@babel/preset-typescript": "^7.12.7",
+    "@tailwindcss/ui": "^0.7.2",
+    "@types/node": "^14.14.13",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^17.0.0",
+    "@types/styled-components": "^5.1.4",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^6.0.1",
+    "eslint-plugin-unused-imports": "^1.0.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.2",
+    "prettier": "^2.2.1",
+    "tailwindcss-debug-screens": "^2.0.0",
+    "typescript": "^4.1.2"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
   }
 }

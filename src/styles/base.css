@@ -1,0 +1,19 @@
+body {
+  @apply font-sans text-base antialiased;
+}
+
+#__next {
+  @apply bg-theme-background text-theme-text;
+}
+
+.important\:z-0 {
+  z-index: 0 !important;
+}
+
+#nprogress .bar {
+  background: #b2102f !important;
+}
+
+.debug {
+  border: 1px solid red;
+}

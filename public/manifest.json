@@ -1,0 +1,23 @@
+{
+  "name": "Breno Polanski",
+  "short_name": "Breno Polanski",
+  "description": "A developer who loves to learn new programming languages​​, build Open Source projects and play video game :)",
+  "theme_color": "#232323",
+  "background_color": "#232323",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/images/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

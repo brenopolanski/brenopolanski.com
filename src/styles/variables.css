@@ -1,0 +1,9 @@
+:root {
+  --theme-black: #121213;
+  --theme-white: #ffffff;
+  --theme-background-color: #232323;
+  --theme-text-color: #f0f0f0;
+  --theme-highlight-color: #b2102f;
+  --theme-border-color: #5b5b5b;
+  --theme-border-link-color: #ff4569;
+}
