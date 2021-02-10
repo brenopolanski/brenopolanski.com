@@ -5,6 +5,7 @@ import { data } from 'data';
 export const SectionProjects = () => (
   <div className="mt-16">
     <Heading title="Projects" />
+
     <div className="space-y-6">
       {data.projects.map((project, index) => (
         <div key={index} className="space-y-2">
@@ -15,8 +16,9 @@ export const SectionProjects = () => (
         </div>
       ))}
     </div>
+
     <div className="mt-5">
-      <ExternalLink className="text-xl font-semibold bg-theme-highlight" href={appConfig.social.github}>
+      <ExternalLink className="text-xl font-semibold" href={appConfig.social.github}>
         More Projects →
       </ExternalLink>
     </div>

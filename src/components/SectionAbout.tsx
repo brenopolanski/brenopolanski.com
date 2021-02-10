@@ -1,10 +1,19 @@
 import { appConfig } from 'appConfig';
-import { Content, ExternalLink, Title } from 'components';
+import { Content, ExternalLink, RouterLink, Title } from 'components';
 import Link from 'next/link';
 
-export const SectionAbout = () => (
+type SectionAboutProps = {
+  backLink?: string;
+  showBackLink?: boolean;
+};
+
+export const SectionAbout = ({ backLink = '/', showBackLink = false }: SectionAboutProps) => (
   <>
-    <Title title="Hey, I'm Breno Polanski 👋" />
+    <Link href="/">
+      <a>
+        <Title title="Hey, I'm Breno Polanski 👋" />
+      </a>
+    </Link>
 
     <Content>
       Front End Engineer based in Brazil. Mainly focused on web development and helping other people by giving
@@ -23,11 +32,15 @@ export const SectionAbout = () => (
     </Content>
 
     <div className="mt-5">
-      <Link href="/portfolio" passHref>
-        <ExternalLink className="text-xl font-semibold bg-theme-highlight" isExternal={false}>
+      {!showBackLink ? (
+        <RouterLink className="text-xl font-semibold" href="/portfolio">
           My Portfolio →
-        </ExternalLink>
-      </Link>
+        </RouterLink>
+      ) : (
+        <RouterLink className="text-xl font-semibold" href={backLink}>
+          ← Back
+        </RouterLink>
+      )}
     </div>
   </>
 );

@@ -4,7 +4,6 @@ import { ExternalLink, Heading } from 'components';
 export const SectionFindMe = () => (
   <div className="mt-16">
     <Heading title="Find Me" />
-
     <ul className="ml-4 space-y-2 list-disc">
       <li>
         <ExternalLink className="text-lg" href={appConfig.social.github}>
