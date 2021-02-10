@@ -10,13 +10,13 @@ export const data = {
       title: 'BitcoinHoje.io',
       link: 'https://bitcoinhoje.io',
       content:
-        'The BitcoinHoje.io allows users to track the price of Bitcoin and other currencies like Ethereum, Litecoin, Bitcoin Cash and etc. There are more than 20 currencies online and the quotes are always updated every 10 minutes.',
+        'The BitcoinHoje.io allows users to track the price of Bitcoin and other currencies like Ethereum, Litecoin, Bitcoin Cash and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
     },
     {
       title: 'DolarHoje.io',
       link: 'https://dolarhoje.io',
       content:
-        'The DolarHoje.io allows users to track the price of the commercial dollar and tourism. Also on the website users can check the quotation of other currencies like Euro, British Pound, Bitcoin and etc. There are more than 20 currencies online and the quotes are always updated every 10 minutes.',
+        'The DolarHoje.io allows users to track the price of the commercial dollar and tourism. Also on the website users can check the quotation of other currencies like Euro, British Pound, Bitcoin and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
     },
     {
       title: 'ARK Desktop Wallet',
@@ -113,6 +113,114 @@ export const data = {
     },
   ],
   portfolio: [
+    {
+      title: 'Ninja Games',
+      description:
+        'Play free online games at Ninja Games. Play action, racing, sports, and other amazing games for free. Have fun!',
+      preview: 'preview.png',
+      imageSize: {
+        width: 1920,
+        height: 1080,
+      },
+      slug: 'ninja-games',
+      isVisible: true,
+      more: {
+        content: '',
+        links: [
+          {
+            name: 'View Website',
+            link: 'https://ninjagames.space',
+          },
+        ],
+        technologies: [
+          {
+            name: 'Vercel',
+            link: 'https://vercel.com',
+          },
+          {
+            name: 'Next.js',
+            link: 'https://nextjs.org',
+          },
+          {
+            name: 'Tailwind CSS',
+            link: 'https://tailwindcss.com',
+          },
+        ],
+        screenshots: ['demo-01.png', 'demo-02.png', 'demo-03.png', 'demo-04.png'],
+      },
+    },
+    {
+      title: 'BitcoinHoje.io',
+      description: 'Check out the Bitcoin price today.',
+      preview: 'preview.png',
+      imageSize: {
+        width: 1920,
+        height: 1080,
+      },
+      slug: 'bitcoin-hoje',
+      isVisible: true,
+      more: {
+        content:
+          'The BitcoinHoje.io allows users to track the price of Bitcoin and other currencies like Ethereum, Litecoin, Bitcoin Cash and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
+        links: [
+          {
+            name: 'View Website',
+            link: 'https://bitcoinhoje.io',
+          },
+        ],
+        technologies: [
+          {
+            name: 'Vercel',
+            link: 'https://vercel.com',
+          },
+          {
+            name: 'Next.js',
+            link: 'https://nextjs.org',
+          },
+          {
+            name: 'Tailwind CSS',
+            link: 'https://tailwindcss.com',
+          },
+        ],
+        screenshots: ['demo-01.png', 'demo-02.png', 'demo-03.png', 'demo-04.png'],
+      },
+    },
+    {
+      title: 'DolarHoje.io',
+      description: 'Check out the US Dollar commercial and tourism price today.',
+      preview: 'preview.png',
+      imageSize: {
+        width: 1920,
+        height: 1080,
+      },
+      slug: 'dolar-hoje',
+      isVisible: true,
+      more: {
+        content:
+          'The DolarHoje.io allows users to track the price of the commercial dollar and tourism. Also on the website users can check the quotation of other currencies like Euro, British Pound, Bitcoin and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
+        links: [
+          {
+            name: 'View Website',
+            link: 'https://dolarhoje.io',
+          },
+        ],
+        technologies: [
+          {
+            name: 'Vercel',
+            link: 'https://vercel.com',
+          },
+          {
+            name: 'Next.js',
+            link: 'https://nextjs.org',
+          },
+          {
+            name: 'Tailwind CSS',
+            link: 'https://tailwindcss.com',
+          },
+        ],
+        screenshots: ['demo-01.png', 'demo-02.png', 'demo-03.png', 'demo-04.png'],
+      },
+    },
     {
       title: 'Saiku Analytics 4',
       description: 'Saiku Analytics 4 - The Worlds Greatest Open Source OLAP Browser.',

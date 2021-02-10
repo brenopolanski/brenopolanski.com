@@ -24,7 +24,7 @@ export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps
         {!showMore ? (
           <Link href={`/portfolio/${project.slug}`}>
             <Image
-              className="w-full h-full rounded cursor-pointer hover:opacity-80"
+              className="w-full h-full bg-black rounded cursor-pointer hover:opacity-80"
               src={`/images/portfolio/${project.slug}/${project.preview}`}
               width={project.imageSize.width}
               height={project.imageSize.height}
@@ -33,7 +33,7 @@ export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps
           </Link>
         ) : (
           <Image
-            className="w-full h-full rounded"
+            className="w-full h-full bg-black rounded"
             src={`/images/portfolio/${project.slug}/${project.preview}`}
             width={project.imageSize.width}
             height={project.imageSize.height}
@@ -42,7 +42,7 @@ export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps
         )}
 
         {showMore && (
-          <>
+          <div>
             {project.more.content && <Content className="text-justify">{project.more.content}</Content>}
 
             {project.more.links.length > 0 && (
@@ -60,7 +60,7 @@ export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps
             )}
 
             {project.more.technologies.length > 0 && (
-              <>
+              <div>
                 <Heading title="Technologies" />
                 <div className="pb-4">
                   <ul className="ml-4 space-y-2 list-disc">
@@ -77,11 +77,11 @@ export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps
                     ))}
                   </ul>
                 </div>
-              </>
+              </div>
             )}
 
             {project.more.screenshots.length > 0 && (
-              <>
+              <div>
                 <Heading title="Screenshots" />
                 <Gallery>
                   <div className="grid grid-cols-1 gap-5 mt-5 sm:grid-cols-2">
@@ -96,7 +96,7 @@ export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps
                         {({ ref, open }) => (
                           <img
                             ref={ref as React.MutableRefObject<HTMLImageElement>}
-                            className="rounded cursor-pointer hover:opacity-80"
+                            className="bg-black rounded cursor-pointer hover:opacity-80"
                             src={`/images/portfolio/${project.slug}/${image}`}
                             alt={project.title}
                             onClick={open}
@@ -106,9 +106,9 @@ export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps
                     ))}
                   </div>
                 </Gallery>
-              </>
+              </div>
             )}
-          </>
+          </div>
         )}
       </div>
     </div>

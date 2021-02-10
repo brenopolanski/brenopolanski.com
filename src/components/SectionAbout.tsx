@@ -8,7 +8,7 @@ type SectionAboutProps = {
 };
 
 export const SectionAbout = ({ backLink = '/', showBackLink = false }: SectionAboutProps) => (
-  <>
+  <header>
     <Link href="/">
       <a>
         <Title title="Hey, I'm Breno Polanski 👋" />
@@ -42,5 +42,5 @@ export const SectionAbout = ({ backLink = '/', showBackLink = false }: SectionAb
         </RouterLink>
       )}
     </div>
-  </>
+  </header>
 );
