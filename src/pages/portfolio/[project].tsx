@@ -14,9 +14,9 @@ export default function ProjectPage({ project }: ProjectPageProps) {
   return (
     <>
       <Head>
-        <title>{`${project.title} | ${appConfig.name}`}</title>
-        <meta name="description" content={project.description} />
-        <link rel="canonical" href={`${appConfig.homepage}/portfolio/${project.slug}`} />
+        <title>{`${project?.title} | ${appConfig.name}`}</title>
+        <meta name="description" content={project?.description} />
+        <link rel="canonical" href={`${appConfig.homepage}/portfolio/${project?.slug}`} />
       </Head>
 
       <Page>
