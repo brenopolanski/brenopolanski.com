@@ -1,7 +1,9 @@
+import { appConfig } from 'appConfig';
 import { Footer, SectionAbout, SectionProject } from 'components';
 import { data } from 'data';
 import { Page, Section } from 'layouts';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import { ParsedUrlQuery } from 'querystring';
 
 type ProjectPageProps = {
@@ -11,6 +13,12 @@ type ProjectPageProps = {
 export default function ProjectPage({ project }: ProjectPageProps) {
   return (
     <>
+      <Head>
+        <title>{`${project.title} | ${appConfig.name}`}</title>
+        <meta name="description" content={project.description} />
+        <link rel="canonical" href={`${appConfig.homepage}/portfolio/${project.slug}`} />
+      </Head>
+
       <Page>
         <Section className="flex-1 max-w-2xl">
           <SectionAbout backLink="/portfolio" showBackLink={true} />
