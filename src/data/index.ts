@@ -142,6 +142,10 @@ export const data = {
             link: 'https://nextjs.org',
           },
           {
+            name: 'Styled Components',
+            link: 'https://styled-components.com',
+          },
+          {
             name: 'Tailwind CSS',
             link: 'https://tailwindcss.com',
           },
@@ -176,6 +180,10 @@ export const data = {
           {
             name: 'Next.js',
             link: 'https://nextjs.org',
+          },
+          {
+            name: 'Styled Components',
+            link: 'https://styled-components.com',
           },
           {
             name: 'Tailwind CSS',
@@ -214,11 +222,90 @@ export const data = {
             link: 'https://nextjs.org',
           },
           {
+            name: 'Styled Components',
+            link: 'https://styled-components.com',
+          },
+          {
             name: 'Tailwind CSS',
             link: 'https://tailwindcss.com',
           },
         ],
         screenshots: ['demo-01.png', 'demo-02.png', 'demo-03.png', 'demo-04.png'],
+      },
+    },
+    {
+      title: 'ARK Desktop Wallet',
+      description: "The World's Most Extensible Crypto Wallet.",
+      preview: 'preview.png',
+      imageSize: {
+        width: 1920,
+        height: 1080,
+      },
+      slug: 'ark-desktop-wallet',
+      isVisible: true,
+      more: {
+        content:
+          'The ARK Desktop Wallet is a multi-asset cryptocurrency wallet built to provide automatic integration of popular coins and any ARK-based cryptoasset.',
+        links: [
+          {
+            name: 'View Website',
+            link: 'https://ark.io/desktop-wallet',
+          },
+          {
+            name: 'View on GitHub',
+            link: 'https://github.com/ArkEcosystem/desktop-wallet',
+          },
+        ],
+        technologies: [
+          {
+            name: 'Electron',
+            link: 'https://www.electronjs.org',
+          },
+          {
+            name: 'React',
+            link: 'https://reactjs.org',
+          },
+          {
+            name: 'ARK Platform SDK',
+            link: 'https://github.com/ArkEcosystem/platform-sdk',
+          },
+          {
+            name: 'Styled Components',
+            link: 'https://styled-components.com',
+          },
+          {
+            name: 'Tailwind CSS',
+            link: 'https://tailwindcss.com',
+          },
+          {
+            name: 'Jest',
+            link: 'https://jestjs.io/',
+          },
+          {
+            name: 'React Testing Library',
+            link: 'https://testing-library.com/docs/react-testing-library/intro/',
+          },
+          {
+            name: 'TestCafe',
+            link: 'https://devexpress.github.io/testcafe/documentation/getting-started/',
+          },
+          {
+            name: 'Storybook',
+            link: 'https://storybook.js.org',
+          },
+        ],
+        screenshots: [
+          'demo-01.png',
+          'demo-02.png',
+          'demo-03.png',
+          'demo-04.png',
+          'demo-05.png',
+          'demo-06.png',
+          'demo-07.png',
+          'demo-08.png',
+          'demo-09.png',
+          'demo-10.png',
+        ],
       },
     },
     {
