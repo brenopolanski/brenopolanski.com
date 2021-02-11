@@ -23,13 +23,15 @@ export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps
 
         {!showMore ? (
           <Link href={`/portfolio/${project.slug}`}>
-            <Image
-              className="w-full h-full bg-black rounded cursor-pointer hover:opacity-80"
-              src={`/images/portfolio/${project.slug}/${project.preview}`}
-              width={project.imageSize.width}
-              height={project.imageSize.height}
-              alt={project.title}
-            />
+            <a>
+              <Image
+                className="w-full h-full bg-black rounded cursor-pointer hover:opacity-80"
+                src={`/images/portfolio/${project.slug}/${project.preview}`}
+                width={project.imageSize.width}
+                height={project.imageSize.height}
+                alt={project.title}
+              />
+            </a>
           </Link>
         ) : (
           <Image
@@ -83,7 +85,7 @@ export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps
             {project.more.screenshots.length > 0 && (
               <div>
                 <Heading title="Screenshots" />
-                <Gallery>
+                <Gallery shareButton={false}>
                   <div className="grid grid-cols-1 gap-5 mt-5 sm:grid-cols-2">
                     {project.more.screenshots.map((image: string, index: number) => (
                       <Item

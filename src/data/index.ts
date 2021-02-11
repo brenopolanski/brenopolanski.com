@@ -10,13 +10,13 @@ export const data = {
       title: 'BitcoinHoje.io',
       link: 'https://bitcoinhoje.io',
       content:
-        'The BitcoinHoje.io allows users to track the price of Bitcoin and other currencies like Ethereum, Litecoin, Bitcoin Cash and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
+        'The BitcoinHoje.io allows users to track the price of Bitcoin and other currencies such as Ethereum, Litecoin, Bitcoin Cash and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
     },
     {
       title: 'DolarHoje.io',
       link: 'https://dolarhoje.io',
       content:
-        'The DolarHoje.io allows users to track the price of the commercial dollar and tourism. Also on the website users can check the quotation of other currencies like Euro, British Pound, Bitcoin and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
+        'The DolarHoje.io allows users to track the price of the commercial dollar and tourism. Also on the website users can check the quotation of other currencies such as Euro, British Pound, Bitcoin and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
     },
     {
       title: 'ARK Desktop Wallet',
@@ -28,7 +28,7 @@ export const data = {
       title: 'Saiku Analytics',
       link: 'https://github.com/OSBI/saiku',
       content:
-        'Saiku offers a friendly web based analytics solution that allows users to quickly and easily analyse corporate data, create and share reports. The solution connects to a variety of OLAP servers, including Mondrian, Microsoft Analysis Services, SAP BW and Oracle Hyperion. It can be deployed quickly and cost effectively to allow users to explore data in real time.',
+        'Saiku offers a friendly web based analytics solution that allows users to quickly and easily analyse corporate data, and create and share reports. The solution connects to a variety of OLAP servers, including Mondrian, Microsoft Analysis Services, SAP BW and Oracle Hyperion. It can be deployed quickly and cost effectively to allow users to explore data in real time.',
     },
     {
       title: 'Saiku React PDF.js',
@@ -165,7 +165,7 @@ export const data = {
       isVisible: true,
       more: {
         content:
-          'The BitcoinHoje.io allows users to track the price of Bitcoin and other currencies like Ethereum, Litecoin, Bitcoin Cash and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
+          'The BitcoinHoje.io allows users to track the price of Bitcoin and other currencies such as Ethereum, Litecoin, Bitcoin Cash and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
         links: [
           {
             name: 'View Website',
@@ -205,7 +205,7 @@ export const data = {
       isVisible: true,
       more: {
         content:
-          'The DolarHoje.io allows users to track the price of the commercial dollar and tourism. Also on the website users can check the quotation of other currencies like Euro, British Pound, Bitcoin and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
+          'The DolarHoje.io allows users to track the price of the commercial dollar and tourism. Also on the website users can check the quotation of other currencies such as Euro, British Pound, Bitcoin and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
         links: [
           {
             name: 'View Website',
@@ -478,10 +478,6 @@ export const data = {
           {
             name: 'View on GitHub',
             link: 'https://github.com/brenopolanski/react-apache-proteus',
-          },
-          {
-            name: 'Apache Distributed Release Audit Tool (DRAT)™',
-            link: 'https://github.com/apache/drat',
           },
         ],
         technologies: [
@@ -829,7 +825,7 @@ export const data = {
     },
     {
       title: 'The Coffee Club',
-      description: 'App to manage coffee consumption in the office.',
+      description: 'Coffee control app within a company, hackspace or co-working.',
       preview: 'preview.png',
       imageSize: {
         width: 1364,
