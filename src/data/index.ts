@@ -873,7 +873,7 @@ export const data = {
       },
     },
     {
-      title: 'NUTES',
+      title: 'NUTES (UEPB)',
       description: 'A Portable System to Support Electrocardiography in Emergency Care.',
       preview: 'preview.png',
       imageSize: {
