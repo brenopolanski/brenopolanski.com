@@ -19,7 +19,7 @@ export const SectionAbout = ({ backLink = '/', showBackLink = false }: SectionAb
       Front End Engineer based in Brazil. Mainly focused on web development and helping other people by giving
       presentations, writing articles and creating{' '}
       <ExternalLink href={appConfig.social.github}>open source projects</ExternalLink>. Skills in Node.js,
-      JavaScript/TypeScript (React ecosystem and Vue.js), HTML5, CSS and Responsive interfaces.
+      JavaScript/TypeScript (React ecosystem and Vue.js and Angular), HTML5, CSS and Responsive interfaces.
     </Content>
 
     <Content>
