@@ -138,6 +138,10 @@ export const data = {
             link: 'https://vercel.com',
           },
           {
+            name: 'TypeScript',
+            link: 'https://www.typescriptlang.org',
+          },
+          {
             name: 'Next.js',
             link: 'https://nextjs.org',
           },
@@ -178,6 +182,10 @@ export const data = {
             link: 'https://vercel.com',
           },
           {
+            name: 'TypeScript',
+            link: 'https://www.typescriptlang.org',
+          },
+          {
             name: 'Next.js',
             link: 'https://nextjs.org',
           },
@@ -216,6 +224,10 @@ export const data = {
           {
             name: 'Vercel',
             link: 'https://vercel.com',
+          },
+          {
+            name: 'TypeScript',
+            link: 'https://www.typescriptlang.org',
           },
           {
             name: 'Next.js',
@@ -260,6 +272,10 @@ export const data = {
           {
             name: 'Electron',
             link: 'https://www.electronjs.org',
+          },
+          {
+            name: 'TypeScript',
+            link: 'https://www.typescriptlang.org',
           },
           {
             name: 'React',
@@ -488,6 +504,10 @@ export const data = {
           {
             name: 'Ant Design',
             link: 'https://ant.design',
+          },
+          {
+            name: 'D3.js',
+            link: 'https://d3js.org',
           },
           {
             name: 'Sass',
