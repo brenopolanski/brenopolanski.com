@@ -6,7 +6,7 @@ export * from './Heading';
 export * from './PortfolioItem';
 export * from './RouterLink';
 export * from './SectionAbout';
-export * from './SectionExperiences';
+export * from './SectionExperience';
 export * from './SectionFindMe';
 export * from './SectionPortfolio';
 export * from './SectionProject';

@@ -1,9 +1,9 @@
 import { Content, ExternalLink, Heading } from 'components';
 import { data } from 'data';
 
-export const SectionExperiences = () => (
+export const SectionExperience = () => (
   <div className="mt-16">
-    <Heading title="Experiences" />
+    <Heading title="Experience" />
     <div className="space-y-6">
       {data.experiences.map((experience, index) => (
         <div key={index} className="space-y-2">

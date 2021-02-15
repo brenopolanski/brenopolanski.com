@@ -6,6 +6,11 @@ export const SectionFindMe = () => (
     <Heading title="Find Me" />
     <ul className="ml-4 space-y-2 list-disc">
       <li>
+        <ExternalLink className="text-lg" href={appConfig.resume}>
+          Resume
+        </ExternalLink>
+      </li>
+      <li>
         <ExternalLink className="text-lg" href={appConfig.social.github}>
           GitHub
         </ExternalLink>

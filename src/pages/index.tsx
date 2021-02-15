@@ -2,7 +2,7 @@ import { appConfig } from 'appConfig';
 import {
   Footer,
   SectionAbout,
-  SectionExperiences,
+  SectionExperience,
   SectionFindMe,
   SectionProjects,
   SectionPublications,
@@ -23,7 +23,7 @@ export default function HomePage() {
         <Section className="flex-1 max-w-2xl">
           <SectionAbout />
           <SectionProjects />
-          <SectionExperiences />
+          <SectionExperience />
           <SectionPublications />
           <SectionFindMe />
           <Footer />

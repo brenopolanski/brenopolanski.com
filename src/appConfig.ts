@@ -5,6 +5,7 @@ export const appConfig = {
   homepage: 'https://brenopolanski.com',
   color: '#232323',
   email: 'mailto:breno.polanski@gmail.com',
+  resume: '/resume_brenopolanski.pdf',
   social: {
     github: 'https://github.com/brenopolanski',
     gitlab: 'https://gitlab.com/brenopolanski',
