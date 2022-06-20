@@ -1,5 +1,4 @@
 import 'photoswipe/dist/photoswipe.css';
-import 'photoswipe/dist/default-skin/default-skin.css';
 
 import { Content, ExternalLink, Heading, RouterLink } from 'components';
 import Image from 'next/image';
@@ -85,7 +84,7 @@ export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps
             {project.more.screenshots.length > 0 && (
               <div>
                 <Heading title="Screenshots" />
-                <Gallery shareButton={false}>
+                <Gallery>
                   <div className="grid grid-cols-1 gap-5 mt-5 sm:grid-cols-2">
                     {project.more.screenshots.map((image: string, index: number) => (
                       <Item
