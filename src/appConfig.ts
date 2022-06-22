@@ -12,4 +12,4 @@ export const appConfig = {
     linkedin: 'https://linkedin.com/in/brenopolanski',
     twitter: 'https://twitter.com/brenopolanski',
   },
-};
+}

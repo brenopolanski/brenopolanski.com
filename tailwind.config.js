@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const defaultConfig = require('tailwindcss/defaultConfig');
-const tailwindUI = require('@tailwindcss/ui');
-const tailwindcssDebugScreens = require('tailwindcss-debug-screens');
+const defaultConfig = require('tailwindcss/defaultConfig')
+const tailwindUI = require('@tailwindcss/ui')
+const tailwindcssDebugScreens = require('tailwindcss-debug-screens')
 
 module.exports = {
   purge: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -30,4 +30,4 @@ module.exports = {
     extend: {},
   },
   plugins: [tailwindUI, tailwindcssDebugScreens],
-};
+}

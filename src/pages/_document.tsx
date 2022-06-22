@@ -1,28 +1,28 @@
-import { Analytics } from 'components';
-import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document';
-import { Children } from 'react';
-import { ServerStyleSheet } from 'styled-components';
-import { isDev } from 'utils';
+import { Analytics } from 'components'
+import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document'
+import { Children } from 'react'
+import { ServerStyleSheet } from 'styled-components'
+import { isDev } from 'utils'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
-    const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
-        });
+        })
 
-      const initialProps = await Document.getInitialProps(ctx);
+      const initialProps = await Document.getInitialProps(ctx)
 
       return {
         ...initialProps,
         styles: [...Children.toArray(initialProps.styles), ...(sheet.getStyleElement() as React.ReactElement[])],
-      };
+      }
     } finally {
-      sheet.seal();
+      sheet.seal()
     }
   }
 
@@ -36,6 +36,6 @@ export default class MyDocument extends Document {
           <Analytics />
         </body>
       </Html>
-    );
+    )
   }
 }

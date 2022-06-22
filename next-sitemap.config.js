@@ -3,4 +3,4 @@ module.exports = {
   changefreq: 'monthly',
   generateIndexSitemap: false,
   generateRobotsTxt: true,
-};
+}

@@ -1014,4 +1014,4 @@ export const data = {
       },
     },
   ],
-};
+}

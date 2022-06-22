@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
 type ExternalLinkProps = {
-  children: React.ReactNode;
-  className?: string;
-  href?: string;
-};
+  children: React.ReactNode
+  className?: string
+  href?: string
+}
 
 export const ExternalLink = ({ children, className, href }: ExternalLinkProps) => (
   <a
@@ -15,4 +15,4 @@ export const ExternalLink = ({ children, className, href }: ExternalLinkProps) =
   >
     {children}
   </a>
-);
+)

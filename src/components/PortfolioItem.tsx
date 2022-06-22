@@ -1,14 +1,14 @@
-import 'photoswipe/dist/photoswipe.css';
+import 'photoswipe/dist/photoswipe.css'
 
-import { Content, ExternalLink, Heading, RouterLink } from 'components';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Gallery, Item } from 'react-photoswipe-gallery';
+import { Content, ExternalLink, Heading, RouterLink } from 'components'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Gallery, Item } from 'react-photoswipe-gallery'
 
 type SectionProjectProps = {
-  project: Record<string, any>;
-  showMore?: boolean;
-};
+  project: Record<string, any>
+  showMore?: boolean
+}
 
 export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps) => {
   return (
@@ -113,5 +113,5 @@ export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps
         )}
       </div>
     </div>
-  );
-};
+  )
+}

@@ -1,14 +1,14 @@
-import { appConfig } from 'appConfig';
-import { Footer, SectionAbout, SectionProject } from 'components';
-import { data } from 'data';
-import { Page, Section } from 'layouts';
-import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
-import { ParsedUrlQuery } from 'querystring';
+import { appConfig } from 'appConfig'
+import { Footer, SectionAbout, SectionProject } from 'components'
+import { data } from 'data'
+import { Page, Section } from 'layouts'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import Head from 'next/head'
+import { ParsedUrlQuery } from 'querystring'
 
 type ProjectPageProps = {
-  project: Record<string, any>;
-};
+  project: Record<string, any>
+}
 
 export default function ProjectPage({ project }: ProjectPageProps) {
   return (
@@ -27,24 +27,24 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         </Section>
       </Page>
     </>
-  );
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = data.portfolio.filter((project) => project.isVisible).map((project) => `/portfolio/${project.slug}`);
+  const paths = data.portfolio.filter((project) => project.isVisible).map((project) => `/portfolio/${project.slug}`)
 
   return {
     paths,
     fallback: true,
-  };
-};
+  }
+}
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { project: projectId } = params as ParsedUrlQuery;
+  const { project: projectId } = params as ParsedUrlQuery
 
   return {
     props: {
       project: data.portfolio.find((project) => project.slug === projectId),
     },
-  };
-};
+  }
+}

@@ -1,6 +1,6 @@
-import { appConfig } from 'appConfig';
-import { Content, ExternalLink, Heading } from 'components';
-import { data } from 'data';
+import { appConfig } from 'appConfig'
+import { Content, ExternalLink, Heading } from 'components'
+import { data } from 'data'
 
 export const SectionProjects = () => (
   <div className="mt-16">
@@ -23,4 +23,4 @@ export const SectionProjects = () => (
       </ExternalLink>
     </div>
   </div>
-);
+)

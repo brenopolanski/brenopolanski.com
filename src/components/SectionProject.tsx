@@ -1,8 +1,8 @@
-import { Heading, PortfolioItem } from 'components';
+import { Heading, PortfolioItem } from 'components'
 
 type SectionProjectProps = {
-  project: Record<string, any>;
-};
+  project: Record<string, any>
+}
 
 export const SectionProject = ({ project }: SectionProjectProps) => (
   <div className="mt-16">
@@ -11,4 +11,4 @@ export const SectionProject = ({ project }: SectionProjectProps) => (
       <PortfolioItem project={project} showMore />
     </div>
   </div>
-);
+)

@@ -1,11 +1,11 @@
-import { appConfig } from 'appConfig';
-import { Content, ExternalLink, RouterLink, Title } from 'components';
-import Link from 'next/link';
+import { appConfig } from 'appConfig'
+import { Content, ExternalLink, RouterLink, Title } from 'components'
+import Link from 'next/link'
 
 type SectionAboutProps = {
-  backLink?: string;
-  showBackLink?: boolean;
-};
+  backLink?: string
+  showBackLink?: boolean
+}
 
 export const SectionAbout = ({ backLink = '/', showBackLink = false }: SectionAboutProps) => (
   <header>
@@ -43,4 +43,4 @@ export const SectionAbout = ({ backLink = '/', showBackLink = false }: SectionAb
       )}
     </div>
   </header>
-);
+)

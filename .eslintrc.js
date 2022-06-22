@@ -38,4 +38,4 @@ module.exports = {
     'simple-import-sort/imports': 'error',
     'unused-imports/no-unused-imports-ts': 'error',
   },
-};
+}

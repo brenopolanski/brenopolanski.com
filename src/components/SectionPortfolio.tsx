@@ -1,5 +1,5 @@
-import { Heading, PortfolioItem } from 'components';
-import { data } from 'data';
+import { Heading, PortfolioItem } from 'components'
+import { data } from 'data'
 
 export const SectionPortfolio = () => (
   <div className="mt-16">
@@ -12,4 +12,4 @@ export const SectionPortfolio = () => (
         ))}
     </div>
   </div>
-);
+)

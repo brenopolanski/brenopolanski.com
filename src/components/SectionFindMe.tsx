@@ -1,5 +1,5 @@
-import { appConfig } from 'appConfig';
-import { ExternalLink, Heading } from 'components';
+import { appConfig } from 'appConfig'
+import { ExternalLink, Heading } from 'components'
 
 export const SectionFindMe = () => (
   <div className="mt-16">
@@ -32,4 +32,4 @@ export const SectionFindMe = () => (
       </li>
     </ul>
   </div>
-);
+)

@@ -1,4 +1,4 @@
-import { appConfig } from 'appConfig';
+import { appConfig } from 'appConfig'
 import {
   Footer,
   SectionAbout,
@@ -6,9 +6,9 @@ import {
   SectionFindMe,
   SectionProjects,
   SectionPublications,
-} from 'components';
-import { Page, Section } from 'layouts';
-import Head from 'next/head';
+} from 'components'
+import { Page, Section } from 'layouts'
+import Head from 'next/head'
 
 export default function HomePage() {
   return (
@@ -30,5 +30,5 @@ export default function HomePage() {
         </Section>
       </Page>
     </>
-  );
+  )
 }

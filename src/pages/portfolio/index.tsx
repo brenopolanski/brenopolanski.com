@@ -1,7 +1,7 @@
-import { appConfig } from 'appConfig';
-import { Footer, SectionAbout, SectionPortfolio } from 'components';
-import { Page, Section } from 'layouts';
-import Head from 'next/head';
+import { appConfig } from 'appConfig'
+import { Footer, SectionAbout, SectionPortfolio } from 'components'
+import { Page, Section } from 'layouts'
+import Head from 'next/head'
 
 export default function PortfolioPage() {
   return (
@@ -20,5 +20,5 @@ export default function PortfolioPage() {
         </Section>
       </Page>
     </>
-  );
+  )
 }

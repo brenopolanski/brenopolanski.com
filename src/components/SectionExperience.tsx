@@ -1,5 +1,5 @@
-import { Content, ExternalLink, Heading } from 'components';
-import { data } from 'data';
+import { Content, ExternalLink, Heading } from 'components'
+import { data } from 'data'
 
 export const SectionExperience = () => (
   <div className="mt-16">
@@ -15,4 +15,4 @@ export const SectionExperience = () => (
       ))}
     </div>
   </div>
-);
+)
