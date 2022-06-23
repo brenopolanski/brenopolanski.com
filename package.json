@@ -29,7 +29,7 @@
     "autoprefixer": "^10.0.4",
     "next": "^12.1.6",
     "next-pwa": "^5.5.4",
-    "nprogress": "^0.2.0",
+    "nextjs-progressbar": "^0.0.14",
     "photoswipe": "^5.2.7",
     "postcss": "^8.1.10",
     "react": "^18.2.0",

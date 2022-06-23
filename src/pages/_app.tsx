@@ -1,25 +1,9 @@
 import 'styles/index.css'
-import 'nprogress/nprogress.css'
 
 import { AppProps } from 'next/app'
-import { Router } from 'next/dist/client/router'
 import Head from 'next/head'
-import NProgress from 'nprogress'
+import NextNprogress from 'nextjs-progressbar'
 import { siteConfig } from 'siteConfig'
-
-NProgress.configure({ showSpinner: false })
-
-Router.events.on('routeChangeStart', () => {
-  NProgress.start()
-})
-
-Router.events.on('routeChangeComplete', () => {
-  NProgress.done()
-})
-
-Router.events.on('routeChangeError', () => {
-  NProgress.done()
-})
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -49,6 +33,15 @@ export default function App({ Component, pageProps }: AppProps) {
         */}
         <link rel="manifest" href="/manifest.json" />
       </Head>
+
+      <NextNprogress
+        color="var(--theme-highlight-color)"
+        height={2}
+        options={{ showSpinner: false }}
+        showOnShallow={false}
+        startPosition={0.1}
+        stopDelayMs={200}
+      />
 
       <Component {...pageProps} />
     </>

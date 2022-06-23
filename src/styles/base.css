@@ -10,10 +10,6 @@ body {
   z-index: 0 !important;
 }
 
-#nprogress .bar {
-  background: #b2102f !important;
-}
-
 .debug {
   border: 1px solid red;
 }
