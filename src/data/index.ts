@@ -67,7 +67,7 @@ export const data = {
     {
       title: 'Meteorite BI',
       link: 'https://www.meteorite.bi',
-      content: 'Frontend Engineer, September 2014 - January 2020 - Remote',
+      content: 'Front End Engineer, September 2014 - January 2020 - Remote',
     },
     {
       title: 'Udacity',
