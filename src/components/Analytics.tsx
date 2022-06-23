@@ -7,7 +7,7 @@ export const Analytics = () => (
       src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_TAG_MANAGER}`}
     />
     <Script
-      id="ga_tracking"
+      id="ga-tracking"
       strategy="afterInteractive"
       dangerouslySetInnerHTML={{
         __html: `
