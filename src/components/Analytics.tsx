@@ -1,16 +1,23 @@
+import Script from 'next/script'
+
 export const Analytics = () => (
   <>
-    <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`} />
-    <script
+    <Script
+      strategy="afterInteractive"
+      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_TAG_MANAGER}`}
+    />
+    <Script
+      id="ga_tracking"
+      strategy="afterInteractive"
       dangerouslySetInnerHTML={{
         __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.GOOGLE_TAG_MANAGER}', {
+            page_path: window.location.pathname,
+          });
+        `,
       }}
     />
   </>
