@@ -26,7 +26,7 @@ export const SectionFindMe = () => (
         </ExternalLink>
       </li>
       <li>
-        <ExternalLink className="text-lg" href={appConfig.email}>
+        <ExternalLink className="text-lg" href={`mailto:${appConfig.email}`}>
           Email
         </ExternalLink>
       </li>
