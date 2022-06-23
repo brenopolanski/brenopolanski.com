@@ -1,11 +1,11 @@
 import 'styles/index.css'
 import 'nprogress/nprogress.css'
 
-import { appConfig } from 'appConfig'
 import { AppProps } from 'next/app'
 import { Router } from 'next/dist/client/router'
 import Head from 'next/head'
 import NProgress from 'nprogress'
+import { siteConfig } from 'siteConfig'
 
 NProgress.configure({ showSpinner: false })
 
@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* Android */}
-        <meta name="theme-color" content={appConfig.color} />
+        <meta name="theme-color" content={siteConfig.color} />
 
         {/* Main Link Tags */}
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />

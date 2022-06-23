@@ -1,10 +1,10 @@
-import { appConfig } from 'appConfig'
 import { Footer, SectionAbout, SectionProject } from 'components'
 import { data } from 'data'
 import { Page, Section } from 'layouts'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import { ParsedUrlQuery } from 'querystring'
+import { siteConfig } from 'siteConfig'
 
 type ProjectPageProps = {
   project: Record<string, any>
@@ -14,9 +14,9 @@ export default function ProjectPage({ project }: ProjectPageProps) {
   return (
     <>
       <Head>
-        <title>{`${project?.title} | ${appConfig.name}`}</title>
+        <title>{`${project?.title} | ${siteConfig.name}`}</title>
         <meta name="description" content={project?.description} />
-        <link rel="canonical" href={`${appConfig.homepage}/portfolio/${project?.slug}`} />
+        <link rel="canonical" href={`${siteConfig.homepage}/portfolio/${project?.slug}`} />
       </Head>
 
       <Page>

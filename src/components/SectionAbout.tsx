@@ -1,6 +1,6 @@
-import { appConfig } from 'appConfig'
 import { Content, ExternalLink, RouterLink, Title } from 'components'
 import Link from 'next/link'
+import { siteConfig } from 'siteConfig'
 
 type SectionAboutProps = {
   backLink?: string
@@ -18,7 +18,7 @@ export const SectionAbout = ({ backLink = '/', showBackLink = false }: SectionAb
     <Content>
       Frontend Engineer based in Brazil. Mainly focused on web development and helping other people by giving
       presentations, writing articles and creating{' '}
-      <ExternalLink href={appConfig.social.github}>open source projects</ExternalLink>. Skills in Node.js,
+      <ExternalLink href={siteConfig.social.github}>open source projects</ExternalLink>. Skills in Node.js,
       JavaScript/TypeScript (React ecosystem, Vue.js and Angular), HTML5, CSS and Responsive interfaces.
     </Content>
 
@@ -28,7 +28,7 @@ export const SectionAbout = ({ backLink = '/', showBackLink = false }: SectionAb
 
     <Content>
       I&apos;m an active open source contributor:{' '}
-      <ExternalLink href={appConfig.social.github}>{appConfig.social.github}</ExternalLink>
+      <ExternalLink href={siteConfig.social.github}>{siteConfig.social.github}</ExternalLink>
     </Content>
 
     <div className="mt-5">

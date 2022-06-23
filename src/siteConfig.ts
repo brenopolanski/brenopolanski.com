@@ -1,4 +1,4 @@
-export const appConfig = {
+export const siteConfig = {
   name: 'Breno Polanski',
   description:
     'A developer who loves to learn new programming languages​​, build Open Source projects and play video game :)',

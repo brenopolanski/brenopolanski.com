@@ -1,6 +1,6 @@
-import { appConfig } from 'appConfig'
 import { Content, ExternalLink, Heading } from 'components'
 import { data } from 'data'
+import { siteConfig } from 'siteConfig'
 
 export const SectionProjects = () => (
   <div className="mt-16">
@@ -18,7 +18,7 @@ export const SectionProjects = () => (
     </div>
 
     <div className="mt-5">
-      <ExternalLink className="text-xl font-semibold" href={appConfig.social.github}>
+      <ExternalLink className="text-xl font-semibold" href={siteConfig.social.github}>
         More Projects →
       </ExternalLink>
     </div>

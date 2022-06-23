@@ -1,4 +1,3 @@
-import { appConfig } from 'appConfig'
 import {
   Footer,
   SectionAbout,
@@ -9,14 +8,15 @@ import {
 } from 'components'
 import { Page, Section } from 'layouts'
 import Head from 'next/head'
+import { siteConfig } from 'siteConfig'
 
 export default function HomePage() {
   return (
     <>
       <Head>
-        <title>{`${appConfig.name} | ${appConfig.description}`}</title>
-        <meta name="description" content={appConfig.description} />
-        <link rel="canonical" href={appConfig.homepage} />
+        <title>{`${siteConfig.name} | ${siteConfig.description}`}</title>
+        <meta name="description" content={siteConfig.description} />
+        <link rel="canonical" href={siteConfig.homepage} />
       </Head>
 
       <Page>

@@ -1,15 +1,15 @@
-import { appConfig } from 'appConfig'
 import { Footer, SectionAbout, SectionPortfolio } from 'components'
 import { Page, Section } from 'layouts'
 import Head from 'next/head'
+import { siteConfig } from 'siteConfig'
 
 export default function PortfolioPage() {
   return (
     <>
       <Head>
-        <title>{`Portfolio | ${appConfig.name}`}</title>
-        <meta name="description" content={appConfig.description} />
-        <link rel="canonical" href={`${appConfig.homepage}/portfolio`} />
+        <title>{`Portfolio | ${siteConfig.name}`}</title>
+        <meta name="description" content={siteConfig.description} />
+        <link rel="canonical" href={`${siteConfig.homepage}/portfolio`} />
       </Head>
 
       <Page>
