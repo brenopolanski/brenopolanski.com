@@ -27,7 +27,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'react-hooks', 'simple-import-sort', 'unused-imports'],
   rules: {
-    "@next/next/no-img-element": "off",
+    '@next/next/no-img-element': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
