@@ -1,9 +1,8 @@
 import { Footer, SectionAbout, SectionProject } from 'components'
-import { data } from 'data'
+import { siteData } from 'data'
 import { Page, Section } from 'layouts'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
-import { ParsedUrlQuery } from 'querystring'
 import { siteConfig } from 'siteConfig'
 
 interface IProjectPageProps {
@@ -31,7 +30,7 @@ export default function ProjectPage({ project }: IProjectPageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = data.portfolio.filter((project) => project.isVisible).map((project) => `/portfolio/${project.slug}`)
+  const paths = siteData.portfolio.filter((project) => project.isVisible).map((project) => `/portfolio/${project.slug}`)
 
   return {
     paths,
@@ -39,12 +38,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { project: projectId } = params as ParsedUrlQuery
+export const getStaticProps: GetStaticProps = async (context) => {
+  const projectId = context.params?.project
 
   return {
     props: {
-      project: data.portfolio.find((project) => project.slug === projectId),
+      project: siteData.portfolio.find((project) => project.slug === projectId),
     },
   }
 }
