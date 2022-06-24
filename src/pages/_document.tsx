@@ -1,7 +1,7 @@
 import { Analytics } from 'components'
-import { siteConfig } from 'data'
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document'
 import { Children } from 'react'
+import { siteConfig } from 'siteConfig'
 import { ServerStyleSheet } from 'styled-components'
 import { isDev } from 'utils'
 

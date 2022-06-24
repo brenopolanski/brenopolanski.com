@@ -6,9 +6,9 @@ import {
   SectionProjects,
   SectionPublications,
 } from 'components'
-import { siteConfig } from 'data'
 import { Page, Section } from 'layouts'
 import Head from 'next/head'
+import { siteConfig } from 'siteConfig'
 
 export default function HomePage() {
   return (

@@ -1,12 +1,13 @@
 import { Content, ExternalLink, Heading } from 'components'
-import { siteConfig, siteData } from 'data'
+import { data } from 'data'
+import { siteConfig } from 'siteConfig'
 
 export const SectionProjects = () => (
   <div className="mt-16">
     <Heading title="Projects" />
 
     <div className="space-y-6">
-      {siteData.projects.map((project, index) => (
+      {data.projects.map((project, index) => (
         <div key={index} className="space-y-2">
           <ExternalLink className="text-xl font-semibold" href={project.link}>
             {project.title}

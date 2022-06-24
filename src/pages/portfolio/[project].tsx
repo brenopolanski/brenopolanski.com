@@ -1,8 +1,9 @@
 import { Footer, SectionAbout, SectionProject } from 'components'
-import { siteConfig, siteData } from 'data'
+import { data } from 'data'
 import { Page, Section } from 'layouts'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
+import { siteConfig } from 'siteConfig'
 
 interface IProjectPageProps {
   project: Record<string, any>
@@ -29,7 +30,7 @@ export default function ProjectPage({ project }: IProjectPageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = siteData.portfolio.filter((project) => project.isVisible).map((project) => `/portfolio/${project.id}`)
+  const paths = data.portfolio.filter((project) => project.isVisible).map((project) => `/portfolio/${project.id}`)
 
   return {
     paths,
@@ -42,7 +43,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      project: siteData.portfolio.find((project) => project.id === projectId),
+      project: data.portfolio.find((project) => project.id === projectId),
     },
   }
 }
