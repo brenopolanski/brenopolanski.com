@@ -1,3 +1,5 @@
+import { NEXT_PUBLIC_GA_TRACKING_ID } from './environment'
+
 declare global {
   interface Window {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -8,7 +10,7 @@ declare global {
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: string): void => {
   if (typeof window !== 'undefined') {
-    window.gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID, {
+    window.gtag('config', NEXT_PUBLIC_GA_TRACKING_ID, {
       page_path: url,
     })
   }
