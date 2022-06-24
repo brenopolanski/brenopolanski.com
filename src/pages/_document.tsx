@@ -1,4 +1,5 @@
 import { Analytics } from 'components'
+import { siteConfig } from 'data'
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document'
 import { Children } from 'react'
 import { ServerStyleSheet } from 'styled-components'
@@ -29,7 +30,31 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          {/* Meta */}
+          <meta charSet="utf-8" />
+          <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+          {/* Android */}
+          <meta name="theme-color" content={siteConfig.color} />
+
+          {/* Main Link Tags */}
+          <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png" />
+
+          {/* iOS */}
+          <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png" />
+
+          {/* Others */}
+          <link rel="shortcut icon" href="/static/favicons/favicon.ico" />
+
+          {/*
+          manifest.json provides metadata used when your web app is added to the
+          homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+        */}
+          <link rel="manifest" href="/static/favicons/manifest.json" />
+        </Head>
         <body className={isDev ? 'debug-screens' : ''}>
           <Main />
           <NextScript />
