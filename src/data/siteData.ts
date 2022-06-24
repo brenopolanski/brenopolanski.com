@@ -114,6 +114,7 @@ export const siteData = {
   ],
   portfolio: [
     {
+      id: 'ninja-games',
       title: 'Ninja Games',
       description:
         'Play free online games at Ninja Games. Play action, racing, sports, and other amazing games for free. Have fun!',
@@ -122,7 +123,6 @@ export const siteData = {
         width: 1920,
         height: 1080,
       },
-      slug: 'ninja-games',
       isVisible: true,
       more: {
         content: '',
@@ -158,6 +158,7 @@ export const siteData = {
       },
     },
     {
+      id: 'bitcoin-hoje',
       title: 'BitcoinHoje.io',
       description: 'Check out the Bitcoin price today.',
       preview: 'preview.png',
@@ -165,7 +166,6 @@ export const siteData = {
         width: 1920,
         height: 1080,
       },
-      slug: 'bitcoin-hoje',
       isVisible: true,
       more: {
         content:
@@ -202,6 +202,7 @@ export const siteData = {
       },
     },
     {
+      id: 'dolar-hoje',
       title: 'DolarHoje.io',
       description: 'Check out the US Dollar commercial and tourism price today.',
       preview: 'preview.png',
@@ -209,7 +210,6 @@ export const siteData = {
         width: 1920,
         height: 1080,
       },
-      slug: 'dolar-hoje',
       isVisible: true,
       more: {
         content:
@@ -246,6 +246,7 @@ export const siteData = {
       },
     },
     {
+      id: 'ark-desktop-wallet',
       title: 'ARK Desktop Wallet',
       description: "The World's Most Extensible Crypto Wallet.",
       preview: 'preview.png',
@@ -253,7 +254,6 @@ export const siteData = {
         width: 1920,
         height: 1080,
       },
-      slug: 'ark-desktop-wallet',
       isVisible: true,
       more: {
         content:
@@ -325,6 +325,7 @@ export const siteData = {
       },
     },
     {
+      id: 'saiku-analytics-4',
       title: 'Saiku Analytics 4',
       description: 'Saiku Analytics 4 - The Worlds Greatest Open Source OLAP Browser.',
       preview: 'preview.png',
@@ -332,7 +333,6 @@ export const siteData = {
         width: 1366,
         height: 768,
       },
-      slug: 'saiku-analytics-4',
       isVisible: true,
       more: {
         content:
@@ -390,6 +390,7 @@ export const siteData = {
       },
     },
     {
+      id: 'saiku-analytics-3',
       title: 'Saiku Analytics 3',
       description: 'Saiku Analytics 3 - The Worlds Greatest Open Source OLAP Browser.',
       preview: 'preview.png',
@@ -397,7 +398,6 @@ export const siteData = {
         width: 1366,
         height: 768,
       },
-      slug: 'saiku-analytics-3',
       isVisible: true,
       more: {
         content:
@@ -477,6 +477,7 @@ export const siteData = {
       },
     },
     {
+      id: 'react-apache-proteus',
       title: 'Proteus a GUI for DRAT',
       description: 'This project is a proposed UI for the Apache DRAT project.',
       preview: 'preview.png',
@@ -486,7 +487,6 @@ export const siteData = {
       },
       content: '',
       technologies: [],
-      slug: 'react-apache-proteus',
       isVisible: true,
       more: {
         content: '',
@@ -527,6 +527,7 @@ export const siteData = {
       },
     },
     {
+      id: 'custmetrics',
       title: 'CustMetrics',
       description: 'Discover Your Customers.',
       preview: 'preview.png',
@@ -536,7 +537,6 @@ export const siteData = {
       },
       content: '',
       technologies: [],
-      slug: 'custmetrics',
       isVisible: true,
       more: {
         content:
@@ -586,6 +586,7 @@ export const siteData = {
       },
     },
     {
+      id: 'anssr',
       title: 'Anssr Data Platform',
       description: 'Website for Anssr Data Platform.',
       preview: 'preview.png',
@@ -595,7 +596,6 @@ export const siteData = {
       },
       content: '',
       technologies: [],
-      slug: 'anssr',
       isVisible: true,
       more: {
         content: '',
@@ -623,6 +623,7 @@ export const siteData = {
       },
     },
     {
+      id: 'mosaicboard',
       title: 'MosaicBoard (Mockups)',
       description: 'The ultimate Free Open Source Solution to create dashboards.',
       preview: 'preview.png',
@@ -632,7 +633,6 @@ export const siteData = {
       },
       content: '',
       technologies: [],
-      slug: 'mosaicboard',
       isVisible: true,
       more: {
         content: '',
@@ -680,6 +680,7 @@ export const siteData = {
       },
     },
     {
+      id: 'aieyes',
       title: 'aiEyes',
       description: 'Describes photos using audio for Blind and Visually-Impaired Users.',
       preview: 'preview.png',
@@ -689,7 +690,6 @@ export const siteData = {
       },
       content: '',
       technologies: [],
-      slug: 'aieyes',
       isVisible: true,
       more: {
         content:
@@ -758,6 +758,7 @@ export const siteData = {
       },
     },
     {
+      id: 'react-beer',
       title: 'React Beer',
       description: 'Examples of Web App using React.js + ES6 + Firebase with OAuth.',
       preview: 'preview.png',
@@ -767,7 +768,6 @@ export const siteData = {
       },
       content: '',
       technologies: [],
-      slug: 'react-beer',
       isVisible: true,
       more: {
         content: '',
@@ -803,6 +803,7 @@ export const siteData = {
       },
     },
     {
+      id: 'saiku-community',
       title: 'Saiku Community',
       description: 'Website for Saiku Community.',
       preview: 'preview.png',
@@ -812,7 +813,6 @@ export const siteData = {
       },
       content: '',
       technologies: [],
-      slug: 'saiku-community',
       isVisible: true,
       more: {
         content: '',
@@ -844,6 +844,7 @@ export const siteData = {
       },
     },
     {
+      id: 'coffee-club',
       title: 'The Coffee Club',
       description: 'Coffee control app within a company, hackspace or co-working.',
       preview: 'preview.png',
@@ -853,7 +854,6 @@ export const siteData = {
       },
       content: '',
       technologies: [],
-      slug: 'coffee-club',
       isVisible: true,
       more: {
         content: '',
@@ -893,6 +893,7 @@ export const siteData = {
       },
     },
     {
+      id: 'nutes',
       title: 'NUTES (UEPB)',
       description: 'A Portable System to Support Electrocardiography in Emergency Care.',
       preview: 'preview.png',
@@ -902,7 +903,6 @@ export const siteData = {
       },
       content: '',
       technologies: [],
-      slug: 'nutes',
       isVisible: true,
       more: {
         content: '',
@@ -926,6 +926,7 @@ export const siteData = {
       },
     },
     {
+      id: 'sigsab',
       title: 'SIGSAB',
       description:
         'The SIGSAB (Sistema de Gestão da Informação e do Conhecimento do Semiárido Brasileiro) is a project for the INSA (Instituto Nacional do Semiárido).',
@@ -936,7 +937,6 @@ export const siteData = {
       },
       content: '',
       technologies: [],
-      slug: 'sigsab',
       isVisible: true,
       more: {
         content:
