@@ -50,9 +50,9 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/static/favicons/favicon.ico" />
 
           {/*
-          manifest.json provides metadata used when your web app is added to the
-          homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
-        */}
+            manifest.json provides metadata used when your web app is added to the
+            homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+          */}
           <link rel="manifest" href="/static/favicons/manifest.json" />
         </Head>
         <body className={isDev ? 'debug-screens' : ''}>
