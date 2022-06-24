@@ -15,7 +15,7 @@ export default function ProjectPage({ project }: IProjectPageProps) {
       <Head>
         <title>{`${project?.title} | ${siteConfig.name}`}</title>
         <meta name="description" content={project?.description} />
-        <link rel="canonical" href={`${siteConfig.homepage}/portfolio/${project?.slug}`} />
+        <link rel="canonical" href={`${siteConfig.homepage}/portfolio/${project?.id}`} />
       </Head>
 
       <Page>
@@ -30,7 +30,7 @@ export default function ProjectPage({ project }: IProjectPageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = siteData.portfolio.filter((project) => project.isVisible).map((project) => `/portfolio/${project.slug}`)
+  const paths = siteData.portfolio.filter((project) => project.isVisible).map((project) => `/portfolio/${project.id}`)
 
   return {
     paths,
@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      project: siteData.portfolio.find((project) => project.slug === projectId),
+      project: siteData.portfolio.find((project) => project.id === projectId),
     },
   }
 }

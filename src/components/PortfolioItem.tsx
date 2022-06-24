@@ -14,18 +14,18 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
   return (
     <div className="space-y-12">
       <div className="space-y-2">
-        <RouterLink className="text-xl font-semibold" href={`/portfolio/${project.slug}`}>
+        <RouterLink className="text-xl font-semibold" href={`/portfolio/${project.id}`}>
           {project.title}
         </RouterLink>
 
         <Content>{project.description}</Content>
 
         {!showMore ? (
-          <Link href={`/portfolio/${project.slug}`}>
+          <Link href={`/portfolio/${project.id}`}>
             <a>
               <Image
                 className="w-full h-full bg-black rounded cursor-pointer hover:opacity-80"
-                src={`/images/portfolio/${project.slug}/${project.preview}`}
+                src={`/images/portfolio/${project.id}/${project.preview}`}
                 width={project.imageSize.width}
                 height={project.imageSize.height}
                 alt={project.title}
@@ -35,7 +35,7 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
         ) : (
           <Image
             className="w-full h-full bg-black rounded"
-            src={`/images/portfolio/${project.slug}/${project.preview}`}
+            src={`/images/portfolio/${project.id}/${project.preview}`}
             width={project.imageSize.width}
             height={project.imageSize.height}
             alt={project.title}
@@ -89,8 +89,8 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
                     {project.more.screenshots.map((image: string, index: number) => (
                       <Item
                         key={index}
-                        original={`/images/portfolio/${project.slug}/${image}`}
-                        thumbnail={`/images/portfolio/${project.slug}/${image}`}
+                        original={`/images/portfolio/${project.id}/${image}`}
+                        thumbnail={`/images/portfolio/${project.id}/${image}`}
                         width={project.imageSize.width}
                         height={project.imageSize.height}
                       >
@@ -98,7 +98,7 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
                           <img
                             ref={ref as React.MutableRefObject<HTMLImageElement>}
                             className="bg-black rounded cursor-pointer hover:opacity-80"
-                            src={`/images/portfolio/${project.slug}/${image}`}
+                            src={`/images/portfolio/${project.id}/${image}`}
                             alt={project.title}
                             onClick={open}
                           />
