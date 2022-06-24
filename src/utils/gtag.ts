@@ -1,36 +1,34 @@
-import { NEXT_PUBLIC_GA_TRACKING_ID } from './environment'
+import { isClient, NEXT_PUBLIC_GA_TRACKING_ID } from 'utils'
 
 declare global {
   interface Window {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     gtag: any
   }
 }
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export const pageview = (url: string): void => {
-  if (typeof window !== 'undefined') {
+export const pageview = (url: string) => {
+  if (isClient) {
     window.gtag('config', NEXT_PUBLIC_GA_TRACKING_ID, {
       page_path: url,
     })
   }
 }
 
-// https://developers.google.com/analytics/devguides/collection/gtagjs/events
-
-type Event = {
+interface IEventParams {
   action: string
   category: string
   label: string
   value?: string
 }
 
-export const gaEvent = ({ action, category, label, value }: Event): void => {
-  if (typeof window !== 'undefined') {
+// https://developers.google.com/analytics/devguides/collection/gtagjs/events
+export const gaEvent = ({ action, category, label, value }: IEventParams) => {
+  if (isClient) {
     window.gtag('event', action, {
       event_category: category,
       event_label: label,
-      value: value,
+      value,
     })
   }
 }
