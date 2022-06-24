@@ -25,7 +25,7 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
             <a>
               <Image
                 className="w-full h-full bg-black rounded cursor-pointer hover:opacity-80"
-                src={`/images/portfolio/${project.id}/${project.preview}`}
+                src={`/static/images/portfolio/${project.id}/${project.preview}`}
                 width={project.imageSize.width}
                 height={project.imageSize.height}
                 alt={project.title}
@@ -35,7 +35,7 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
         ) : (
           <Image
             className="w-full h-full bg-black rounded"
-            src={`/images/portfolio/${project.id}/${project.preview}`}
+            src={`/static/images/portfolio/${project.id}/${project.preview}`}
             width={project.imageSize.width}
             height={project.imageSize.height}
             alt={project.title}
@@ -89,8 +89,8 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
                     {project.more.screenshots.map((image: string, index: number) => (
                       <Item
                         key={index}
-                        original={`/images/portfolio/${project.id}/${image}`}
-                        thumbnail={`/images/portfolio/${project.id}/${image}`}
+                        original={`/static/images/portfolio/${project.id}/${image}`}
+                        thumbnail={`/static/images/portfolio/${project.id}/${image}`}
                         width={project.imageSize.width}
                         height={project.imageSize.height}
                       >
@@ -98,7 +98,7 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
                           <img
                             ref={ref as React.MutableRefObject<HTMLImageElement>}
                             className="bg-black rounded cursor-pointer hover:opacity-80"
-                            src={`/images/portfolio/${project.id}/${image}`}
+                            src={`/static/images/portfolio/${project.id}/${image}`}
                             alt={project.title}
                             onClick={open}
                           />
