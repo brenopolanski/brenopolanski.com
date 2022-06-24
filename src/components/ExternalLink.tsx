@@ -1,12 +1,12 @@
 import React from 'react'
 
-type ExternalLinkProps = {
+interface IExternalLinkProps {
   children: React.ReactNode
   className?: string
   href?: string
 }
 
-export const ExternalLink = ({ children, className, href }: ExternalLinkProps) => (
+export const ExternalLink = ({ children, className, href }: IExternalLinkProps) => (
   <a
     className={`border-b border-theme-border-link hover:bg-theme-highlight ${className}`}
     href={href}

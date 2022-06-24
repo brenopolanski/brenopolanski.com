@@ -5,12 +5,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 
-type SectionProjectProps = {
+interface IPortfolioItemProps {
   project: Record<string, any>
   showMore?: boolean
 }
 
-export const PortfolioItem = ({ project, showMore = false }: SectionProjectProps) => {
+export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps) => {
   return (
     <div className="space-y-12">
       <div className="space-y-2">

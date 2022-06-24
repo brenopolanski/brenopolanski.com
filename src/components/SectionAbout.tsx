@@ -2,12 +2,12 @@ import { Content, ExternalLink, RouterLink, Title } from 'components'
 import Link from 'next/link'
 import { siteConfig } from 'siteConfig'
 
-type SectionAboutProps = {
+interface ISectionAboutProps {
   backLink?: string
   showBackLink?: boolean
 }
 
-export const SectionAbout = ({ backLink = '/', showBackLink = false }: SectionAboutProps) => (
+export const SectionAbout = ({ backLink = '/', showBackLink = false }: ISectionAboutProps) => (
   <header>
     <Link href="/">
       <a>

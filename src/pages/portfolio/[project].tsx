@@ -6,11 +6,11 @@ import Head from 'next/head'
 import { ParsedUrlQuery } from 'querystring'
 import { siteConfig } from 'siteConfig'
 
-type ProjectPageProps = {
+interface IProjectPageProps {
   project: Record<string, any>
 }
 
-export default function ProjectPage({ project }: ProjectPageProps) {
+export default function ProjectPage({ project }: IProjectPageProps) {
   return (
     <>
       <Head>

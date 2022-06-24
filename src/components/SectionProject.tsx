@@ -1,10 +1,10 @@
 import { Heading, PortfolioItem } from 'components'
 
-type SectionProjectProps = {
+interface ISectionProjectProps {
   project: Record<string, any>
 }
 
-export const SectionProject = ({ project }: SectionProjectProps) => (
+export const SectionProject = ({ project }: ISectionProjectProps) => (
   <div className="mt-16">
     <Heading title="Portfolio" />
     <div className="space-y-12">
