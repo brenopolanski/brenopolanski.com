@@ -1,4 +1,5 @@
-import { Heading, PortfolioItem } from '@/components'
+import { Heading } from './Heading'
+import { PortfolioItem } from './PortfolioItem'
 
 interface ISectionProjectProps {
   project: Record<string, any>

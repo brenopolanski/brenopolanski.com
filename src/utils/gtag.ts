@@ -1,4 +1,5 @@
-import { isClient, NEXT_PUBLIC_GA_TRACKING_ID } from '@/utils'
+import { NEXT_PUBLIC_GA_TRACKING_ID } from './environment'
+import { isClient } from './isClient'
 
 declare global {
   interface Window {

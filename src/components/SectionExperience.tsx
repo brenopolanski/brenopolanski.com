@@ -1,5 +1,8 @@
-import { Content, ExternalLink, Heading } from '@/components'
 import { siteData } from '@/data'
+
+import { Content } from './Content'
+import { ExternalLink } from './ExternalLink'
+import { Heading } from './Heading'
 
 export const SectionExperience = () => (
   <div className="mt-16">

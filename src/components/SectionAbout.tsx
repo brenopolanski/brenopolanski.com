@@ -1,7 +1,11 @@
 import Link from 'next/link'
 
-import { Content, ExternalLink, RouterLink, Title } from '@/components'
 import { siteConfig } from '@/siteConfig'
+
+import { Content } from './Content'
+import { ExternalLink } from './ExternalLink'
+import { RouterLink } from './RouterLink'
+import { Title } from './Title'
 
 interface ISectionAboutProps {
   backLink?: string

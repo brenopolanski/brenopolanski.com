@@ -4,7 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 
-import { Content, ExternalLink, Heading, RouterLink } from '@/components'
+import { Content } from './Content'
+import { ExternalLink } from './ExternalLink'
+import { Heading } from './Heading'
+import { RouterLink } from './RouterLink'
 
 interface IPortfolioItemProps {
   project: Record<string, any>

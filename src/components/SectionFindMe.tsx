@@ -1,5 +1,7 @@
-import { ExternalLink, Heading } from '@/components'
 import { siteConfig } from '@/siteConfig'
+
+import { ExternalLink } from './ExternalLink'
+import { Heading } from './Heading'
 
 export const SectionFindMe = () => (
   <div className="mt-16">

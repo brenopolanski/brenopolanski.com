@@ -1,4 +1,4 @@
-import { Heading } from '@/components'
+import { Heading } from './Heading'
 
 export const Footer = () => (
   <div className="mt-16">

@@ -1,6 +1,9 @@
-import { Content, ExternalLink, Heading } from '@/components'
 import { siteData } from '@/data'
 import { siteConfig } from '@/siteConfig'
+
+import { Content } from './Content'
+import { ExternalLink } from './ExternalLink'
+import { Heading } from './Heading'
 
 export const SectionProjects = () => (
   <div className="mt-16">
