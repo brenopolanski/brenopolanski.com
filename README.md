@@ -1,4 +1,4 @@
-# <img src="./public/images/android-chrome-192x192.png" width="40" align="left"> [brenopolanski.com](https://brenopolanski.com/)
+# <img src="./public/static/favicons/android-chrome-192x192.png" width="40" align="left"> [brenopolanski.com](https://brenopolanski.com/)
 
 > My personal website
 
