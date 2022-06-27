@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import {
   Footer,
   SectionAbout,
@@ -5,10 +7,9 @@ import {
   SectionFindMe,
   SectionProjects,
   SectionPublications,
-} from 'components'
-import { Page, Section } from 'layouts'
-import Head from 'next/head'
-import { siteConfig } from 'siteConfig'
+} from '@/components'
+import { Page, Section } from '@/layouts'
+import { siteConfig } from '@/siteConfig'
 
 export default function HomePage() {
   return (

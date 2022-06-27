@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "baseUrl": "src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
@@ -23,6 +22,7 @@
   "exclude": [
     "node_modules"
   ],
+  "extends": "./tsconfig.paths.json",
   "include": [
     "next-env.d.ts",
     "**/*.ts",

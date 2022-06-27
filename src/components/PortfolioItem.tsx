@@ -1,9 +1,10 @@
 import 'photoswipe/dist/photoswipe.css'
 
-import { Content, ExternalLink, Heading, RouterLink } from 'components'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Gallery, Item } from 'react-photoswipe-gallery'
+
+import { Content, ExternalLink, Heading, RouterLink } from '@/components'
 
 interface IPortfolioItemProps {
   project: Record<string, any>

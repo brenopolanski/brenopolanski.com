@@ -1,5 +1,5 @@
-import { Content, ExternalLink, Heading } from 'components'
-import { siteData } from 'data'
+import { Content, ExternalLink, Heading } from '@/components'
+import { siteData } from '@/data'
 
 export const SectionPublications = () => (
   <div className="mt-16">

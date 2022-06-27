@@ -1,6 +1,7 @@
-import { Content, ExternalLink, RouterLink, Title } from 'components'
 import Link from 'next/link'
-import { siteConfig } from 'siteConfig'
+
+import { Content, ExternalLink, RouterLink, Title } from '@/components'
+import { siteConfig } from '@/siteConfig'
 
 interface ISectionAboutProps {
   backLink?: string

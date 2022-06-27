@@ -1,9 +1,10 @@
-import { Footer, SectionAbout, SectionProject } from 'components'
-import { siteData } from 'data'
-import { Page, Section } from 'layouts'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
-import { siteConfig } from 'siteConfig'
+
+import { Footer, SectionAbout, SectionProject } from '@/components'
+import { siteData } from '@/data'
+import { Page, Section } from '@/layouts'
+import { siteConfig } from '@/siteConfig'
 
 interface IProjectPageProps {
   project: Record<string, any>

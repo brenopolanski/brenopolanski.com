@@ -1,5 +1,5 @@
-import { Heading, PortfolioItem } from 'components'
-import { siteData } from 'data'
+import { Heading, PortfolioItem } from '@/components'
+import { siteData } from '@/data'
 
 export const SectionPortfolio = () => (
   <div className="mt-16">

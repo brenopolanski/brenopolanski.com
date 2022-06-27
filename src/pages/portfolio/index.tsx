@@ -1,7 +1,8 @@
-import { Footer, SectionAbout, SectionPortfolio } from 'components'
-import { Page, Section } from 'layouts'
 import Head from 'next/head'
-import { siteConfig } from 'siteConfig'
+
+import { Footer, SectionAbout, SectionPortfolio } from '@/components'
+import { Page, Section } from '@/layouts'
+import { siteConfig } from '@/siteConfig'
 
 export default function PortfolioPage() {
   return (

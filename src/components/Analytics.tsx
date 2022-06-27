@@ -1,5 +1,6 @@
 import Script from 'next/script'
-import { NEXT_PUBLIC_GA_TRACKING_ID } from 'utils'
+
+import { NEXT_PUBLIC_GA_TRACKING_ID } from '@/utils'
 
 export const Analytics = () => (
   <>
