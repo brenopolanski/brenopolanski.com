@@ -2,8 +2,8 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 
 import { Footer, SectionAbout, SectionProject } from '@/components'
+import { Page, Section } from '@/components/layouts'
 import { siteData } from '@/data'
-import { Page, Section } from '@/layouts'
 import { siteConfig } from '@/siteConfig'
 
 interface IProjectPageProps {

@@ -8,7 +8,7 @@ import {
   SectionProjects,
   SectionPublications,
 } from '@/components'
-import { Page, Section } from '@/layouts'
+import { Page, Section } from '@/components/layouts'
 import { siteConfig } from '@/siteConfig'
 
 export default function HomePage() {

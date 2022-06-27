@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import { Footer, SectionAbout, SectionPortfolio } from '@/components'
-import { Page, Section } from '@/layouts'
+import { Page, Section } from '@/components/layouts'
 import { siteConfig } from '@/siteConfig'
 
 export default function PortfolioPage() {
