@@ -1,5 +1,5 @@
 import { Footer, SectionAbout, SectionProject } from 'components'
-import { data } from 'data'
+import { siteData } from 'data'
 import { Page, Section } from 'layouts'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
@@ -30,7 +30,7 @@ export default function ProjectPage({ project }: IProjectPageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = data.portfolio.filter((project) => project.isVisible).map((project) => `/portfolio/${project.id}`)
+  const paths = siteData.portfolio.filter((project) => project.isVisible).map((project) => `/portfolio/${project.id}`)
 
   return {
     paths,
@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      project: data.portfolio.find((project) => project.id === projectId),
+      project: siteData.portfolio.find((project) => project.id === projectId),
     },
   }
 }
