@@ -1,6 +1,13 @@
 export const siteData = {
   projects: [
     {
+      title: 'Aluna.Social',
+      link: 'https://aluna.social/insights',
+      content:
+        'A crypto trading platform enabling traders to manage multiple exchange accounts from one place while leveraging social features and copy trading.',
+      isVisible: true,
+    },
+    {
       title: 'Ninja Games',
       link: 'https://ninjagames.space',
       content:
@@ -70,23 +77,28 @@ export const siteData = {
   ],
   experiences: [
     {
+      title: 'Aluna.Social',
+      link: 'https://aluna.social/insights',
+      content: 'Front End Engineer, March 2021 - June 2022 - Remote',
+    },
+    {
       title: 'ARK Ecosystem',
       link: 'https://ark.io',
       content: 'Full Stack Developer, January 2020 - January 2021 - Remote',
     },
     {
       title: 'Meteorite BI',
-      link: 'https://www.meteorite.bi',
+      link: 'https://meteorite.bi',
       content: 'Front End Engineer, September 2014 - January 2020 - Remote',
     },
     {
       title: 'Udacity',
-      link: 'https://www.udacity.com',
+      link: 'https://udacity.com',
       content: 'Mentor and Project Reviewer, June 2016 - December 2019 - Remote',
     },
     {
       title: 'Spicule LTD',
-      link: 'https://www.spicule.co.uk',
+      link: 'https://spicule.co.uk',
       content: 'Software Engineer, April 2017 - December 2019 - Remote',
     },
     {
@@ -101,7 +113,7 @@ export const siteData = {
     },
     {
       title: 'Indra Company',
-      link: 'https://www.indracompany.com',
+      link: 'https://indracompany.com',
       content: 'Systems Analyst, June 2013 - September 2014',
     },
     {
@@ -124,6 +136,65 @@ export const siteData = {
   ],
   portfolio: [
     {
+      id: 'aluna-social',
+      title: 'Aluna.Social',
+      description:
+        'A crypto trading platform enabling traders to manage multiple exchange accounts from one place while leveraging social features and copy trading.',
+      preview: 'preview.png',
+      imageSize: {
+        width: 1920,
+        height: 1080,
+      },
+      isVisible: true,
+      more: {
+        content: '',
+        links: [
+          {
+            name: 'See Website',
+            link: 'https://aluna.social/insights',
+          },
+        ],
+        technologies: [
+          {
+            name: 'TypeScript',
+            link: 'https://typescriptlang.org',
+          },
+          {
+            name: 'Next.js',
+            link: 'https://nextjs.org',
+          },
+          {
+            name: 'Chakra UI',
+            link: 'https://chakra-ui.com',
+          },
+          {
+            name: 'SWR',
+            link: 'https://swr.vercel.app/docs/with-nextjs',
+          },
+          {
+            name: 'Zustand',
+            link: 'https://github.com/pmndrs/zustand',
+          },
+          {
+            name: 'Web3.js',
+            link: 'https://github.com/ChainSafe/web3.js',
+          },
+        ],
+        screenshots: [
+          'demo-01.png',
+          'demo-02.png',
+          'demo-03.png',
+          'demo-04.png',
+          'demo-05.png',
+          'demo-06.png',
+          'demo-07.png',
+          'demo-08.png',
+          'demo-09.png',
+          'demo-10.png',
+        ],
+      },
+    },
+    {
       id: 'ninja-games',
       title: 'Ninja Games',
       description:
@@ -138,7 +209,7 @@ export const siteData = {
         content: '',
         links: [
           {
-            name: 'View Website',
+            name: 'See Website',
             link: 'https://ninjagames.space',
           },
         ],
@@ -149,7 +220,7 @@ export const siteData = {
           },
           {
             name: 'TypeScript',
-            link: 'https://www.typescriptlang.org',
+            link: 'https://typescriptlang.org',
           },
           {
             name: 'Next.js',
@@ -182,7 +253,7 @@ export const siteData = {
           'The BitcoinHoje.io allows users to track the price of Bitcoin and other currencies such as Ethereum, Litecoin, Bitcoin Cash and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
         links: [
           {
-            name: 'View Website',
+            name: 'See Website',
             link: 'https://bitcoinhoje.io',
           },
         ],
@@ -193,7 +264,7 @@ export const siteData = {
           },
           {
             name: 'TypeScript',
-            link: 'https://www.typescriptlang.org',
+            link: 'https://typescriptlang.org',
           },
           {
             name: 'Next.js',
@@ -226,7 +297,7 @@ export const siteData = {
           'The DolarHoje.io allows users to track the price of the commercial dollar and tourism. Also on the website users can check the quotation of other currencies such as Euro, British Pound, Bitcoin and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
         links: [
           {
-            name: 'View Website',
+            name: 'See Website',
             link: 'https://dolarhoje.io',
           },
         ],
@@ -237,7 +308,7 @@ export const siteData = {
           },
           {
             name: 'TypeScript',
-            link: 'https://www.typescriptlang.org',
+            link: 'https://typescriptlang.org',
           },
           {
             name: 'Next.js',
@@ -270,22 +341,22 @@ export const siteData = {
           'The ARK Desktop Wallet is a multi-asset cryptocurrency wallet built to provide automatic integration of popular coins and any ARK-based cryptoasset.',
         links: [
           {
-            name: 'View Website',
+            name: 'See Website',
             link: 'https://ark.io/desktop-wallet',
           },
           {
-            name: 'View on GitHub',
+            name: 'See on GitHub',
             link: 'https://github.com/ArkEcosystem/desktop-wallet',
           },
         ],
         technologies: [
           {
             name: 'Electron',
-            link: 'https://www.electronjs.org',
+            link: 'https://electronjs.org',
           },
           {
             name: 'TypeScript',
-            link: 'https://www.typescriptlang.org',
+            link: 'https://typescriptlang.org',
           },
           {
             name: 'React',
@@ -349,11 +420,11 @@ export const siteData = {
           'Saiku Analytics allows the entire organisation to unlock the data held in any application or data store. Undertake complex, powerful analysis using an easy to use, drag and drop interface, via the browser, to answer ad hoc queries without involving IT. Analyse data from virtually anywhere, deploy it to everyone without the costs associated with other Enterprise Business Intelligence tools. Saiku provides a fast, consistent, secure view of data across systems, so everyone sees the same numbers. Simply drag in the information required from a list of business terms, to create detailed reports or beautiful visualisations. Save and share findings or export to PDF and Excel.',
         links: [
           {
-            name: 'View Website',
-            link: 'https://www.meteorite.bi',
+            name: 'See Website',
+            link: 'https://meteorite.bi',
           },
           {
-            name: 'View on GitLab',
+            name: 'See on GitLab',
             link: 'https://gitlab.com/spiculedata/saiku4/saiku4-webframework',
           },
         ],
@@ -368,7 +439,7 @@ export const siteData = {
           },
           {
             name: 'RabbitMQ',
-            link: 'https://www.rabbitmq.com',
+            link: 'https://rabbitmq.com',
           },
           {
             name: 'React',
@@ -414,11 +485,11 @@ export const siteData = {
           'Saiku Analytics allows the entire organisation to unlock the data held in any application or data store. Undertake complex, powerful analysis using an easy to use, drag and drop interface, via the browser, to answer ad hoc queries without involving IT. Analyse data from virtually anywhere, deploy it to everyone without the costs associated with other Enterprise Business Intelligence tools. Saiku provides a fast, consistent, secure view of data across systems, so everyone sees the same numbers. Simply drag in the information required from a list of business terms, to create detailed reports or beautiful visualisations. Save and share findings or export to PDF and Excel.',
         links: [
           {
-            name: 'View Website',
-            link: 'https://www.meteorite.bi',
+            name: 'See Website',
+            link: 'https://meteorite.bi',
           },
           {
-            name: 'View on GitHub',
+            name: 'See on GitHub',
             link: 'https://github.com/OSBI/saiku',
           },
         ],
@@ -502,7 +573,7 @@ export const siteData = {
         content: '',
         links: [
           {
-            name: 'View on GitHub',
+            name: 'See on GitHub',
             link: 'https://github.com/brenopolanski/react-apache-proteus',
           },
         ],
@@ -553,7 +624,7 @@ export const siteData = {
           'The open source CustMetrics tool allows you to gain a greater understanding of your customers and the pain points.',
         links: [
           {
-            name: 'View on GitLab',
+            name: 'See on GitLab',
             link: 'https://gitlab.com/spiculedata/custmetrics',
           },
         ],
@@ -568,7 +639,7 @@ export const siteData = {
           },
           {
             name: 'MongoDB',
-            link: 'https://www.mongodb.com',
+            link: 'https://mongodb.com',
           },
           {
             name: 'React',
@@ -611,14 +682,14 @@ export const siteData = {
         content: '',
         links: [
           {
-            name: 'View Website',
+            name: 'See Website',
             link: 'https://anssr.io',
           },
         ],
         technologies: [
           {
             name: 'Netlify',
-            link: 'https://www.netlify.com',
+            link: 'https://netlify.com',
           },
           {
             name: 'Docusaurus',
@@ -648,7 +719,7 @@ export const siteData = {
         content: '',
         links: [
           {
-            name: 'View on GitHub',
+            name: 'See on GitHub',
             link: 'https://github.com/MosaicBoard/mosaicboard',
           },
         ],
@@ -707,10 +778,10 @@ export const siteData = {
         links: [
           {
             name: 'Demo Video',
-            link: 'https://www.youtube.com/watch?v=k8kd785kfMY',
+            link: 'https://youtube.com/watch?v=k8kd785kfMY',
           },
           {
-            name: 'View on GitHub',
+            name: 'See on GitHub',
             link: 'https://github.com/brenopolanski/aiEyes',
           },
         ],
@@ -783,11 +854,11 @@ export const siteData = {
         content: '',
         links: [
           {
-            name: 'View Website',
+            name: 'See Website',
             link: 'http://react-beer.github.io/the-beer-store-react-es6-firebase/',
           },
           {
-            name: 'View on GitHub',
+            name: 'See on GitHub',
             link: 'https://github.com/react-beer',
           },
         ],
@@ -828,11 +899,11 @@ export const siteData = {
         content: '',
         links: [
           {
-            name: 'View Website',
+            name: 'See Website',
             link: 'https://community.meteorite.bi',
           },
           {
-            name: 'View on GitHub',
+            name: 'See on GitHub',
             link: 'https://github.com/OSBI/saiku_community_website',
           },
         ],
@@ -869,7 +940,7 @@ export const siteData = {
         content: '',
         links: [
           {
-            name: 'View on GitHub',
+            name: 'See on GitHub',
             link: 'https://github.com/brenopolanski/coffee-club',
           },
         ],
@@ -884,7 +955,7 @@ export const siteData = {
           },
           {
             name: 'MongoDB',
-            link: 'https://www.mongodb.com',
+            link: 'https://mongodb.com',
           },
           {
             name: 'Gulp',
@@ -918,7 +989,7 @@ export const siteData = {
         content: '',
         links: [
           {
-            name: 'View Website',
+            name: 'See Website',
             link: 'http://nutes.uepb.edu.br',
           },
         ],
@@ -953,18 +1024,18 @@ export const siteData = {
           'This projects aim is to institutionalize, consolidate and operationalize a computerized information and knowledge management system, through a databank linked to a Geographical Information System (Sistema de Informações Geográficas – SIG) to generate scientific information connected to popular knowledge, aiming at subsidizing the formulation of policies that match the regions context. Another goal is to support other strategic studies and offer relevant services to policy and decision makers.',
         links: [
           {
-            name: 'View Website',
+            name: 'See Website',
             link: 'http://sigsab.insa.gov.br',
           },
         ],
         technologies: [
           {
             name: 'Pentaho BI',
-            link: 'https://www.hitachivantara.com/en-us/products/data-management-analytics/pentaho.html',
+            link: 'https://hitachivantara.com/en-us/products/data-management-analytics/pentaho.html',
           },
           {
             name: 'Saiku Analytics',
-            link: 'https://www.meteorite.bi',
+            link: 'https://meteorite.bi',
           },
           {
             name: 'Java',
