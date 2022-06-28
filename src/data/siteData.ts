@@ -5,57 +5,67 @@ export const siteData = {
       link: 'https://ninjagames.space',
       content:
         'Play free online games at Ninja Games. Play action, racing, sports, and other amazing games for free. Have fun!',
+      isVisible: false,
     },
     {
       title: 'BitcoinHoje.io',
       link: 'https://bitcoinhoje.io',
       content:
         'The BitcoinHoje.io allows users to track the price of Bitcoin and other currencies such as Ethereum, Litecoin, Bitcoin Cash and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
+      isVisible: true,
     },
     {
       title: 'DolarHoje.io',
       link: 'https://dolarhoje.io',
       content:
         'The DolarHoje.io allows users to track the price of the commercial dollar and tourism. Also on the website users can check the quotation of other currencies such as Euro, British Pound, Bitcoin and etc. There are more than 20 currencies online and the prices are always updated every 10 minutes.',
+      isVisible: true,
     },
     {
       title: 'ARK Desktop Wallet',
       link: 'https://github.com/ArkEcosystem/desktop-wallet',
       content:
         'The ARK Desktop Wallet is a multi-asset cryptocurrency wallet built to provide automatic integration of popular coins and any ARK-based cryptoasset.',
+      isVisible: true,
     },
     {
       title: 'Saiku Analytics',
       link: 'https://github.com/OSBI/saiku',
       content:
         'Saiku offers a friendly web based analytics solution that allows users to quickly and easily analyse corporate data, and create and share reports. The solution connects to a variety of OLAP servers, including Mondrian, Microsoft Analysis Services, SAP BW and Oracle Hyperion. It can be deployed quickly and cost effectively to allow users to explore data in real time.',
+      isVisible: true,
     },
     {
       title: 'Saiku React PDF.js',
       link: 'https://github.com/OSBI/saiku-react-pdfjs',
       content: 'A React component to wrap PDF.js.',
+      isVisible: true,
     },
     {
       title: 'Saiku Embed Element',
       link: 'https://github.com/OSBI/saiku-embed-element',
       content: 'A web component to embed Saiku Analytics using Polymer.',
+      isVisible: true,
     },
     {
       title: 'aiEyes',
       link: 'https://github.com/brenopolanski/aiEyes',
       content:
         'aiEyes is an open source app that helps the Blind and Visually-Impaired Users to see the world with the help of artificial intelligence.',
+      isVisible: true,
     },
     {
       title: 'Notifier for Udacity Reviewer',
       link: 'https://github.com/brenopolanski/notifier-for-udacity-reviewer',
       content:
         'The extension checks for new notifications every minute and running API calls against the Udacity Reviews API.',
+      isVisible: true,
     },
     {
       title: 'The Coffee Club',
       link: 'https://github.com/brenopolanski/coffee-club',
       content: 'Coffee control app within a company, hackspace or co-working.',
+      isVisible: true,
     },
   ],
   experiences: [
@@ -123,7 +133,7 @@ export const siteData = {
         width: 1920,
         height: 1080,
       },
-      isVisible: true,
+      isVisible: false,
       more: {
         content: '',
         links: [

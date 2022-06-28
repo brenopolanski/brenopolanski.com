@@ -10,14 +10,16 @@ export const SectionProjects = () => (
     <Heading title="Projects" />
 
     <div className="space-y-6">
-      {siteData.projects.map((project, index) => (
-        <div key={index} className="space-y-2">
-          <ExternalLink className="text-xl font-semibold" href={project.link}>
-            {project.title}
-          </ExternalLink>
-          <Content>{project.content}</Content>
-        </div>
-      ))}
+      {siteData.projects
+        .filter((project) => project.isVisible)
+        .map((project, index) => (
+          <div key={index} className="space-y-2">
+            <ExternalLink className="text-xl font-semibold" href={project.link}>
+              {project.title}
+            </ExternalLink>
+            <Content>{project.content}</Content>
+          </div>
+        ))}
     </div>
 
     <div className="mt-5">
