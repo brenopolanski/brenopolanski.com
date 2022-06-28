@@ -1,8 +1,8 @@
 import { siteData } from '@/data'
 
 import { Content } from './Content'
-import { ExternalLink } from './ExternalLink'
 import { Heading } from './Heading'
+import { Link } from './Link'
 
 export const SectionPublications = () => (
   <div className="mt-16">
@@ -10,9 +10,9 @@ export const SectionPublications = () => (
     <div className="space-y-6">
       {siteData.publications.map((publication, index) => (
         <div key={index} className="space-y-2">
-          <ExternalLink className="text-xl font-semibold" href={publication.link}>
+          <Link className="text-xl font-semibold" href={publication.link} isExternal>
             {publication.title}
-          </ExternalLink>
+          </Link>
           <Content>{publication.content}</Content>
         </div>
       ))}

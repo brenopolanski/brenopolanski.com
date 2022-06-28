@@ -1,36 +1,36 @@
 import { siteConfig } from '@/siteConfig'
 
-import { ExternalLink } from './ExternalLink'
 import { Heading } from './Heading'
+import { Link } from './Link'
 
 export const SectionFindMe = () => (
   <div className="mt-16">
     <Heading title="Find Me" />
     <ul className="ml-4 space-y-2 list-disc">
       <li>
-        <ExternalLink className="text-lg" href={`/${siteConfig.resume}`}>
+        <Link className="text-lg" href={`/${siteConfig.resume}`} isExternal>
           Resume
-        </ExternalLink>
+        </Link>
       </li>
       <li>
-        <ExternalLink className="text-lg" href={siteConfig.social.github}>
+        <Link className="text-lg" href={siteConfig.social.github} isExternal>
           GitHub
-        </ExternalLink>
+        </Link>
       </li>
       <li>
-        <ExternalLink className="text-lg" href={siteConfig.social.linkedin}>
+        <Link className="text-lg" href={siteConfig.social.linkedin} isExternal>
           LinkedIn
-        </ExternalLink>
+        </Link>
       </li>
       <li>
-        <ExternalLink className="text-lg" href={siteConfig.social.twitter}>
+        <Link className="text-lg" href={siteConfig.social.twitter} isExternal>
           Twitter
-        </ExternalLink>
+        </Link>
       </li>
       <li>
-        <ExternalLink className="text-lg" href={`mailto:${siteConfig.email}`}>
+        <Link className="text-lg" href={`mailto:${siteConfig.email}`} isExternal>
           Email
-        </ExternalLink>
+        </Link>
       </li>
     </ul>
   </div>

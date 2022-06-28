@@ -1,13 +1,11 @@
 import 'photoswipe/dist/photoswipe.css'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 
 import { Content } from './Content'
-import { ExternalLink } from './ExternalLink'
 import { Heading } from './Heading'
-import { RouterLink } from './RouterLink'
+import { Link } from './Link'
 
 interface IPortfolioItemProps {
   project: Record<string, any>
@@ -18,23 +16,21 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
   return (
     <div className="space-y-12">
       <div className="space-y-2">
-        <RouterLink className="text-xl font-semibold" href={`/portfolio/${project.id}`}>
+        <Link className="text-xl font-semibold" href={`/portfolio/${project.id}`}>
           {project.title}
-        </RouterLink>
+        </Link>
 
         <Content>{project.description}</Content>
 
         {!showMore ? (
           <Link href={`/portfolio/${project.id}`}>
-            <a>
-              <Image
-                className="w-full h-full bg-black rounded cursor-pointer hover:opacity-80"
-                src={`/static/images/portfolio/${project.id}/${project.preview}`}
-                width={project.imageSize.width}
-                height={project.imageSize.height}
-                alt={project.title}
-              />
-            </a>
+            <Image
+              className="w-full h-full bg-black rounded cursor-pointer hover:opacity-80"
+              src={`/static/images/portfolio/${project.id}/${project.preview}`}
+              width={project.imageSize.width}
+              height={project.imageSize.height}
+              alt={project.title}
+            />
           </Link>
         ) : (
           <Image
@@ -55,9 +51,9 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
                 <ul className="ml-4 space-y-2 list-disc">
                   {project.more.links.map(({ name, link }: Record<string, string>, index: number) => (
                     <li key={index}>
-                      <ExternalLink className="text-lg" href={link}>
+                      <Link className="text-lg" href={link} isExternal>
                         {name}
-                      </ExternalLink>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -72,9 +68,9 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
                     {project.more.technologies.map(({ name, link }: Record<string, string>, index: number) => (
                       <li key={index}>
                         {link ? (
-                          <ExternalLink className="text-lg" href={link}>
+                          <Link className="text-lg" href={link} isExternal>
                             {name}
-                          </ExternalLink>
+                          </Link>
                         ) : (
                           name
                         )}

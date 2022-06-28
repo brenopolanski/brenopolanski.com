@@ -1,10 +1,7 @@
-import Link from 'next/link'
-
 import { siteConfig } from '@/siteConfig'
 
 import { Content } from './Content'
-import { ExternalLink } from './ExternalLink'
-import { RouterLink } from './RouterLink'
+import { Link } from './Link'
 import { Title } from './Title'
 
 interface ISectionAboutProps {
@@ -15,16 +12,17 @@ interface ISectionAboutProps {
 export const SectionAbout = ({ backLink = '/', showBackLink = false }: ISectionAboutProps) => (
   <header>
     <Link href="/">
-      <a>
-        <Title title="Hey, I'm Breno Polanski 👋" />
-      </a>
+      <Title title="Hey, I'm Breno Polanski 👋" />
     </Link>
 
     <Content>
       Front End Engineer based in Brazil. Mainly focused on web development and helping other people by giving
       presentations, writing articles and creating{' '}
-      <ExternalLink href={siteConfig.social.github}>open source projects</ExternalLink>. Skills in Node.js,
-      JavaScript/TypeScript (React ecosystem, Vue.js and Angular), HTML5, CSS and Responsive interfaces.
+      <Link href={siteConfig.social.github} isExternal>
+        open source projects
+      </Link>
+      . Skills in Node.js, JavaScript/TypeScript (React ecosystem, Vue.js and Angular), HTML5, CSS and Responsive
+      interfaces.
     </Content>
 
     <Content>
@@ -33,18 +31,20 @@ export const SectionAbout = ({ backLink = '/', showBackLink = false }: ISectionA
 
     <Content>
       I&apos;m an active open source contributor:{' '}
-      <ExternalLink href={siteConfig.social.github}>{siteConfig.social.github}</ExternalLink>
+      <Link href={siteConfig.social.github} isExternal>
+        {siteConfig.social.github}
+      </Link>
     </Content>
 
     <div className="mt-5">
       {!showBackLink ? (
-        <RouterLink className="text-xl font-semibold" href="/portfolio">
+        <Link className="text-xl font-semibold" href="/portfolio">
           My Portfolio →
-        </RouterLink>
+        </Link>
       ) : (
-        <RouterLink className="text-xl font-semibold" href={backLink}>
+        <Link className="text-xl font-semibold" href={backLink}>
           ← Back
-        </RouterLink>
+        </Link>
       )}
     </div>
   </header>

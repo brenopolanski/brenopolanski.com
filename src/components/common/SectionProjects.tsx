@@ -2,8 +2,8 @@ import { siteData } from '@/data'
 import { siteConfig } from '@/siteConfig'
 
 import { Content } from './Content'
-import { ExternalLink } from './ExternalLink'
 import { Heading } from './Heading'
+import { Link } from './Link'
 
 export const SectionProjects = () => (
   <div className="mt-16">
@@ -14,18 +14,18 @@ export const SectionProjects = () => (
         .filter((project) => project.isVisible)
         .map((project, index) => (
           <div key={index} className="space-y-2">
-            <ExternalLink className="text-xl font-semibold" href={project.link}>
+            <Link className="text-xl font-semibold" href={project.link} isExternal>
               {project.title}
-            </ExternalLink>
+            </Link>
             <Content>{project.content}</Content>
           </div>
         ))}
     </div>
 
     <div className="mt-5">
-      <ExternalLink className="text-xl font-semibold" href={siteConfig.social.github}>
+      <Link className="text-xl font-semibold" href={siteConfig.social.github} isExternal>
         More Projects →
-      </ExternalLink>
+      </Link>
     </div>
   </div>
 )
