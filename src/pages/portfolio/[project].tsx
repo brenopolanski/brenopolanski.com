@@ -1,30 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 
-import { SEO } from '@/components/_partials'
-import { Footer, SectionAbout, SectionProject } from '@/components/common'
-import { Page, Section } from '@/components/layouts'
+import { Project } from '@/components/pages'
 import { siteData } from '@/data'
-import { siteConfig } from '@/siteConfig'
 
-interface IProjectPageProps {
-  project: Record<string, any>
-}
-
-export default function ProjectPage({ project }: IProjectPageProps) {
-  return (
-    <>
-      <SEO title={`${project?.title} | ${siteConfig.name}`} />
-
-      <Page>
-        <Section className="flex-1 max-w-2xl">
-          <SectionAbout backLink="/portfolio" showBackLink={true} />
-          <SectionProject project={project} />
-          <Footer />
-        </Section>
-      </Page>
-    </>
-  )
-}
+export default Project
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = siteData.portfolio.filter((project) => project.isVisible).map((project) => `/portfolio/${project.id}`)
