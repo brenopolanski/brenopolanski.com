@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { Footer, SectionAbout, SectionPortfolio } from '@/components'
+import { Footer, SectionAbout, SectionPortfolio } from '@/components/common'
 import { Page, Section } from '@/components/layouts'
 import { siteConfig } from '@/siteConfig'
 

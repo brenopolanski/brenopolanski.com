@@ -7,7 +7,7 @@ import {
   SectionFindMe,
   SectionProjects,
   SectionPublications,
-} from '@/components'
+} from '@/components/common'
 import { Page, Section } from '@/components/layouts'
 import { siteConfig } from '@/siteConfig'
 
