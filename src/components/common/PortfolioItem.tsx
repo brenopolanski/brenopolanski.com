@@ -1,6 +1,7 @@
 import 'photoswipe/dist/photoswipe.css'
 
 import Image from 'next/image'
+import NextLink from 'next/link'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 
 import { Content } from './Content'
@@ -23,15 +24,17 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
         <Content>{project.description}</Content>
 
         {!showMore ? (
-          <Link href={`/portfolio/${project.id}`}>
-            <Image
-              className="w-full h-full bg-black rounded cursor-pointer hover:opacity-80"
-              src={`/static/images/portfolio/${project.id}/${project.preview}`}
-              width={project.imageSize.width}
-              height={project.imageSize.height}
-              alt={project.title}
-            />
-          </Link>
+          <NextLink href={`/portfolio/${project.id}`}>
+            <a>
+              <Image
+                className="w-full h-full bg-black rounded cursor-pointer hover:opacity-80"
+                src={`/static/images/portfolio/${project.id}/${project.preview}`}
+                width={project.imageSize.width}
+                height={project.imageSize.height}
+                alt={project.title}
+              />
+            </a>
+          </NextLink>
         ) : (
           <Image
             className="w-full h-full bg-black rounded"

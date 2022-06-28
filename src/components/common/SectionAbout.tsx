@@ -1,3 +1,5 @@
+import NextLink from 'next/link'
+
 import { siteConfig } from '@/siteConfig'
 
 import { Content } from './Content'
@@ -11,9 +13,11 @@ interface ISectionAboutProps {
 
 export const SectionAbout = ({ backLink = '/', showBackLink = false }: ISectionAboutProps) => (
   <header>
-    <Link href="/">
-      <Title title="Hey, I'm Breno Polanski 👋" />
-    </Link>
+    <NextLink href="/">
+      <a>
+        <Title title="Hey, I'm Breno Polanski 👋" />
+      </a>
+    </NextLink>
 
     <Content>
       Front End Engineer based in Brazil. Mainly focused on web development and helping other people by giving
