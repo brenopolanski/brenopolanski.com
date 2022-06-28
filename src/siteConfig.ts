@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Breno Polanski',
   description:
-    'A developer who loves to learn new programming languages​​, build Open Source projects and play video game :)',
+    'A developer who loves to learn new programming languages, build Open Source projects and play video game :)',
   homepage: 'https://brenopolanski.com',
   color: '#232323',
   email: 'breno.polanski@gmail.com',

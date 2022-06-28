@@ -31,6 +31,7 @@
     "next-circular-dependency": "^1.0.1",
     "next-compose-plugins": "^2.2.1",
     "next-pwa": "^5.5.4",
+    "next-seo": "^5.4.0",
     "nextjs-progressbar": "^0.0.14",
     "photoswipe": "^5.2.7",
     "postcss": "^8.1.10",

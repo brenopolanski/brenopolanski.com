@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import Head from 'next/head'
 
+import { SEO } from '@/components/_partials'
 import { Footer, SectionAbout, SectionProject } from '@/components/common'
 import { Page, Section } from '@/components/layouts'
 import { siteData } from '@/data'
@@ -13,11 +13,7 @@ interface IProjectPageProps {
 export default function ProjectPage({ project }: IProjectPageProps) {
   return (
     <>
-      <Head>
-        <title>{`${project?.title} | ${siteConfig.name}`}</title>
-        <meta name="description" content={project?.description} />
-        <link rel="canonical" href={`${siteConfig.homepage}/portfolio/${project?.id}`} />
-      </Head>
+      <SEO title={`${project?.title} | ${siteConfig.name}`} />
 
       <Page>
         <Section className="flex-1 max-w-2xl">
