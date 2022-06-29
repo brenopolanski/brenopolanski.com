@@ -5,6 +5,7 @@ import Head from 'next/head'
 import NextNprogress from 'nextjs-progressbar'
 
 import { SEODefault } from '@/components/_partials'
+import { Page } from '@/components/layouts'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -24,7 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
         stopDelayMs={200}
       />
 
-      <Component {...pageProps} />
+      <Page>
+        <Component {...pageProps} />
+      </Page>
     </>
   )
 }
