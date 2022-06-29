@@ -14,12 +14,12 @@ export const SEO = ({ title }: ISEOProps) => {
 
   return (
     <NextSeo
-      title={title}
       canonical={url}
       openGraph={{
         title,
         url,
       }}
+      title={title}
     />
   )
 }

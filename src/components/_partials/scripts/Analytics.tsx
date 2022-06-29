@@ -5,12 +5,10 @@ import { NEXT_PUBLIC_GA_TRACKING_ID } from '@/utils'
 export const Analytics = () => (
   <>
     <Script
-      strategy="afterInteractive"
       src={`https://www.googletagmanager.com/gtag/js?id=${NEXT_PUBLIC_GA_TRACKING_ID}`}
+      strategy="afterInteractive"
     />
     <Script
-      id="ga-tracking"
-      strategy="afterInteractive"
       dangerouslySetInnerHTML={{
         __html: `
           window.dataLayer = window.dataLayer || [];
@@ -21,6 +19,8 @@ export const Analytics = () => (
           });
         `,
       }}
+      id="ga-tracking"
+      strategy="afterInteractive"
     />
   </>
 )

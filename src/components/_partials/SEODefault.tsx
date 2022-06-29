@@ -9,15 +9,15 @@ export const SEODefault = () => {
 
   return (
     <DefaultSeo
-      title={title}
-      description={description}
       canonical={url}
+      description={description}
       openGraph={{
         description,
         title,
         type: 'website',
         url,
       }}
+      title={title}
       twitter={{
         cardType: 'summary_large_image',
         handle: '@brenopolanski',

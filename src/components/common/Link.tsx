@@ -13,8 +13,8 @@ export const Link = ({ children, className, href, isExternal = false }: ILinkPro
       <a
         className={`border-b border-theme-border-link hover:bg-theme-highlight ${className}`}
         href={href}
-        target="_blank"
         rel="noopener noreferrer"
+        target="_blank"
       >
         {children}
       </a>

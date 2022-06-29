@@ -27,21 +27,21 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
           <NextLink href={`/portfolio/${project.id}`}>
             <a>
               <Image
+                alt={project.title}
                 className="w-full h-full bg-black rounded cursor-pointer hover:opacity-80"
+                height={project.imageSize.height}
                 src={`/static/images/portfolio/${project.id}/${project.preview}`}
                 width={project.imageSize.width}
-                height={project.imageSize.height}
-                alt={project.title}
               />
             </a>
           </NextLink>
         ) : (
           <Image
+            alt={project.title}
             className="w-full h-full bg-black rounded"
+            height={project.imageSize.height}
             src={`/static/images/portfolio/${project.id}/${project.preview}`}
             width={project.imageSize.width}
-            height={project.imageSize.height}
-            alt={project.title}
           />
         )}
 
@@ -92,17 +92,17 @@ export const PortfolioItem = ({ project, showMore = false }: IPortfolioItemProps
                     {project.more.screenshots.map((image: string, index: number) => (
                       <Item
                         key={index}
+                        height={project.imageSize.height}
                         original={`/static/images/portfolio/${project.id}/${image}`}
                         thumbnail={`/static/images/portfolio/${project.id}/${image}`}
                         width={project.imageSize.width}
-                        height={project.imageSize.height}
                       >
                         {({ ref, open }) => (
                           <img
                             ref={ref as React.MutableRefObject<HTMLImageElement>}
+                            alt={project.title}
                             className="bg-black rounded cursor-pointer hover:opacity-80"
                             src={`/static/images/portfolio/${project.id}/${image}`}
-                            alt={project.title}
                             onClick={open}
                           />
                         )}

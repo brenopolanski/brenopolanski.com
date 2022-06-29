@@ -6,22 +6,22 @@ export const HeadContent = () => (
     <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
 
     {/* Android */}
-    <meta name="theme-color" content={siteConfig.color} />
+    <meta content={siteConfig.color} name="theme-color" />
 
     {/* Main Link Tags */}
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png" />
+    <link href="/static/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/static/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
 
     {/* iOS */}
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png" />
+    <link href="/static/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
 
     {/* Others */}
-    <link rel="shortcut icon" href="/static/favicons/favicon.ico" />
+    <link href="/static/favicons/favicon.ico" rel="shortcut icon" />
 
     {/*
       site.webmanifest provides metadata used when your web app is added to the
       homescreen on Android. See https://web.dev/add-manifest/
     */}
-    <link rel="manifest" href="/static/favicons/site.webmanifest" />
+    <link href="/static/favicons/site.webmanifest" rel="manifest" />
   </>
 )

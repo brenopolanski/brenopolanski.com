@@ -35,6 +35,16 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/jsx-sort-props': [
+      'error',
+      {
+        callbacksLast: true,
+        ignoreCase: true,
+        noSortAlphabetically: false,
+        reservedFirst: true,
+        shorthandLast: true,
+      },
+    ],
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'simple-import-sort/exports': 'error',
