@@ -3980,10 +3980,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@^13.0.2:
-  version "13.0.2"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-13.0.2.tgz#35a1c57130e9ad5b1dea784972a40777ba433dd5"
-  integrity sha512-qQLfLTh9z34eMzfEHENC+QBskZfxjomrf+snF3xJ4BzilORbD989NLqQ00ughsF/A+PT41e87+WsMFabf9++pQ==
+lint-staged@^13.0.3:
+  version "13.0.3"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-13.0.3.tgz#d7cdf03a3830b327a2b63c6aec953d71d9dc48c6"
+  integrity sha512-9hmrwSCFroTSYLjflGI8Uk+GWAwMB4OlpU4bMJEAT5d/llQwtYKoim4bLOyLCuWFAhWEupE0vkIFqtw/WIsPug==
   dependencies:
     cli-truncate "^3.1.0"
     colorette "^2.0.17"
@@ -4599,10 +4599,10 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-photoswipe@^5.2.7:
-  version "5.2.7"
-  resolved "https://registry.yarnpkg.com/photoswipe/-/photoswipe-5.2.7.tgz#9ff2aaf2a3e03c817ac2835dc6dee0f901e8159d"
-  integrity sha512-AogMba7W/O5gOtDIZ8cQuou1ltwxlaLNoZY1qi1s+kbYXpZk9D6rXxnNGAfDppl+bfe+sKLW2w2sx+3uQ8oPzg==
+photoswipe@^5.2.8:
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/photoswipe/-/photoswipe-5.2.8.tgz#c276a17dac575c746262472ceb594fc390786176"
+  integrity sha512-tsbG+1ILcli4mR3Tzp4xdxCUSSJaz14wct4dSznk3suVst9tBdt6vDlSASOw/VFqSkcDjbRUA1tC1LoF2DCkzg==
 
 picocolors@^1.0.0:
   version "1.0.0"
