@@ -1,3 +1,5 @@
+import { NextPage } from 'next'
+
 import { SEO } from '@/components/_partials'
 import { Footer, SectionAbout, SectionProject } from '@/components/common'
 import { Page, Section } from '@/components/layouts'
@@ -7,7 +9,7 @@ interface IProjectProps {
   project: Record<string, any>
 }
 
-export const Project = ({ project }: IProjectProps) => (
+export const Project: NextPage<IProjectProps> = ({ project }) => (
   <>
     <SEO title={`${project?.title} | ${siteConfig.name}`} />
 
