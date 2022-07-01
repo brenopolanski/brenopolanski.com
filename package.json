@@ -1,17 +1,9 @@
 {
   "name": "brenopolanski.com",
   "description": "My personal website",
-  "author": "Breno Polanski <breno.polanski@gmail.com>",
-  "private": true,
-  "homepage": "https://github.com/brenopolanski/brenopolanski.com#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brenopolanski/brenopolanski.com.git"
-  },
+  "author": "Breno Polanski <breno.polanski@gmail.com> (@brenopolanski)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/brenopolanski/brenopolanski.com/issues"
-  },
+  "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",
