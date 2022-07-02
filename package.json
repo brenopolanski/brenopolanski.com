@@ -7,7 +7,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "eslint src --max-warnings=0",
+    "lint": "eslint --ignore-path .gitignore 'src/**/*.{js,ts,tsx}' --max-warnings=0",
     "postbuild": "next-sitemap",
     "prepare": "husky install",
     "start": "next start",
