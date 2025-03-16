@@ -1,19 +1,20 @@
-import { ThemeToggle } from '@/components/ThemeToggle'
-import Link from 'next/link'
 import {
-  Mail,
-  Twitter,
-  Linkedin,
-  Github,
+  Coffee,
   FileText,
+  Gauge,
+  Github,
   Globe,
-  TrendingUp,
   Hash,
   Link as LinkIcon,
+  Linkedin,
+  Mail,
   Search,
-  Gauge,
-  Coffee,
+  TrendingUp,
+  Twitter,
 } from 'lucide-react'
+import Link from 'next/link'
+
+import { ThemeToggle } from '@/components/ThemeToggle'
 
 export default function Home() {
   return (
