@@ -1,0 +1,27 @@
+# Ignore artifacts:
+.next
+node_modules
+public
+build
+dist
+coverage
+.vercel
+.turbo
+
+# Ignore all HTML files:
+*.html
+
+# Ignore all markdown files:
+*.md
+
+# Ignore all shadcn/ui files:
+src/components/ui
+
+# Ignore all css style files:
+src/styles
+
+# Ignore package files:
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb

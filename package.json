@@ -3,10 +3,13 @@
   "version": "4.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev",
+    "format:check": "bun prettier --check",
+    "format:fix": "bun prettier --write",
+    "lint": "next lint",
+    "prettier": "prettier --cache \"**/*.{md,json,js,mjs,ts,tsx}\"",
+    "start": "next start"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
@@ -28,6 +31,9 @@
     "@types/react-dom": "^19.0.4",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
