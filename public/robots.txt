@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://brenopolanski.com
-
-# Sitemaps
-Sitemap: https://brenopolanski.com/sitemap.xml
