@@ -1,5 +1,7 @@
 import { FlatCompat } from '@eslint/eslintrc'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
+import sortKeysCustomOrderFix from 'eslint-plugin-sort-keys-custom-order-fix'
+import unusedImports from 'eslint-plugin-unused-imports'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -16,6 +18,8 @@ const eslintConfig = [
     ignores: ['src/styles/**', 'src/components/ui/**'],
     plugins: {
       'simple-import-sort': simpleImportSort,
+      'sort-keys-custom-order-fix': sortKeysCustomOrderFix,
+      'unused-imports': unusedImports,
     },
     rules: {
       '@typescript-eslint/ban-ts-comment': 'off',
@@ -38,8 +42,29 @@ const eslintConfig = [
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-import-type-side-effects': ['error'],
       '@typescript-eslint/no-non-null-assertion': 'off',
-      'simple-import-sort/imports': 'error',
+      'no-unused-vars': 'off',
       'simple-import-sort/exports': 'error',
+      'simple-import-sort/imports': 'error',
+      'sort-keys-custom-order-fix/sort-keys-custom-order-fix': [
+        'error',
+        'custom',
+        {
+          caseSensitive: true,
+          natural: true,
+          order: ['id', 'title', 'description'],
+          orderBy: 'asc',
+        },
+      ],
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
+        'warn',
+        {
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+          vars: 'all',
+          varsIgnorePattern: '^_'
+        }
+      ],
     },
   },
 ]
