@@ -18,8 +18,26 @@ const eslintConfig = [
       'simple-import-sort': simpleImportSort,
     },
     rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+      '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          format: ['PascalCase'],
+          prefix: ['I'],
+          selector: 'interface',
+        },
+        {
+          format: ['PascalCase'],
+          prefix: ['T'],
+          selector: 'typeAlias',
+        },
+      ],
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-import-type-side-effects': ['error'],
+      '@typescript-eslint/no-non-null-assertion': 'off',
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
     },
