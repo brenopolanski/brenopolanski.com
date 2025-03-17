@@ -16,7 +16,7 @@ import Link from 'next/link'
 
 import { ThemeToggle } from '@/components/ThemeToggle'
 
-export default function Home() {
+export const Home = () => {
   return (
     <div className="bg-background text-foreground flex min-h-screen flex-col items-center p-4 md:p-8">
       <div className="mx-auto w-full max-w-3xl">
@@ -44,9 +44,9 @@ export default function Home() {
             </p>
             <div className="flex">
               <input
-                type="email"
-                placeholder="type your email and hit enter to join"
                 className="flex-1 rounded-l-md border-0 p-2 text-black outline-none"
+                placeholder="type your email and hit enter to join"
+                type="email"
               />
               <button className="rounded-r-md bg-black p-2 text-white">
                 <Mail className="h-5 w-5" />
@@ -59,8 +59,8 @@ export default function Home() {
             <h3 className="mb-4 text-center text-sm">socials</h3>
             <div className="space-y-2">
               <Link
-                href="https://twitter.com/brenopolanski"
                 className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
+                href="https://twitter.com/brenopolanski"
               >
                 <Twitter className="mr-3 h-5 w-5" />
                 <div className="flex-1">
@@ -70,8 +70,8 @@ export default function Home() {
               </Link>
 
               <Link
-                href="https://github.com/brenopolanski"
                 className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
+                href="https://github.com/brenopolanski"
               >
                 <Github className="mr-3 h-5 w-5" />
                 <div className="flex-1">
@@ -81,8 +81,8 @@ export default function Home() {
               </Link>
 
               <Link
-                href="https://linkedin.com/in/brenopolanski"
                 className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
+                href="https://linkedin.com/in/brenopolanski"
               >
                 <Linkedin className="mr-3 h-5 w-5" />
                 <div className="flex-1">
@@ -98,8 +98,8 @@ export default function Home() {
             <h3 className="mb-4 text-center text-sm">projects</h3>
             <div className="space-y-2">
               <Link
-                href="#"
                 className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
+                href="#"
               >
                 <FileText className="mr-3 h-5 w-5" />
                 <div className="flex-1">
@@ -109,8 +109,8 @@ export default function Home() {
               </Link>
 
               <Link
-                href="#"
                 className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
+                href="#"
               >
                 <Globe className="mr-3 h-5 w-5" />
                 <div className="flex-1">
@@ -120,8 +120,8 @@ export default function Home() {
               </Link>
 
               <Link
-                href="#"
                 className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
+                href="#"
               >
                 <TrendingUp className="mr-3 h-5 w-5" />
                 <div className="flex-1">
@@ -131,8 +131,8 @@ export default function Home() {
               </Link>
 
               <Link
-                href="#"
                 className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
+                href="#"
               >
                 <Hash className="mr-3 h-5 w-5" />
                 <div className="flex-1">
@@ -142,8 +142,8 @@ export default function Home() {
               </Link>
 
               <Link
-                href="#"
                 className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
+                href="#"
               >
                 <LinkIcon className="mr-3 h-5 w-5" />
                 <div className="flex-1">
@@ -156,8 +156,8 @@ export default function Home() {
               </Link>
 
               <Link
-                href="#"
                 className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
+                href="#"
               >
                 <Search className="mr-3 h-5 w-5" />
                 <div className="flex-1">
@@ -170,8 +170,8 @@ export default function Home() {
               </Link>
 
               <Link
-                href="#"
                 className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
+                href="#"
               >
                 <Gauge className="mr-3 h-5 w-5" />
                 <div className="flex-1">
@@ -184,8 +184,8 @@ export default function Home() {
               </Link>
 
               <Link
-                href="#"
                 className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
+                href="#"
               >
                 <Coffee className="mr-3 h-5 w-5" />
                 <div className="flex-1">
@@ -200,3 +200,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
