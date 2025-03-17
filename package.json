@@ -5,12 +5,17 @@
   "scripts": {
     "build": "next build",
     "check": "bun format:check && bun lint && bun typecheck",
-    "dev": "next dev",
+    "check:fix": "bun format:fix && bun lint:fix && bun typecheck",
+    "clean": "/bin/bash scripts/clean.sh",
+    "dev": "stale-dep && next dev",
     "format:check": "bun prettier --check",
     "format:fix": "bun prettier --write",
     "lint": "next lint",
     "lint:fix": "bun lint --fix",
-    "prettier": "prettier --cache \"**/*.{md,json,js,mjs,ts,tsx}\"",
+    "postinstall": "stale-dep -u",
+    "preinstall": "npx only-allow bun",
+    "prettier": "prettier \"**/*.{md,json,js,mjs,ts,tsx}\"",
+    "preview": "bun run build && bun start -p 3001",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },
@@ -40,6 +45,7 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.12",
+    "stale-dep": "^0.8.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
