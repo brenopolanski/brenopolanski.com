@@ -44,9 +44,11 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/circular-dependency-plugin": "^5.0.8",
     "@types/node": "^20",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "circular-dependency-plugin": "^5.2.2",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "eslint-config-prettier": "^9.1.0",
