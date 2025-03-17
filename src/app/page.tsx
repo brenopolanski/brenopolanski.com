@@ -16,7 +16,7 @@ import Link from 'next/link'
 
 import { ThemeToggle } from '@/components/ThemeToggle'
 
-export const Home = () => {
+const Home = () => {
   return (
     <div className="bg-background text-foreground flex min-h-screen flex-col items-center p-4 md:p-8">
       <div className="mx-auto w-full max-w-3xl">

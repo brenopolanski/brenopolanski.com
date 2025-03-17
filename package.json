@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "check": "bun format:check && bun lint && bun typecheck",
     "dev": "next dev",
     "format:check": "bun prettier --check",
     "format:fix": "bun prettier --write",
     "lint": "next lint",
     "lint:fix": "bun lint --fix",
     "prettier": "prettier --cache \"**/*.{md,json,js,mjs,ts,tsx}\"",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
