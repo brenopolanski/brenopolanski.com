@@ -87,8 +87,8 @@ const eslintConfig = [
           args: 'after-used',
           argsIgnorePattern: '^_',
           vars: 'all',
-          varsIgnorePattern: '^_'
-        }
+          varsIgnorePattern: '^_',
+        },
       ],
     },
   },
