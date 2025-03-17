@@ -20,6 +20,16 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Code Quality Tools
+
+This project uses several tools to ensure code quality:
+
+### Husky and lint-staged
+
+[Husky](https://typicode.github.io/husky/) is used to enforce code quality checks before commits. [lint-staged](https://github.com/lint-staged/lint-staged) runs linters on staged files to catch issues before they're committed.
+
+- **pre-commit hook**: Runs ESLint and Prettier on staged files
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

@@ -14,10 +14,20 @@
     "lint:fix": "bun lint --fix",
     "postinstall": "stale-dep -u",
     "preinstall": "npx only-allow bun",
-    "prettier": "prettier \"**/*.{md,json,js,mjs,ts,tsx}\"",
+    "prepare": "husky",
+    "prettier": "prettier \"**/*.{md,json,css,js,mjs,ts,tsx}\"",
     "preview": "bun run build && bun start -p 3001",
     "start": "next start",
     "typecheck": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "bun lint:fix",
+      "bun format:fix"
+    ],
+    "*.{md,json,css,mjs}": [
+      "bun format:fix"
+    ]
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
@@ -43,6 +53,8 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-sort-keys-custom-order-fix": "^0.1.1",
     "eslint-plugin-unused-imports": "^4.1.4",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.12",
     "stale-dep": "^0.8.2",
