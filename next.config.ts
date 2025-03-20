@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
     NEXT_TELEMETRY_DISABLED: '1',
   },
   webpack: (config, { dev, isServer }) => {
-    // Add plugins in development mode
     if (dev && !isServer) {
+      // Add plugins in development mode
       config.plugins.push(
         new CircularDependencyPlugin({
           allowAsyncCycles: false,
