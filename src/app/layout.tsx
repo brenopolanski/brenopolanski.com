@@ -2,9 +2,9 @@ import '@/styles/globals.css'
 
 import type { Metadata } from 'next'
 
-import { ThemeProvider } from '@/components/ThemeProvider'
 import { fontVariables } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
+import { ThemeProvider } from '@/providers/ThemeProvider'
 
 export const metadata: Metadata = {
   title: 'Breno Polanski',
