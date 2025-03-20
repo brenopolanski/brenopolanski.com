@@ -11,7 +11,7 @@
     "format:check": "bun prettier --check",
     "format:fix": "bun prettier --write",
     "lint": "next lint",
-    "lint:fix": "bun lint --fix",
+    "lint:fix": "next lint --fix",
     "postinstall": "stale-dep -u",
     "preinstall": "npx only-allow bun",
     "prepare": "husky",
@@ -22,7 +22,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "bun lint:fix",
+      "bun eslint --fix",
       "bun format:fix"
     ],
     "*.{md,json,css,mjs}": [
