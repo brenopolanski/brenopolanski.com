@@ -24,9 +24,6 @@
     "*.{js,mjs,ts,tsx}": [
       "bun eslint --fix",
       "bun format:fix"
-    ],
-    "*.{md,json,css}": [
-      "bun format:fix"
     ]
   },
   "dependencies": {
