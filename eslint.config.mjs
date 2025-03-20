@@ -75,7 +75,7 @@ const eslintConfig = [
         {
           caseSensitive: true,
           natural: true,
-          order: ['id', 'title', 'description'],
+          order: ['id', 'title', 'description', 'default', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', 'icon'],
           orderBy: 'asc',
         },
       ],
