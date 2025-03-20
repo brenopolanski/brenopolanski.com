@@ -18,7 +18,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-mono antialiased', fontVariables)}>
+      <body className={cn('theme-scaled font-mono antialiased', fontVariables)}>
         <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange enableSystem>
           {children}
         </ThemeProvider>
