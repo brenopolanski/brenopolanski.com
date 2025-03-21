@@ -12,6 +12,7 @@ import {
   TrendingUp,
   Twitter,
 } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { ThemeToggle } from '@/components/ThemeToggle'
@@ -19,20 +20,30 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 const Home = () => {
   return (
     <div className="bg-background text-foreground flex min-h-screen flex-col items-center p-4 md:p-8">
-      <div className="mx-auto w-full max-w-3xl">
+      <div className="mx-auto w-full">
         {/* Header with theme toggle */}
-        <div className="fixed right-4 top-4 z-50">
-          <ThemeToggle />
+        <div className="mb-4 flex justify-between md:mb-0 md:block">
+          <div className="md:fixed md:left-4 md:top-4 md:z-50">
+            <Image
+              alt="Breno Polanski profile picture"
+              className="size-9 rounded-md"
+              height={32}
+              src="/breno-pfp.webp"
+              width={32}
+            />
+          </div>
+
+          <div className="md:fixed md:right-4 md:top-4 md:z-50">
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Main content */}
-        {/* <main className="space-y-8 flex min-h-screen flex-col items-center justify-center p-8 bg-white dark:bg-black text-black dark:text-white"> */}
-        {/* <main className="flex max-w-md flex-col items-center justify-center gap-y-8"> */}
-        <main className="flex min-h-screen flex-col items-center justify-center p-8">
+        <main className="flex min-h-screen flex-col items-center justify-center">
           <div className="w-full max-w-md space-y-4">
             {/* Header section */}
             <div className="text-center">
-              <h1 className="mb-2 text-4xl font-bold">Breno Polanski</h1>
+              <h1 className="mb-2 text-3xl font-bold md:text-4xl">Breno Polanski</h1>
               <p className="text-muted-foreground text-base">
                 Front-end engineer. Open source enthusiast. Always learning. Usually from my mistakes.
               </p>
