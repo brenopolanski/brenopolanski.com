@@ -11,13 +11,12 @@ import {
   Linkedin,
   Search,
   TrendingUp,
-  Twitter,
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
-import { MailIcon, SendIcon, XIcon } from '@/components/Icons'
+import { MailIcon, SendIcon, XIcon, XTwitterIcon } from '@/components/Icons'
 import { If } from '@/components/If'
 import { MatrixText } from '@/components/MatrixText'
 import { ThemeToggle } from '@/components/ThemeToggle'
@@ -127,42 +126,54 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            {/* Social links section */}
+            {/* Links section */}
             <div>
-              <h3 className="mb-4 text-center text-sm">socials</h3>
-              <div className="space-y-2">
-                <Link
-                  className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
-                  href="https://twitter.com/brenopolanski"
+              <div className="my-6 flex items-center justify-center gap-4">
+                <div className="bg-muted-foreground/20 h-px w-full" />
+                <span className="text-muted-foreground text-center text-xs font-medium">links</span>
+                <div className="bg-muted-foreground/20 h-px w-full" />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <Button
+                  className="flex h-auto w-full cursor-pointer flex-col items-center gap-2 py-4 shadow-none"
+                  variant="outline"
+                  asChild
                 >
-                  <Twitter className="mr-3 h-5 w-5" />
-                  <div className="flex-1">
-                    <p className="font-bold">follow @brenopolanski</p>
-                    <p className="text-muted-foreground text-sm">this is where i&apos;m most active</p>
-                  </div>
-                </Link>
-
-                <Link
-                  className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
-                  href="https://github.com/brenopolanski"
+                  <Link href="https://twitter.com/brenopolanski" rel="noopener noreferrer" target="_blank">
+                    <XTwitterIcon className="size-4" />
+                    <span className="text-sm">X (Twitter)</span>
+                  </Link>
+                </Button>
+                <Button
+                  className="flex h-auto w-full cursor-pointer flex-col items-center gap-2 py-4 shadow-none"
+                  variant="outline"
+                  asChild
                 >
-                  <Github className="mr-3 h-5 w-5" />
-                  <div className="flex-1">
-                    <p className="font-bold">check my github</p>
-                    <p className="text-muted-foreground text-sm">see my open source projects</p>
-                  </div>
-                </Link>
-
-                <Link
-                  className="border-border hover:bg-muted flex items-center rounded-lg border p-4 transition-colors"
-                  href="https://linkedin.com/in/brenopolanski"
+                  <Link href="https://github.com/brenopolanski" rel="noopener noreferrer" target="_blank">
+                    <Github className="size-5" />
+                    <span className="text-sm">GitHub</span>
+                  </Link>
+                </Button>
+                <Button
+                  className="flex h-auto w-full cursor-pointer flex-col items-center gap-2 py-4 shadow-none"
+                  variant="outline"
+                  asChild
                 >
-                  <Linkedin className="mr-3 h-5 w-5" />
-                  <div className="flex-1">
-                    <p className="font-bold">connect on linkedin</p>
-                    <p className="text-muted-foreground text-sm">i&apos;m not very active here</p>
-                  </div>
-                </Link>
+                  <Link href="https://linkedin.com/in/brenopolanski" rel="noopener noreferrer" target="_blank">
+                    <Linkedin className="size-5" />
+                    <span className="text-sm">LinkedIn</span>
+                  </Link>
+                </Button>
+                <Button
+                  className="flex h-auto w-full cursor-pointer flex-col items-center gap-2 py-4 shadow-none"
+                  variant="outline"
+                  asChild
+                >
+                  <Link href="/resume.pdf" target="_blank">
+                    <FileText className="size-5" />
+                    <span className="text-sm">Resume</span>
+                  </Link>
+                </Button>
               </div>
             </div>
 
