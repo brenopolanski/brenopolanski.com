@@ -15,7 +15,7 @@ export const ThemeToggle = () => {
   }, [resolvedTheme, setTheme])
 
   return (
-    <Button className="cursor-pointer" size="icon" variant="secondary" onClick={toggleTheme}>
+    <Button className="cursor-pointer" size="icon" onClick={toggleTheme}>
       <BrightnessIcon className="size-5" />
       <span className="sr-only">Toggle theme</span>
     </Button>

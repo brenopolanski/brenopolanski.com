@@ -1,5 +1,5 @@
 import type { LucideProps } from 'lucide-react'
-import { MailIcon, SendIcon, XIcon } from 'lucide-react'
+import { BitcoinIcon, CameraIcon, CircleDollarSignIcon, MailIcon, SendIcon, WorkflowIcon, XIcon } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
@@ -67,4 +67,16 @@ const XTwitterIcon = ({ className, ...props }: LucideProps) => (
   </svg>
 )
 
-export { BrightnessIcon, LinkedInIcon, MailIcon, SendIcon, TwitterIcon, XIcon, XTwitterIcon }
+export {
+  BitcoinIcon,
+  BrightnessIcon,
+  CameraIcon,
+  CircleDollarSignIcon,
+  LinkedInIcon,
+  MailIcon,
+  SendIcon,
+  TwitterIcon,
+  WorkflowIcon,
+  XIcon,
+  XTwitterIcon,
+}
