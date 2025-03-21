@@ -20,6 +20,7 @@ import { useState } from 'react'
 
 import { XIcon } from '@/components/Icons'
 import { If } from '@/components/If'
+import { MatrixText } from '@/components/MatrixText'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
 const Home = () => {
@@ -88,9 +89,9 @@ const Home = () => {
           <div className="w-full max-w-md space-y-4">
             {/* Header section */}
             <div className="text-center">
-              <h1 className="mb-2 text-3xl font-bold md:text-4xl">Breno Polanski</h1>
+              <MatrixText text="Breno Polanski" textClassName="mb-2 text-3xl font-bold md:text-4xl" />
               <p className="text-muted-foreground text-base">
-                Front-end engineer. Open source enthusiast. Always learning. Usually from my mistakes.
+                Front End Engineer. Open Source enthusiast. Always learning. Usually from my mistakes.
               </p>
             </div>
 
