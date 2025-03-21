@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Coffee,
   FileText,
@@ -14,26 +16,69 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
+import { XIcon } from '@/components/Icons'
+import { If } from '@/components/If'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
 const Home = () => {
+  const [showFullImage, setShowFullImage] = useState(false)
+
   return (
     <div className="bg-background text-foreground flex min-h-screen flex-col items-center p-4 md:p-8">
       <div className="mx-auto w-full">
-        {/* Header with theme toggle */}
+        {/* Header with image & theme toggle */}
         <div className="mb-4 flex justify-between md:mb-0 md:block">
-          <div className="md:fixed md:left-4 md:top-4 md:z-50">
-            <Image
-              alt="Breno Polanski profile picture"
-              className="size-9 rounded-md"
-              height={32}
-              src="/breno-pfp.webp"
-              width={32}
-            />
+          <div className="md:fixed md:left-4 md:top-4 md:z-40">
+            <button
+              aria-label="View profile picture"
+              className="cursor-pointer transition-transform hover:scale-110"
+              onClick={() => setShowFullImage(true)}
+            >
+              <Image
+                alt="Breno Polanski profile picture"
+                className="size-9 rounded-md"
+                height={32}
+                src="/breno-pfp.webp"
+                width={32}
+              />
+            </button>
           </div>
 
-          <div className="md:fixed md:right-4 md:top-4 md:z-50">
+          {/* Fullscreen Image Modal */}
+          <If cond={showFullImage}>
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm sm:p-6 md:p-8"
+              onClick={() => setShowFullImage(false)}
+            >
+              <div className="relative aspect-square w-full max-w-[60vh]">
+                <button
+                  className="absolute -right-2 -top-2 z-[60] cursor-pointer rounded-full bg-white p-2 text-black transition-colors hover:bg-gray-100 sm:-right-4 sm:-top-4"
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    setShowFullImage(false)
+                  }}
+                >
+                  <XIcon className="size-4 sm:size-5" />
+                  <span className="sr-only">Close button</span>
+                </button>
+                <div className="relative size-full">
+                  <Image
+                    alt="Breno Polanski profile picture"
+                    className="animate-scale-up rounded-lg object-contain shadow-2xl"
+                    quality={95}
+                    sizes="(max-width: 640px) 70vw, (max-width: 1024px) 60vw, 50vw"
+                    src="/breno-pfp.webp"
+                    fill
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </If>
+
+          <div className="md:fixed md:right-4 md:top-4 md:z-40">
             <ThemeToggle />
           </div>
         </div>
