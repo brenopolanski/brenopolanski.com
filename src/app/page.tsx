@@ -9,7 +9,6 @@ import {
   Hash,
   Link as LinkIcon,
   Linkedin,
-  Mail,
   Search,
   TrendingUp,
   Twitter,
@@ -18,10 +17,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
-import { XIcon } from '@/components/Icons'
+import { MailIcon, SendIcon, XIcon } from '@/components/Icons'
 import { If } from '@/components/If'
 import { MatrixText } from '@/components/MatrixText'
 import { ThemeToggle } from '@/components/ThemeToggle'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
 
 const Home = () => {
   const [showFullImage, setShowFullImage] = useState(false)
@@ -96,23 +98,34 @@ const Home = () => {
             </div>
 
             {/* Email signup section */}
-            <div className="rounded-lg bg-[#00ff66] p-6 text-black">
-              <h2 className="mb-2 font-bold">join breno&apos;s list</h2>
-              <p className="mb-4 text-sm">
-                sporadic emails where i talk about what i&apos;m working on (usually web development, open source and
-                tech)
-              </p>
-              <div className="flex">
-                <input
-                  className="flex-1 rounded-l-md border-0 p-2 text-black outline-none"
-                  placeholder="type your email and hit enter to join"
-                  type="email"
-                />
-                <button className="rounded-r-md bg-black p-2 text-white">
-                  <Mail className="h-5 w-5" />
-                </button>
-              </div>
-            </div>
+            <Card className="bg-gradient-to-br from-emerald-400 to-green-500 dark:from-emerald-500 dark:to-green-600">
+              <CardContent className="px-8 py-4">
+                <CardHeader className="p-0">
+                  <CardTitle className="text-2xl font-bold text-black">Join breno&apos;s list</CardTitle>
+                  <CardDescription className="text-black/80">
+                    Sporadic emails where I talk about what i&apos;m working on (usually web development, open source
+                    and saas).
+                  </CardDescription>
+                </CardHeader>
+                <div className="mt-4 flex gap-2">
+                  <div className="relative flex-1">
+                    <MailIcon className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-black/60" />
+                    <Input
+                      className="flex-1 border-0 !bg-white pl-10 text-black placeholder:text-black/60 focus-visible:ring-0"
+                      placeholder="Your email..."
+                      type="email"
+                    />
+                  </div>
+                  <Button
+                    className="cursor-pointer bg-white text-black transition-colors hover:bg-gray-100"
+                    size="icon"
+                    variant="secondary"
+                  >
+                    <SendIcon className="size-4" />
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
 
             {/* Social links section */}
             <div>
