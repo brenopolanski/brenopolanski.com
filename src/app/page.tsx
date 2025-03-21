@@ -1,6 +1,6 @@
 'use client'
 
-import { FileText, Github, Linkedin } from 'lucide-react'
+import { FileText, Github, Linkedin, Quote } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -24,6 +24,17 @@ import { Input } from '@/components/ui/input'
 
 const Home = () => {
   const [showFullImage, setShowFullImage] = useState(false)
+  const [showQuote, setShowQuote] = useState(false)
+  const [quoteLanguage, setQuoteLanguage] = useState<'en' | 'pt-br'>('en')
+
+  const quoteText = {
+    en: `Tick-tock. Tick-tock.
+
+Time is the most important asset. Time does not equal money. Time equals life. And you only have one chance to make it right. Every human being is fighting a battle inside themselves. It's your obligation to help and inspire them. Regardless of what you do, you can always inspire others to do good. Nobody is better than you. And you're not better than anybody else. Be humble. Being in the comfort zone is wonderful, but nothing ever grows there. Keep studying. Keep creating. Haters will come if you have the audacity to build something new. Don't let them define you. Don't let them stop you. Just block them and keep going. Don't expect others to make you happy. You are the only one responsible for your happiness. Don't wait until friday to enjoy life. Joy should be present in everything you do. Be kind to your parents. They gave up many things for you. Having hundreds of people admiring you is worthless, if you're not admired by your own family. Don't fear the unknown. Fear knowing everything. Life is too damn short and every day counts. Do what you wanna do and do it now. Tick-tock don't stop. Tick-tock don't wait.`,
+    'pt-br': `Tique-taque. Tique-taque.
+
+Tempo é o ativo mais importante. Tempo não é igual a dinheiro. Tempo é igual a vida. E você só tem uma chance de fazer direito. Todo ser humano está travando uma batalha interior. É sua obrigação ajudar e inspirar. Independentemente do que você faz, você sempre pode inspirar outros a fazer o bem. Ninguém é melhor que você. E você não é melhor que ninguém. Seja humilde. Estar na zona de conforto é maravilhoso, mas nada cresce lá. Continue estudando. Continue criando. Haters virão se você tiver a audácia de construir algo novo. Não deixe que eles te definam. Não deixe que eles te parem. Apenas bloqueie-os e siga em frente. Não espere que outros te façam feliz. Você é o único responsável pela sua felicidade. Não espere até sexta-feira para aproveitar a vida. A alegria deve estar presente em tudo que você faz. Seja gentil com seus pais. Eles abriram mão de muitas coisas por você. Ter centenas de pessoas te admirando não vale nada se você não é admirado pela sua própria família. Não tema o desconhecido. Tema saber tudo. A vida é muito curta e cada dia conta. Faça o que você quer fazer e faça agora. Tique-taque não para. Tique-taque não espera.`,
+  }
 
   return (
     <div className="bg-background text-foreground flex min-h-screen flex-col items-center p-4 md:p-8">
@@ -45,6 +56,80 @@ const Home = () => {
               />
             </button>
           </div>
+
+          {/* Quote Modal */}
+          <If cond={showQuote}>
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm sm:p-6 md:p-8"
+              onClick={() => setShowQuote(false)}
+            >
+              <button
+                className="absolute right-2 top-2 z-[60] cursor-pointer rounded-full bg-white p-2 text-black transition-colors hover:bg-gray-100 sm:right-4 sm:top-4"
+                onClick={(event) => {
+                  event.stopPropagation()
+                  setShowQuote(false)
+                }}
+              >
+                <XIcon className="size-4 sm:size-5" />
+                <span className="sr-only">Close quote</span>
+              </button>
+
+              <div className="relative w-full max-w-2xl rounded-lg bg-transparent p-4 text-white sm:p-6">
+                <div className="mb-4 flex justify-center gap-2">
+                  <button
+                    className={`rounded px-3 py-1 text-sm transition-colors ${
+                      quoteLanguage === 'en' ? 'bg-white text-black' : 'bg-transparent text-white/60 hover:text-white'
+                    }`}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      setQuoteLanguage('en')
+                    }}
+                  >
+                    EN
+                  </button>
+                  <button
+                    className={`rounded px-3 py-1 text-sm transition-colors ${
+                      quoteLanguage === 'pt-br'
+                        ? 'bg-white text-black'
+                        : 'bg-transparent text-white/60 hover:text-white'
+                    }`}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      setQuoteLanguage('pt-br')
+                    }}
+                  >
+                    PT-BR
+                  </button>
+                </div>
+                <div className="space-y-4 sm:space-y-6">
+                  <p className="max-h-[70vh] overflow-y-auto font-['Playfair_Display'] text-base leading-relaxed sm:text-lg md:text-xl">
+                    {quoteText[quoteLanguage].split('\n\n').map((paragraph, index) => (
+                      <span key={index}>
+                        {paragraph}
+                        {index < quoteText[quoteLanguage].split('\n\n').length - 1 && (
+                          <>
+                            <br />
+                            <br />
+                          </>
+                        )}
+                      </span>
+                    ))}
+                  </p>
+                  <div className="space-y-2 text-right">
+                    <p className="font-['Playfair_Display'] text-xs italic sm:text-sm">- by Zeno & Carol</p>
+                    <Link
+                      className="text-xs text-gray-400 transition-colors hover:text-white"
+                      href="https://zenorocha.com/reminder"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Source: zenorocha.com/reminder
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </If>
 
           {/* Fullscreen Image Modal */}
           <If cond={showFullImage}>
@@ -88,7 +173,18 @@ const Home = () => {
           <div className="w-full max-w-md space-y-4">
             {/* Header section */}
             <div className="text-center">
-              <MatrixText text="Breno Polanski" textClassName="mb-2 text-3xl font-bold md:text-4xl" />
+              <div className="flex items-start justify-center gap-2">
+                <MatrixText text="Breno Polanski" textClassName="mb-2 text-3xl font-bold md:text-4xl" />{' '}
+                <Button
+                  aria-label="View inspirational quote"
+                  className="cursor-pointer rounded-full p-2 transition-transform hover:scale-110"
+                  size="icon"
+                  variant="secondary"
+                  onClick={() => setShowQuote(true)}
+                >
+                  <Quote className="size-5" />
+                </Button>
+              </div>
               <p className="text-muted-foreground text-base">
                 Indie hacker. Web3 Developer. Open source enthusiast. Always learning. Usually from my mistakes.
               </p>
