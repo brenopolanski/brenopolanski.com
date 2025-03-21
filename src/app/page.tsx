@@ -59,10 +59,7 @@ Tempo é o ativo mais importante. Tempo não é igual a dinheiro. Tempo é igual
 
           {/* Quote Modal */}
           <If cond={showQuote}>
-            <div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm sm:p-6 md:p-8"
-              onClick={() => setShowQuote(false)}
-            >
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm sm:p-6 md:p-8">
               <button
                 className="absolute right-2 top-2 z-[60] cursor-pointer rounded-full bg-white p-2 text-black transition-colors hover:bg-gray-100 sm:right-4 sm:top-4"
                 onClick={(event) => {
