@@ -51,7 +51,7 @@ export const QuoteTextModal = ({ onClose }: IQuoteTextModalProps) => {
           </button>
         </div>
         <div className="space-y-4 sm:space-y-6">
-          <p className="max-h-[70vh] overflow-y-auto text-left font-['Playfair_Display'] text-base leading-relaxed sm:text-lg md:text-xl">
+          <p className="max-h-[70vh] overflow-y-auto pr-4 text-justify font-['Playfair_Display'] text-base leading-relaxed sm:text-lg md:text-xl">
             <span className="mb-4 block font-bold">{quoteText[quoteLanguage].title}</span>
             {quoteText[quoteLanguage].text}
           </p>
