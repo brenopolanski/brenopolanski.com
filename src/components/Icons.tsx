@@ -1,5 +1,14 @@
 import type { LucideProps } from 'lucide-react'
-import { BitcoinIcon, CameraIcon, CircleDollarSignIcon, MailIcon, SendIcon, WorkflowIcon, XIcon } from 'lucide-react'
+import {
+  BitcoinIcon,
+  CameraIcon,
+  CircleDollarSignIcon,
+  MailIcon,
+  QuoteIcon,
+  SendIcon,
+  WorkflowIcon,
+  XIcon,
+} from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
@@ -74,6 +83,7 @@ export {
   CircleDollarSignIcon,
   LinkedInIcon,
   MailIcon,
+  QuoteIcon,
   SendIcon,
   TwitterIcon,
   WorkflowIcon,

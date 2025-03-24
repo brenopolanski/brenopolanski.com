@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Playfair_Display } from 'next/font/google'
 
 import { cn } from './utils'
 
@@ -12,4 +12,9 @@ const fontMono = Geist_Mono({
   variable: '--font-geist-mono',
 })
 
-export const fontVariables = cn(fontSans.variable, fontMono.variable)
+const fontPlayfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+})
+
+export const fontVariables = cn(fontSans.variable, fontMono.variable, fontPlayfair)
