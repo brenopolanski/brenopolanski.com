@@ -7,7 +7,6 @@ import { useState } from 'react'
 
 import {
   BitcoinIcon,
-  CameraIcon,
   CircleDollarSignIcon,
   MailIcon,
   SendIcon,
@@ -17,6 +16,7 @@ import {
 } from '@/components/Icons'
 import { If } from '@/components/If'
 import { MatrixText } from '@/components/MatrixText'
+import { PhootoAiLogo } from '@/components/sections/projects/Logos'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -285,7 +285,7 @@ Tempo é o ativo mais importante. Tempo não é igual a dinheiro. Tempo é igual
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <CameraIcon className="mr-4 size-6 shrink-0" />
+                  <PhootoAiLogo className="mr-4 size-6 shrink-0" />
                   <div className="min-w-0 flex-grow">
                     <p className="font-bold">PHOOTO.AI</p>
                     <p className="text-muted-foreground truncate text-xs">Professional headshots with AI.</p>
