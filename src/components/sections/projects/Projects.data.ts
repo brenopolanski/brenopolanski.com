@@ -1,4 +1,4 @@
-import { BitcoinHojeLogo, DolarHojeLogo, PhootoAiLogo } from '@/components/Logos'
+import { BitcoinHojeLogo, DolarHojeLogo, PhootoAILogo } from '@/components/Logos'
 
 export interface IProject {
   title: string
@@ -12,7 +12,7 @@ export const projectData: IProject[] = [
   {
     title: 'PHOOTO.AI',
     description: 'Professional headshots with AI.',
-    icon: PhootoAiLogo,
+    icon: PhootoAILogo,
     href: 'https://phooto.ai',
     isExternal: true,
   },

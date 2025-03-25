@@ -1,9 +1,6 @@
-# Breno Polanski's Portfolio
+# <img src="public/breno-pfp.webp" width="40" align="left"> [brenopolanski.com](https://brenopolanski.com/)
 
-<div align="center">
-  <img src="public/breno-pfp.webp" alt="Breno Polanski" width="120" height="120" style="border-radius: 8px;"/>
-  <h3>Personal website built with Next.js, TypeScript, and Tailwind CSS</h3>
-</div>
+> Personal website built with Next.js, TypeScript and Tailwind CSS
 
 ## 🚀 Features
 
@@ -65,7 +62,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/brenopolanski/brenopolanski.com/issues).
+Contributions, issues, and feature requests are welcome!
 
 ## 📬 Contact
 

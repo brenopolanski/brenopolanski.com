@@ -133,7 +133,7 @@ const LlamaNodesLogo = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
-const PhootoAiLogo = (props: React.SVGProps<SVGSVGElement>) => {
+const PhootoAILogo = (props: React.SVGProps<SVGSVGElement>) => {
   const id = useId()
 
   return (
@@ -187,4 +187,4 @@ const PhootoAiLogo = (props: React.SVGProps<SVGSVGElement>) => {
   )
 }
 
-export { BitcoinHojeLogo, DefiMoneyLogo, DolarHojeLogo, LlamaFolioLogo, LlamaNodesLogo, PhootoAiLogo }
+export { BitcoinHojeLogo, DefiMoneyLogo, DolarHojeLogo, LlamaFolioLogo, LlamaNodesLogo, PhootoAILogo }
