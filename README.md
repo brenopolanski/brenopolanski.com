@@ -1,6 +1,9 @@
-# <img src="public/breno-pfp.webp" width="40" align="left"> [brenopolanski.com](https://brenopolanski.com/)
+# [Breno Polanski's Portfolio](https://brenopolanski.com)
 
-> Personal website built with Next.js, TypeScript and Tailwind CSS
+<div align="center">
+  <img src="public/breno-pfp.webp" alt="Breno Polanski" width="120" height="120" style="border-radius: 8px;"/>
+  <h3>Personal website built with Next.js, TypeScript and Tailwind CSS</h3>
+</div>
 
 ## 🚀 Features
 
