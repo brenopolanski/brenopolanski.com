@@ -29,7 +29,7 @@ export const linkData: ILink[] = [
   {
     title: 'Resume',
     icon: FileTextIcon,
-    href: '/resume.pdf',
+    href: '/resume_brenopolanski.pdf',
     isExternal: false,
   },
 ] as const
