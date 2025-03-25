@@ -1,5 +1,6 @@
 'use client'
 
+import { Footer } from '@/components/Footer'
 import { Header } from '@/components/header/Header'
 import { SectionDivider } from '@/components/SectionDivider'
 import { Links } from '@/components/sections/links/Links'
@@ -31,6 +32,8 @@ const Home = () => {
             <PrevWorks />
           </div>
         </main>
+
+        <Footer />
       </div>
     </div>
   )
