@@ -1,5 +1,53 @@
 import { useId } from 'react'
 
+const BitcoinHojeLogo = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      height="22.870583mm"
+      id="svg1651"
+      version="1.1"
+      viewBox="0 0 22.881168 22.870582"
+      width="22.881168mm"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <defs id="defs1645" />
+      <g id="layer1" transform="translate(-145.50047,-144.62831)">
+        <g id="g1948">
+          <rect
+            height="22.870583"
+            id="rect1364-6-1-2"
+            rx={4.612958}
+            ry={5.2955542}
+            style={{
+              fill: '#666666',
+              fillOpacity: 1,
+              paintOrder: 'stroke fill markers',
+              stroke: 'none',
+              strokeDasharray: 'none',
+              strokeMiterlimit: 4,
+              strokeOpacity: 1,
+              strokeWidth: 0.4,
+            }}
+            width="22.881168"
+            x="145.50047"
+            y="144.62831"
+          />
+          <path
+            className="cls-2"
+            d="m 160.17773,155.90089 c 1.18228,-0.33409 2.15683,-1.27749 2.15683,-2.66575 0,-1.51982 -1.15631,-2.50476 -2.74364,-2.78864 l 0.27523,-1.31557 a 0.4535224,0.4535224 0 0 0 -0.44314,-0.54699 h -1.67388 a 0.45525341,0.45525341 0 0 0 -0.44486,0.36005 l -0.30119,1.41596 h -2.74884 a 0.34620031,0.34620031 0 0 0 -0.33235,0.26657 l -2.36801,10.73221 a 0.34620031,0.34620031 0 0 0 0.33235,0.41198 h 2.58612 l -0.25965,1.2117 a 0.46563942,0.46563942 0 0 0 0.4414,0.56084 h 1.67562 a 0.45525341,0.45525341 0 0 0 0.44832,-0.36004 l 0.29601,-1.41769 h 0.25618 c 2.68305,0 4.39155,-1.4679 4.39155,-3.36853 a 2.7176724,2.7176724 0 0 0 -1.54405,-2.4961 z m -2.90635,3.70607 h -2.73499 l 0.60239,-2.73152 h 2.22954 c 1.10091,0 1.77254,0.46391 1.77254,1.29306 0,0.82914 -0.6872,1.43846 -1.86948,1.43846 z m 0.94339,-4.74295 h -2.63112 l 0.5193,-2.33339 h 2.22607 c 0.91051,0 1.43846,0.41544 1.43846,1.10265 -0.003,0.8153 -0.6422,1.23074 -1.55271,1.23074 z"
+            id="path1896"
+            style={{
+              fill: '#ffffff',
+              strokeWidth: 0.1731,
+            }}
+          />
+        </g>
+      </g>
+    </svg>
+  )
+}
+
 const DolarHojeLogo = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
@@ -100,4 +148,4 @@ const PhootoAiLogo = (props: React.SVGProps<SVGSVGElement>) => {
   )
 }
 
-export { DolarHojeLogo, PhootoAiLogo }
+export { BitcoinHojeLogo, DolarHojeLogo, PhootoAiLogo }

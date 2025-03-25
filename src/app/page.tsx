@@ -3,11 +3,12 @@
 import { FileText, Github, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 
-import { BitcoinIcon, CircleDollarSignIcon, WorkflowIcon, XTwitterIcon } from '@/components/Icons'
+import { CircleDollarSignIcon, WorkflowIcon, XTwitterIcon } from '@/components/Icons'
+import { SectionDivider } from '@/components/SectionDivider'
 import { Header } from '@/components/sections/header/Header'
 import { Hero } from '@/components/sections/main/Hero'
 import { Newsletter } from '@/components/sections/main/Newsletter'
-import { DolarHojeLogo, PhootoAiLogo } from '@/components/sections/projects/Logos'
+import { Projects } from '@/components/sections/projects/Projects'
 import { Button } from '@/components/ui/button'
 
 const Home = () => {
@@ -21,13 +22,8 @@ const Home = () => {
             <Hero />
             <Newsletter />
 
-            {/* Links section */}
             <div>
-              <div className="my-6 flex items-center justify-center gap-4">
-                <div className="bg-muted-foreground/20 h-px w-full" />
-                <span className="text-muted-foreground text-center text-xs font-medium">links</span>
-                <div className="bg-muted-foreground/20 h-px w-full" />
-              </div>
+              <SectionDivider className="my-6" title="links" />
               <div className="grid grid-cols-2 gap-4">
                 <Button
                   className="flex h-auto w-full cursor-pointer flex-col items-center gap-2 bg-zinc-50 py-4 shadow-none"
@@ -75,108 +71,52 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Projects section */}
-            <div>
-              <div className="my-6 flex items-center justify-center gap-4">
-                <div className="bg-muted-foreground/20 h-px w-full" />
-                <span className="text-muted-foreground text-center text-xs font-medium">projects</span>
-                <div className="bg-muted-foreground/20 h-px w-full" />
-              </div>
-              <div className="space-y-4">
-                <Link
-                  className="hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border border bg-zinc-50 p-4 transition-colors"
-                  href="https://phooto.ai"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <PhootoAiLogo className="mr-4 size-6 shrink-0" />
-                  <div className="min-w-0 flex-grow">
-                    <p className="font-bold">PHOOTO.AI</p>
-                    <p className="text-muted-foreground truncate text-xs">Professional headshots with AI.</p>
-                  </div>
-                </Link>
-
-                <Link
-                  className="hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border border bg-zinc-50 p-4 transition-colors"
-                  href="https://dolarhoje.io"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <DolarHojeLogo className="mr-4 size-6 shrink-0" />
-                  <div className="min-w-0 flex-grow">
-                    <p className="font-bold">Dólar Hoje</p>
-                    <p className="text-muted-foreground truncate text-xs">
-                      Track the price of the commercial dollar and tourism.
-                    </p>
-                  </div>
-                </Link>
-
-                <Link
-                  className="hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border border bg-zinc-50 p-4 transition-colors"
-                  href="https://bitcoinhoje.io"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <BitcoinIcon className="mr-4 size-6 shrink-0" />
-                  <div className="min-w-0 flex-grow">
-                    <p className="font-bold">Bitcoin Hoje</p>
-                    <p className="text-muted-foreground truncate text-xs">
-                      Track the price of Bitcoin and other cryptos.
-                    </p>
-                  </div>
-                </Link>
-              </div>
-            </div>
+            <SectionDivider className="my-6" title="projects" />
+            <Projects />
 
             {/* Previous works section */}
-            <div>
-              <div className="my-6 flex items-center justify-center gap-4">
-                <div className="bg-muted-foreground/20 h-px w-full" />
-                <span className="text-muted-foreground text-center text-xs font-medium">prev&nbsp;works</span>
-                <div className="bg-muted-foreground/20 h-px w-full" />
-              </div>
-              <div className="space-y-4">
-                <Link
-                  className="hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border border bg-zinc-50 p-4 transition-colors"
-                  href="https://github.com/defidotmoney"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <CircleDollarSignIcon className="mr-4 size-6 shrink-0" />
-                  <div className="min-w-0 flex-grow">
-                    <p className="font-bold">defi.money</p>
-                    <p className="text-muted-foreground truncate text-xs">Welcome to a new era of $MONEY.</p>
-                  </div>
-                </Link>
+            <SectionDivider className="my-6" title="prev&nbsp;works" />
+            <div className="space-y-4">
+              <Link
+                className="hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border border bg-zinc-50 p-4 transition-colors"
+                href="https://github.com/defidotmoney"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <CircleDollarSignIcon className="mr-4 size-6 shrink-0" />
+                <div className="min-w-0 flex-grow">
+                  <p className="font-bold">defi.money</p>
+                  <p className="text-muted-foreground truncate text-xs">Welcome to a new era of $MONEY.</p>
+                </div>
+              </Link>
 
-                <Link
-                  className="hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border border bg-zinc-50 p-4 transition-colors"
-                  href="https://github.com/llamafolio"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <CircleDollarSignIcon className="mr-4 size-6 shrink-0" />
-                  <div className="min-w-0 flex-grow">
-                    <p className="font-bold">LlamaFolio</p>
-                    <p className="text-muted-foreground truncate text-xs">DeFi portfolio tracker.</p>
-                  </div>
-                </Link>
+              <Link
+                className="hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border border bg-zinc-50 p-4 transition-colors"
+                href="https://github.com/llamafolio"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <CircleDollarSignIcon className="mr-4 size-6 shrink-0" />
+                <div className="min-w-0 flex-grow">
+                  <p className="font-bold">LlamaFolio</p>
+                  <p className="text-muted-foreground truncate text-xs">DeFi portfolio tracker.</p>
+                </div>
+              </Link>
 
-                <Link
-                  className="hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border border bg-zinc-50 p-4 transition-colors"
-                  href="https://github.com/llamanodes"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <WorkflowIcon className="mr-4 size-6 shrink-0" />
-                  <div className="min-w-0 flex-grow">
-                    <p className="font-bold">LlamaNodes</p>
-                    <p className="text-muted-foreground truncate text-xs">
-                      Fast and private RPC infra designed for Web3.
-                    </p>
-                  </div>
-                </Link>
-              </div>
+              <Link
+                className="hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border border bg-zinc-50 p-4 transition-colors"
+                href="https://github.com/llamanodes"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <WorkflowIcon className="mr-4 size-6 shrink-0" />
+                <div className="min-w-0 flex-grow">
+                  <p className="font-bold">LlamaNodes</p>
+                  <p className="text-muted-foreground truncate text-xs">
+                    Fast and private RPC infra designed for Web3.
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
         </main>
