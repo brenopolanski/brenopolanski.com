@@ -21,17 +21,22 @@
 
 ## 🛠️ Tech Stack
 
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Lucide Icons](https://lucide.dev/)
-- [shadcn/ui](https://ui.shadcn.com/)
+- [Next.js](https://nextjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Lucide Icons](https://lucide.dev)
+- [shadcn/ui](https://ui.shadcn.com)
 
 ## 🏃‍♂️ Running Locally
 
+First of all, install the dependencies to run this app:
+
+- [Node.js](https://nodejs.org)
+- [Bun](https://bun.sh)
+
 ```bash
 # Clone the repository
-git clone https://github.com/brenopolanski/brenopolanski.com.git
+git clone git@github.com:brenopolanski/brenopolanski.com.git
 
 # Navigate to the project directory
 cd brenopolanski.com
@@ -59,13 +64,13 @@ Visit `http://localhost:3000` to view the application.
 └── tailwind.config.ts # Tailwind configuration
 ```
 
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📬 Contact
 
