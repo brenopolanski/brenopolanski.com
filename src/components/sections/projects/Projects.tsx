@@ -1,8 +1,8 @@
 import { LinkCard } from '@/components/LinkCard'
 import { cn, generateReactKey } from '@/lib/utils'
 
-import type { IProject } from './projectData'
-import { projectData } from './projectData'
+import type { IProject } from './Projects.data'
+import { projectData } from './Projects.data'
 
 export const Projects = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
   return (

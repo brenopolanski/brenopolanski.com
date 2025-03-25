@@ -1,15 +1,14 @@
 'use client'
 
-import { FileText, Github, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 
-import { CircleDollarSignIcon, WorkflowIcon, XTwitterIcon } from '@/components/Icons'
+import { Header } from '@/components/header/Header'
+import { CircleDollarSignIcon, WorkflowIcon } from '@/components/Icons'
 import { SectionDivider } from '@/components/SectionDivider'
-import { Header } from '@/components/sections/header/Header'
+import { Links } from '@/components/sections/links/Links'
 import { Hero } from '@/components/sections/main/Hero'
 import { Newsletter } from '@/components/sections/main/Newsletter'
 import { Projects } from '@/components/sections/projects/Projects'
-import { Button } from '@/components/ui/button'
 
 const Home = () => {
   return (
@@ -24,51 +23,7 @@ const Home = () => {
 
             <div>
               <SectionDivider className="my-6" title="links" />
-              <div className="grid grid-cols-2 gap-4">
-                <Button
-                  className="flex h-auto w-full cursor-pointer flex-col items-center gap-2 bg-zinc-50 py-4 shadow-none"
-                  variant="outline"
-                  asChild
-                >
-                  <Link href="https://twitter.com/brenopolanski" rel="noopener noreferrer" target="_blank">
-                    <XTwitterIcon className="size-4 shrink-0" />
-                    <span className="text-sm">X (Twitter)</span>
-                  </Link>
-                </Button>
-
-                <Button
-                  className="flex h-auto w-full cursor-pointer flex-col items-center gap-2 bg-zinc-50 py-4 shadow-none"
-                  variant="outline"
-                  asChild
-                >
-                  <Link href="https://github.com/brenopolanski" rel="noopener noreferrer" target="_blank">
-                    <Github className="size-5 shrink-0" />
-                    <span className="text-sm">GitHub</span>
-                  </Link>
-                </Button>
-
-                <Button
-                  className="flex h-auto w-full cursor-pointer flex-col items-center gap-2 bg-zinc-50 py-4 shadow-none"
-                  variant="outline"
-                  asChild
-                >
-                  <Link href="https://linkedin.com/in/brenopolanski" rel="noopener noreferrer" target="_blank">
-                    <Linkedin className="size-5 shrink-0" />
-                    <span className="text-sm">LinkedIn</span>
-                  </Link>
-                </Button>
-
-                <Button
-                  className="flex h-auto w-full cursor-pointer flex-col items-center gap-2 bg-zinc-50 py-4 shadow-none"
-                  variant="outline"
-                  asChild
-                >
-                  <Link href="/resume.pdf" target="_blank">
-                    <FileText className="size-5 shrink-0" />
-                    <span className="text-sm">Resume</span>
-                  </Link>
-                </Button>
-              </div>
+              <Links />
             </div>
 
             <SectionDivider className="my-6" title="projects" />
