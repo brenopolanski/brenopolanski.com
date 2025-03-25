@@ -7,12 +7,13 @@ import { projectData } from './Projects.data'
 export const Projects = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <div className={cn('space-y-4', className)} {...props}>
-      {projectData.map(({ title, description, icon: Icon, href }: IProject, index) => (
+      {projectData.map(({ title, description, icon: Icon, href, isExternal }: IProject, index) => (
         <LinkCard
           key={generateReactKey('project', index)}
           description={description}
           href={href}
           icon={<Icon className="mr-4 size-6 shrink-0" />}
+          isExternal={isExternal}
           title={title}
         />
       ))}

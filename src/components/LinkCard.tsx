@@ -8,17 +8,18 @@ interface ILinkCardProps extends React.ComponentProps<typeof Link> {
   icon?: React.ReactNode
   title: string
   description: string
+  isExternal?: boolean
 }
 
-export const LinkCard = ({ className, icon, title, description, ...props }: ILinkCardProps) => {
+export const LinkCard = ({ className, icon, title, description, isExternal = false, ...props }: ILinkCardProps) => {
   return (
     <Link
       className={cn(
         'hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border bg-zinc-50 p-4 transition-colors',
         className,
       )}
-      rel="noopener noreferrer"
-      target="_blank"
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+      target={isExternal ? '_blank' : undefined}
       {...props}
     >
       <If cond={Boolean(icon)}>{icon}</If>

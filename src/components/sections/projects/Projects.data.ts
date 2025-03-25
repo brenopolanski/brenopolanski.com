@@ -1,10 +1,11 @@
-import { BitcoinHojeLogo, DolarHojeLogo, PhootoAiLogo } from './Logos'
+import { BitcoinHojeLogo, DolarHojeLogo, PhootoAiLogo } from '@/components/Logos'
 
 export interface IProject {
   title: string
   description: string
   icon: React.ElementType
   href: string
+  isExternal?: boolean
 }
 
 export const projectData: IProject[] = [
@@ -13,17 +14,20 @@ export const projectData: IProject[] = [
     description: 'Professional headshots with AI.',
     icon: PhootoAiLogo,
     href: 'https://phooto.ai',
+    isExternal: true,
   },
   {
     title: 'Dólar Hoje',
     description: 'Track the price of the commercial dollar and tourism.',
     icon: DolarHojeLogo,
     href: 'https://dolarhoje.io',
+    isExternal: true,
   },
   {
     title: 'Bitcoin Hoje',
     description: 'Track the price of Bitcoin and other cryptos.',
     icon: BitcoinHojeLogo,
     href: 'https://bitcoinhoje.io',
+    isExternal: true,
   },
 ] as const
