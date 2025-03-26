@@ -9,6 +9,7 @@ export const siteConfig = {
     twitter: 'https://twitter.com/brenopolanski',
     github: 'https://github.com/brenopolanski',
     linkedin: 'https://linkedin.com/in/brenopolanski',
+    resume: '/resume_brenopolanski.pdf',
   },
   creator: {
     name: 'Breno Polanski',

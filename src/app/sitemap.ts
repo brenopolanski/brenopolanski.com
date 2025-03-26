@@ -13,7 +13,7 @@ const sitemap = (): MetadataRoute.Sitemap => [
     changeFrequency: 'monthly',
     lastModified: new Date().toISOString(),
     priority: 0.8,
-    url: `${siteConfig.url}/resume_brenopolanski.pdf`,
+    url: `${siteConfig.url}/${siteConfig.links.resume}`,
   },
 ]
 
