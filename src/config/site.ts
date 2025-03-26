@@ -4,7 +4,11 @@ export const siteConfig = {
   name: 'Breno Polanski',
   description: 'Indie hacker. Web3 Developer. Open source enthusiast. Always learning. Usually from my mistakes.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://brenopolanski.com',
-  ogImage: '/og-image.png',
+  // ogImage: '/og-image.png',
+  themeColor: {
+    light: '#FFFFFF',
+    dark: '#09090B',
+  },
   links: {
     twitter: 'https://twitter.com/brenopolanski',
     github: 'https://github.com/brenopolanski',

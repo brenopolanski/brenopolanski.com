@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     apple: [{ url: '/apple-touch-icon.png' }],
     other: [
       {
-        color: '#09090B',
+        color: siteConfig.themeColor.dark,
         rel: 'mask-icon',
         url: '/safari-pinned-tab.svg',
       },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       {
         alt: siteConfig.name,
         height: 630,
-        url: siteConfig.ogImage,
+        url: `${siteConfig.url}/api/og`,
         width: 1200,
       },
     ],
@@ -66,6 +66,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     card: 'summary_large_image',
     creator: siteConfig.creator.twitter,
-    images: [siteConfig.ogImage],
+    images: [`${siteConfig.url}/api/og`],
   },
 }
