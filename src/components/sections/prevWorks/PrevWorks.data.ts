@@ -1,4 +1,4 @@
-import { DefiMoneyLogo, LlamaFolioLogo, LlamaNodesLogo } from '@/components/Logos'
+import { ArkEcosystemLogo, DefiMoneyLogo, LlamaFolioLogo, LlamaNodesLogo, SaikuLogo } from '@/components/Logos'
 
 export interface IPrevWork {
   title: string
@@ -28,6 +28,20 @@ export const prevWorksData: IPrevWork[] = [
     description: 'Fast and private RPC infra designed for Web3.',
     icon: LlamaNodesLogo,
     href: 'https://github.com/llamanodes',
+    isExternal: true,
+  },
+  {
+    title: 'ARK Ecosystem',
+    description: 'A blockchain ecosystem built for everyone.',
+    icon: ArkEcosystemLogo,
+    href: 'https://github.com/ArkEcosystem',
+    isExternal: true,
+  },
+  {
+    title: 'Saiku Analytics',
+    description: 'The worlds greatest open source OLAP browser.',
+    icon: SaikuLogo,
+    href: 'https://github.com/OSBI/saiku',
     isExternal: true,
   },
 ] as const
