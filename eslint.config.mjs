@@ -1,6 +1,7 @@
 import { FlatCompat } from '@eslint/eslintrc'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import sortKeysCustomOrderFix from 'eslint-plugin-sort-keys-custom-order-fix'
+import tailwindcss from 'eslint-plugin-tailwindcss'
 import unusedImports from 'eslint-plugin-unused-imports'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
@@ -19,7 +20,15 @@ const eslintConfig = [
     plugins: {
       'simple-import-sort': simpleImportSort,
       'sort-keys-custom-order-fix': sortKeysCustomOrderFix,
+      tailwindcss,
       'unused-imports': unusedImports,
+    },
+    settings: {
+      tailwindcss: {
+        callees: ['cn'],
+        config: 'tailwind.config.ts',
+        cssFiles: ['**/*.css', '!**/node_modules', '!**/.*', '!**/dist', '!**/build'],
+      },
     },
     rules: {
       '@typescript-eslint/ban-ts-comment': 'off',
@@ -90,6 +99,8 @@ const eslintConfig = [
           varsIgnorePattern: '^_',
         },
       ],
+      'tailwindcss/classnames-order': 'off',
+      'tailwindcss/no-custom-classname': 'off',
     },
   },
 ]
