@@ -1,4 +1,4 @@
-# [Breno Polanski's Portfolio](https://brenopolanski.com)
+# [brenopolanski.com](https://brenopolanski.com)
 
 <div align="center">
   <img src="public/breno-pfp.webp" alt="Breno Polanski" width="120" height="120" style="border-radius: 8px;"/>

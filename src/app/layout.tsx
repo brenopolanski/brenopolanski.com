@@ -1,15 +1,11 @@
 import '@/styles/globals.css'
 
-import type { Metadata } from 'next'
-
+import { siteConfig } from '@/config/site'
 import { fontVariables } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/providers/ThemeProvider'
 
-export const metadata: Metadata = {
-  title: 'Breno Polanski',
-  description: 'Personal website of Breno Polanski',
-}
+export { metadata } from './metadata'
 
 const RootLayout = ({
   children,
@@ -17,9 +13,14 @@ const RootLayout = ({
   children: React.ReactNode
 }>) => {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={siteConfig.meta.language} suppressHydrationWarning>
       <body className={cn('theme-scaled font-mono antialiased', fontVariables)}>
-        <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange enableSystem>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme={siteConfig.meta.theme.default}
+          disableTransitionOnChange
+          enableSystem
+        >
           {children}
         </ThemeProvider>
       </body>
