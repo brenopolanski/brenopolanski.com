@@ -1,5 +1,6 @@
 import '@/styles/globals.css'
 
+import { DebugView } from '@/components/DebugView'
 import { siteConfig } from '@/config/site'
 import { fontVariables } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
@@ -22,6 +23,7 @@ const RootLayout = ({
           enableSystem
         >
           {children}
+          <DebugView />
         </ThemeProvider>
       </body>
     </html>
