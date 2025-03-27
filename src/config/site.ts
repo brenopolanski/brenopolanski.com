@@ -19,7 +19,10 @@ export const siteConfig = {
     name: 'Breno Polanski',
     twitter: '@brenopolanski',
     url: 'https://brenopolanski.com',
-    email: 'breno.polanski@gmail.com',
+    emails: {
+      personal: 'breno.polanski@gmail.com',
+      newsletter: 'hi@brenopolanski.com',
+    },
   },
   keywords: [
     'Breno Polanski',

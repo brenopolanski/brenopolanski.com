@@ -6,7 +6,7 @@ import { sendEmail } from './sendEmail'
 export const sendSubscribeToNewsletterEmail = async (email: string) => {
   return await sendEmail({
     to: [email],
-    from: siteConfig.creator.email,
+    from: siteConfig.creator.emails.newsletter,
     subject: `Welcome to ${siteConfig.name}'s Newsletter! 🚀`,
     react: SubscribeToNewsletterEmail(),
   })
