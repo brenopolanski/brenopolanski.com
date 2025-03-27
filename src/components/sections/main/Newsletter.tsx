@@ -1,15 +1,22 @@
 'use client'
 
-import { CheckIcon } from 'lucide-react'
 import { useState } from 'react'
 
-import { MailIcon, SendIcon, XIcon } from '@/components/Icons'
+import { CheckIcon, MailIcon, SendIcon, XIcon } from '@/components/Icons'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-import { sendWelcomeEmail } from '@/lib/resend/emailTemplates'
+import { sendSubscribeToNewsletterEmail } from '@/lib/resend/emailTemplates'
+import { isValidEmail } from '@/lib/utils'
 
 type TStatus = 'idle' | 'loading' | 'success' | 'error'
+
+const statusStyles = {
+  error: 'text-red-800 bg-red-100 border-red-200',
+  idle: '',
+  loading: '',
+  success: 'text-green-800 bg-green-100 border-green-200',
+}
 
 export const Newsletter = () => {
   const [email, setEmail] = useState('')
@@ -25,31 +32,30 @@ export const Newsletter = () => {
       return
     }
 
+    if (!isValidEmail(email)) {
+      setStatus('error')
+      setMessage('Please enter a valid email')
+      return
+    }
+
     setStatus('loading')
 
     try {
-      await sendWelcomeEmail(email)
+      await sendSubscribeToNewsletterEmail(email)
 
       setStatus('success')
-      setMessage('Welcome email sent! Check your inbox')
+      setMessage('Successfully subscribed! Check your inbox :)')
       setEmail('')
 
       // Reset success message after 5 seconds
       setTimeout(() => {
         setStatus('idle')
         setMessage('')
-      }, 5000)
+      }, 5_000)
     } catch (error) {
       setStatus('error')
-      setMessage(error instanceof Error ? error.message : 'Failed to send welcome email. Please try again.')
+      setMessage(error instanceof Error ? error.message : 'Failed to subscribe to newsletter. Please try again.')
     }
-  }
-
-  const statusStyles = {
-    error: 'text-red-800 bg-red-100 border-red-200',
-    idle: '',
-    loading: '',
-    success: 'text-green-800 bg-green-100 border-green-200',
   }
 
   return (

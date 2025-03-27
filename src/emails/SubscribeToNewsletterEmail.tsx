@@ -3,7 +3,7 @@ import { Body, Container, Head, Html, Img, Link, Row, Section, Tailwind, Text } 
 
 import { siteConfig } from '@/config/site'
 
-export const WelcomeEmail = () => {
+export const SubscribeToNewsletterEmail = () => {
   return (
     <Html>
       <Head />
@@ -101,4 +101,4 @@ export const WelcomeEmail = () => {
   )
 }
 
-export default WelcomeEmail
+export default SubscribeToNewsletterEmail

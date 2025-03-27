@@ -78,8 +78,6 @@ const eslintConfig = [
           natural: true,
           order: [
             'id',
-            'title',
-            'description',
             'default',
             'xs',
             'sm',
@@ -88,6 +86,8 @@ const eslintConfig = [
             'xl',
             '2xl',
             'icon',
+            'title',
+            'description',
             'to',
             'from',
             'subject',
