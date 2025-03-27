@@ -11,26 +11,26 @@ export interface ILink {
 
 export const linkData: ILink[] = [
   {
-    title: 'X (Twitter)',
     icon: XTwitterIcon,
+    title: 'X (Twitter)',
     href: siteConfig.links.twitter,
     isExternal: true,
   },
   {
-    title: 'GitHub',
     icon: GithubIcon,
+    title: 'GitHub',
     href: siteConfig.links.github,
     isExternal: true,
   },
   {
-    title: 'LinkedIn',
     icon: LinkedInIcon,
+    title: 'LinkedIn',
     href: siteConfig.links.linkedin,
     isExternal: true,
   },
   {
-    title: 'Resume',
     icon: FileTextIcon,
+    title: 'Resume',
     href: paths.resume,
     isExternal: false,
   },

@@ -10,23 +10,23 @@ export interface IProject {
 
 export const projectData: IProject[] = [
   {
+    icon: PhootoAILogo,
     title: 'PHOOTO.AI',
     description: 'Professional headshots with AI.',
-    icon: PhootoAILogo,
     href: 'https://phooto.ai',
     isExternal: true,
   },
   {
+    icon: DolarHojeLogo,
     title: 'Dólar Hoje',
     description: 'Track the price of the commercial dollar and tourism.',
-    icon: DolarHojeLogo,
     href: 'https://dolarhoje.io',
     isExternal: true,
   },
   {
+    icon: BitcoinHojeLogo,
     title: 'Bitcoin Hoje',
     description: 'Track the price of Bitcoin and other cryptos.',
-    icon: BitcoinHojeLogo,
     href: 'https://bitcoinhoje.io',
     isExternal: true,
   },
