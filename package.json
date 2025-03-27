@@ -8,6 +8,7 @@
     "check:fix": "bun format:fix && bun lint:fix && bun typecheck",
     "clean": "/bin/bash scripts/clean.sh",
     "dev": "stale-dep && next dev",
+    "email": "email dev --dir src/emails --port 3001",
     "format:check": "bun prettier --check",
     "format:fix": "bun prettier --write",
     "lint": "next lint",
@@ -28,6 +29,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
+    "@react-email/components": "^0.0.34",
     "@vercel/og": "^0.6.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -37,6 +39,8 @@
     "next-themes": "^0.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-email": "^3.0.7",
+    "resend": "^4.2.0",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7"
   },

@@ -10,37 +10,37 @@ export interface IPrevWork {
 
 export const prevWorksData: IPrevWork[] = [
   {
+    icon: DefiMoneyLogo,
     title: 'defi.money',
     description: 'Welcome to a new era of $MONEY.',
-    icon: DefiMoneyLogo,
     href: 'https://github.com/defidotmoney',
     isExternal: true,
   },
   {
+    icon: LlamaFolioLogo,
     title: 'LlamaFolio',
     description: 'DeFi portfolio tracker.',
-    icon: LlamaFolioLogo,
     href: 'https://github.com/llamafolio',
     isExternal: true,
   },
   {
+    icon: LlamaNodesLogo,
     title: 'LlamaNodes',
     description: 'Fast and private RPC infra designed for Web3.',
-    icon: LlamaNodesLogo,
     href: 'https://github.com/llamanodes',
     isExternal: true,
   },
   {
+    icon: ArkEcosystemLogo,
     title: 'ARK Ecosystem',
     description: 'A blockchain ecosystem built for everyone.',
-    icon: ArkEcosystemLogo,
     href: 'https://github.com/ArkEcosystem',
     isExternal: true,
   },
   {
+    icon: SaikuLogo,
     title: 'Saiku Analytics',
     description: 'The worlds greatest open source OLAP browser.',
-    icon: SaikuLogo,
     href: 'https://github.com/OSBI/saiku',
     isExternal: true,
   },

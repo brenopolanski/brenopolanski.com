@@ -1,4 +1,5 @@
 import { FileTextIcon, GithubIcon, LinkedInIcon, XTwitterIcon } from '@/components/Icons'
+import { paths } from '@/config/paths'
 import { siteConfig } from '@/config/site'
 
 export interface ILink {
@@ -10,27 +11,27 @@ export interface ILink {
 
 export const linkData: ILink[] = [
   {
-    title: 'X (Twitter)',
     icon: XTwitterIcon,
+    title: 'X (Twitter)',
     href: siteConfig.links.twitter,
     isExternal: true,
   },
   {
-    title: 'GitHub',
     icon: GithubIcon,
+    title: 'GitHub',
     href: siteConfig.links.github,
     isExternal: true,
   },
   {
-    title: 'LinkedIn',
     icon: LinkedInIcon,
+    title: 'LinkedIn',
     href: siteConfig.links.linkedin,
     isExternal: true,
   },
   {
-    title: 'Resume',
     icon: FileTextIcon,
-    href: siteConfig.links.resume,
+    title: 'Resume',
+    href: paths.resume,
     isExternal: false,
   },
 ] as const
