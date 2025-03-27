@@ -18,6 +18,7 @@ export const Links = ({ className, ...props }: React.HTMLAttributes<HTMLDivEleme
         >
           <Link
             href={href}
+            prefetch={false}
             rel={isExternal ? 'noopener noreferrer' : undefined}
             target={isExternal ? '_blank' : undefined}
           >
