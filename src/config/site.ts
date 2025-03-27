@@ -1,9 +1,10 @@
 /* eslint-disable sort-keys-custom-order-fix/sort-keys-custom-order-fix */
+import { ENV } from './env'
 
 export const siteConfig = {
   name: 'Breno Polanski',
   description: 'Indie hacker. Web3 Developer. Open source enthusiast. Always learning. Usually from my mistakes.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://brenopolanski.com',
+  url: ENV.SITE_URL,
   // ogImage: '/og-image.png',
   themeColor: {
     light: '#FFFFFF',
@@ -13,7 +14,6 @@ export const siteConfig = {
     twitter: 'https://twitter.com/brenopolanski',
     github: 'https://github.com/brenopolanski',
     linkedin: 'https://linkedin.com/in/brenopolanski',
-    resume: '/resume_brenopolanski.pdf',
   },
   creator: {
     name: 'Breno Polanski',
@@ -40,5 +40,3 @@ export const siteConfig = {
     },
   },
 } as const
-
-export type TSiteConfig = typeof siteConfig
