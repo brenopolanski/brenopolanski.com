@@ -18,6 +18,7 @@ export const LinkCard = ({ className, icon, title, description, isExternal = fal
         'hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border bg-zinc-50 p-4 transition-colors',
         className,
       )}
+      prefetch={isExternal ? false : true}
       rel={isExternal ? 'noopener noreferrer' : undefined}
       target={isExternal ? '_blank' : undefined}
       {...props}

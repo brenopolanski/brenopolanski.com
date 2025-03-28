@@ -32,6 +32,6 @@ export const linkData: ILink[] = [
     icon: FileTextIcon,
     title: 'Resume',
     href: paths.resume,
-    isExternal: false,
+    isExternal: true,
   },
 ] as const
