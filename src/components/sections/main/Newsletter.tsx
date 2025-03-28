@@ -2,11 +2,11 @@
 
 import { useState } from 'react'
 
+import { subscribeToNewsletter } from '@/app/actions/newsletter'
 import { CheckIcon, MailIcon, SendIcon, XIcon } from '@/components/Icons'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-import { sendSubscribeToNewsletterEmail } from '@/lib/resend/emailTemplates'
 import { isValidEmail } from '@/lib/utils'
 
 type TStatus = 'idle' | 'loading' | 'success' | 'error'
@@ -41,20 +41,26 @@ export const Newsletter = () => {
     setStatus('loading')
 
     try {
-      await sendSubscribeToNewsletterEmail(email)
+      const result = await subscribeToNewsletter(email)
 
-      setStatus('success')
-      setMessage('Successfully subscribed! Check your inbox :)')
-      setEmail('')
+      if (result.success) {
+        setStatus('success')
+        setMessage('Successfully subscribed! Check your inbox :)')
+        setEmail('')
 
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setStatus('idle')
-        setMessage('')
-      }, 5_000)
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setStatus('idle')
+          setMessage('')
+        }, 5_000)
+      } else {
+        setStatus('error')
+        setMessage(result.error || 'Failed to subscribe to newsletter. Please try again.')
+      }
     } catch (error) {
+      console.error('Failed to subscribe to newsletter', error)
       setStatus('error')
-      setMessage(error instanceof Error ? error.message : 'Failed to subscribe to newsletter. Please try again.')
+      setMessage('Failed to subscribe to newsletter. Please try again.')
     }
   }
 
