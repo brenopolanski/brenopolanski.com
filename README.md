@@ -24,8 +24,9 @@
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Lucide Icons](https://lucide.dev)
 - [shadcn/ui](https://ui.shadcn.com)
+- [Lucide Icons](https://lucide.dev)
+- [Resend](https://resend.com)
 
 ## 🏃‍♂️ Running Locally
 
