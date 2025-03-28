@@ -2,6 +2,13 @@ import type { ClassValue } from 'clsx'
 import { clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
+/**
+ * Merges multiple class names using clsx and tailwind-merge
+ * @param inputs - Class values to merge
+ * @returns Merged class names
+ * @example
+ * cn('bg-red-500', 'text-white', 'p-4') // => 'bg-red-500 text-white p-4'
+ */
 export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs))
 }

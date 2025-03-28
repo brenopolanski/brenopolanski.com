@@ -2,8 +2,9 @@
 
 import { useState } from 'react'
 
-import { subscribeToNewsletter } from '@/app/actions/newsletter'
+import { subscribeToNewsletter } from '@/actions/newsletter'
 import { CheckIcon, MailIcon, SendIcon, XIcon } from '@/components/Icons'
+import { If } from '@/components/If'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -107,7 +108,7 @@ export const Newsletter = () => {
           </div>
 
           {/* Status Message */}
-          {message && status !== 'loading' && (
+          <If cond={message && status !== 'loading'}>
             <div
               className={`flex items-center gap-2 rounded-md border px-3 py-2 text-sm ${statusStyles[status]}`}
               role="alert"
@@ -115,7 +116,7 @@ export const Newsletter = () => {
               {status === 'success' ? <CheckIcon className="size-4" /> : <XIcon className="size-4" />}
               {message}
             </div>
-          )}
+          </If>
         </form>
       </CardContent>
     </Card>

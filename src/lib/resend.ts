@@ -16,6 +16,23 @@ interface ISendEmailParams {
   scheduledAt?: string
 }
 
+/**
+ * Sends an email using Resend
+ * @param to - Array of email addresses to send the email to
+ * @param from - Email address of the sender
+ * @param subject - Subject of the email
+ * @param react - React component to render in the email body
+ * @param scheduledAt - Optional date and time to schedule the email to be sent
+ * @returns Object containing the email details and success status
+ * @example
+ * const result = await sendEmail({
+ *   to: ['test@example.com'],
+ *   from: 'hello@example.com',
+ *   subject: 'Test Email',
+ *   react: <div>Hello, world!</div>,
+ * })
+ * console.log(result) // { message: 'Email sent successfully', success: true }
+ */
 export const sendEmail = async ({ to, from, subject, react, scheduledAt }: ISendEmailParams) => {
   try {
     const msg = {
