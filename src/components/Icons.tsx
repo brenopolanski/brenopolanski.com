@@ -1,11 +1,8 @@
 import type { LucideProps } from 'lucide-react'
 import { CheckIcon, FileTextIcon, MailIcon, QuoteIcon, SendIcon, XIcon } from 'lucide-react'
 
-import { cn } from '@/lib/utils'
-
-const BrightnessIcon = ({ className, ...props }: LucideProps) => (
+const BrightnessIcon = (props: LucideProps) => (
   <svg
-    className={cn('size-6', className)}
     fill="none"
     height="24"
     stroke="currentColor"
@@ -25,9 +22,8 @@ const BrightnessIcon = ({ className, ...props }: LucideProps) => (
   </svg>
 )
 
-const GithubIcon = ({ className, ...props }: LucideProps) => (
+const GithubIcon = (props: LucideProps) => (
   <svg
-    className={cn('size-6', className)}
     fill="none"
     height="24"
     stroke="currentColor"
@@ -44,9 +40,8 @@ const GithubIcon = ({ className, ...props }: LucideProps) => (
   </svg>
 )
 
-const LinkedInIcon = ({ className, ...props }: LucideProps) => (
+const LinkedInIcon = (props: LucideProps) => (
   <svg
-    className={cn('size-6', className)}
     fill="none"
     height="24"
     stroke="currentColor"
@@ -64,14 +59,8 @@ const LinkedInIcon = ({ className, ...props }: LucideProps) => (
   </svg>
 )
 
-const XTwitterIcon = ({ className, ...props }: LucideProps) => (
-  <svg
-    className={cn('size-6', className)}
-    fill="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
+const XTwitterIcon = (props: LucideProps) => (
+  <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
   </svg>
 )

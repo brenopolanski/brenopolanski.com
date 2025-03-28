@@ -2,7 +2,7 @@ import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 
 import { siteConfig } from '@/config/site'
-import { SubscribeToNewsletterEmail } from '@/emails/SubscribeToNewsletterEmail'
+import { WelcomeToNewsletterEmail } from '@/emails/WelcomeToNewsletterEmail'
 import { sendEmail } from '@/lib/resend'
 import { isValidEmail } from '@/lib/utils'
 
@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
       to: [email],
       from: siteConfig.creator.emails.newsletter,
       subject: `Welcome to ${siteConfig.name}'s Newsletter! 🚀`,
-      react: SubscribeToNewsletterEmail(),
+      react: WelcomeToNewsletterEmail(),
     })
 
     if (!result.success) {
