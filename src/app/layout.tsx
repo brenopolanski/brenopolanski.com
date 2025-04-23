@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 
-import { DebugView } from '@/components/DebugView'
+import { DevBox } from '@breno.polanski/dev-box'
+
 import { siteConfig } from '@/config/site'
 import { fontVariables } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
@@ -23,7 +24,7 @@ const RootLayout = ({
           enableSystem
         >
           {children}
-          <DebugView />
+          <DevBox />
         </ThemeProvider>
       </body>
     </html>

@@ -28,6 +28,7 @@
     ]
   },
   "dependencies": {
+    "@breno.polanski/dev-box": "^0.2.1",
     "@radix-ui/react-slot": "^1.1.2",
     "@react-email/components": "^0.0.34",
     "@vercel/og": "^0.6.5",
