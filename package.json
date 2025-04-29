@@ -17,7 +17,7 @@
     "preinstall": "npx only-allow bun",
     "prepare": "husky",
     "prettier": "prettier \"**/*.{md,json,css,js,mjs,ts,tsx}\"",
-    "preview": "bun run build && bun start -p 3001",
+    "preview": "bun run build && bun start -p 3002",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },
@@ -28,7 +28,7 @@
     ]
   },
   "dependencies": {
-    "@breno.polanski/dev-box": "^0.2.1",
+    "@breno.polanski/dev-box": "^0.2.2",
     "@radix-ui/react-slot": "^1.1.2",
     "@react-email/components": "^0.0.34",
     "@vercel/og": "^0.6.5",
