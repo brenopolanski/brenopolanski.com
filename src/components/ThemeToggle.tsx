@@ -10,9 +10,18 @@ import { BrightnessIcon } from './Icons'
 export const ThemeToggle = () => {
   const { resolvedTheme, setTheme } = useTheme()
 
-  const toggleTheme = useCallback(() => {
+  const switchTheme = useCallback(() => {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
   }, [resolvedTheme, setTheme])
+
+  // Ref: https://github.com/rudrodip/theme-toggle-effect
+  const toggleTheme = useCallback(() => {
+    if (!document.startViewTransition) {
+      switchTheme()
+    }
+
+    document.startViewTransition(switchTheme)
+  }, [switchTheme])
 
   return (
     <Button className="cursor-pointer" size="icon" onClick={toggleTheme}>
