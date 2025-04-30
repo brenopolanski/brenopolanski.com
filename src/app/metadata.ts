@@ -67,5 +67,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     creator: siteConfig.creator.twitter,
     images: [`${siteConfig.url}/api/og`],
+    site: siteConfig.url,
   },
 }
