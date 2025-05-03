@@ -26,9 +26,7 @@ export const ProfileModal = ({ onClose }: IProfileModalProps) => {
         <div className="relative size-full">
           <ProfileImage
             alt="Breno Polanski profile picture"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
-            className="animate-scale-up rounded-lg object-contain shadow-2xl"
-            placeholder="blur"
+            className="animate-scale-up rounded-lg bg-white/20 object-contain shadow-2xl"
             quality={95}
             sizes="(max-width: 640px) 70vw, (max-width: 1024px) 60vw, 50vw"
             src="/breno-pfp.webp"
