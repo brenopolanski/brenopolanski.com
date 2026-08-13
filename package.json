@@ -23,7 +23,7 @@
   },
   "lint-staged": {
     "*.{js,mjs,ts,tsx}": [
-      "bun eslint --fix",
+      "bun eslint --fix --max-warnings=0",
       "bun format:fix"
     ]
   },

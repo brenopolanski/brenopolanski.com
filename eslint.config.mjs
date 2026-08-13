@@ -13,9 +13,11 @@ const compat = new FlatCompat({
 })
 
 const eslintConfig = [
+  {
+    ignores: ['.next/**', '.source/**', 'out/**', 'build/**', 'next-env.d.ts', '**/src/components/ui/**'],
+  },
   ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier'),
   {
-    ignores: ['src/components/ui/**'],
     plugins: {
       'simple-import-sort': simpleImportSort,
       'sort-keys-custom-order-fix': sortKeysCustomOrderFix,
