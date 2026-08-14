@@ -2,6 +2,18 @@
   "name": "brenopolanski.com",
   "version": "4.0.0",
   "private": true,
+  "type": "module",
+  "description": "Breno Polanski's personal website",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brenopolanski/brenopolanski.com.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Breno Polanski",
+    "email": "breno@brenopolanski.com",
+    "url": "https://github.com/brenopolanski"
+  },
   "scripts": {
     "build": "next build",
     "check": "bun format:check && bun lint && bun typecheck",
