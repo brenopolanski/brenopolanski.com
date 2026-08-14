@@ -22,7 +22,7 @@ done
 # remove files
 for file in "${files[@]}"; do
   echo "Removing all $file files..."
-  find . -name "$file" -type f -prune -exec rm -rf '{}' + -print
+  find . -name "$file" -type f -prune -exec rm -rf {} + -print
 done
 
 echo "Done 🎉"

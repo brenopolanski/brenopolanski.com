@@ -1,7 +1,5 @@
 import '@/styles/globals.css'
 
-import { DevBox } from '@breno.polanski/dev-box'
-
 import { siteConfig } from '@/config/site'
 import { fontVariables } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
@@ -24,7 +22,6 @@ const RootLayout = ({
           enableSystem
         >
           {children}
-          <DevBox />
         </ThemeProvider>
       </body>
     </html>

@@ -23,12 +23,11 @@
   },
   "lint-staged": {
     "*.{js,mjs,ts,tsx}": [
-      "bun eslint --fix",
+      "bun eslint --fix --max-warnings=0",
       "bun format:fix"
     ]
   },
   "dependencies": {
-    "@breno.polanski/dev-box": "^0.2.2",
     "@radix-ui/react-slot": "^1.1.2",
     "@react-email/components": "^0.0.34",
     "@vercel/og": "^0.6.5",
