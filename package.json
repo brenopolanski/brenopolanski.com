@@ -29,18 +29,13 @@
     "format:check": "bun prettier --check",
     "lint": "next lint",
     "lint:fix": "bun lint --fix",
+    "lint-staged": "lint-staged",
     "preinstall": "npx only-allow bun",
     "prepare": "husky",
     "prettier": "prettier \"**/*.{js,mjs,ts,tsx,css,json,md}\"",
     "start": "portless --script start:next",
     "start:next": "next start",
     "typecheck": "tsc --noEmit"
-  },
-  "lint-staged": {
-    "*.{js,mjs,ts,tsx}": [
-      "bun eslint --fix --max-warnings=0",
-      "bun format:fix"
-    ]
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
@@ -60,6 +55,8 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/circular-dependency-plugin": "^5.0.8",
