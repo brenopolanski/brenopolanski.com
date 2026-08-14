@@ -1,4 +1,3 @@
-/* eslint-disable sort-keys-custom-order-fix/sort-keys-custom-order-fix */
 import { ENV } from './env'
 
 export const siteConfig = {
