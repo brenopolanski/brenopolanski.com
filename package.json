@@ -19,13 +19,12 @@
     "check": "bun format:check && bun lint && bun typecheck",
     "check:fix": "bun format:fix && bun lint:fix && bun typecheck",
     "clean": "/bin/bash scripts/clean.sh",
-    "dev": "stale-dep && next dev",
+    "dev": "next dev",
     "email": "email dev --dir src/emails --port 3001",
     "format:check": "bun prettier --check",
     "format:fix": "bun prettier --write",
     "lint": "next lint",
     "lint:fix": "bun lint --fix",
-    "postinstall": "stale-dep -u",
     "preinstall": "npx only-allow bun",
     "prepare": "husky",
     "prettier": "prettier \"**/*.{md,json,css,js,mjs,ts,tsx}\"",
@@ -74,7 +73,6 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.12",
-    "stale-dep": "^0.8.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
