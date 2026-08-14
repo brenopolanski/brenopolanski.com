@@ -14,12 +14,17 @@
     "email": "breno@brenopolanski.com",
     "url": "https://github.com/brenopolanski"
   },
+  "portless": {
+    "name": "personal-website",
+    "script": "dev:next"
+  },
   "scripts": {
     "build": "next build",
     "check": "bun format:check && bun lint && bun typecheck",
     "check:fix": "bun format:fix && bun lint:fix && bun typecheck",
     "clean": "/bin/bash scripts/clean.sh",
-    "dev": "next dev",
+    "dev": "portless",
+    "dev:next": "next dev --turbopack",
     "email": "email dev --dir src/emails --port 3001",
     "format:check": "bun prettier --check",
     "format:fix": "bun prettier --write",
@@ -29,7 +34,8 @@
     "prepare": "husky",
     "prettier": "prettier \"**/*.{md,json,css,js,mjs,ts,tsx}\"",
     "preview": "bun run build && bun start -p 3002",
-    "start": "next start",
+    "start": "portless --script start:next",
+    "start:next": "next start",
     "typecheck": "tsc --noEmit"
   },
   "lint-staged": {
@@ -71,6 +77,7 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.2",
+    "portless": "^0.15.5",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.12",
     "tailwindcss": "^4",
