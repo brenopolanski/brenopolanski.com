@@ -27,7 +27,7 @@
     "email": "email dev --dir src/emails --port 3001",
     "format": "bun prettier --write",
     "format:check": "bun prettier --check",
-    "lint": "next lint",
+    "lint": "eslint .",
     "lint:fix": "bun lint --fix",
     "lint-staged": "lint-staged",
     "preinstall": "npx only-allow bun",
@@ -57,7 +57,6 @@
   "devDependencies": {
     "@commitlint/cli": "^21.2.2",
     "@commitlint/config-conventional": "^21.2.2",
-    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/circular-dependency-plugin": "^5.0.8",
     "@types/node": "^20",
