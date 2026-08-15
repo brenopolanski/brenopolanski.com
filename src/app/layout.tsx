@@ -14,7 +14,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang={siteConfig.meta.language} suppressHydrationWarning>
-      <body className={cn('theme-scaled font-mono antialiased', fontVariables)}>
+      <body className={cn('theme-scaled font-mono antialiased', fontVariables)} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme={siteConfig.meta.theme.default}
