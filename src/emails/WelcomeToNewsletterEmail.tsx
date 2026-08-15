@@ -34,7 +34,7 @@ export const WelcomeToNewsletterEmail = () => {
             />
           </Container>
 
-          <Container className="mb-45 bg-background p-45 text-foreground">
+          <Container className="bg-background text-foreground mb-45 p-45">
             <Section>
               <Row>
                 <Text className="text-base">Hey there! 👋</Text>

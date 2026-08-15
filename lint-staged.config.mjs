@@ -12,7 +12,7 @@ const lintStagedConfig = {
       commands.push(`eslint --fix --max-warnings=0 ${eslintFilesString}`)
     }
 
-    commands.push('pnpm typecheck')
+    commands.push('bun typecheck')
 
     return commands
   },

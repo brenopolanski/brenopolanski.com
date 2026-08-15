@@ -78,7 +78,7 @@ export const Newsletter = () => {
         <form className="mt-4 space-y-3" onSubmit={handleSubmit}>
           <div className="flex gap-2">
             <div className="relative flex-1">
-              <MailIcon className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-black/60" />
+              <MailIcon className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-black/60" />
               <Input
                 className="flex-1 border-0 !bg-white pl-10 text-black placeholder:text-black/60 focus-visible:ring-0"
                 disabled={status === 'loading'}

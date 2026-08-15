@@ -1,51 +1,22 @@
-import nextCoreWebVitals from 'eslint-config-next/core-web-vitals'
-import nextTypescript from 'eslint-config-next/typescript'
-import { FlatCompat } from '@eslint/eslintrc'
+import { defineConfig, globalIgnores } from 'eslint/config'
+import nextVitals from 'eslint-config-next/core-web-vitals'
+import nextTs from 'eslint-config-next/typescript'
+import prettier from 'eslint-config-prettier/flat'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import unusedImports from 'eslint-plugin-unused-imports'
-import { dirname } from 'path'
-import { fileURLToPath } from 'url'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-})
-
-const eslintConfig = [
-  {
-    ignores: ['.next/**', '.source/**', 'out/**', 'build/**', 'next-env.d.ts', '**/src/components/ui/**'],
-  },
-  ...nextCoreWebVitals,
-  ...nextTypescript,
-  ...compat.extends('prettier'),
+/** @type {import('eslint').Config} */
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  prettier,
+  globalIgnores(['.next/**', '.source/**', 'out/**', 'build/**', 'next-env.d.ts', '**/src/components/ui/**']),
   {
     plugins: {
       'simple-import-sort': simpleImportSort,
       'unused-imports': unusedImports,
     },
     rules: {
-      '@typescript-eslint/ban-ts-comment': 'off',
-      '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-      '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/naming-convention': [
-        'error',
-        {
-          format: ['PascalCase'],
-          prefix: ['I'],
-          selector: 'interface',
-        },
-        {
-          format: ['PascalCase'],
-          prefix: ['T'],
-          selector: 'typeAlias',
-        },
-      ],
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-import-type-side-effects': ['error'],
-      '@typescript-eslint/no-non-null-assertion': 'off',
       curly: 'error',
       'no-unused-vars': 'off',
       'object-shorthand': ['error', 'always'],
@@ -86,6 +57,38 @@ const eslintConfig = [
       ],
     },
   },
-]
+  {
+    files: ['**/*.ts', '**/*.tsx'],
+    ignores: ['**/*.config.mjs'],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+    rules: {
+      '@typescript-eslint/ban-ts-comment': 'off',
+      '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+      '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          format: ['PascalCase'],
+          prefix: ['I'],
+          selector: 'interface',
+        },
+        {
+          format: ['PascalCase'],
+          prefix: ['T'],
+          selector: 'typeAlias',
+        },
+      ],
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-import-type-side-effects': ['error'],
+      '@typescript-eslint/no-non-null-assertion': 'off',
+    },
+  },
+])
 
 export default eslintConfig
