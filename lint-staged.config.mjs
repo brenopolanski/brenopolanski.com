@@ -9,7 +9,7 @@ const lintStagedConfig = {
     const commands = [`prettier --write ${filesString}`]
 
     if (eslintFiles.length > 0) {
-      commands.push(`eslint --fix --max-warnings=0 ${eslintFilesString}`)
+      commands.push(`eslint --fix --max-warnings=0 --no-warn-ignored ${eslintFilesString}`)
     }
 
     commands.push('bun typecheck')
@@ -20,7 +20,7 @@ const lintStagedConfig = {
   '*.{js,mjs}': (filenames) => {
     const filesString = filenames.join(' ')
 
-    return [`prettier --write ${filesString}`, `eslint --fix --max-warnings=0 ${filesString}`]
+    return [`prettier --write ${filesString}`, `eslint --fix --max-warnings=0 --no-warn-ignored ${filesString}`]
   },
 
   '*.{json,css,md}': (filenames) => {
