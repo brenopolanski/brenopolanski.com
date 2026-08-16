@@ -7,5 +7,5 @@ coverage/
 pnpm-lock.yaml
 .pnpm-store/
 
-# Ignore all shadcn/ui files
+# ignore all shadcn/ui files
 **/src/components/ui/**
