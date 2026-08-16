@@ -1,7 +1,10 @@
+'use client'
+
 import Link from 'next/link'
 import { useState } from 'react'
 
 import { XIcon } from '@/components/Icons'
+import { useEscapeKey } from '@/hooks/useEscapeKey'
 
 import { quoteText } from './quoteText'
 
@@ -12,10 +15,12 @@ interface IQuoteTextModalProps {
 export const QuoteTextModal = ({ onClose }: IQuoteTextModalProps) => {
   const [quoteLanguage, setQuoteLanguage] = useState<'en' | 'pt-br'>('en')
 
+  useEscapeKey(onClose)
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm sm:p-6 md:p-8">
       <button
-        className="absolute top-2 right-2 z-[60] cursor-pointer rounded-full bg-white p-2 text-black transition-colors hover:bg-gray-100 sm:top-4 sm:right-4"
+        className="absolute top-2 right-2 z-60 cursor-pointer rounded-full bg-white p-2 text-black transition-colors hover:bg-gray-100 sm:top-4 sm:right-4"
         onClick={(event) => {
           event.stopPropagation()
           onClose()

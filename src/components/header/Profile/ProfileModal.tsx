@@ -1,4 +1,7 @@
+'use client'
+
 import { XIcon } from '@/components/Icons'
+import { useEscapeKey } from '@/hooks/useEscapeKey'
 
 import { ProfileImage } from './ProfileImage'
 
@@ -7,6 +10,8 @@ interface IProfileModalProps {
 }
 
 export const ProfileModal = ({ onClose }: IProfileModalProps) => {
+  useEscapeKey(onClose)
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm sm:p-6 md:p-8"
