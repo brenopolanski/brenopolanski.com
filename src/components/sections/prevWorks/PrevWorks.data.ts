@@ -1,4 +1,10 @@
-import { ArkEcosystemLogo, DefiMoneyLogo, LlamaFolioLogo, LlamaNodesLogo, SaikuLogo } from '@/components/Logos'
+import {
+  ArkEcosystemLogo,
+  DefiMoneyLogo,
+  LlamaFolioLogo,
+  LlamaNodesLogo,
+  SaikuLogo,
+} from '@/components/Logos'
 
 export interface IPrevWork {
   title: string

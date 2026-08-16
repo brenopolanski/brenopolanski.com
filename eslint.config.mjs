@@ -10,7 +10,14 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   prettier,
-  globalIgnores(['.next/**', '.source/**', 'out/**', 'build/**', 'next-env.d.ts', '**/src/components/ui/**']),
+  globalIgnores([
+    '.next/**',
+    '.source/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+    '**/src/components/ui/**',
+  ]),
   {
     plugins: {
       'simple-import-sort': simpleImportSort,

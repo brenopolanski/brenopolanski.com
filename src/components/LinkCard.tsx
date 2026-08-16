@@ -11,11 +11,18 @@ interface ILinkCardProps extends React.ComponentProps<typeof Link> {
   isExternal?: boolean
 }
 
-export const LinkCard = ({ className, icon, title, description, isExternal = false, ...props }: ILinkCardProps) => {
+export const LinkCard = ({
+  className,
+  icon,
+  title,
+  description,
+  isExternal = false,
+  ...props
+}: ILinkCardProps) => {
   return (
     <Link
       className={cn(
-        'hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 flex items-center rounded-lg border bg-zinc-50 p-4 transition-colors',
+        'flex items-center rounded-lg border bg-zinc-50 p-4 transition-colors hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50',
         className,
       )}
       prefetch={isExternal ? false : true}
@@ -26,7 +33,7 @@ export const LinkCard = ({ className, icon, title, description, isExternal = fal
       <If cond={Boolean(icon)}>{icon}</If>
       <div className="min-w-0 flex-grow">
         <p className="font-bold">{title}</p>
-        <p className="text-muted-foreground truncate text-xs">{description}</p>
+        <p className="truncate text-xs text-muted-foreground">{description}</p>
       </div>
     </Link>
   )

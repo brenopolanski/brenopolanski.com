@@ -1,13 +1,15 @@
-/**
- * @see https://prettier.io/docs/en/configuration.html
- * @type {import("prettier").Config}
- */
-const config = {
+/** @type {import('prettier').Config} */
+const prettierConfig = {
+  arrowParens: 'always',
+  endOfLine: 'lf',
   plugins: ['prettier-plugin-tailwindcss'],
-  printWidth: 120,
+  printWidth: 100,
   semi: false,
   singleQuote: true,
+  tabWidth: 2,
+  tailwindFunctions: ['cn', 'cva'],
+  tailwindStylesheet: 'src/styles/globals.css',
   trailingComma: 'all',
 }
 
-export default config
+export default prettierConfig

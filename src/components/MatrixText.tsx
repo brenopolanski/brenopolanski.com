@@ -126,7 +126,10 @@ export const MatrixText = ({
             <motion.div
               key={`${index}-${letter.char}`}
               animate={letter.isMatrix ? 'matrix' : 'normal'}
-              className={cn('w-[1ch] overflow-hidden text-center font-mono text-4xl md:text-6xl', textClassName)}
+              className={cn(
+                'w-[1ch] overflow-hidden text-center font-mono text-4xl md:text-6xl',
+                textClassName,
+              )}
               initial="initial"
               style={{
                 display: 'inline-block',

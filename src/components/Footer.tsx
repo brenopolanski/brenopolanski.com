@@ -54,7 +54,10 @@ export const Footer = ({ className, ...props }: React.HTMLAttributes<HTMLElement
   }
 
   return (
-    <footer className={cn('mt-10 flex items-center justify-center gap-2 md:mt-12', className)} {...props}>
+    <footer
+      className={cn('mt-10 flex items-center justify-center gap-2 md:mt-12', className)}
+      {...props}
+    >
       <span className="text-base">Made with</span>
       <div className="relative size-5 [&>svg]:absolute [&>svg]:inset-0 [&>svg]:size-full">
         <Icon />

@@ -20,7 +20,10 @@ const lintStagedConfig = {
   '*.{js,mjs}': (filenames) => {
     const filesString = filenames.join(' ')
 
-    return [`prettier --write ${filesString}`, `eslint --fix --max-warnings=0 --no-warn-ignored ${filesString}`]
+    return [
+      `prettier --write ${filesString}`,
+      `eslint --fix --max-warnings=0 --no-warn-ignored ${filesString}`,
+    ]
   },
 
   '*.{json,css,md}': (filenames) => {

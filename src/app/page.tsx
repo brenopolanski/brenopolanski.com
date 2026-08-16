@@ -11,7 +11,7 @@ import { Projects } from '@/components/sections/projects/Projects'
 
 const Home = () => {
   return (
-    <div className="bg-background text-foreground flex min-h-screen flex-col items-center p-4 md:p-8">
+    <div className="flex min-h-screen flex-col items-center bg-background p-4 text-foreground md:p-8">
       <div className="mx-auto w-full">
         <Header />
 

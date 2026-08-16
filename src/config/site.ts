@@ -2,7 +2,8 @@ import { ENV } from './env'
 
 export const siteConfig = {
   name: 'Breno Polanski',
-  description: 'Indie hacker. Web3 Developer. Open source enthusiast. Always learning. Usually from my mistakes.',
+  description:
+    'Indie hacker. Web3 Developer. Open source enthusiast. Always learning. Usually from my mistakes.',
   url: ENV.SITE_URL,
   // ogImage: '/og-image.png',
   themeColor: {

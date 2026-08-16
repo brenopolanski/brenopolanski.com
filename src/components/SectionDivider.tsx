@@ -7,9 +7,9 @@ interface ISectionDividerProps extends React.HTMLAttributes<HTMLDivElement> {
 export const SectionDivider = ({ className, title, ...props }: ISectionDividerProps) => {
   return (
     <div className={cn('flex items-center justify-center gap-4', className)} {...props}>
-      <div className="bg-muted-foreground/20 h-px w-full" />
-      <span className="text-muted-foreground text-center text-xs font-medium">{title}</span>
-      <div className="bg-muted-foreground/20 h-px w-full" />
+      <div className="h-px w-full bg-muted-foreground/20" />
+      <span className="text-center text-xs font-medium text-muted-foreground">{title}</span>
+      <div className="h-px w-full bg-muted-foreground/20" />
     </div>
   )
 }

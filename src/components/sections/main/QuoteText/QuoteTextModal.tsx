@@ -29,7 +29,9 @@ export const QuoteTextModal = ({ onClose }: IQuoteTextModalProps) => {
         <div className="mb-4 flex justify-center gap-2">
           <button
             className={`cursor-pointer rounded px-3 py-1 text-sm transition-colors ${
-              quoteLanguage === 'en' ? 'bg-white text-black' : 'bg-transparent text-white/60 hover:text-white'
+              quoteLanguage === 'en'
+                ? 'bg-white text-black'
+                : 'bg-transparent text-white/60 hover:text-white'
             }`}
             onClick={(event) => {
               event.stopPropagation()
@@ -40,7 +42,9 @@ export const QuoteTextModal = ({ onClose }: IQuoteTextModalProps) => {
           </button>
           <button
             className={`cursor-pointer rounded px-3 py-1 text-sm transition-colors ${
-              quoteLanguage === 'pt-br' ? 'bg-white text-black' : 'bg-transparent text-white/60 hover:text-white'
+              quoteLanguage === 'pt-br'
+                ? 'bg-white text-black'
+                : 'bg-transparent text-white/60 hover:text-white'
             }`}
             onClick={(event) => {
               event.stopPropagation()

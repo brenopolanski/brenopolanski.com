@@ -29,7 +29,11 @@ export const cn = (...inputs: ClassValue[]) => {
  * // With number identifier
  * generateReactKey('product', 123) // => 'product_123'
  */
-export const generateReactKey = (prefix: string, identifier: string | number, index?: number): string => {
+export const generateReactKey = (
+  prefix: string,
+  identifier: string | number,
+  index?: number,
+): string => {
   const base = `${prefix}_${identifier}`
   return typeof index === 'number' ? `${base}_${index}` : base
 }

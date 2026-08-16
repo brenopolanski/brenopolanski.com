@@ -71,8 +71,8 @@ export const Newsletter = () => {
         <CardHeader className="p-0">
           <CardTitle className="text-2xl font-bold text-black">Join breno&apos;s list</CardTitle>
           <CardDescription className="text-black/80">
-            Sporadic emails where I talk about what i&apos;m working on (usually web3 development, open source and
-            SaaS).
+            Sporadic emails where I talk about what i&apos;m working on (usually web3 development,
+            open source and SaaS).
           </CardDescription>
         </CardHeader>
         <form className="mt-4 space-y-3" onSubmit={handleSubmit}>
@@ -113,7 +113,11 @@ export const Newsletter = () => {
               className={`flex items-center gap-2 rounded-md border px-3 py-2 text-sm ${statusStyles[status]}`}
               role="alert"
             >
-              {status === 'success' ? <CheckIcon className="size-4" /> : <XIcon className="size-4" />}
+              {status === 'success' ? (
+                <CheckIcon className="size-4" />
+              ) : (
+                <XIcon className="size-4" />
+              )}
               {message}
             </div>
           </If>

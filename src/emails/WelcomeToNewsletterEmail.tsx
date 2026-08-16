@@ -1,5 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Body, Container, Head, Html, Img, Link, Row, Section, Tailwind, Text } from '@react-email/components'
+import {
+  Body,
+  Container,
+  Head,
+  Html,
+  Img,
+  Link,
+  Row,
+  Section,
+  Tailwind,
+  Text,
+} from '@react-email/components'
 
 import { siteConfig } from '@/config/site'
 
@@ -34,14 +45,15 @@ export const WelcomeToNewsletterEmail = () => {
             />
           </Container>
 
-          <Container className="bg-background text-foreground mb-45 p-45">
+          <Container className="mb-45 bg-background p-45 text-foreground">
             <Section>
               <Row>
                 <Text className="text-base">Hey there! 👋</Text>
 
                 <Text className="text-base">
-                  Thanks for subscribing to my newsletter! I'm excited to have you join this journey where I share my
-                  thoughts, experiences, and learnings about web development and technology.
+                  Thanks for subscribing to my newsletter! I'm excited to have you join this journey
+                  where I share my thoughts, experiences, and learnings about web development and
+                  technology.
                 </Text>
 
                 <Text className="text-base">Here's what you can expect from me:</Text>
@@ -84,13 +96,16 @@ export const WelcomeToNewsletterEmail = () => {
 
             <Section className="mt-45">
               <Row>
-                <Text className="text-base">Looking forward to sharing valuable content with you!</Text>
+                <Text className="text-base">
+                  Looking forward to sharing valuable content with you!
+                </Text>
 
                 <Text className="mt-20 text-base">Best regards,</Text>
                 <Text className="text-base font-bold">{siteConfig.creator.name}</Text>
 
                 <Text className="mt-45 text-sm text-gray-400">
-                  P.S. If you ever want to reach out, just reply to this email. I read all responses!
+                  P.S. If you ever want to reach out, just reply to this email. I read all
+                  responses!
                 </Text>
               </Row>
             </Section>
