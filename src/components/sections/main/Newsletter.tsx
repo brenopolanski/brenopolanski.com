@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 import { subscribeToNewsletter } from '@/actions/newsletter'
 import { CheckIcon, MailIcon, SendIcon, XIcon } from '@/components/Icons'
-import { If } from '@/components/If'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -66,7 +65,7 @@ export const Newsletter = () => {
   }
 
   return (
-    <Card className="bg-gradient-to-br from-emerald-400 to-green-500 dark:from-emerald-500 dark:to-green-600">
+    <Card className="bg-linear-to-br from-emerald-400 to-green-500 dark:from-emerald-500 dark:to-green-600">
       <CardContent className="px-8 py-4">
         <CardHeader className="p-0">
           <CardTitle className="text-2xl font-bold text-black">Join breno&apos;s list</CardTitle>
@@ -80,7 +79,7 @@ export const Newsletter = () => {
             <div className="relative flex-1">
               <MailIcon className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-black/60" />
               <Input
-                className="flex-1 border-0 !bg-white pl-10 text-black placeholder:text-black/60 focus-visible:ring-0"
+                className="flex-1 border-0 bg-white! pl-10 text-black placeholder:text-black/60 focus-visible:ring-0"
                 disabled={status === 'loading'}
                 placeholder="type your email to join..."
                 type="email"
@@ -108,7 +107,7 @@ export const Newsletter = () => {
           </div>
 
           {/* Status Message */}
-          <If cond={message && status !== 'loading'}>
+          {message && status !== 'loading' && (
             <div
               className={`flex items-center gap-2 rounded-md border px-3 py-2 text-sm ${statusStyles[status]}`}
               role="alert"
@@ -120,7 +119,7 @@ export const Newsletter = () => {
               )}
               {message}
             </div>
-          </If>
+          )}
         </form>
       </CardContent>
     </Card>

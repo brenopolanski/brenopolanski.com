@@ -2,8 +2,6 @@ import Link from 'next/link'
 
 import { cn } from '@/lib/utils'
 
-import { If } from './If'
-
 interface ILinkCardProps extends React.ComponentProps<typeof Link> {
   icon?: React.ReactNode
   title: string
@@ -30,8 +28,8 @@ export const LinkCard = ({
       target={isExternal ? '_blank' : undefined}
       {...props}
     >
-      <If cond={Boolean(icon)}>{icon}</If>
-      <div className="min-w-0 flex-grow">
+      {Boolean(icon) && icon}
+      <div className="min-w-0 grow">
         <p className="font-bold">{title}</p>
         <p className="truncate text-xs text-muted-foreground">{description}</p>
       </div>

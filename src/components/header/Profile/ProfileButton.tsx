@@ -2,8 +2,6 @@
 
 import { useState } from 'react'
 
-import { If } from '@/components/If'
-
 import { ProfileImage } from './ProfileImage'
 import { ProfileModal } from './ProfileModal'
 
@@ -28,9 +26,7 @@ export const ProfileButton = ({ className, ...props }: React.HTMLAttributes<HTML
         </button>
       </div>
 
-      <If cond={showFullImage}>
-        <ProfileModal onClose={() => setShowFullImage(false)} />
-      </If>
+      {showFullImage && <ProfileModal onClose={() => setShowFullImage(false)} />}
     </>
   )
 }

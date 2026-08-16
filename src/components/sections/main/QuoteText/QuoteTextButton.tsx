@@ -3,7 +3,6 @@
 import { useState } from 'react'
 
 import { QuoteIcon } from '@/components/Icons'
-import { If } from '@/components/If'
 import { Button } from '@/components/ui/button'
 
 import { QuoteTextModal } from './QuoteTextModal'
@@ -23,9 +22,7 @@ export const QuoteTextButton = () => {
         <QuoteIcon className="size-5" />
       </Button>
 
-      <If cond={showQuote}>
-        <QuoteTextModal onClose={() => setShowQuote(false)} />
-      </If>
+      {showQuote && <QuoteTextModal onClose={() => setShowQuote(false)} />}
     </>
   )
 }
