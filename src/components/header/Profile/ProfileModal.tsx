@@ -17,7 +17,10 @@ export const ProfileModal = ({ onClose }: IProfileModalProps) => {
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm sm:p-6 md:p-8"
       onClick={onClose}
     >
-      <div className="relative aspect-square w-full max-w-[60vh]">
+      <div
+        className="relative aspect-square w-full max-w-[60vh]"
+        onClick={(event) => event.stopPropagation()}
+      >
         <button
           className="absolute -top-2 -right-2 z-60 cursor-pointer rounded-full bg-white p-2 text-black transition-colors hover:bg-gray-100 sm:-top-4 sm:-right-4"
           onClick={(event) => {
