@@ -27,11 +27,11 @@ export const ProfileModal = ({ onClose }: IProfileModalProps) => {
           <ProfileImage
             alt="Breno Polanski profile picture"
             className="animate-scale-up rounded-lg bg-white/20 object-contain shadow-2xl"
+            loading="eager"
             quality={95}
             sizes="(max-width: 640px) 70vw, (max-width: 1024px) 60vw, 50vw"
             src="/breno-pfp.webp"
             fill
-            priority
           />
         </div>
       </div>
