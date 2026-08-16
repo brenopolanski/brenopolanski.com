@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { cn } from '@/lib/utils'
 
-interface ILinkCardProps extends React.ComponentProps<typeof Link> {
+interface LinkCardProps extends React.ComponentProps<typeof Link> {
   icon?: React.ReactNode
   title: string
   description: string
@@ -16,7 +16,7 @@ export const LinkCard = ({
   description,
   isExternal = false,
   ...props
-}: ILinkCardProps) => {
+}: LinkCardProps) => {
   return (
     <Link
       className={cn(

@@ -5,11 +5,11 @@ import { useEscapeKey } from '@/hooks/useEscapeKey'
 
 import { ProfileImage } from './ProfileImage'
 
-interface IProfileModalProps {
+interface ProfileModalProps {
   onClose: () => void
 }
 
-export const ProfileModal = ({ onClose }: IProfileModalProps) => {
+export const ProfileModal = ({ onClose }: ProfileModalProps) => {
   useEscapeKey(onClose)
 
   return (

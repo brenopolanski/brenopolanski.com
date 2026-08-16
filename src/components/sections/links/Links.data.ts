@@ -2,14 +2,14 @@ import { FileTextIcon, GithubIcon, LinkedInIcon, XTwitterIcon } from '@/componen
 import { paths } from '@/config/paths'
 import { siteConfig } from '@/config/site'
 
-export interface ILink {
+export interface LinkItem {
   title: string
   href: string
   icon: React.ElementType
   isExternal?: boolean
 }
 
-export const linkData: ILink[] = [
+export const linkData: LinkItem[] = [
   {
     icon: XTwitterIcon,
     title: 'X (Twitter)',

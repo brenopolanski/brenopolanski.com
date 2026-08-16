@@ -8,11 +8,11 @@ import { useEscapeKey } from '@/hooks/useEscapeKey'
 
 import { quoteText } from './quoteText'
 
-interface IQuoteTextModalProps {
+interface QuoteTextModalProps {
   onClose: () => void
 }
 
-export const QuoteTextModal = ({ onClose }: IQuoteTextModalProps) => {
+export const QuoteTextModal = ({ onClose }: QuoteTextModalProps) => {
   const [quoteLanguage, setQuoteLanguage] = useState<'en' | 'pt-br'>('en')
 
   useEscapeKey(onClose)

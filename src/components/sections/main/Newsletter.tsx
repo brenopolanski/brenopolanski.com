@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { isValidEmail } from '@/lib/utils'
 
-type TStatus = 'idle' | 'loading' | 'success' | 'error'
+type StatusType = 'idle' | 'loading' | 'success' | 'error'
 
 const statusStyles = {
   error: 'text-red-800 bg-red-100 border-red-200',
@@ -20,7 +20,7 @@ const statusStyles = {
 
 export const Newsletter = () => {
   const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<TStatus>('idle')
+  const [status, setStatus] = useState<StatusType>('idle')
   const [message, setMessage] = useState('')
 
   const handleSubmit = async (event: React.FormEvent) => {

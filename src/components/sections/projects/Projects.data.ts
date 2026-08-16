@@ -1,6 +1,6 @@
 import { BitcoinHojeLogo, DolarHojeLogo, PhootoAILogo } from '@/components/Logos'
 
-export interface IProject {
+export interface ProjectItem {
   title: string
   description: string
   icon: React.ElementType
@@ -8,7 +8,7 @@ export interface IProject {
   isExternal?: boolean
 }
 
-export const projectData: IProject[] = [
+export const projectData: ProjectItem[] = [
   {
     icon: PhootoAILogo,
     title: 'PHOOTO.AI',

@@ -6,12 +6,12 @@ export const ENV = {
   SITE_URL: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://brenopolanski.com',
 }
 
-interface IValidateEnvParams {
+interface ValidateEnvParams {
   name: string
   value: string | undefined
 }
 
-export const validateEnv = ({ name, value }: IValidateEnvParams) => {
+export const validateEnv = ({ name, value }: ValidateEnvParams) => {
   if (!value) {
     throw new Error(`${name} env variable not defined!`)
   }

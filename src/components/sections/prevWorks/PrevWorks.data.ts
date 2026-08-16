@@ -6,7 +6,7 @@ import {
   SaikuLogo,
 } from '@/components/Logos'
 
-export interface IPrevWork {
+export interface PrevWorkItem {
   title: string
   description: string
   href: string
@@ -14,7 +14,7 @@ export interface IPrevWork {
   isExternal?: boolean
 }
 
-export const prevWorksData: IPrevWork[] = [
+export const prevWorksData: PrevWorkItem[] = [
   {
     icon: DefiMoneyLogo,
     title: 'defi.money',

@@ -8,7 +8,7 @@ validateEnv({ name: 'RESEND_API_KEY', value: ENV.RESEND.API_KEY })
 
 const resend = new Resend(ENV.RESEND.API_KEY)
 
-interface ISendEmailParams {
+interface SendEmailParams {
   to: string[]
   from: string
   subject: string
@@ -33,7 +33,7 @@ interface ISendEmailParams {
  * })
  * console.log(result) // { message: 'Email sent successfully', success: true }
  */
-export const sendEmail = async ({ to, from, subject, react, scheduledAt }: ISendEmailParams) => {
+export const sendEmail = async ({ to, from, subject, react, scheduledAt }: SendEmailParams) => {
   try {
     const msg = {
       to,

@@ -5,13 +5,13 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { cn } from '@/lib/utils'
 
-interface ILetterState {
+interface LetterState {
   char: string
   isMatrix: boolean
   isSpace: boolean
 }
 
-interface IMatrixTextProps extends React.HTMLAttributes<HTMLDivElement> {
+interface MatrixTextProps extends React.HTMLAttributes<HTMLDivElement> {
   text?: string
   textClassName?: string
   initialDelay?: number
@@ -26,8 +26,8 @@ export const MatrixText = ({
   initialDelay = 200,
   letterAnimationDuration = 500,
   letterInterval = 100,
-}: IMatrixTextProps) => {
-  const [letters, setLetters] = useState<ILetterState[]>(() =>
+}: MatrixTextProps) => {
+  const [letters, setLetters] = useState<LetterState[]>(() =>
     text.split('').map((char) => ({
       char,
       isMatrix: false,
