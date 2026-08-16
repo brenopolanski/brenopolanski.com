@@ -1,7 +1,17 @@
 import { withEnvStyles } from 'env.style'
 import type { NextConfig } from 'next'
 
-const nextConfig: NextConfig = {}
+const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/portfolio',
+        destination: 'https://github.com/brenopolanski/brenopolanski.com/blob/dev/PORTFOLIO.md',
+        permanent: false,
+      },
+    ]
+  },
+}
 
 export default withEnvStyles(nextConfig, {
   color: {
