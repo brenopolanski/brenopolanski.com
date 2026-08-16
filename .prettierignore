@@ -1,18 +1,11 @@
-# Ignore artifacts:
-.next
-node_modules
-public
-build
-dist
-coverage
-.vercel
-.turbo
-
-# Ignore package files:
-package-lock.json
-yarn.lock
+# ignore artifacts
+dist/
+node_modules/
+.next/
+.turbo/
+coverage/
 pnpm-lock.yaml
-bun.lockb
+.pnpm-store/
 
-# Ignore all shadcn/ui files:
-src/components/ui
+# Ignore all shadcn/ui files
+**/src/components/ui/**
