@@ -13,7 +13,7 @@ export const linkData: LinkItem[] = [
   {
     icon: XTwitterIcon,
     title: 'X (Twitter)',
-    href: siteConfig.links.twitter,
+    href: siteConfig.links.x,
     isExternal: true,
   },
   {

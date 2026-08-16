@@ -82,7 +82,7 @@ export const WelcomeToNewsletterEmail = () => {
 
             <ul className="list-none pl-0">
               {[
-                { name: 'Twitter', url: siteConfig.links.twitter },
+                { name: 'X (Twitter)', url: siteConfig.links.x },
                 { name: 'GitHub', url: siteConfig.links.github },
                 { name: 'LinkedIn', url: siteConfig.links.linkedin },
               ].map(({ name, url }) => (

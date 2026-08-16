@@ -11,13 +11,13 @@ export const siteConfig = {
     dark: '#09090B',
   },
   links: {
-    twitter: 'https://twitter.com/brenopolanski',
+    x: 'https://x.com/brenopolanski',
     github: 'https://github.com/brenopolanski',
     linkedin: 'https://linkedin.com/in/brenopolanski',
   },
   creator: {
     name: 'Breno Polanski',
-    twitter: '@brenopolanski',
+    x: '@brenopolanski',
     url: 'https://brenopolanski.com',
     emails: {
       personal: 'breno.polanski@gmail.com',
@@ -29,11 +29,15 @@ export const siteConfig = {
     'Web3',
     'Developer',
     'Software Engineer',
+    'Full Stack Developer',
+    'Front-End Engineer',
+    'Indie Hacker',
     'Open Source',
     'JavaScript',
     'TypeScript',
     'React',
     'Next.js',
+    'Node.js',
   ],
   meta: {
     language: 'en',
