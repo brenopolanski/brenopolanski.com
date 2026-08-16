@@ -55,7 +55,7 @@ export const sendEmail = async ({ to, from, subject, react, scheduledAt }: ISend
   } catch (error: any) {
     console.error('Error sending email:', error)
 
-    if (error.response && error.response.body && error.response.body.errors) {
+    if (error.response?.body?.errors) {
       console.error('Resend errors:', error.response.body.errors)
     }
 

@@ -18,8 +18,10 @@ const eslintConfig = defineConfig([
     },
     rules: {
       curly: 'error',
-      'no-unused-vars': 'off',
       'object-shorthand': ['error', 'always'],
+      'prefer-arrow-callback': 'error',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
       'react/function-component-definition': [
         'error',
         {
@@ -39,22 +41,9 @@ const eslintConfig = defineConfig([
         },
       ],
       'react/no-unknown-property': ['error', { ignore: ['global', 'jsx'] }],
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react-hooks/exhaustive-deps': 'warn',
-      'react-hooks/rules-of-hooks': 'error',
       'simple-import-sort/exports': 'error',
       'simple-import-sort/imports': 'error',
       'unused-imports/no-unused-imports': 'error',
-      'unused-imports/no-unused-vars': [
-        'warn',
-        {
-          args: 'after-used',
-          argsIgnorePattern: '^_',
-          vars: 'all',
-          varsIgnorePattern: '^_',
-        },
-      ],
     },
   },
   {
@@ -67,26 +56,25 @@ const eslintConfig = defineConfig([
       },
     },
     rules: {
-      '@typescript-eslint/ban-ts-comment': 'off',
       '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-      '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/naming-convention': [
+      '@typescript-eslint/no-import-type-side-effects': 'error',
+      '@typescript-eslint/no-unused-vars': [
         'error',
         {
-          format: ['PascalCase'],
-          prefix: ['I'],
-          selector: 'interface',
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
         },
+      ],
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
         {
-          format: ['PascalCase'],
-          prefix: ['T'],
-          selector: 'typeAlias',
+          prefer: 'type-imports',
         },
       ],
       '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-import-type-side-effects': ['error'],
-      '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+      '@typescript-eslint/prefer-optional-chain': 'warn',
     },
   },
 ])

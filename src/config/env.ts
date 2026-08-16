@@ -3,7 +3,7 @@ export const ENV = {
   RESEND: {
     API_KEY: process.env.RESEND_API_KEY,
   },
-  SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://brenopolanski.com',
+  SITE_URL: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://brenopolanski.com',
 }
 
 interface IValidateEnvParams {

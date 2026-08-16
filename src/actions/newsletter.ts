@@ -16,7 +16,7 @@ export const subscribeToNewsletter = async (email: string) => {
     const data = await response.json()
 
     if (!response.ok) {
-      throw new Error(data.error || 'Failed to subscribe')
+      throw new Error(data.error ?? 'Failed to subscribe')
     }
 
     return { message: data.message, success: true }

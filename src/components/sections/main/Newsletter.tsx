@@ -56,7 +56,7 @@ export const Newsletter = () => {
         }, 5_000)
       } else {
         setStatus('error')
-        setMessage(result.error || 'Failed to subscribe to newsletter. Please try again.')
+        setMessage(result.error ?? 'Failed to subscribe to newsletter. Please try again.')
       }
     } catch (error) {
       console.error('Failed to subscribe to newsletter', error)

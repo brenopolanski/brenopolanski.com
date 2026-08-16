@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     })
 
     if (!result.success) {
-      return NextResponse.json({ error: result.error || 'Failed to send email' }, { status: 500 })
+      return NextResponse.json({ error: result.error ?? 'Failed to send email' }, { status: 500 })
     }
 
     return NextResponse.json({ message: 'Subscription email sent successfully' }, { status: 200 })
