@@ -85,7 +85,7 @@ export const Newsletter = () => {
                 type="email"
                 value={email}
                 required
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(event) => setEmail(event.target.value)}
               />
             </div>
             <Button
