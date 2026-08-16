@@ -14,7 +14,7 @@ export const ProfileModal = ({ onClose }: IProfileModalProps) => {
     >
       <div className="relative aspect-square w-full max-w-[60vh]">
         <button
-          className="absolute -top-2 -right-2 z-[60] cursor-pointer rounded-full bg-white p-2 text-black transition-colors hover:bg-gray-100 sm:-top-4 sm:-right-4"
+          className="absolute -top-2 -right-2 z-60 cursor-pointer rounded-full bg-white p-2 text-black transition-colors hover:bg-gray-100 sm:-top-4 sm:-right-4"
           onClick={(event) => {
             event.stopPropagation()
             onClose()
