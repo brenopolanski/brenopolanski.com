@@ -4,12 +4,12 @@ import { cn } from './utils'
 
 const fontSans = Geist({
   subsets: ['latin'],
-  variable: '--font-geist-sans',
+  variable: '--font-sans',
 })
 
 const fontMono = Geist_Mono({
   subsets: ['latin'],
-  variable: '--font-geist-mono',
+  variable: '--font-mono',
 })
 
 const fontPlayfair = Playfair_Display({
