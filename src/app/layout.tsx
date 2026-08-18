@@ -2,7 +2,7 @@ import '@/styles/globals.css'
 
 import { fontVariables } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
-import { ThemeProvider } from '@/providers/ThemeProvider'
+import { Providers } from '@/providers/Providers'
 
 export { metadata } from './metadata'
 
@@ -12,19 +12,13 @@ interface RootLayoutProps {
 
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn('theme-scaled font-mono antialiased', fontVariables)}
-        suppressHydrationWarning
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          disableTransitionOnChange
-          enableSystem
-        >
-          {children}
-        </ThemeProvider>
+    <html
+      className={cn('theme-scaled font-mono antialiased', fontVariables)}
+      lang="en"
+      suppressHydrationWarning
+    >
+      <body>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
