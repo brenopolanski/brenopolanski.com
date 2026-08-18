@@ -6,11 +6,11 @@ import { ThemeProvider } from '@/providers/ThemeProvider'
 
 export { metadata } from './metadata'
 
-const RootLayout = ({
-  children,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode
-}>) => {
+}
+
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
