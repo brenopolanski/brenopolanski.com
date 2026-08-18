@@ -1,5 +1,8 @@
 import '@/styles/globals.css'
 
+import { Analytics } from '@vercel/analytics/next'
+
+import { AnalyticsClickTracker } from '@/components/analytics/AnalyticsClickTracker'
 import { fontVariables } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 import { Providers } from '@/providers/Providers'
@@ -19,6 +22,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
     >
       <body>
         <Providers>{children}</Providers>
+        <Analytics />
+        <AnalyticsClickTracker />
       </body>
     </html>
   )

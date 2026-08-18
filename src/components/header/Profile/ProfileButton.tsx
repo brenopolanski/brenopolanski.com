@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 
+import { ANALYTICS_EVENTS } from '@/lib/analytics'
+
 import { ProfileImage } from './ProfileImage'
 import { ProfileModal } from './ProfileModal'
 
@@ -14,6 +16,7 @@ export const ProfileButton = ({ className, ...props }: React.HTMLAttributes<HTML
         <button
           aria-label="View profile picture"
           className="cursor-pointer transition-transform hover:scale-110"
+          data-analytics-event={ANALYTICS_EVENTS.profileOpen}
           onClick={() => setShowFullImage(true)}
         >
           <ProfileImage

@@ -4,6 +4,7 @@ import { useTheme } from 'next-themes'
 import { useCallback } from 'react'
 
 import { Button } from '@/components/ui/button'
+import { ANALYTICS_EVENTS } from '@/lib/analytics'
 
 import { BrightnessIcon } from './Icons'
 
@@ -25,7 +26,13 @@ export const ThemeToggle = () => {
   }, [switchTheme])
 
   return (
-    <Button className="cursor-pointer" size="icon" onClick={toggleTheme}>
+    <Button
+      className="cursor-pointer"
+      data-analytics-event={ANALYTICS_EVENTS.themeToggle}
+      data-analytics-source="button"
+      size="icon"
+      onClick={toggleTheme}
+    >
       <BrightnessIcon className="size-5" />
       <span className="sr-only">Toggle theme</span>
     </Button>

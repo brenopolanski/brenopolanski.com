@@ -7,6 +7,7 @@ import { CheckIcon, MailIcon, SendIcon, XIcon } from '@/components/Icons'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+import { ANALYTICS_EVENTS, trackEvent } from '@/lib/analytics'
 import { isValidEmail } from '@/lib/utils'
 
 type StatusType = 'idle' | 'loading' | 'success' | 'error'
@@ -29,12 +30,14 @@ export const Newsletter = () => {
     if (!email) {
       setStatus('error')
       setMessage('Please enter your email')
+      trackEvent(ANALYTICS_EVENTS.newsletterSubscribe, { success: false, reason: 'empty' })
       return
     }
 
     if (!isValidEmail(email)) {
       setStatus('error')
       setMessage('Please enter a valid email')
+      trackEvent(ANALYTICS_EVENTS.newsletterSubscribe, { success: false, reason: 'invalid' })
       return
     }
 
@@ -47,6 +50,7 @@ export const Newsletter = () => {
         setStatus('success')
         setMessage('Successfully subscribed! Check your inbox :)')
         setEmail('')
+        trackEvent(ANALYTICS_EVENTS.newsletterSubscribe, { success: true })
 
         // Reset success message after 5 seconds
         setTimeout(() => {
@@ -56,11 +60,13 @@ export const Newsletter = () => {
       } else {
         setStatus('error')
         setMessage(result.error ?? 'Failed to subscribe to newsletter. Please try again.')
+        trackEvent(ANALYTICS_EVENTS.newsletterSubscribe, { success: false })
       }
     } catch (error) {
       console.error('Failed to subscribe to newsletter', error)
       setStatus('error')
       setMessage('Failed to subscribe to newsletter. Please try again.')
+      trackEvent(ANALYTICS_EVENTS.newsletterSubscribe, { success: false })
     }
   }
 

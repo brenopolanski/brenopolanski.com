@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 import { XIcon } from '@/components/Icons'
 import { useEscapeKey } from '@/hooks/useEscapeKey'
+import { ANALYTICS_EVENTS } from '@/lib/analytics'
 
 import { quoteText } from './quoteText'
 
@@ -44,6 +45,8 @@ export const QuoteTextModal = ({ onClose }: QuoteTextModalProps) => {
                 ? 'bg-white text-black'
                 : 'bg-transparent text-white/60 hover:text-white'
             }`}
+            data-analytics-event={ANALYTICS_EVENTS.quoteLanguage}
+            data-analytics-language="en"
             onClick={(event) => {
               event.stopPropagation()
               setQuoteLanguage('en')
@@ -57,6 +60,8 @@ export const QuoteTextModal = ({ onClose }: QuoteTextModalProps) => {
                 ? 'bg-white text-black'
                 : 'bg-transparent text-white/60 hover:text-white'
             }`}
+            data-analytics-event={ANALYTICS_EVENTS.quoteLanguage}
+            data-analytics-language="pt-br"
             onClick={(event) => {
               event.stopPropagation()
               setQuoteLanguage('pt-br')
@@ -74,6 +79,8 @@ export const QuoteTextModal = ({ onClose }: QuoteTextModalProps) => {
             <p className="font-['Playfair_Display'] text-xs italic sm:text-sm">- by Zeno & Carol</p>
             <Link
               className="text-xs text-gray-400 transition-colors hover:text-white"
+              data-analytics-event={ANALYTICS_EVENTS.quoteSourceClick}
+              data-analytics-target="https://zenorocha.com/reminder"
               href="https://zenorocha.com/reminder"
               rel="noopener noreferrer"
               target="_blank"

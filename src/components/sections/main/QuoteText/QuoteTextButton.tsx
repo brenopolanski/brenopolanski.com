@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 import { QuoteIcon } from '@/components/Icons'
 import { Button } from '@/components/ui/button'
+import { ANALYTICS_EVENTS } from '@/lib/analytics'
 
 import { QuoteTextModal } from './QuoteTextModal'
 
@@ -15,6 +16,7 @@ export const QuoteTextButton = () => {
       <Button
         aria-label="View inspirational quote"
         className="cursor-pointer rounded-full p-2 transition-transform hover:scale-110"
+        data-analytics-event={ANALYTICS_EVENTS.quoteOpen}
         size="icon"
         variant="secondary"
         onClick={() => setShowQuote(true)}

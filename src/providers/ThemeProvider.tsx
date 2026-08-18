@@ -4,6 +4,8 @@ import type { ThemeProviderProps } from 'next-themes'
 import { ThemeProvider as NextThemesProvider, useTheme } from 'next-themes'
 import { useEffect } from 'react'
 
+import { ANALYTICS_EVENTS, trackEvent } from '@/lib/analytics'
+
 const isTypingTarget = (target: EventTarget | null) => {
   if (!(target instanceof HTMLElement)) {
     return false
@@ -41,6 +43,8 @@ const ThemeHotkey = () => {
       const switchTheme = () => {
         setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
       }
+
+      trackEvent(ANALYTICS_EVENTS.themeToggle, { source: 'hotkey' })
 
       // Ref: https://github.com/rudrodip/theme-toggle-effect
       if (!document.startViewTransition) {

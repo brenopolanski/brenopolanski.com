@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
+import { ANALYTICS_EVENTS } from '@/lib/analytics'
 import { cn, generateReactKey } from '@/lib/utils'
 
 import type { LinkItem } from './Links.data'
@@ -17,6 +18,11 @@ export const Links = ({ className, ...props }: React.HTMLAttributes<HTMLDivEleme
           asChild
         >
           <Link
+            data-analytics-event={
+              title === 'Resume' ? ANALYTICS_EVENTS.resumeClick : ANALYTICS_EVENTS.socialClick
+            }
+            data-analytics-location="links"
+            data-analytics-target={href}
             href={href}
             prefetch={false}
             rel={isExternal ? 'noopener noreferrer' : undefined}
