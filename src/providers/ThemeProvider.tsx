@@ -38,7 +38,17 @@ const ThemeHotkey = () => {
         return
       }
 
-      setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+      const switchTheme = () => {
+        setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+      }
+
+      // Ref: https://github.com/rudrodip/theme-toggle-effect
+      if (!document.startViewTransition) {
+        switchTheme()
+        return
+      }
+
+      document.startViewTransition(switchTheme)
     }
 
     window.addEventListener('keydown', onKeyDown)

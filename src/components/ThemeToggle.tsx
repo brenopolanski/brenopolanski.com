@@ -18,6 +18,7 @@ export const ThemeToggle = () => {
   const toggleTheme = useCallback(() => {
     if (!document.startViewTransition) {
       switchTheme()
+      return
     }
 
     document.startViewTransition(switchTheme)
