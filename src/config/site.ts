@@ -1,9 +1,12 @@
 import { ENV } from './env'
 
+const siteName = 'Breno Polanski'
+const description =
+  'Indie hacker. Web3 Developer. Open source enthusiast. Always learning. Usually from my mistakes.'
+
 export const siteConfig = {
-  name: 'Breno Polanski',
-  description:
-    'Indie hacker. Web3 Developer. Open source enthusiast. Always learning. Usually from my mistakes.',
+  name: siteName,
+  description,
   url: ENV.SITE_URL,
   themeColor: {
     light: '#FFFFFF',
@@ -14,23 +17,23 @@ export const siteConfig = {
     github: 'https://github.com/brenopolanski',
     linkedin: 'https://linkedin.com/in/brenopolanski',
   },
-  creator: {
-    name: 'Breno Polanski',
+  author: {
+    name: siteName,
     x: '@brenopolanski',
-    url: 'https://brenopolanski.com',
+    url: ENV.SITE_URL,
     emails: {
       personal: 'breno.polanski@gmail.com',
       newsletter: 'hi@brenopolanski.com',
     },
   },
   keywords: [
-    'Breno Polanski',
+    siteName,
+    'Indie Hacker',
     'Web3',
     'Developer',
     'Software Engineer',
     'Full Stack Developer',
     'Front-End Engineer',
-    'Indie Hacker',
     'Open Source',
     'JavaScript',
     'TypeScript',
@@ -38,11 +41,4 @@ export const siteConfig = {
     'Next.js',
     'Node.js',
   ],
-  meta: {
-    language: 'en',
-    locale: 'en_US',
-    theme: {
-      default: 'system',
-    },
-  },
 } as const

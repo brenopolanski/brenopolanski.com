@@ -101,7 +101,7 @@ export const WelcomeToNewsletterEmail = () => {
                 </Text>
 
                 <Text className="mt-20 text-base">Best regards,</Text>
-                <Text className="text-base font-bold">{siteConfig.creator.name}</Text>
+                <Text className="text-base font-bold">{siteConfig.author.name}</Text>
 
                 <Text className="mt-45 text-sm text-gray-400">
                   P.S. If you ever want to reach out, just reply to this email. I read all

@@ -1,6 +1,5 @@
 import '@/styles/globals.css'
 
-import { siteConfig } from '@/config/site'
 import { fontVariables } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/providers/ThemeProvider'
@@ -13,14 +12,14 @@ const RootLayout = ({
   children: React.ReactNode
 }>) => {
   return (
-    <html lang={siteConfig.meta.language} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn('theme-scaled font-mono antialiased', fontVariables)}
         suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme={siteConfig.meta.theme.default}
+          defaultTheme="system"
           disableTransitionOnChange
           enableSystem
         >
