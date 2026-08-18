@@ -1,3 +1,5 @@
+import { blankToUndefined } from '@/lib/utils'
+
 export const ENV = {
   NODE_ENV: process.env.NODE_ENV,
   RESEND: {
@@ -12,8 +14,8 @@ interface ValidateEnvParams {
 }
 
 export const validateEnv = ({ name, value }: ValidateEnvParams) => {
-  if (!value) {
-    throw new Error(`${name} env variable not defined!`)
+  if (!blankToUndefined(value)) {
+    throw new Error(`The ${name} environment variable is not defined!`)
   }
 }
 

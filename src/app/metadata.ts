@@ -3,9 +3,10 @@ import type { Metadata } from 'next'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
+    template: `%s · ${siteConfig.name}`,
   },
   description: siteConfig.description,
   appleWebApp: {
@@ -33,7 +34,6 @@ export const metadata: Metadata = {
   },
   keywords: [...siteConfig.keywords],
   manifest: '/site.webmanifest',
-  metadataBase: new URL(siteConfig.url),
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,

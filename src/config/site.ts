@@ -5,7 +5,6 @@ export const siteConfig = {
   description:
     'Indie hacker. Web3 Developer. Open source enthusiast. Always learning. Usually from my mistakes.',
   url: ENV.SITE_URL,
-  // ogImage: '/og-image.png',
   themeColor: {
     light: '#FFFFFF',
     dark: '#09090B',
