@@ -1,6 +1,9 @@
-# Portfolio
-
-Indie hacker. Web3 developer. Open source enthusiast. Always learning. Usually from my mistakes.
+<h1 align="center">
+  Breno Polanski - Portfolio
+</h1>
+<p align="center">
+  Indie hacker. Web3 developer. Open source enthusiast.
+</p>
 
 [![Website](https://img.shields.io/badge/BRENOPOLANSKI.COM-09090B?style=for-the-badge&logo=googlechrome&logoColor=ffffff)](https://brenopolanski.com) [![GitHub](https://img.shields.io/badge/GITHUB-09090B?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/brenopolanski) [![X](https://img.shields.io/badge/X-09090B?style=for-the-badge&logo=x&logoColor=ffffff)](https://x.com/brenopolanski) [![LinkedIn](https://img.shields.io/badge/LINKEDIN-09090B?style=for-the-badge&logo=linkedin&logoColor=ffffff)](https://linkedin.com/in/brenopolanski)
 
@@ -22,17 +25,6 @@ Unofficial macOS menu bar client · MIT · 2026
 A tiny, keyboard-first tray app for [DefiLlama Search](https://search.defillama.com). Press `⌘⇧L` (or click the menu bar icon) to open a compact popover, type a query, and hit Enter to open the official project link in your default browser.
 
 This is an independent open-source client. It is not developed, maintained, or endorsed by DefiLlama.
-
-### What it does
-
-- Lives in the macOS menu bar with no Dock icon
-- Opens a native popover anchored near the tray icon
-- Searches the public DefiLlama Search directory
-- Navigates results with `↑` / `↓`
-- Opens the selected result in the default browser
-- Remembers recent queries locally (up to 8)
-- Pins search results and queries as favorites (up to 20)
-- Clears history or favorites from the tray menu
 
 ### Tech stack
 
