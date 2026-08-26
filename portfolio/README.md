@@ -19,10 +19,10 @@ Unofficial macOS menu bar client · MIT · 2026
 <table>
   <tr>
     <td width="50%" align="center">
-      <img src="./assets/defillama-search/screenshot-01.png" alt="DefiLlama Search popover with a query and results" />
+      <img src="./projects/defillama-search/demo-01.png" alt="DefiLlama Search popover with a query and results" />
     </td>
     <td width="50%" align="center">
-      <img src="./assets/defillama-search/screenshot-02.png" alt="DefiLlama Search favorites and recent searches" />
+      <img src="./projects/defillama-search/demo-02.png" alt="DefiLlama Search favorites and recent searches" />
     </td>
   </tr>
 </table>
