@@ -9,7 +9,8 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/portfolio',
-        destination: 'https://github.com/brenopolanski/brenopolanski.com/blob/dev/PORTFOLIO.md',
+        destination:
+          'https://github.com/brenopolanski/brenopolanski.com/blob/dev/portfolio/README.md',
         permanent: false,
       },
     ]
