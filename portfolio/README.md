@@ -38,3 +38,30 @@ This is an independent open-source client. It is not developed, maintained, or e
 ### Links
 
 [![Repo](https://img.shields.io/badge/GITHUB-09090B?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/brenopolanski/defillama-search) [![Download](https://img.shields.io/badge/DOWNLOAD-09090B?style=for-the-badge&logo=apple&logoColor=ffffff)](https://github.com/brenopolanski/defillama-search/releases) [![DefiLlama Search](https://img.shields.io/badge/SEARCH.DEFILLAMA.COM-09090B?style=for-the-badge&logoColor=ffffff)](https://search.defillama.com)
+
+## <samp>// DASHFY</samp>
+
+Dashboards for developers · AGPL-3.0 · 2025
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="./projects/dashfy/demo-01.png" alt="Dashfy dashboard in dark mode" />
+    </td>
+    <td width="50%" align="center">
+      <img src="./projects/dashfy/demo-02.png" alt="Dashfy dashboard widgets and layout" />
+    </td>
+  </tr>
+</table>
+
+An open-source framework I built to define dashboards as code. Connect APIs, compose widgets through extensions, and render real-time interfaces — without assembling dashboards by hand in a UI.
+
+A CLI scaffolds projects, adds extensions, and audits setup. Dashboards are declarative (TypeScript, JSON, or YAML) and stay versionable.
+
+### Tech stack
+
+![TypeScript](https://img.shields.io/badge/TYPESCRIPT-09090B?style=for-the-badge&logo=typescript&logoColor=ffffff) ![React](https://img.shields.io/badge/REACT-09090B?style=for-the-badge&logo=react&logoColor=ffffff) ![Node.js](https://img.shields.io/badge/NODE.JS-09090B?style=for-the-badge&logo=nodedotjs&logoColor=ffffff) ![Vite](https://img.shields.io/badge/VITE-09090B?style=for-the-badge&logo=vite&logoColor=ffffff) ![Next.js](https://img.shields.io/badge/NEXT.JS-09090B?style=for-the-badge&logo=nextdotjs&logoColor=ffffff) ![WebSockets](https://img.shields.io/badge/WEBSOCKETS-09090B?style=for-the-badge&logoColor=ffffff)
+
+### Links
+
+[![Repo](https://img.shields.io/badge/GITHUB-09090B?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/dashfy/dashfy) [![Website](https://img.shields.io/badge/DASHFY.DEV-09090B?style=for-the-badge&logo=googlechrome&logoColor=ffffff)](https://dashfy.dev) [![Demo](https://img.shields.io/badge/DEMO-09090B?style=for-the-badge&logoColor=ffffff)](https://demo.dashfy.dev) [![Docs](https://img.shields.io/badge/DOCS-09090B?style=for-the-badge&logoColor=ffffff)](https://dashfy.dev/docs)
