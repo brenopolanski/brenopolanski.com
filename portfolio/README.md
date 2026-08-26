@@ -43,13 +43,31 @@ This is an independent open-source client. It is not developed, maintained, or e
 
 Dashboards for developers · AGPL-3.0 · 2025
 
+<p align="center">
+  <img src="./projects/dashfy/hero.png" alt="Dashfy dashboard preview" />
+</p>
+
 <table>
   <tr>
-    <td width="50%" align="center">
+    <td width="33%" align="center">
       <img src="./projects/dashfy/demo-01.png" alt="Dashfy dashboard in dark mode" />
     </td>
-    <td width="50%" align="center">
+    <td width="33%" align="center">
       <img src="./projects/dashfy/demo-02.png" alt="Dashfy dashboard widgets and layout" />
+    </td>
+    <td width="33%" align="center">
+      <img src="./projects/dashfy/demo-03.png" alt="Dashfy dashboard detail view" />
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" align="center">
+      <img src="./projects/dashfy/demo-04.png" alt="Dashfy dashboard panel" />
+    </td>
+    <td width="33%" align="center">
+      <img src="./projects/dashfy/demo-05.png" alt="Dashfy product preview" />
+    </td>
+    <td width="33%" align="center">
+      <img src="./projects/dashfy/demo-06.png" alt="Dashfy product banner" />
     </td>
   </tr>
 </table>
