@@ -5,7 +5,12 @@
   Indie hacker. Web3 developer. Open source enthusiast.
 </p>
 
-[![Website](https://img.shields.io/badge/BRENOPOLANSKI.COM-09090B?style=for-the-badge&logo=googlechrome&logoColor=ffffff)](https://brenopolanski.com) [![GitHub](https://img.shields.io/badge/GITHUB-09090B?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/brenopolanski) [![X](https://img.shields.io/badge/X-09090B?style=for-the-badge&logo=x&logoColor=ffffff)](https://x.com/brenopolanski) [![LinkedIn](https://img.shields.io/badge/LINKEDIN-09090B?style=for-the-badge&logo=linkedin&logoColor=ffffff)](https://linkedin.com/in/brenopolanski)
+<p align="center">
+  <a href="https://brenopolanski.com"><img src="https://img.shields.io/badge/BRENOPOLANSKI.COM-09090B?style=for-the-badge&logo=googlechrome&logoColor=ffffff" alt="Website" /></a>
+  <a href="https://github.com/brenopolanski"><img src="https://img.shields.io/badge/GITHUB-09090B?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub" /></a>
+  <a href="https://x.com/brenopolanski"><img src="https://img.shields.io/badge/X-09090B?style=for-the-badge&logo=x&logoColor=ffffff" alt="X" /></a>
+  <a href="https://linkedin.com/in/brenopolanski"><img src="https://img.shields.io/badge/LINKEDIN-09090B?style=for-the-badge&logo=linkedin&logoColor=ffffff" alt="LinkedIn" /></a>
+</p>
 
 ## <samp>// DEFILLAMA SEARCH</samp>
 
