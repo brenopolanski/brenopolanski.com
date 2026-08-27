@@ -35,6 +35,10 @@ pnpm-debug.log*
 .env
 .env*.local
 
+# resume (yamlresume build artifacts, resume.yml is the source)
+/resume/*
+!/resume/resume.yml
+
 # misc
 *.tsbuildinfo
 .eslintcache

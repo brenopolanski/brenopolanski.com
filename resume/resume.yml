@@ -1,0 +1,345 @@
+# yaml-language-server: $schema=https://yamlresume.dev/schema.json
+---
+content:
+  basics:
+    name: Breno Polanski
+    headline: Senior Front-End Engineer
+    email: breno.polanski@gmail.com
+    phone: "+55 83 98908-1243"
+    url: https://brenopolanski.com
+    summary: |
+      - Front-End Engineer with 12+ years of experience building web applications, developer tools, AI products, SaaS applications, and Web3 platforms
+      - Focused on React, TypeScript, Next.js, and front-end architecture, with experience shipping full-stack products from concept to production
+      - Background in open source, blockchain applications, developer tooling, and real-time systems
+
+  profiles:
+    - network: LinkedIn
+      username: brenopolanski
+      url: https://www.linkedin.com/in/brenopolanski/
+    - network: GitHub
+      username: brenopolanski
+      url: https://github.com/brenopolanski
+
+  work:
+    - name: Dashfy
+      position: Founder & Full-Stack Engineer
+      url: https://github.com/dashfy
+      startDate: Jan 2026
+      summary: |
+        - Founded and built an open-source, real-time dashboard framework for developers and engineering teams
+        - Designed a plugin-based architecture so developers can extend the platform with custom widgets and integrations
+        - Implemented a WebSocket communication layer for live dashboards and event-driven updates
+        - Built a reusable component library and extensions used to compose custom dashboards
+        - Set up the project as a pnpm monorepo with Turbo, focused on maintainability and extensibility
+      keywords:
+        - React
+        - TypeScript
+        - Tailwind CSS
+        - shadcn/ui
+        - Socket.IO
+        - Node.js
+        - Turbo
+        - pnpm
+        - GitHub API
+
+    - name: PHOOTO.AI
+      position: Founder & Full-Stack Engineer
+      url: https://phooto.ai
+      startDate: Nov 2024
+      endDate: Jun 2025
+      summary: |
+        - Founded and built an AI platform that turns regular photos into professional headshots
+        - Built the product end to end, including frontend, backend, authentication, payments, and deployment
+        - Integrated AI image generation APIs to produce headshots within minutes
+        - Built the marketing website and onboarding flow
+        - Owned the product lifecycle, from UX design and payment integration to deployment and production support
+        - Generated over 1,000 headshots during the initial launch period
+      keywords:
+        - React
+        - Next.js
+        - TypeScript
+        - Tailwind CSS
+        - shadcn/ui
+        - React Email
+        - Resend
+        - Stripe
+        - Supabase
+        - Astria FLUX API
+
+    - name: defi.money
+      position: Senior Front-End Engineer
+      url: https://blog.defi.money/introducing-defimoney
+      startDate: May 2024
+      endDate: Nov 2024
+      summary: |
+        - Built the frontend for a cross-chain, over-collateralized stablecoin protocol based on an authorized fork of crvUSD
+        - Contributed to a multi-chain interface for managing positions across several EVM networks from a single place
+        - Helped implement cross-chain asset transfers using LayerZero OFT
+        - Worked with smart contract engineers to turn protocol specifications into user interfaces
+      keywords:
+        - React
+        - Next.js
+        - TypeScript
+        - Tailwind CSS
+        - Zustand
+        - React Query
+        - Viem/Wagmi
+        - LayerZero OFT
+
+    - name: LlamaFolio
+      position: Senior Front-End Engineer
+      url: https://github.com/llamafolio
+      startDate: Jul 2022
+      endDate: May 2024
+      summary: |
+        - Built the frontend for an open-source, privacy-first DeFi portfolio tracker supporting 400+ protocols across 17 blockchains
+        - Developed responsive and accessible interfaces for portfolio tracking, wallet management, and asset analytics
+        - Integrated blockchain data from multiple EVM networks into a single portfolio view
+      keywords:
+        - React
+        - Next.js
+        - TypeScript
+        - Chakra UI
+        - Zustand
+        - React Query
+        - Viem/Wagmi
+
+    - name: LlamaNodes
+      position: Senior Front-End Engineer
+      url: https://github.com/llamanodes
+      startDate: Jul 2022
+      endDate: May 2024
+      summary: |
+        - Built the frontend for a Web3 RPC platform providing low-latency blockchain infrastructure for developers
+        - Developed dashboards for managing RPC endpoints, API keys, usage analytics, and account settings
+        - Built reusable UI components and frontend architecture for the developer platform
+      keywords:
+        - React
+        - Next.js
+        - TypeScript
+        - Chakra UI
+        - Zustand
+        - React Query
+        - Viem/Wagmi
+
+    - name: Aluna.Social
+      position: Senior Front-End Engineer
+      startDate: Mar 2021
+      endDate: Jun 2022
+      summary: |
+        - Contributed to a multi-exchange crypto trading platform with portfolio management, social trading, and copy trading
+        - Built and maintained React and Next.js interfaces for trading across multiple exchanges
+        - Developed interfaces for portfolio management, order execution, and real-time market data
+      keywords:
+        - React
+        - Next.js
+        - TypeScript
+        - Chakra UI
+        - Zustand
+        - SWR
+        - MongoDB
+
+    - name: ARK Ecosystem
+      position: Full-Stack Engineer
+      url: https://github.com/ArkEcosystem
+      startDate: Jan 2020
+      endDate: Jan 2021
+      summary: |
+        - Contributed to ARK Explorer and ARK Desktop Wallet, two core products of the ARK blockchain ecosystem
+        - Developed features for a multi-asset desktop wallet built with Electron, supporting ARK-based networks and multiple cryptocurrencies
+        - Built interfaces for blockchain explorers to browse transactions, wallet addresses, blocks, and network activity
+      keywords:
+        - React
+        - TypeScript
+        - Electron
+        - Tailwind CSS
+        - Testing Library
+        - TestCafe
+
+    - name: Meteorite BI
+      position: Front-End Engineer
+      url: https://github.com/spiculedata/saiku
+      startDate: Sep 2014
+      endDate: Jan 2020
+      summary: |
+        - Contributed to Saiku, a web-based business intelligence platform for interactive OLAP analysis and reporting
+        - Built and maintained data visualization interfaces, reporting features, and analytical dashboards for enterprise users
+        - Developed reusable components and interactive charts for exploring multidimensional datasets
+      keywords:
+        - Java
+        - Backbone.js
+        - Underscore.js
+        - HTML5
+        - CSS3
+        - jQuery
+        - jQuery UI
+        - D3.js
+        - CCC Chart
+
+    - name: Udacity
+      position: Mentor and Project Reviewer
+      url: https://udacity.com
+      startDate: Jun 2016
+      endDate: Dec 2019
+      summary: |
+        - Mentored students enrolled in Udacity Nanodegree programs, providing technical guidance toward their learning goals
+        - Reviewed student projects and gave feedback on programming fundamentals and front-end development practices
+
+    - name: NUTES (UEPB)
+      position: Student Researcher
+      url: https://nutes.uepb.edu.br
+      startDate: Jul 2014
+      endDate: Nov 2015
+      summary: |
+        - Developed software for electrocardiogram (ECG) acquisition and analysis in emergency cardiac care
+        - Built a web application for electronic medical record visualization and management
+
+    - name: Microsoft
+      position: Microsoft Student Partner
+      url: https://mvp.microsoft.com/studentambassadors
+      startDate: Dec 2012
+      endDate: Oct 2015
+      summary: |
+        - Organized technical talks, workshops, and community events on software development and Microsoft technologies
+        - Delivered presentations and hands-on sessions for students on web development and programming
+
+    - name: Indra Company
+      position: Systems Analyst
+      url: https://www.indragroup.com
+      startDate: Jun 2013
+      endDate: Sep 2014
+      summary: |
+        - Contributed to SIGSAB, an information and knowledge management system for the Brazilian National Institute of the Semi-Arid Region (INSA)
+        - Built frontend interfaces and integrated geospatial data and business intelligence tools
+      keywords:
+        - Java
+        - PHP
+        - PostgreSQL (PostGIS)
+        - i3Geo
+        - HTML5
+        - CSS3
+        - jQuery
+        - jQuery UI
+
+  education:
+    - institution: Facisa - Faculdade de Ciências Sociais e Aplicadas
+      degree: Bachelor
+      area: Information Systems
+      startDate: "2009"
+      endDate: "2015"
+
+  publications:
+    - name: A Portable System to Support Electrocardiography in Emergency Care
+      publisher: IEEE Symposium on Computer-Based Medical Systems (CBMS)
+      releaseDate: "2015"
+    - name: A Method for Intelligent Support to Medical Diagnosis in Emergency Cardiac Care
+      publisher: 25th Brazilian Congress on Biomedical Engineering (CBEB)
+      releaseDate: "2016"
+
+  awards:
+    - title: Bronze Medal
+      awarder: Paraiba Olympiads in Informatics
+      date: "2012"
+
+  skills:
+    - name: Languages
+      level: Expert
+      keywords:
+        - JavaScript
+        - TypeScript
+    - name: Frontend
+      level: Expert
+      keywords:
+        - React
+        - Next.js
+        - React Native
+        - Tailwind CSS
+        - shadcn/ui
+        - Radix UI
+        - Base UI
+        - Chakra UI
+    - name: State Management
+      level: Advanced
+      keywords:
+        - Redux
+        - SWR
+        - TanStack Query
+        - Zustand
+    - name: Blockchain
+      level: Advanced
+      keywords:
+        - Web3.js
+        - Ethers.js
+        - Wagmi
+        - Viem
+        - LayerZero OFT
+    - name: Desktop
+      level: Intermediate
+      keywords:
+        - Electron
+        - Tauri
+    - name: Backend
+      level: Intermediate
+      keywords:
+        - Node.js
+    - name: Databases
+      level: Intermediate
+      keywords:
+        - MySQL
+        - PostgreSQL
+        - MongoDB
+    - name: Backend Services
+      level: Intermediate
+      keywords:
+        - Firebase
+        - Supabase
+    - name: Testing
+      level: Advanced
+      keywords:
+        - Jest
+        - React Testing Library
+        - Vitest
+        - Cypress
+        - TestCafe
+    - name: Tooling
+      level: Advanced
+      keywords:
+        - Webpack
+        - Docker
+        - GitHub Actions
+        - pnpm
+        - Turbo
+        - Vite
+
+  volunteer:
+    - organization: CGHackspace
+      position: Member
+      startDate: "2014"
+      endDate: "2019"
+      summary: |
+        - Member of CGHackspace, a hackerspace in Campina Grande, Brazil
+        - Organized talks and events about hacking, technologies, and open source
+
+locale:
+  language: en
+
+layouts:
+  - engine: latex
+    template: moderncv-banking
+    page:
+      showPageNumbers: false
+    sections:
+      aliases:
+        basics: Summary
+        work: Experience
+        volunteer: General
+      order:
+        - basics
+        - work
+        - education
+        - publications
+        - awards
+        - skills
+        - volunteer
+    typography:
+      fontSize: 10pt
