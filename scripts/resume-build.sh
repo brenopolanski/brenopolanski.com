@@ -4,7 +4,9 @@
 # yamlresume requires skill `level` for schema validation and always prints it.
 # This script keeps those fields in YAML, then patches the TeX before compile:
 # hide skill levels, use conventional section headings, keep role headings
-# with their bullets, and add space between a job's keywords and the next role.
+# with their bullets, add space between a job's keywords and the next role,
+# and draw header icons from a font that carries a ToUnicode map so PDF text
+# extraction stays clean.
 
 set -euo pipefail
 
@@ -56,6 +58,40 @@ new_heading = """\\titleformat{\\section}{
 if old_heading not in updated:
     raise SystemExit("Did not find section heading format to patch")
 updated = updated.replace(old_heading, new_heading, 1)
+
+fontspec_anchor = """%% fontspec
+\\usepackage{fontspec}"""
+fontspec_patch = fontspec_anchor + """
+\\usepackage{accsupp}
+\\IfFontExistsTF{FontAwesome}{%
+  \\newfontfamily\\faunicodefont{FontAwesome}%
+  \\newcommand{\\faicon}[2]{{\\BeginAccSupp{method=plain,ActualText={}}\\faunicodefont\\symbol{"#1}\\EndAccSupp{}}}%
+}{%
+  \\newcommand{\\faicon}[2]{{\\BeginAccSupp{method=plain,ActualText={}}#2\\EndAccSupp{}}}%
+}"""
+if fontspec_anchor not in updated:
+    raise SystemExit("Did not find fontspec block to attach the icon font")
+updated = updated.replace(fontspec_anchor, fontspec_patch, 1)
+
+# fontawesome5/7 embed subset fonts without a ToUnicode CMap, so extractors
+# guess characters for the icons. The v4 font maps each glyph to its private
+# use codepoint, and the empty ActualText hides it from parsers that read it.
+icon_glyphs = [
+    (r"\faPhoneVolume", "F2A0"),
+    (r"\faEnvelope[regular]", "F003"),
+    (r"\faGlobe", "F0AC"),
+    (r"\faLinkedin", "F08C"),
+    (r"\faGithub", "F09B"),
+]
+for icon, codepoint in icon_glyphs:
+    if icon not in updated:
+        raise SystemExit(f"Did not find header icon {icon}")
+    updated = updated.replace(icon, "\\faicon{%s}{%s}" % (codepoint, icon))
+
+# The math-mode separator renders through a Type3 font with no ToUnicode.
+if " $|$ " not in updated:
+    raise SystemExit("Did not find the header separator to replace")
+updated = updated.replace(" $|$ ", " | ")
 
 spaced = re.sub(
     r"(\\end\{adjustwidth\}\n\n)\\resumeSubheading",

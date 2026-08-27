@@ -343,4 +343,5 @@ layouts:
         - awards
     typography:
       fontSize: 10pt
+      fontFamily: Inter
       lineSpacing: tight
