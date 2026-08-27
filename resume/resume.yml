@@ -3,14 +3,14 @@
 content:
   basics:
     name: Breno Polanski
-    headline: Senior Front-End Engineer
+    headline: Senior Software Engineer
     email: breno.polanski@gmail.com
-    phone: "+55 83 98908-1243"
+    phone: '+55 83 98908-1243'
     url: https://brenopolanski.com
     summary: |
-      - Front-End Engineer with 12+ years of experience building web applications, developer tools, AI products, SaaS applications, and Web3 platforms
-      - Focused on React, TypeScript, Next.js, and front-end architecture, with experience shipping full-stack products from concept to production
-      - Background in open source, blockchain applications, developer tooling, and real-time systems
+      - Senior Software Engineer with 12+ years of experience building web applications, developer tools, AI products, SaaS applications, and Web3 platforms
+      - Strong TypeScript and JavaScript experience, with React, Next.js, and full-stack development across frontend, backend, APIs, and real-time systems
+      - Experience with software architecture, open source, and shipping products from concept to production
 
   profiles:
     - network: LinkedIn
@@ -27,10 +27,10 @@ content:
       startDate: Jan 2026
       summary: |
         - Founded and built an open-source, real-time dashboard framework for developers and engineering teams
-        - Designed a plugin-based architecture so developers can extend the platform with custom widgets and integrations
+        - Designed a plugin-based architecture so developers can add custom widgets and integrations
         - Implemented a WebSocket communication layer for live dashboards and event-driven updates
         - Built a reusable component library and extensions used to compose custom dashboards
-        - Set up the project as a pnpm monorepo with Turbo, focused on maintainability and extensibility
+        - Set up the project as a pnpm monorepo with Turbo, using React, TypeScript, and Node.js
       keywords:
         - React
         - TypeScript
@@ -51,8 +51,7 @@ content:
         - Founded and built an AI platform that turns regular photos into professional headshots
         - Built the product end to end, including frontend, backend, authentication, payments, and deployment
         - Integrated AI image generation APIs to produce headshots within minutes
-        - Built the marketing website and onboarding flow
-        - Owned the product lifecycle, from UX design and payment integration to deployment and production support
+        - Built the marketing website and onboarding flow, and owned the product lifecycle from UX design and payments to deployment and production support
         - Generated over 1,000 headshots during the initial launch period
       keywords:
         - React
@@ -74,8 +73,7 @@ content:
       summary: |
         - Built the frontend for a cross-chain, over-collateralized stablecoin protocol based on an authorized fork of crvUSD
         - Contributed to a multi-chain interface for managing positions across several EVM networks from a single place
-        - Helped implement cross-chain asset transfers using LayerZero OFT
-        - Worked with smart contract engineers to turn protocol specifications into user interfaces
+        - Helped implement cross-chain asset transfers using LayerZero OFT, working with smart contract engineers to turn protocol specifications into user interfaces
       keywords:
         - React
         - Next.js
@@ -93,8 +91,7 @@ content:
       endDate: May 2024
       summary: |
         - Built the frontend for an open-source, privacy-first DeFi portfolio tracker supporting 400+ protocols across 17 blockchains
-        - Developed responsive and accessible interfaces for portfolio tracking, wallet management, and asset analytics
-        - Integrated blockchain data from multiple EVM networks into a single portfolio view
+        - Developed responsive and accessible interfaces for portfolio tracking, wallet management, and asset analytics, integrating blockchain data from multiple EVM networks
       keywords:
         - React
         - Next.js
@@ -111,8 +108,7 @@ content:
       endDate: May 2024
       summary: |
         - Built the frontend for a Web3 RPC platform providing low-latency blockchain infrastructure for developers
-        - Developed dashboards for managing RPC endpoints, API keys, usage analytics, and account settings
-        - Built reusable UI components and frontend architecture for the developer platform
+        - Developed dashboards for RPC endpoints, API keys, usage analytics, and account settings, plus reusable UI components and frontend architecture
       keywords:
         - React
         - Next.js
@@ -128,8 +124,7 @@ content:
       endDate: Jun 2022
       summary: |
         - Contributed to a multi-exchange crypto trading platform with portfolio management, social trading, and copy trading
-        - Built and maintained React and Next.js interfaces for trading across multiple exchanges
-        - Developed interfaces for portfolio management, order execution, and real-time market data
+        - Built and maintained React and Next.js interfaces for portfolio management, order execution, and real-time market data across multiple exchanges
       keywords:
         - React
         - Next.js
@@ -146,8 +141,7 @@ content:
       endDate: Jan 2021
       summary: |
         - Contributed to ARK Explorer and ARK Desktop Wallet, two core products of the ARK blockchain ecosystem
-        - Developed features for a multi-asset desktop wallet built with Electron, supporting ARK-based networks and multiple cryptocurrencies
-        - Built interfaces for blockchain explorers to browse transactions, wallet addresses, blocks, and network activity
+        - Developed features for a multi-asset Electron wallet and explorer interfaces for transactions, wallet addresses, blocks, and network activity across ARK-based networks and multiple cryptocurrencies
       keywords:
         - React
         - TypeScript
@@ -163,8 +157,7 @@ content:
       endDate: Jan 2020
       summary: |
         - Contributed to Saiku, a web-based business intelligence platform for interactive OLAP analysis and reporting
-        - Built and maintained data visualization interfaces, reporting features, and analytical dashboards for enterprise users
-        - Developed reusable components and interactive charts for exploring multidimensional datasets
+        - Built data visualization interfaces, reporting features, and analytical dashboards for exploring multidimensional datasets
       keywords:
         - Java
         - Backbone.js
@@ -182,8 +175,7 @@ content:
       startDate: Jun 2016
       endDate: Dec 2019
       summary: |
-        - Mentored students enrolled in Udacity Nanodegree programs, providing technical guidance toward their learning goals
-        - Reviewed student projects and gave feedback on programming fundamentals and front-end development practices
+        - Mentored Udacity Nanodegree students and reviewed projects, giving feedback on programming fundamentals and front-end development
 
     - name: NUTES (UEPB)
       position: Student Researcher
@@ -191,8 +183,7 @@ content:
       startDate: Jul 2014
       endDate: Nov 2015
       summary: |
-        - Developed software for electrocardiogram (ECG) acquisition and analysis in emergency cardiac care
-        - Built a web application for electronic medical record visualization and management
+        - Developed software for electrocardiogram (ECG) acquisition and analysis, and a web application for electronic medical record visualization and management
 
     - name: Microsoft
       position: Microsoft Student Partner
@@ -200,8 +191,7 @@ content:
       startDate: Dec 2012
       endDate: Oct 2015
       summary: |
-        - Organized technical talks, workshops, and community events on software development and Microsoft technologies
-        - Delivered presentations and hands-on sessions for students on web development and programming
+        - Organized talks, workshops, and community events on software development and Microsoft technologies, including presentations for students on web development and programming
 
     - name: Indra Company
       position: Systems Analyst
@@ -209,8 +199,7 @@ content:
       startDate: Jun 2013
       endDate: Sep 2014
       summary: |
-        - Contributed to SIGSAB, an information and knowledge management system for the Brazilian National Institute of the Semi-Arid Region (INSA)
-        - Built frontend interfaces and integrated geospatial data and business intelligence tools
+        - Contributed to SIGSAB, an information and knowledge management system for the Brazilian National Institute of the Semi-Arid Region (INSA), building frontend interfaces and integrating geospatial data and business intelligence tools
       keywords:
         - Java
         - PHP
@@ -225,23 +214,25 @@ content:
     - institution: Facisa - Faculdade de Ciências Sociais e Aplicadas
       degree: Bachelor
       area: Information Systems
-      startDate: "2009"
-      endDate: "2015"
+      startDate: '2009'
+      endDate: '2015'
 
   publications:
     - name: A Portable System to Support Electrocardiography in Emergency Care
       publisher: IEEE Symposium on Computer-Based Medical Systems (CBMS)
-      releaseDate: "2015"
+      releaseDate: '2015'
     - name: A Method for Intelligent Support to Medical Diagnosis in Emergency Cardiac Care
       publisher: 25th Brazilian Congress on Biomedical Engineering (CBEB)
-      releaseDate: "2016"
+      releaseDate: '2016'
 
   awards:
     - title: Bronze Medal
       awarder: Paraiba Olympiads in Informatics
-      date: "2012"
+      date: '2012'
 
   skills:
+    # yamlresume requires `level` and prints it. These values are unchanged from
+    # the previous resume except APIs & Real-Time, which is new grouping only.
     - name: Languages
       level: Expert
       keywords:
@@ -258,6 +249,15 @@ content:
         - Radix UI
         - Base UI
         - Chakra UI
+    - name: Backend
+      level: Intermediate
+      keywords:
+        - Node.js
+    - name: APIs & Real-Time
+      level: Intermediate
+      keywords:
+        - WebSockets
+        - Socket.IO
     - name: State Management
       level: Advanced
       keywords:
@@ -265,6 +265,12 @@ content:
         - SWR
         - TanStack Query
         - Zustand
+    - name: Databases
+      level: Intermediate
+      keywords:
+        - MySQL
+        - PostgreSQL
+        - MongoDB
     - name: Blockchain
       level: Advanced
       keywords:
@@ -278,16 +284,6 @@ content:
       keywords:
         - Electron
         - Tauri
-    - name: Backend
-      level: Intermediate
-      keywords:
-        - Node.js
-    - name: Databases
-      level: Intermediate
-      keywords:
-        - MySQL
-        - PostgreSQL
-        - MongoDB
     - name: Backend Services
       level: Intermediate
       keywords:
@@ -314,20 +310,24 @@ content:
   volunteer:
     - organization: CGHackspace
       position: Member
-      startDate: "2014"
-      endDate: "2019"
+      startDate: '2014'
+      endDate: '2019'
       summary: |
-        - Member of CGHackspace, a hackerspace in Campina Grande, Brazil
-        - Organized talks and events about hacking, technologies, and open source
+        - Member of CGHackspace, a hackerspace in Campina Grande, Brazil; organized talks and events about hacking, technologies, and open source
 
 locale:
   language: en
 
 layouts:
   - engine: latex
-    template: moderncv-banking
+    template: jake
     page:
       showPageNumbers: false
+      margins:
+        top: 1.2cm
+        bottom: 1.2cm
+        left: 1.2cm
+        right: 1.2cm
     sections:
       aliases:
         basics: Summary
@@ -336,10 +336,11 @@ layouts:
       order:
         - basics
         - work
+        - skills
         - education
         - publications
         - awards
-        - skills
         - volunteer
     typography:
       fontSize: 10pt
+      lineSpacing: tight
