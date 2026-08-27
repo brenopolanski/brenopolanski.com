@@ -1,0 +1,5 @@
+{
+  "title": "Portfolio",
+  "root": true,
+  "pages": ["index", "defillama-search", "dashfy"]
+}

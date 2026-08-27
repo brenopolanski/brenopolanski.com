@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://brenopolanski.com"><img src="https://img.shields.io/badge/BRENOPOLANSKI.COM-09090B?style=for-the-badge&logo=googlechrome&logoColor=ffffff" alt="Website" /></a>
+  <a href="https://brenopolanski.com"><img src="https://img.shields.io/badge/BRENOPOLANSKI.COM-09090B?style=for-the-badge&logo=googlechrome&logoColor=ffffff" alt="brenopolanski.com" /></a>
   <a href="https://github.com/brenopolanski"><img src="https://img.shields.io/badge/GITHUB-09090B?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub" /></a>
   <a href="https://x.com/brenopolanski"><img src="https://img.shields.io/badge/X-09090B?style=for-the-badge&logo=x&logoColor=ffffff" alt="X" /></a>
   <a href="https://linkedin.com/in/brenopolanski"><img src="https://img.shields.io/badge/LINKEDIN-09090B?style=for-the-badge&logo=linkedin&logoColor=ffffff" alt="LinkedIn" /></a>
@@ -27,17 +27,20 @@ Unofficial macOS menu bar client · MIT · 2026
   </tr>
 </table>
 
-A tiny, keyboard-first tray app for [DefiLlama Search](https://search.defillama.com). Press `⌘⇧L` (or click the menu bar icon) to open a compact popover, type a query, and hit Enter to open the official project link in your default browser.
+A tiny, keyboard-first tray app for [DefiLlama Search](https://search.defillama.com).
+Press `⌘⇧L` (or click the menu bar icon) to open a compact popover, type a query,
+and hit Enter to open the official project link in your default browser.
 
-This is an independent open-source client. It is not developed, maintained, or endorsed by DefiLlama.
+This is an independent open-source client. It is not developed, maintained, or
+endorsed by DefiLlama.
 
 ### Tech stack
 
-![Tauri](https://img.shields.io/badge/TAURI%202-09090B?style=for-the-badge&logo=tauri&logoColor=ffffff) ![React](https://img.shields.io/badge/REACT-09090B?style=for-the-badge&logo=react&logoColor=ffffff) ![TypeScript](https://img.shields.io/badge/TYPESCRIPT-09090B?style=for-the-badge&logo=typescript&logoColor=ffffff) ![Vite](https://img.shields.io/badge/VITE-09090B?style=for-the-badge&logo=vite&logoColor=ffffff) ![Tailwind CSS](https://img.shields.io/badge/TAILWIND%20CSS-09090B?style=for-the-badge&logo=tailwindcss&logoColor=ffffff) ![shadcn/ui](https://img.shields.io/badge/SHADCN%2FUI-09090B?style=for-the-badge&logoColor=ffffff) ![Vitest](https://img.shields.io/badge/VITEST-09090B?style=for-the-badge&logo=vitest&logoColor=ffffff)
+![Tauri 2](https://img.shields.io/badge/TAURI%202-09090B?style=for-the-badge&logo=tauri&logoColor=ffffff) ![React](https://img.shields.io/badge/REACT-09090B?style=for-the-badge&logo=react&logoColor=ffffff) ![TypeScript](https://img.shields.io/badge/TYPESCRIPT-09090B?style=for-the-badge&logo=typescript&logoColor=ffffff) ![Vite](https://img.shields.io/badge/VITE-09090B?style=for-the-badge&logo=vite&logoColor=ffffff) ![Tailwind CSS](https://img.shields.io/badge/TAILWIND%20CSS-09090B?style=for-the-badge&logo=tailwindcss&logoColor=ffffff) ![shadcn/ui](https://img.shields.io/badge/SHADCN%2FUI-09090B?style=for-the-badge&logoColor=ffffff) ![Vitest](https://img.shields.io/badge/VITEST-09090B?style=for-the-badge&logo=vitest&logoColor=ffffff)
 
 ### Links
 
-[![Repo](https://img.shields.io/badge/GITHUB-09090B?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/brenopolanski/defillama-search) [![Download](https://img.shields.io/badge/DOWNLOAD-09090B?style=for-the-badge&logo=apple&logoColor=ffffff)](https://github.com/brenopolanski/defillama-search/releases) [![DefiLlama Search](https://img.shields.io/badge/SEARCH.DEFILLAMA.COM-09090B?style=for-the-badge&logoColor=ffffff)](https://search.defillama.com)
+[![GitHub](https://img.shields.io/badge/GITHUB-09090B?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/brenopolanski/defillama-search) [![Download](https://img.shields.io/badge/DOWNLOAD-09090B?style=for-the-badge&logo=apple&logoColor=ffffff)](https://github.com/brenopolanski/defillama-search/releases) [![search.defillama.com](https://img.shields.io/badge/SEARCH.DEFILLAMA.COM-09090B?style=for-the-badge&logoColor=ffffff)](https://search.defillama.com)
 
 ## <samp>// DASHFY</samp>
 
@@ -72,9 +75,12 @@ Dashboards for developers · AGPL-3.0 · 2025
   </tr>
 </table>
 
-An open-source framework I built to define dashboards as code. Connect APIs, compose widgets through extensions, and render real-time interfaces — without assembling dashboards by hand in a UI.
+An open-source framework I built to define dashboards as code. Connect APIs,
+compose widgets through extensions, and render real-time interfaces — without
+assembling dashboards by hand in a UI.
 
-A CLI scaffolds projects, adds extensions, and audits setup. Dashboards are declarative (TypeScript, JSON, or YAML) and stay versionable.
+A CLI scaffolds projects, adds extensions, and audits setup. Dashboards are
+declarative (TypeScript, JSON, or YAML) and stay versionable.
 
 ### Tech stack
 
@@ -82,4 +88,4 @@ A CLI scaffolds projects, adds extensions, and audits setup. Dashboards are decl
 
 ### Links
 
-[![Repo](https://img.shields.io/badge/GITHUB-09090B?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/dashfy/dashfy) [![Website](https://img.shields.io/badge/DASHFY.DEV-09090B?style=for-the-badge&logo=googlechrome&logoColor=ffffff)](https://dashfy.dev) [![Demo](https://img.shields.io/badge/DEMO-09090B?style=for-the-badge&logoColor=ffffff)](https://demo.dashfy.dev) [![Docs](https://img.shields.io/badge/DOCS-09090B?style=for-the-badge&logoColor=ffffff)](https://dashfy.dev/docs)
+[![GitHub](https://img.shields.io/badge/GITHUB-09090B?style=for-the-badge&logo=github&logoColor=ffffff)](https://github.com/dashfy/dashfy) [![dashfy.dev](https://img.shields.io/badge/DASHFY.DEV-09090B?style=for-the-badge&logo=googlechrome&logoColor=ffffff)](https://dashfy.dev) [![Demo](https://img.shields.io/badge/DEMO-09090B?style=for-the-badge&logoColor=ffffff)](https://demo.dashfy.dev) [![Docs](https://img.shields.io/badge/DOCS-09090B?style=for-the-badge&logoColor=ffffff)](https://dashfy.dev/docs)

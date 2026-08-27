@@ -13,6 +13,7 @@ export const ANALYTICS_EVENTS = {
   newsletterSubscribe: 'newsletter_subscribe',
   socialClick: 'social_click',
   resumeClick: 'resume_click',
+  portfolioClick: 'portfolio_click',
   projectClick: 'project_click',
   prevWorkClick: 'prev_work_click',
 } as const
