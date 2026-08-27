@@ -231,8 +231,8 @@ content:
       date: '2012'
 
   skills:
-    # yamlresume requires `level` and prints it. These values are unchanged from
-    # the previous resume except APIs & Real-Time, which is new grouping only.
+    # yamlresume requires `level` for validation. The PDF build strips the
+    # printed labels so Skills render as "Name: keywords" only.
     - name: Languages
       level: Expert
       keywords:

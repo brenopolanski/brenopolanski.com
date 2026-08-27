@@ -33,7 +33,7 @@
     "preinstall": "npx only-allow bun",
     "prepare": "husky",
     "prettier": "prettier \"**/*.{js,mjs,ts,tsx,css,json,md}\"",
-    "resume:build": "docker run --rm -v \"$PWD/resume:/home/yamlresume\" yamlresume/yamlresume build resume.yml && cp resume/resume.pdf public/resume_brenopolanski.pdf",
+    "resume:build": "/bin/bash scripts/resume-build.sh",
     "resume:validate": "docker run --rm -v \"$PWD/resume:/home/yamlresume\" yamlresume/yamlresume validate resume.yml",
     "start": "portless --script start:next",
     "start:next": "next start",
