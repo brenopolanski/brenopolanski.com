@@ -51,18 +51,18 @@ strings:
   # Dashfy
   "Founded and built an open-source, real-time dashboard framework for developers and engineering teams": "Fundou e desenvolveu um framework open-source de dashboards em tempo real para desenvolvedores e equipes de engenharia"
   "Designed a plugin-based architecture so developers can add custom widgets and integrations": "Projetou uma arquitetura baseada em plugins para que desenvolvedores possam adicionar widgets e integrações customizadas"
-  "Implemented a WebSocket communication layer for live dashboards and event-driven updates": "Implementou camada de comunicação WebSocket para dashboards ao vivo e atualizações event-driven"
+  "Implemented a WebSocket communication layer for live dashboards and event-driven updates": "Implementou camada de comunicação WebSocket para dashboards em tempo real e atualizações event-driven"
   "Built a reusable component library and extensions used to compose custom dashboards": "Desenvolveu biblioteca de componentes reutilizáveis e extensions para compor dashboards customizados"
   "Set up the project as a pnpm monorepo with Turbo, using React, TypeScript, and Node.js": "Estruturou o projeto como um monorepo pnpm com Turbo, utilizando React, TypeScript e Node.js"
 
   # Polanski Tech Solutions
   "PHOOTO.AI — Built an AI platform that turns regular photos into professional headshots, including frontend, backend, authentication, payments, deployment, and AI image generation APIs": "PHOOTO.AI — Desenvolveu uma plataforma de AI que transforma fotos comuns em fotos profissionais de perfil, incluindo frontend, backend, authentication, payments, deployment e APIs de AI image generation"
-  "PHOOTO.AI — Built the marketing website and onboarding flow, used Stripe, Supabase, Resend, and AI image generation APIs, owned the product lifecycle from UX design and payments to deployment and production support, and generated over 1,000 headshots during the initial launch period": "PHOOTO.AI — Desenvolveu o site de marketing e o fluxo de onboarding, utilizou Stripe, Supabase, Resend e APIs de AI image generation, conduziu o ciclo de vida do produto do UX design e payments até deployment e suporte em produção, e gerou mais de 1,000 headshots durante o período inicial de lançamento"
+  "PHOOTO.AI — Built the marketing website and onboarding flow, used Stripe, Supabase, Resend, and AI image generation APIs, owned the product lifecycle from UX design and payments to deployment and production support, and generated over 1,000 headshots during the initial launch period": "PHOOTO.AI — Desenvolveu o site de marketing e o fluxo de onboarding, utilizou Stripe, Supabase, Resend e APIs de AI image generation, conduziu o ciclo de vida do produto do UX design e payments até deployment e suporte em produção, e gerou mais de 1.000 headshots durante o período inicial de lançamento"
   "DefiLlama — Contributed to DefiLlama's open-source ecosystem by developing protocol adapters for fees, revenue, and volume metrics across DeFi protocols": "DefiLlama — Contribuiu para o ecossistema open-source do DefiLlama desenvolvendo protocol adapters para métricas de fees, revenue e volume em protocolos DeFi"
 
   # defi.money
   "Built the frontend for a cross-chain, over-collateralized stablecoin protocol based on an authorized fork of crvUSD": "Desenvolveu o frontend de um protocolo de stablecoin cross-chain e sobrecolateralizado, baseado em um fork autorizado do crvUSD"
-  "Contributed to a multi-chain interface for managing positions across several EVM networks from a single place": "Contribuiu para interface multi-chain para gerenciar posições em várias redes EVM em um único lugar"
+  "Contributed to a multi-chain interface for managing positions across several EVM networks from a single place": "Contribuiu para uma interface multi-chain para gerenciar posições em várias redes EVM em um único lugar"
   "Helped implement cross-chain asset transfers using LayerZero OFT, working with smart contract engineers to turn protocol specifications into user interfaces": "Ajudou a implementar transferências de ativos cross-chain utilizando LayerZero OFT, trabalhando com smart contract engineers para transformar especificações de protocolo em interfaces de usuário"
 
   # LlamaFolio
