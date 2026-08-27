@@ -42,17 +42,13 @@ content:
         - pnpm
         - GitHub API
 
-    - name: PHOOTO.AI
-      position: Founder & Full-Stack Engineer
-      url: https://phooto.ai
+    - name: Polanski Tech Solutions
+      position: Independent Software Engineer
       startDate: Nov 2024
-      endDate: Jun 2025
       summary: |
-        - Founded and built an AI platform that turns regular photos into professional headshots
-        - Built the product end to end, including frontend, backend, authentication, payments, and deployment
-        - Integrated AI image generation APIs to produce headshots within minutes
-        - Built the marketing website and onboarding flow, and owned the product lifecycle from UX design and payments to deployment and production support
-        - Generated over 1,000 headshots during the initial launch period
+        - PHOOTO.AI — Built an AI platform that turns regular photos into professional headshots, including frontend, backend, authentication, payments, deployment, and AI image generation APIs
+        - PHOOTO.AI — Built the marketing website and onboarding flow, used Stripe, Supabase, Resend, and AI image generation APIs, owned the product lifecycle from UX design and payments to deployment and production support, and generated over 1,000 headshots during the initial launch period
+        - DefiLlama — Contributed to DefiLlama's open-source ecosystem by developing protocol adapters for fees, revenue, and volume metrics across DeFi protocols
       keywords:
         - React
         - Next.js
