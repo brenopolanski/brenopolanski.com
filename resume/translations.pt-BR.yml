@@ -1,0 +1,119 @@
+# Brazilian Portuguese translation memory for resume.yml.
+#
+# resume.yml stays the single source of truth. This file only maps the English
+# strings it contains onto their pt-BR equivalents, and scripts/resume-translate.ts
+# applies it to produce resume_pt.generated.yml.
+#
+# Every translatable string must appear here, including the ones deliberately
+# kept in English (mapped to themselves). A string added to resume.yml without
+# an entry here fails the build rather than silently shipping untranslated.
+#
+# Technology names, company names, product names and URLs are never translated.
+
+locale: pt-br
+
+sections:
+  basics: RESUMO
+  work: EXPERIÊNCIA
+  skills: HABILIDADES
+  education: FORMAÇÃO ACADÊMICA
+  publications: PUBLICAÇÕES
+  awards: PRÊMIOS
+
+# Labels for the header contact line. MuPDF truncates a PDF ToUnicode mapping
+# longer than 8 characters, so none of these may exceed that.
+contactLabels:
+  phone: Telefone
+  email: E-mail
+  url: Website
+  linkedin: LinkedIn
+  github: GitHub
+
+strings:
+  # Headline and job titles. Engineering titles stay in English because that is
+  # what Brazilian technology recruiters search for; seniority is never altered.
+  "Software Engineer": "Software Engineer"
+  "Founder & Full-Stack Engineer": "Fundador & Full-Stack Engineer"
+  "Independent Software Engineer": "Independent Software Engineer"
+  "Senior Front-End Engineer": "Senior Front-End Engineer"
+  "Full-Stack Engineer": "Full-Stack Engineer"
+  "Front-End Engineer": "Front-End Engineer"
+  "Mentor and Project Reviewer": "Mentor e Revisor de Projetos"
+  "Student Researcher": "Aluno Pesquisador"
+  "Microsoft Student Partner": "Microsoft Student Partner"
+  "Systems Analyst": "Analista de Sistemas"
+
+  # Summary
+  "Software Engineer with 12+ years of experience building web applications, developer tools, AI products, SaaS applications, and Web3 platforms": "Software Engineer com 12+ anos de experiência construindo aplicações web, developer tools, produtos de AI, aplicações SaaS e plataformas Web3"
+  "Strong TypeScript and JavaScript experience, with React, Next.js, and full-stack development across frontend, backend, APIs, and real-time systems": "Sólida experiência em TypeScript e JavaScript, com React, Next.js e desenvolvimento full-stack em frontend, backend, APIs e sistemas real-time"
+  "Experience with software architecture, open source, and shipping products from concept to production": "Experiência em arquitetura de software, open source e entrega de produtos do conceito à produção"
+
+  # Dashfy
+  "Founded and built an open-source, real-time dashboard framework for developers and engineering teams": "Fundou e desenvolveu um framework open-source de dashboards em tempo real para desenvolvedores e equipes de engenharia"
+  "Designed a plugin-based architecture so developers can add custom widgets and integrations": "Projetou uma arquitetura baseada em plugins para que desenvolvedores possam adicionar widgets e integrações customizadas"
+  "Implemented a WebSocket communication layer for live dashboards and event-driven updates": "Implementou camada de comunicação WebSocket para dashboards ao vivo e atualizações event-driven"
+  "Built a reusable component library and extensions used to compose custom dashboards": "Desenvolveu biblioteca de componentes reutilizáveis e extensions para compor dashboards customizados"
+  "Set up the project as a pnpm monorepo with Turbo, using React, TypeScript, and Node.js": "Estruturou o projeto como um monorepo pnpm com Turbo, utilizando React, TypeScript e Node.js"
+
+  # Polanski Tech Solutions
+  "PHOOTO.AI — Built an AI platform that turns regular photos into professional headshots, including frontend, backend, authentication, payments, deployment, and AI image generation APIs": "PHOOTO.AI — Desenvolveu uma plataforma de AI que transforma fotos comuns em fotos profissionais de perfil, incluindo frontend, backend, authentication, payments, deployment e APIs de AI image generation"
+  "PHOOTO.AI — Built the marketing website and onboarding flow, used Stripe, Supabase, Resend, and AI image generation APIs, owned the product lifecycle from UX design and payments to deployment and production support, and generated over 1,000 headshots during the initial launch period": "PHOOTO.AI — Desenvolveu o site de marketing e o fluxo de onboarding, utilizou Stripe, Supabase, Resend e APIs de AI image generation, conduziu o ciclo de vida do produto do UX design e payments até deployment e suporte em produção, e gerou mais de 1,000 headshots durante o período inicial de lançamento"
+  "DefiLlama — Contributed to DefiLlama's open-source ecosystem by developing protocol adapters for fees, revenue, and volume metrics across DeFi protocols": "DefiLlama — Contribuiu para o ecossistema open-source do DefiLlama desenvolvendo protocol adapters para métricas de fees, revenue e volume em protocolos DeFi"
+
+  # defi.money
+  "Built the frontend for a cross-chain, over-collateralized stablecoin protocol based on an authorized fork of crvUSD": "Desenvolveu o frontend de um protocolo de stablecoin cross-chain e sobrecolateralizado, baseado em um fork autorizado do crvUSD"
+  "Contributed to a multi-chain interface for managing positions across several EVM networks from a single place": "Contribuiu para interface multi-chain para gerenciar posições em várias redes EVM em um único lugar"
+  "Helped implement cross-chain asset transfers using LayerZero OFT, working with smart contract engineers to turn protocol specifications into user interfaces": "Ajudou a implementar transferências de ativos cross-chain utilizando LayerZero OFT, trabalhando com smart contract engineers para transformar especificações de protocolo em interfaces de usuário"
+
+  # LlamaFolio
+  "Built the frontend for an open-source, privacy-first DeFi portfolio tracker supporting 400+ protocols across 17 blockchains": "Desenvolveu o frontend de um portfolio tracker DeFi open-source e privacy-first, com suporte a 400+ protocolos em 17 blockchains"
+  "Developed responsive and accessible interfaces for portfolio tracking, wallet management, and asset analytics, integrating blockchain data from multiple EVM networks": "Desenvolveu interfaces responsivas e acessíveis para portfolio tracking, gerenciamento de wallets e análise de ativos, integrando dados de blockchain de múltiplas redes EVM"
+
+  # LlamaNodes
+  "Built the frontend for a Web3 RPC platform providing low-latency blockchain infrastructure for developers": "Desenvolveu o frontend de uma plataforma de RPC Web3 que oferece infraestrutura blockchain de baixa latência para desenvolvedores"
+  "Developed dashboards for RPC endpoints, API keys, usage analytics, and account settings, plus reusable UI components and frontend architecture": "Desenvolveu dashboards para RPC endpoints, API keys, análise de uso e configurações de conta, além de componentes de UI reutilizáveis e arquitetura de frontend"
+
+  # Aluna.Social
+  "Contributed to a multi-exchange crypto trading platform with portfolio management, social trading, and copy trading": "Contribuiu para uma plataforma de trading de criptomoedas multi-exchange com gerenciamento de portfolio, social trading e copy trading"
+  "Built and maintained React and Next.js interfaces for portfolio management, order execution, and real-time market data across multiple exchanges": "Desenvolveu e manteve interfaces em React e Next.js para gerenciamento de portfolio, execução de ordens e dados de mercado em tempo real em múltiplas exchanges"
+
+  # ARK Ecosystem
+  "Contributed to ARK Explorer and ARK Desktop Wallet, two core products of the ARK blockchain ecosystem": "Contribuiu para ARK Explorer e ARK Desktop Wallet, dois produtos-chave do ecossistema blockchain ARK"
+  "Developed features for a multi-asset Electron wallet and explorer interfaces for transactions, wallet addresses, blocks, and network activity across ARK-based networks and multiple cryptocurrencies": "Desenvolveu recursos para uma wallet multi-ativos em Electron e interfaces de explorer para transações, endereços de wallet, blocos e atividade de rede em redes baseadas em ARK e várias criptomoedas"
+
+  # Meteorite BI
+  "Contributed to Saiku, a web-based business intelligence platform for interactive OLAP analysis and reporting": "Contribuiu para o Saiku, plataforma web de business intelligence para análise OLAP interativa e relatórios"
+  "Built data visualization interfaces, reporting features, and analytical dashboards for exploring multidimensional datasets": "Desenvolveu interfaces de visualização de dados, funcionalidades de relatórios e dashboards analíticos para explorar datasets multidimensionais"
+
+  # Udacity
+  "Mentored Udacity Nanodegree students and reviewed projects, giving feedback on programming fundamentals and front-end development": "Mentorou alunos do Udacity Nanodegree e revisou projetos, dando feedback sobre fundamentos de programação e desenvolvimento front-end"
+
+  # NUTES (UEPB)
+  "Developed software for electrocardiogram (ECG) acquisition and analysis, and a web application for electronic medical record visualization and management": "Desenvolveu software para aquisição e análise de eletrocardiograma (ECG) e uma aplicação web para visualização e gestão de prontuário eletrônico"
+
+  # Microsoft
+  "Organized talks, workshops, and community events on software development and Microsoft technologies, including presentations for students on web development and programming": "Organizou palestras, workshops e eventos de comunidade sobre desenvolvimento de software e tecnologias Microsoft, incluindo apresentações para estudantes sobre desenvolvimento web e programação"
+
+  # Indra Company
+  "Contributed to SIGSAB, an information and knowledge management system for the Brazilian National Institute of the Semi-Arid Region (INSA), building frontend interfaces and integrating geospatial data and business intelligence tools": "Contribuiu para o SIGSAB, sistema de gestão da informação e do conhecimento do Instituto Nacional do Semiárido (INSA), desenvolvendo interfaces de frontend e integrando dados geoespaciais e ferramentas de business intelligence"
+
+  # Education. `degree` is a schema enum that yamlresume localises itself, the
+  # same way it localises skill `level`, so it is not listed here.
+  "Information Systems": "Sistemas de Informação"
+
+  # Awards
+  "Bronze Medal": "Medalha de Bronze"
+
+  # Skill categories. The technologies themselves are never translated.
+  "Languages": "Linguagens"
+  "Frontend": "Frontend"
+  "Backend": "Backend"
+  "APIs & Real-Time": "APIs e Tempo Real"
+  "State Management": "Gerenciamento de Estado"
+  "Databases": "Bancos de Dados"
+  "Blockchain": "Blockchain"
+  "Architecture": "Arquitetura"
+  "Desktop": "Desktop"
+  "Backend Services": "Serviços de Backend"
+  "Testing": "Testes"
+  "Tooling": "Ferramentas"

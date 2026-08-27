@@ -10,20 +10,32 @@ labels are longer than the codepoints they replace, so stream lengths and the
 xref offsets that follow the edit are both corrected to keep the file valid.
 """
 
+import argparse
 import re
-import sys
 from pathlib import Path
 
 # MuPDF replaces any mapping longer than 8 characters with U+FFFD, so the
-# colon rides on the space that follows each icon rather than on the label.
-LABELS = {
-    "F2A0": "Phone",
-    "F003": "E-mail",
-    "F0AC": "Website",
-    "F08C": "LinkedIn",
-    "F09B": "GitHub",
-    "0020": ": ",
+# colon rides on the space that follows each icon rather than on the label,
+# and no label itself may be longer than that.
+LOCALES = {
+    "en": {
+        "F2A0": "Phone",
+        "F003": "E-mail",
+        "F0AC": "Website",
+        "F08C": "LinkedIn",
+        "F09B": "GitHub",
+        "0020": ": ",
+    },
+    "pt-br": {
+        "F2A0": "Telefone",
+        "F003": "E-mail",
+        "F0AC": "Website",
+        "F08C": "LinkedIn",
+        "F09B": "GitHub",
+        "0020": ": ",
+    },
 }
+LABEL_LIMIT = 8
 ICON_FONT = b"FontAwesome"
 
 STREAM_OBJECT = re.compile(
@@ -76,13 +88,26 @@ def repair_offsets(updated, original, shifts):
 
 
 def main():
-    path = Path(sys.argv[1])
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("pdf", type=Path)
+    parser.add_argument("--locale", choices=sorted(LOCALES), default="en")
+    args = parser.parse_args()
+
+    labels = LOCALES[args.locale]
+    too_long = sorted(text for text in labels.values() if len(text) > LABEL_LIMIT)
+    if too_long:
+        raise SystemExit(
+            f"Labels longer than {LABEL_LIMIT} characters extract as U+FFFD: "
+            + ", ".join(too_long)
+        )
+
+    path = args.pdf
     data = path.read_bytes()
     relabelled = set()
 
     def rewrite_entry(entry):
         codepoint = entry.group(2).decode("ascii").upper()
-        label = LABELS.get(codepoint)
+        label = labels.get(codepoint)
         if label is None:
             return entry.group(0)
         relabelled.add(codepoint)
@@ -110,7 +135,7 @@ def main():
 
     updated += data[cursor:]
 
-    missing = sorted(set(LABELS) - relabelled)
+    missing = sorted(set(labels) - relabelled)
     if missing:
         raise SystemExit(f"Never found icon glyphs: {', '.join(missing)}")
 

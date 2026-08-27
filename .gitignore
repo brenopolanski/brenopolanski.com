@@ -35,9 +35,11 @@ pnpm-debug.log*
 .env
 .env*.local
 
-# resume (yamlresume build artifacts, resume.yml is the source)
+# resume (build artifacts, including the generated pt-BR resume; resume.yml is
+# the source and translations.pt-BR.yml is its pt-BR wording)
 /resume/*
 !/resume/resume.yml
+!/resume/translations.pt-BR.yml
 
 # misc
 *.tsbuildinfo
