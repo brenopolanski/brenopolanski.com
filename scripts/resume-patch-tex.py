@@ -7,6 +7,7 @@ Applies to every language build:
 * use conventional section headings instead of small caps,
 * keep a role heading with its own bullets,
 * separate one job's keywords from the next role,
+* underline the links the template leaves bare, so every link matches,
 * render header icons from a font that has a ToUnicode map, and replace the
   math-mode separator that renders through an unmapped Type 3 font.
 
@@ -20,6 +21,11 @@ from pathlib import Path
 
 # "Name: <level> \hfill Keywords: ..." where both labels are localised.
 SKILL_LEVEL = re.compile(r"(\\textbf\{[^}]+\}): [^\\]*\\hfill \\textbf\{[^}]+\}: ")
+
+# The template underlines \href but leaves \url bare, which is why the header
+# website and the company links in EXPERIENCE were the only links without an
+# underline. Routing them through \href picks it up. \urlstyle does not match.
+BARE_URL = re.compile(r"\\url\{([^{}]+)\}")
 
 OLD_SUBHEADING = """\\newcommand{\\resumeSubheading}[4]{
   \\begin{tabular*}{\\textwidth}[t]{l@{\\extracolsep{\\fill}}r}
@@ -104,7 +110,11 @@ def main():
     if spaced == updated:
         raise SystemExit(f"{path.name}: found no job boundary to space out")
 
-    path.write_text(spaced)
+    linked, count = BARE_URL.subn(r"\\href{\1}{\1}", spaced)
+    if count == 0:
+        raise SystemExit(f"{path.name}: found no bare links to underline")
+
+    path.write_text(linked)
 
 
 if __name__ == "__main__":
