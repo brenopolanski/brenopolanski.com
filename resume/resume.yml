@@ -303,14 +303,6 @@ content:
         - Turbo
         - Vite
 
-  volunteer:
-    - organization: CGHackspace
-      position: Member
-      startDate: '2014'
-      endDate: '2019'
-      summary: |
-        - Member of CGHackspace, a hackerspace in Campina Grande, Brazil; organized talks and events about hacking, technologies, and open source
-
 locale:
   language: en
 
@@ -326,9 +318,12 @@ layouts:
         right: 1.2cm
     sections:
       aliases:
-        basics: Summary
-        work: Experience
-        volunteer: General
+        basics: SUMMARY
+        work: EXPERIENCE
+        skills: SKILLS
+        education: EDUCATION
+        publications: PUBLICATIONS
+        awards: AWARDS
       order:
         - basics
         - work
@@ -336,7 +331,6 @@ layouts:
         - education
         - publications
         - awards
-        - volunteer
     typography:
       fontSize: 10pt
       lineSpacing: tight

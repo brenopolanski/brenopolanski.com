@@ -3,8 +3,8 @@
 # Build resume.yml to public/resume_brenopolanski.pdf.
 # yamlresume requires skill `level` for schema validation and always prints it.
 # This script keeps those fields in YAML, then patches the TeX before compile:
-# hide skill levels, keep role headings with their bullets, and add space
-# between a job's keywords and the next role.
+# hide skill levels, use conventional section headings, keep role headings
+# with their bullets, and add space between a job's keywords and the next role.
 
 set -euo pipefail
 
@@ -46,6 +46,16 @@ new_command = """\\newcommand{\\resumeSubheading}[4]{
 if old_command not in updated:
     raise SystemExit("Did not find resumeSubheading command to patch")
 updated = updated.replace(old_command, new_command, 1)
+
+old_heading = """\\titleformat{\\section}{
+  \\vspace{-4pt}\\scshape\\raggedright\\large
+}{}{0em}{}[\\color{black}\\titlerule \\vspace{-5pt}]"""
+new_heading = """\\titleformat{\\section}{
+  \\vspace{-4pt}\\raggedright\\large\\bfseries
+}{}{0em}{}[\\color{black}\\titlerule \\vspace{-5pt}]"""
+if old_heading not in updated:
+    raise SystemExit("Did not find section heading format to patch")
+updated = updated.replace(old_heading, new_heading, 1)
 
 spaced = re.sub(
     r"(\\end\{adjustwidth\}\n\n)\\resumeSubheading",
