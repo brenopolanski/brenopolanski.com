@@ -254,6 +254,7 @@ content:
       keywords:
         - WebSockets
         - Socket.IO
+        - API Integration
     - name: State Management
       level: Advanced
       keywords:
@@ -275,6 +276,12 @@ content:
         - Wagmi
         - Viem
         - LayerZero OFT
+    - name: Architecture
+      level: Advanced
+      keywords:
+        - Software Architecture
+        - Event-Driven Systems
+        - Monorepos
     - name: Desktop
       level: Intermediate
       keywords:
@@ -296,12 +303,15 @@ content:
     - name: Tooling
       level: Advanced
       keywords:
+        - Git
         - Webpack
         - Docker
         - GitHub Actions
+        - CI/CD
         - pnpm
         - Turbo
         - Vite
+        - Open Source
 
 locale:
   language: en
