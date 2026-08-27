@@ -55,7 +55,6 @@ content:
         - TypeScript
         - Tailwind CSS
         - shadcn/ui
-        - React Email
         - Resend
         - Stripe
         - Supabase
@@ -63,7 +62,7 @@ content:
 
     - name: defi.money
       position: Senior Front-End Engineer
-      url: https://blog.defi.money/introducing-defimoney
+      url: https://github.com/defidotmoney
       startDate: May 2024
       endDate: Nov 2024
       summary: |
@@ -116,6 +115,7 @@ content:
 
     - name: Aluna.Social
       position: Senior Front-End Engineer
+      url: https://x.com/AlunaSocial
       startDate: Mar 2021
       endDate: Jun 2022
       summary: |
