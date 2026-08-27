@@ -5,8 +5,8 @@
 # This script keeps those fields in YAML, then patches the TeX before compile:
 # hide skill levels, use conventional section headings, keep role headings
 # with their bullets, add space between a job's keywords and the next role,
-# and draw header icons from a font that carries a ToUnicode map so PDF text
-# extraction stays clean.
+# and label the header contact details in plain text so the PDF extracts
+# cleanly for ATS parsers.
 
 set -euo pipefail
 
@@ -59,34 +59,36 @@ if old_heading not in updated:
     raise SystemExit("Did not find section heading format to patch")
 updated = updated.replace(old_heading, new_heading, 1)
 
+# fontawesome5/7 embed subset fonts with no ToUnicode CMap at all, so text
+# extraction invents characters for the icons. The v4 font maps every glyph to
+# a codepoint, which the post-build pass then rewrites into a written label.
 fontspec_anchor = """%% fontspec
 \\usepackage{fontspec}"""
+# The icon is followed by the font's own space rather than the template's, so
+# the post-build pass can label the icon and the space separately. MuPDF caps
+# a ToUnicode mapping at 8 characters, which "LinkedIn: " would exceed.
 fontspec_patch = fontspec_anchor + """
-\\usepackage{accsupp}
 \\IfFontExistsTF{FontAwesome}{%
   \\newfontfamily\\faunicodefont{FontAwesome}%
-  \\newcommand{\\faicon}[2]{{\\BeginAccSupp{method=plain,ActualText={}}\\faunicodefont\\symbol{"#1}\\EndAccSupp{}}}%
+  \\newcommand{\\faicon}[2]{{\\faunicodefont\\symbol{"#1}\\symbol{"20}}}%
 }{%
-  \\newcommand{\\faicon}[2]{{\\BeginAccSupp{method=plain,ActualText={}}#2\\EndAccSupp{}}}%
+  \\newcommand{\\faicon}[2]{#2\\ }%
 }"""
 if fontspec_anchor not in updated:
     raise SystemExit("Did not find fontspec block to attach the icon font")
 updated = updated.replace(fontspec_anchor, fontspec_patch, 1)
 
-# fontawesome5/7 embed subset fonts without a ToUnicode CMap, so extractors
-# guess characters for the icons. The v4 font maps each glyph to its private
-# use codepoint, and the empty ActualText hides it from parsers that read it.
 icon_glyphs = [
-    (r"\faPhoneVolume", "F2A0"),
-    (r"\faEnvelope[regular]", "F003"),
-    (r"\faGlobe", "F0AC"),
-    (r"\faLinkedin", "F08C"),
-    (r"\faGithub", "F09B"),
+    (r"{\small \faPhoneVolume}~", "F2A0", r"\faPhoneVolume"),
+    (r"{\small \faEnvelope[regular]}~", "F003", r"\faEnvelope[regular]"),
+    (r"{\small \faGlobe}~", "F0AC", r"\faGlobe"),
+    (r"{\small \faLinkedin}\ ", "F08C", r"\faLinkedin"),
+    (r"{\small \faGithub}\ ", "F09B", r"\faGithub"),
 ]
-for icon, codepoint in icon_glyphs:
-    if icon not in updated:
-        raise SystemExit(f"Did not find header icon {icon}")
-    updated = updated.replace(icon, "\\faicon{%s}{%s}" % (codepoint, icon))
+for snippet, codepoint, fallback in icon_glyphs:
+    if snippet not in updated:
+        raise SystemExit(f"Did not find header icon {fallback}")
+    updated = updated.replace(snippet, "{\\small \\faicon{%s}{%s}}" % (codepoint, fallback))
 
 # The math-mode separator renders through a Type3 font with no ToUnicode.
 if " $|$ " not in updated:
@@ -111,5 +113,17 @@ docker run --rm \
   --entrypoint xelatex \
   yamlresume/yamlresume \
   -halt-on-error resume.tex
+
+docker run --rm \
+  -v "$resume_dir:/home/yamlresume" \
+  -v "$root/scripts:/scripts:ro" \
+  --workdir /home/yamlresume \
+  --entrypoint bash \
+  yamlresume/yamlresume \
+  -c 'set -e
+      mutool clean -d resume.pdf resume-raw.pdf
+      python3 /scripts/resume-label-icon-glyphs.py resume-raw.pdf
+      mutool clean -z resume-raw.pdf resume.pdf
+      rm -f resume-raw.pdf'
 
 cp "$resume_dir/resume.pdf" "$root/public/resume_brenopolanski.pdf"
