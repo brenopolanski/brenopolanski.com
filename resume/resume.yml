@@ -9,7 +9,7 @@ content:
     url: https://brenopolanski.com
     summary: |
       - Software Engineer with 12+ years of experience building web applications, developer tools, AI products, SaaS applications, and Web3 platforms
-      - Strong TypeScript and JavaScript experience, with React, Next.js, and full-stack development across frontend, backend, APIs, and real-time systems
+      - Strong experience with JavaScript, TypeScript, React, Next.js, and full-stack development
       - Experience with software architecture, open source, and shipping products from concept to production
 
   profiles:
@@ -46,9 +46,9 @@ content:
       position: Independent Software Engineer
       startDate: Nov 2024
       summary: |
-        - PHOOTO.AI — Built an AI platform that turns regular photos into professional headshots, including frontend, backend, authentication, payments, deployment, and AI image generation APIs
-        - PHOOTO.AI — Built the marketing website and onboarding flow, used Stripe, Supabase, Resend, and AI image generation APIs, owned the product lifecycle from UX design and payments to deployment and production support, and generated over 1,000 headshots during the initial launch period
-        - DefiLlama — Contributed to DefiLlama's open-source ecosystem by developing protocol adapters for fees, revenue, and volume metrics across DeFi protocols
+        - PHOOTO.AI: Built an AI platform that turns regular photos into professional headshots, including frontend, backend, authentication, payments, deployment, and AI image generation APIs
+        - PHOOTO.AI: Built the marketing website and onboarding flow, used Stripe, Supabase, and Resend, owned the product lifecycle from UX design and payments to deployment and production support, and generated over 1,000 headshots during the initial launch period
+        - DefiLlama: Contributed to DefiLlama's open-source ecosystem by developing protocol adapters for fees, revenue, and volume metrics across DeFi protocols
       keywords:
         - React
         - Next.js
