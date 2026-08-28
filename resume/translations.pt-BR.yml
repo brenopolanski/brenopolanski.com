@@ -53,7 +53,7 @@ strings:
   'Designed a plugin-based architecture so developers can add custom widgets and integrations': 'Projetei uma arquitetura baseada em plugins para que desenvolvedores possam adicionar widgets e integrações customizadas'
   'Implemented a WebSocket communication layer for live dashboards and event-driven updates': 'Implementei camada de comunicação WebSocket para dashboards em tempo real e atualizações event-driven'
   'Built a reusable component library and extensions used to compose custom dashboards': 'Desenvolvi biblioteca de componentes reutilizáveis e extensions para compor dashboards customizados'
-  'Set up the project as a pnpm monorepo with Turbo, using React, TypeScript, and Node.js': 'Estruturei o projeto como um monorepo pnpm com Turbo, utilizando React, TypeScript e Node.js'
+  'Set up the project in a pnpm monorepo with Turbo, using React, TypeScript, and Node.js': 'Estruturei o projeto em um monorepo pnpm com Turbo, utilizando React, TypeScript e Node.js'
 
   # Polanski Tech Solutions
   'PHOOTO.AI: Built an AI platform that turns regular photos into professional headshots, including frontend, backend, authentication, payments, deployment, and AI image generation APIs': 'PHOOTO.AI: Desenvolvi uma plataforma de AI que transforma fotos comuns em fotos profissionais de perfil, incluindo frontend, backend, authentication, payments, deployment e APIs de AI image generation'
@@ -103,17 +103,18 @@ strings:
 
   # Awards
   'Bronze Medal': 'Medalha de Bronze'
+  'Paraiba Olympiads in Informatics': 'Olimpíada Paraibana de Informática - OPI'
 
   # Skill categories. The technologies themselves are never translated.
   'Languages': 'Linguagens'
   'Frontend': 'Frontend'
   'Backend': 'Backend'
-  'APIs & Real-Time': 'APIs e Tempo Real'
+  'APIs & Real-Time': 'APIs e Real-Time'
   'State Management': 'Gerenciamento de Estado'
   'Databases': 'Bancos de Dados'
   'Blockchain': 'Blockchain'
   'Architecture': 'Arquitetura'
   'Desktop': 'Desktop'
-  'Backend Services': 'Serviços de Backend'
+  'Backend Services': 'Serviços Backend'
   'Testing': 'Testes'
   'Tooling': 'Ferramentas'

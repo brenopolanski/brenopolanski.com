@@ -30,7 +30,7 @@ content:
         - Designed a plugin-based architecture so developers can add custom widgets and integrations
         - Implemented a WebSocket communication layer for live dashboards and event-driven updates
         - Built a reusable component library and extensions used to compose custom dashboards
-        - Set up the project as a pnpm monorepo with Turbo, using React, TypeScript, and Node.js
+        - Set up the project in a pnpm monorepo with Turbo, using React, TypeScript, and Node.js
       keywords:
         - React
         - TypeScript

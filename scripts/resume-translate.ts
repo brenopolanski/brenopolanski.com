@@ -26,6 +26,7 @@ const source = read(sourcePath)
 const memory = read(memoryPath)
 const phrases: Record<string, string> = memory.strings ?? {}
 const missing = new Set<string>()
+const used = new Set<string>()
 
 function translate(text: unknown): unknown {
   if (typeof text !== 'string') {
@@ -36,6 +37,7 @@ function translate(text: unknown): unknown {
     missing.add(text)
     return text
   }
+  used.add(text)
   return translated
 }
 
@@ -71,6 +73,7 @@ for (const study of content.education ?? []) {
 }
 for (const award of content.awards ?? []) {
   award.title = translate(award.title)
+  award.awarder = translate(award.awarder)
 }
 for (const skill of content.skills ?? []) {
   skill.name = translate(skill.name)
@@ -90,6 +93,18 @@ if (missing.size > 0) {
       'Add an entry for each string above, mapping it to itself if it should stay in English.',
   )
   process.exit(1)
+}
+
+// An entry nobody looks up is usually a translation written for a field the
+// generator does not touch, which otherwise fails silently: the wording sits in
+// the memory while the PDF keeps the English string.
+const unused = Object.keys(phrases).filter((text) => !used.has(text))
+if (unused.length > 0) {
+  const list = unused.map((text) => `  - ${JSON.stringify(text)}`).join('\n')
+  console.warn(
+    `Warning: unused pt-BR translations in ${memoryPath}:\n${list}\n\n` +
+      'No field in resume.yml carries these strings, so they change nothing.',
+  )
 }
 
 // Bun.YAML.stringify emits flow style on a single line. The generated file is
