@@ -31,7 +31,7 @@ build_variant() {
 
   run_in_image yamlresume/yamlresume build --no-pdf "$source"
 
-  python3 "$root/scripts/resume-patch-tex.py" "$resume_dir/$base.tex"
+  python3 "$root/scripts/resume-patch-tex.py" "$resume_dir/$base.tex" --locale "$locale"
 
   run_in_image --entrypoint xelatex yamlresume/yamlresume -halt-on-error "$base.tex"
 

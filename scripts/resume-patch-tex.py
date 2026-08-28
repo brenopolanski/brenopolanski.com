@@ -12,15 +12,21 @@ Applies to every language build:
   math-mode separator that renders through an unmapped Type 3 font.
 
 Locale-sensitive wording is matched by shape rather than by word, so the same
-patches work for the English and Brazilian Portuguese builds.
+patches work for the English and Brazilian Portuguese builds. The one exception
+is the per-locale keyword label, which is renamed by --locale.
 """
 
+import argparse
 import re
-import sys
 from pathlib import Path
 
 # "Name: <level> \hfill Keywords: ..." where both labels are localised.
 SKILL_LEVEL = re.compile(r"(\\textbf\{[^}]+\}): [^\\]*\\hfill \\textbf\{[^}]+\}: ")
+
+# yamlresume labels each job's keyword list from its own locale. Brazilian
+# resumes conventionally head that list "Tecnologias" rather than the literal
+# "Palavras-chave", so the pt-BR build renames it. English keeps "Keywords".
+KEYWORDS_LABEL = {"pt-br": ("Palavras-chave", "Tecnologias")}
 
 # The template underlines \href but leaves \url bare, which is why the header
 # website and the company links in EXPERIENCE were the only links without an
@@ -74,7 +80,12 @@ ICONS = [
 
 
 def main():
-    path = Path(sys.argv[1])
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("tex", type=Path)
+    parser.add_argument("--locale", default="en")
+    args = parser.parse_args()
+
+    path = args.tex
     text = path.read_text()
 
     updated = SKILL_LEVEL.sub(r"\1: ", text)
@@ -113,6 +124,16 @@ def main():
     linked, count = BARE_URL.subn(r"\\href{\1}{\1}", spaced)
     if count == 0:
         raise SystemExit(f"{path.name}: found no bare links to underline")
+
+    # Runs after SKILL_LEVEL, which has already dropped the copy of this label
+    # that sits in the Skills section, so only the job keyword lines are left.
+    rename = KEYWORDS_LABEL.get(args.locale)
+    if rename is not None:
+        source, target = rename
+        old = f"\\textbf{{{source}}}: "
+        if old not in linked:
+            raise SystemExit(f"{path.name}: found no {source!r} label to rename")
+        linked = linked.replace(old, f"\\textbf{{{target}}}: ")
 
     path.write_text(linked)
 
