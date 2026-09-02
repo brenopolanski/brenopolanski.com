@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 import { subscribeToNewsletter } from '@/actions/newsletter'
-import { CheckIcon, MailIcon, SendIcon, XIcon } from '@/components/Icons'
+import { CheckIcon, MailIcon, SendIcon, XIcon } from '@/components/shared/Icons'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'

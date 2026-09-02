@@ -1,4 +1,4 @@
-import { FileTextIcon, GithubIcon, LinkedInIcon, XTwitterIcon } from '@/components/Icons'
+import { FileTextIcon, GithubIcon, LinkedInIcon, XTwitterIcon } from '@/components/shared/Icons'
 import { paths } from '@/config/paths'
 import { siteConfig } from '@/config/site'
 

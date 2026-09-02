@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { QuoteIcon } from '@/components/Icons'
+import { QuoteIcon } from '@/components/shared/Icons'
 import { Button } from '@/components/ui/button'
 import { ANALYTICS_EVENTS } from '@/lib/analytics'
 

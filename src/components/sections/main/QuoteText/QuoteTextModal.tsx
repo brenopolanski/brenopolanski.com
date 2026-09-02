@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 
-import { XIcon } from '@/components/Icons'
+import { XIcon } from '@/components/shared/Icons'
 import { useEscapeKey } from '@/hooks/useEscapeKey'
 import { ANALYTICS_EVENTS } from '@/lib/analytics'
 

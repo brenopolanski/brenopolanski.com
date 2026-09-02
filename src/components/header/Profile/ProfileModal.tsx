@@ -1,6 +1,6 @@
 'use client'
 
-import { XIcon } from '@/components/Icons'
+import { XIcon } from '@/components/shared/Icons'
 import { useEscapeKey } from '@/hooks/useEscapeKey'
 
 import { ProfileImage } from './ProfileImage'

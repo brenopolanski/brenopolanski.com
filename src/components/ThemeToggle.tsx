@@ -3,10 +3,9 @@
 import { useTheme } from 'next-themes'
 import { useCallback } from 'react'
 
+import { BrightnessIcon } from '@/components/shared/Icons'
 import { Button } from '@/components/ui/button'
 import { ANALYTICS_EVENTS } from '@/lib/analytics'
-
-import { BrightnessIcon } from './Icons'
 
 export const ThemeToggle = () => {
   const { resolvedTheme, setTheme } = useTheme()
