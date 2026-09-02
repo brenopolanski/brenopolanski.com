@@ -1,5 +1,4 @@
-import { MatrixText } from '@/components/MatrixText'
-
+import { MatrixText } from './MatrixText'
 import { QuoteTextButton } from './QuoteText/QuoteTextButton'
 
 export const Hero = () => {

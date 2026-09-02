@@ -32,7 +32,7 @@ const Flash = (props: React.ComponentProps<'svg'>) => {
 }
 
 const ICONS = [Face, Heart, Flash]
-const INTERVAL = 1_000
+const INTERVAL_MS = 1_000
 
 export const Footer = ({ className, ...props }: React.ComponentProps<'footer'>) => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -40,7 +40,7 @@ export const Footer = ({ className, ...props }: React.ComponentProps<'footer'>) 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((previousIndex) => (previousIndex + 1) % ICONS.length)
-    }, INTERVAL)
+    }, INTERVAL_MS)
 
     return () => {
       clearInterval(interval)

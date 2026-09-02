@@ -1,6 +1,5 @@
-import { ThemeToggle } from '@/components/ThemeToggle'
-
 import { ProfileButton } from './Profile/ProfileButton'
+import { ThemeToggle } from './ThemeToggle'
 
 export const Header = () => {
   return (

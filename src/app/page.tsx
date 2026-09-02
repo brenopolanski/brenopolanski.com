@@ -1,6 +1,6 @@
 'use client'
 
-import { Footer } from '@/components/Footer'
+import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/header/Header'
 import { Links } from '@/components/sections/links/Links'
 import { Hero } from '@/components/sections/main/Hero'
