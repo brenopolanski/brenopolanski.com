@@ -1,4 +1,4 @@
-import { LinkCard } from '@/components/LinkCard'
+import { LinkCard } from '@/components/shared/LinkCard'
 import { ANALYTICS_EVENTS } from '@/lib/analytics'
 import { cn, generateReactKey } from '@/lib/utils'
 

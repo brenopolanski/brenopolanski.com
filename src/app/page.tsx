@@ -2,12 +2,12 @@
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/header/Header'
-import { SectionDivider } from '@/components/SectionDivider'
 import { Links } from '@/components/sections/links/Links'
 import { Hero } from '@/components/sections/main/Hero'
 import { Newsletter } from '@/components/sections/main/Newsletter'
 import { PrevWorks } from '@/components/sections/prevWorks/PrevWorks'
 import { Projects } from '@/components/sections/projects/Projects'
+import { SectionDivider } from '@/components/shared/SectionDivider'
 
 const Home = () => {
   return (
