@@ -5,7 +5,7 @@ import { cn, generateReactKey } from '@/lib/utils'
 import type { ProjectItem } from './Projects.data'
 import { projectData } from './Projects.data'
 
-export const Projects = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
+export const Projects = ({ className, ...props }: React.ComponentProps<'div'>) => {
   return (
     <div className={cn('space-y-4', className)} {...props}>
       {projectData.map(

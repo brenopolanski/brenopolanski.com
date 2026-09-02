@@ -34,7 +34,7 @@ const Flash = (props: React.ComponentProps<'svg'>) => {
 const ICONS = [Face, Heart, Flash]
 const INTERVAL = 1_000
 
-export const Footer = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
+export const Footer = ({ className, ...props }: React.ComponentProps<'footer'>) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {

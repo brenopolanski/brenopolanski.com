@@ -7,7 +7,7 @@ import { ANALYTICS_EVENTS } from '@/lib/analytics'
 import { ProfileImage } from './ProfileImage'
 import { ProfileModal } from './ProfileModal'
 
-export const ProfileButton = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
+export const ProfileButton = ({ className, ...props }: React.ComponentProps<'div'>) => {
   const [showFullImage, setShowFullImage] = useState(false)
 
   return (

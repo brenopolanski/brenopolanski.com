@@ -11,7 +11,7 @@ interface LetterState {
   isSpace: boolean
 }
 
-interface MatrixTextProps extends React.HTMLAttributes<HTMLDivElement> {
+interface MatrixTextProps extends React.ComponentProps<'div'> {
   text?: string
   textClassName?: string
   initialDelay?: number

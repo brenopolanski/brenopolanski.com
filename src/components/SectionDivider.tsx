@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 
-interface SectionDividerProps extends React.HTMLAttributes<HTMLDivElement> {
+interface SectionDividerProps extends React.ComponentProps<'div'> {
   title: string
 }
 
