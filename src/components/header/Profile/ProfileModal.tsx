@@ -38,7 +38,7 @@ export const ProfileModal = ({ onClose }: ProfileModalProps) => {
             loading="eager"
             quality={95}
             sizes="(max-width: 640px) 70vw, (max-width: 1024px) 60vw, 50vw"
-            src="/breno-pfp.webp"
+            src="/breno-polanski.webp"
             fill
           />
         </div>

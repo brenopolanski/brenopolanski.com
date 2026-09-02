@@ -33,7 +33,7 @@ export async function GET() {
           <img
             alt="Breno Polanski"
             height="160"
-            src={`${siteConfig.url}/breno-pfp.png`}
+            src={`${siteConfig.url}/breno-polanski.png`}
             style={{
               borderRadius: '16px',
             }}

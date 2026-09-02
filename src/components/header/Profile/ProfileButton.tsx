@@ -23,7 +23,7 @@ export const ProfileButton = ({ className, ...props }: React.ComponentProps<'div
             alt="Breno Polanski profile picture"
             className="size-9 rounded-md"
             height={32}
-            src="/breno-pfp.webp"
+            src="/breno-polanski.webp"
             width={32}
           />
         </button>

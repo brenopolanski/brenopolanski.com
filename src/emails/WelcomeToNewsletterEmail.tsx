@@ -40,7 +40,7 @@ export const WelcomeToNewsletterEmail = () => {
               alt={`${siteConfig.name} profile`}
               className="mx-auto mt-12 rounded-lg"
               height="80"
-              src={`${siteConfig.url}/breno-pfp.png`}
+              src={`${siteConfig.url}/breno-polanski.png`}
               width="80"
             />
           </Container>
