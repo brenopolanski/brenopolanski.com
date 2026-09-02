@@ -1,14 +1,8 @@
-import type { ClassValue } from 'clsx'
-import { clsx } from 'clsx'
-import { twMerge } from 'tailwind-merge'
+export { cn } from 'cn'
 
 export const blankToUndefined = (value: string | null | undefined): string | undefined => {
   const trimmed = value?.trim()
   return trimmed !== undefined && trimmed.length > 0 ? trimmed : undefined
-}
-
-export const cn = (...inputs: ClassValue[]): string => {
-  return twMerge(clsx(inputs))
 }
 
 export const generateReactKey = (

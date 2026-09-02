@@ -45,7 +45,7 @@
     "@vercel/analytics": "^2.0.1",
     "@vercel/og": "^1.0.1",
     "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
+    "cn": "^0.2.4",
     "env.style": "^1.0.1",
     "lucide-react": "^1.31.0",
     "motion": "^13.1.0",
@@ -54,8 +54,7 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-email": "^6.9.2",
-    "resend": "^6.20.0",
-    "tailwind-merge": "^3.6.0"
+    "resend": "^6.20.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^21.2.2",
