@@ -7,6 +7,7 @@ const ArkEcosystemLogo = (props: React.SVGProps<SVGSVGElement>) => (
     viewBox="0 0 44 44"
     width="44"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden
     {...props}
   >
     <rect fill="#666" height="44" rx="12" width="44" />
@@ -25,6 +26,7 @@ const BitcoinHojeLogo = (props: React.SVGProps<SVGSVGElement>) => (
     viewBox="0 0 22.881168 22.870582"
     width="22.881168mm"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden
     {...props}
   >
     <defs id="defs1645" />
@@ -64,7 +66,7 @@ const BitcoinHojeLogo = (props: React.SVGProps<SVGSVGElement>) => (
 )
 
 const DefiMoneyLogo = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg fill="#666666" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg fill="#666666" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden {...props}>
     <g clipPath="url(#a)">
       <path
         clipRule="evenodd"
@@ -91,6 +93,7 @@ const DolarHojeLogo = (props: React.SVGProps<SVGSVGElement>) => (
     viewBox="0 0 22.881168 22.870582"
     width="22.881168mm"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden
     {...props}
   >
     <defs id="defs1645" />
@@ -134,6 +137,7 @@ const LlamaFolioLogo = (props: React.SVGProps<SVGSVGElement>) => (
     viewBox="0 0 32 36"
     width="32"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden
     {...props}
   >
     <path d="M2.07983 0.991758L4.67233 4.58291C4.84429 4.82761 5.16835 4.91358 5.4395 4.78131C6.10086 4.45725 7.48309 3.90833 9.52005 3.67685C10.0227 3.61733 10.2542 3.02873 9.91687 2.65175C9.24229 1.8912 8.00556 0.872714 5.96859 0.389926C4.35488 -0.000272509 3.2372 -0.0333402 2.52294 0.0195681C2.04676 0.0526358 1.80206 0.608173 2.07983 0.991758Z" />
@@ -149,6 +153,7 @@ const LlamaNodesLogo = (props: React.SVGProps<SVGSVGElement>) => (
     viewBox="0 0 36 41"
     width="36"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden
     {...props}
   >
     <path d="M35.1497 15.2937L27.8222 19.5267C27.4605 19.7411 27.0319 19.7411 26.6568 19.5267L18.6327 14.8918V5.75586L35.1229 15.2803C35.1229 15.2803 35.1363 15.2937 35.1631 15.3071L35.1497 15.2937Z" />
@@ -170,6 +175,7 @@ const PhootoAILogo = (props: React.SVGProps<SVGSVGElement>) => {
       viewBox="0 0 200 200"
       width="400"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
       {...props}
     >
       <g clipPath={`url(#cs_clip_1_ellipse-12_${id})`}>
@@ -222,7 +228,14 @@ const PhootoAILogo = (props: React.SVGProps<SVGSVGElement>) => {
 }
 
 const SaikuLogo = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg height="151" viewBox="0 0 151 151" width="151" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg
+    height="151"
+    viewBox="0 0 151 151"
+    width="151"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden
+    {...props}
+  >
     <path
       d="M.852 71.676C3.005 30.103 38.286-1.826 79.646.355c41.365 2.182 73.151 37.648 71 79.221-1.154 22.278-11.817 41.783-27.832 54.758V64.543c0-11.096-8.86-28.478-21.637-31.48v113.505a73.844 73.844 0 0 1-14.39 3.633V94.22c0-11.09-8.86-28.473-21.637-31.473v87.502a74.213 74.213 0 0 1-14.391-3.547v-26.865c0-11.094-8.866-28.477-21.637-31.477v46.287C10.787 119.998-.463 96.968.845 71.676"
       fill="#666666"

@@ -1,4 +1,4 @@
-import { BitcoinHojeLogo, DolarHojeLogo, PhootoAILogo } from '@/components/Logos'
+import { BitcoinHojeLogo, DolarHojeLogo, PhootoAILogo } from '@/components/shared/Logos'
 
 export interface ProjectItem {
   title: string

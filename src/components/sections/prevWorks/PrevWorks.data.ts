@@ -4,7 +4,7 @@ import {
   LlamaFolioLogo,
   LlamaNodesLogo,
   SaikuLogo,
-} from '@/components/Logos'
+} from '@/components/shared/Logos'
 
 export interface PrevWorkItem {
   title: string
