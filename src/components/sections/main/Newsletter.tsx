@@ -72,12 +72,12 @@ export const Newsletter = () => {
 
   return (
     <Card className="bg-linear-to-br from-emerald-400 to-green-500 dark:from-emerald-500 dark:to-green-600">
-      <CardContent className="px-8 py-4">
+      <CardContent className="px-6 py-4">
         <CardHeader className="p-0">
           <CardTitle className="text-2xl font-bold text-black">Join breno&apos;s list</CardTitle>
           <CardDescription className="text-black/80">
-            Sporadic emails where I talk about what i&apos;m working on (usually web3 development,
-            open source and SaaS).
+            Sporadic emails about what I&apos;m building, usually open source, developer tools,
+            SaaS, AI, and Web3.
           </CardDescription>
         </CardHeader>
         <form className="mt-4 space-y-3" onSubmit={handleSubmit}>

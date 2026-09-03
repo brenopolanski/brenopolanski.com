@@ -9,7 +9,7 @@ export const Hero = () => {
         <QuoteTextButton />
       </div>
       <p className="text-base text-muted-foreground">
-        Indie hacker. Web3 Developer. Open source enthusiast. Always learning. Usually from my
+        Software Engineer. Indie hacker. Open source enthusiast. Always learning. Usually from my
         mistakes.
       </p>
     </div>
