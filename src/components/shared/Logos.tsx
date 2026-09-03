@@ -65,6 +65,74 @@ const BitcoinHojeLogo = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 )
 
+const DashfyLogo = (props: React.SVGProps<SVGSVGElement>) => {
+  const id = useId()
+  const gradientId = `dashfy-gradient-${id}`
+  const gradientFillId = `dashfy-gradient-fill-${id}`
+
+  return (
+    <svg
+      viewBox="128.0593 29.215 2399.997 2400.0012"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+      {...props}
+    >
+      <defs>
+        <linearGradient id={gradientId}>
+          <stop offset="0.50259823" style={{ stopColor: '#fdfdfd', stopOpacity: 1 }} />
+          <stop offset="1" style={{ stopColor: '#ffffff', stopOpacity: 0 }} />
+        </linearGradient>
+        <linearGradient
+          gradientUnits="userSpaceOnUse"
+          href={`#${gradientId}`}
+          id={gradientFillId}
+          x1="-107.28035"
+          x2="-67.28035"
+          y1="20.362432"
+          y2="20.362432"
+        />
+      </defs>
+      <rect
+        height="2400.0012"
+        style={{
+          fill: '#666666',
+          fillOpacity: 1,
+          paintOrder: 'stroke fill markers',
+          stroke: 'none',
+          strokeLinejoin: 'miter',
+          strokeWidth: 0,
+        }}
+        width="2400.0012"
+        x="128.05786"
+        y="29.214844"
+      />
+      <g
+        style={{
+          fill: `url(#${gradientFillId})`,
+          fillOpacity: 1,
+          stroke: '#fdfdfd',
+          strokeDasharray: 'none',
+          strokeOpacity: 1,
+          strokeWidth: 0.166667,
+        }}
+        transform="matrix(0,30.000015,-30.000015,0,1938.9317,3847.6275)"
+      >
+        <path
+          d="m -77.280349,28.362433 v -16 c 0,-1.105 -0.895,-2 -2,-2 h -0.101 c -0.53,0 -1.039,0.211 -1.414,0.586 l -15.898999,15.899 c -0.375,0.375 -0.586,0.884 -0.586,1.414 v 12.101 h -10.000002 v -12.101 c 0,-3.182 1.264,-6.234 3.515,-8.485 L -87.866349,3.8774334 c 2.251,-2.251 5.303,-3.51499995 8.485,-3.51499995 h 0.101 c 6.627,0 12.000001,5.37299995 12.000001,11.99999955 v 16 c 0,6.627 -5.373001,12 -12.000001,12 h -13.999999 v -10 h 13.999999 c 1.105,0 2,-0.895 2,-2 z"
+          style={{
+            fill: `url(#${gradientFillId})`,
+            fillOpacity: 1,
+            stroke: '#fdfdfd',
+            strokeDasharray: 'none',
+            strokeOpacity: 1,
+            strokeWidth: 0.166667,
+          }}
+        />
+      </g>
+    </svg>
+  )
+}
+
 const DefiMoneyLogo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg fill="#666666" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden {...props}>
     <g clipPath="url(#a)">
@@ -227,6 +295,15 @@ const PhootoAILogo = (props: React.SVGProps<SVGSVGElement>) => {
   )
 }
 
+const PixenLogo = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg fill="none" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden {...props}>
+    <rect height="204" rx="46" stroke="#666666" strokeWidth="18" width="204" x="26" y="26" />
+    <rect fill="#666666" height="52" rx="13" width="52" x="74" y="74" />
+    <rect fill="#666666" height="52" rx="13" width="52" x="130" y="74" />
+    <rect fill="#666666" height="52" rx="13" width="52" x="130" y="130" />
+  </svg>
+)
+
 const SaikuLogo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     height="151"
@@ -246,10 +323,12 @@ const SaikuLogo = (props: React.SVGProps<SVGSVGElement>) => (
 export {
   ArkEcosystemLogo,
   BitcoinHojeLogo,
+  DashfyLogo,
   DefiMoneyLogo,
   DolarHojeLogo,
   LlamaFolioLogo,
   LlamaNodesLogo,
   PhootoAILogo,
+  PixenLogo,
   SaikuLogo,
 }

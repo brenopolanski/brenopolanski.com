@@ -1,4 +1,10 @@
-import { BitcoinHojeLogo, DolarHojeLogo, PhootoAILogo } from '@/components/shared/Logos'
+import {
+  BitcoinHojeLogo,
+  DashfyLogo,
+  DolarHojeLogo,
+  PhootoAILogo,
+  PixenLogo,
+} from '@/components/shared/Logos'
 
 export interface ProjectItem {
   title: string
@@ -9,6 +15,20 @@ export interface ProjectItem {
 }
 
 export const projectData: ProjectItem[] = [
+  {
+    icon: DashfyLogo,
+    title: 'Dashfy',
+    description: 'Dashboards for developers.',
+    href: 'https://dashfy.dev',
+    isExternal: true,
+  },
+  {
+    icon: PixenLogo,
+    title: 'Pixen',
+    description: 'Open-source desktop image editor.',
+    href: 'https://github.com/brenopolanski/pixen',
+    isExternal: true,
+  },
   {
     icon: PhootoAILogo,
     title: 'PHOOTO.AI',
