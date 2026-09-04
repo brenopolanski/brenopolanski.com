@@ -2,7 +2,7 @@ import { ENV } from './env'
 
 const siteName = 'Breno Polanski'
 const description =
-  'Indie hacker. Web3 Developer. Open source enthusiast. Always learning. Usually from my mistakes.'
+  'Software Engineer. Indie hacker. Open source enthusiast. Always learning. Usually from my mistakes.'
 
 export const siteConfig = {
   name: siteName,
