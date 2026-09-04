@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/header/Header'
 import { ArrowLeftIcon, FileTextIcon } from '@/components/shared/Icons'
-import { Button } from '@/components/ui/button'
+import { LinkButton } from '@/components/shared/LinkButton'
 import { paths } from '@/config/paths'
 
 export const metadata: Metadata = {
@@ -29,32 +28,17 @@ const NotFound = () => {
             </div>
 
             <div className="grid w-full grid-cols-2 gap-4">
-              <Button
-                className="flex h-auto w-full cursor-pointer flex-col items-center gap-2 bg-zinc-50 py-4 shadow-none"
-                variant="outline"
-                asChild
-              >
-                <Link href={paths.home}>
-                  <ArrowLeftIcon className="size-5 shrink-0" />
-                  <span className="text-sm">Back to home</span>
-                </Link>
-              </Button>
-
-              <Button
-                className="flex h-auto w-full cursor-pointer flex-col items-center gap-2 bg-zinc-50 py-4 shadow-none"
-                variant="outline"
-                asChild
-              >
-                <Link
-                  href={paths.resume}
-                  prefetch={false}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FileTextIcon className="size-5 shrink-0" />
-                  <span className="text-sm">Resume</span>
-                </Link>
-              </Button>
+              <LinkButton
+                href={paths.home}
+                icon={<ArrowLeftIcon className="size-5 shrink-0" />}
+                title="Back to home"
+              />
+              <LinkButton
+                href={paths.resume}
+                icon={<FileTextIcon className="size-5 shrink-0" />}
+                title="Resume"
+                isExternal
+              />
             </div>
           </div>
         </main>
