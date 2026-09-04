@@ -94,6 +94,8 @@ const DashfyLogo = (props: React.SVGProps<SVGSVGElement>) => {
       </defs>
       <rect
         height="2400.0012"
+        rx={483.85}
+        ry={555.69}
         style={{
           fill: '#666666',
           fillOpacity: 1,
