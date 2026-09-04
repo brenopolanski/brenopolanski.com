@@ -25,7 +25,7 @@ export const projectData: ProjectItem[] = [
   {
     icon: PixenLogo,
     title: 'Pixen',
-    description: 'Open-source desktop image editor.',
+    description: 'Open source desktop image editor.',
     href: 'https://github.com/brenopolanski/pixen',
     isExternal: true,
   },
