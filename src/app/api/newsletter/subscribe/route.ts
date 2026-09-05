@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 
 import { siteConfig } from '@/config/site'
 import { WelcomeToNewsletterEmail } from '@/emails/WelcomeToNewsletterEmail'
-import { sendEmail } from '@/lib/resend'
+import { addContactToAudience, sendEmail } from '@/lib/resend'
 import { isValidEmail } from '@/lib/utils'
 
 export async function POST(request: NextRequest) {
@@ -18,6 +18,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Please enter a valid email' }, { status: 400 })
     }
 
+    const contactResult = await addContactToAudience(email)
+
+    if (!contactResult.success) {
+      return NextResponse.json(
+        { error: contactResult.error ?? 'Failed to subscribe' },
+        { status: 500 },
+      )
+    }
+
     const result = await sendEmail({
       to: [email],
       from: siteConfig.author.emails.newsletter,
@@ -26,7 +35,7 @@ export async function POST(request: NextRequest) {
     })
 
     if (!result.success) {
-      return NextResponse.json({ error: result.error ?? 'Failed to send email' }, { status: 500 })
+      console.error('Welcome email failed after saving contact:', result.error)
     }
 
     return NextResponse.json({ message: 'Subscription email sent successfully' }, { status: 200 })

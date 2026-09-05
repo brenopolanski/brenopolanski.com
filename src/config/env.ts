@@ -4,8 +4,8 @@ export const ENV = {
   NODE_ENV: process.env.NODE_ENV,
   RESEND: {
     API_KEY: process.env.RESEND_API_KEY,
+    AUDIENCE_ID: process.env.RESEND_AUDIENCE_ID,
   },
-  SITE_URL: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://brenopolanski.com',
 }
 
 interface ValidateEnvParams {

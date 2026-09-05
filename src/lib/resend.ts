@@ -3,10 +3,26 @@
 import { Resend } from 'resend'
 
 import { ENV, isProd, validateEnv } from '@/config/env'
+import { getErrorMessage } from '@/lib/error'
 
-validateEnv({ name: 'RESEND_API_KEY', value: ENV.RESEND.API_KEY })
+const getResend = () => {
+  validateEnv({ name: 'RESEND_API_KEY', value: ENV.RESEND.API_KEY })
+  return new Resend(ENV.RESEND.API_KEY)
+}
 
-const resend = new Resend(ENV.RESEND.API_KEY)
+const getAudienceId = () => {
+  validateEnv({ name: 'RESEND_AUDIENCE_ID', value: ENV.RESEND.AUDIENCE_ID })
+  return ENV.RESEND.AUDIENCE_ID as string
+}
+
+const isAlreadySubscribedError = (error: unknown) => {
+  const statusCode =
+    typeof error === 'object' && error !== null && 'statusCode' in error
+      ? error.statusCode
+      : undefined
+
+  return statusCode === 409 || /already exists/i.test(getErrorMessage(error))
+}
 
 interface SendEmailParams {
   to: string[]
@@ -47,21 +63,62 @@ export const sendEmail = async ({ to, from, subject, react, scheduledAt }: SendE
     let data = null
 
     if (isProd) {
-      data = await resend.emails.send(msg)
+      data = await getResend().emails.send(msg)
     }
 
     console.log('Email sent successfully', JSON.stringify(data))
     return { message: 'Email sent successfully', success: true }
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error sending email:', error)
 
-    if (error.response?.body?.errors) {
-      console.error('Resend errors:', error.response.body.errors)
+    return {
+      error: getErrorMessage(error),
+      success: false,
+    }
+  }
+}
+
+/**
+ * Adds an email to the Resend newsletter audience
+ * @param email - The email address to add
+ * @returns Object containing the result message and success status
+ * @example
+ * const result = await addContactToAudience('test@example.com')
+ * console.log(result) // { message: 'Contact added successfully', success: true }
+ */
+export const addContactToAudience = async (email: string) => {
+  try {
+    if (!isProd) {
+      console.log('Skipped adding contact in non-prod', email)
+      return { message: 'Contact added successfully', success: true }
+    }
+
+    const { data, error } = await getResend().contacts.create({
+      audienceId: getAudienceId(),
+      email,
+      unsubscribed: false,
+    })
+
+    if (error) {
+      if (isAlreadySubscribedError(error)) {
+        return { message: 'Contact already subscribed', success: true }
+      }
+
+      console.error('Error adding contact:', error)
+      return { error: error.message, success: false }
+    }
+
+    console.log('Contact added successfully', JSON.stringify(data))
+    return { message: 'Contact added successfully', success: true }
+  } catch (error) {
+    console.error('Error adding contact:', error)
+
+    if (isAlreadySubscribedError(error)) {
+      return { message: 'Contact already subscribed', success: true }
     }
 
     return {
-      details: error.response?.body?.errors,
-      error: error.message,
+      error: getErrorMessage(error),
       success: false,
     }
   }
