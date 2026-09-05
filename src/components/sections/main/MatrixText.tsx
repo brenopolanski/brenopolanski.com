@@ -107,6 +107,8 @@ export const MatrixText = ({
 
   const motionVariants = useMemo(
     () => ({
+      initial: {},
+      normal: {},
       matrix: {
         color: '#00ff00',
         textShadow: '0 2px 4px rgba(0, 255, 0, 0.5)',

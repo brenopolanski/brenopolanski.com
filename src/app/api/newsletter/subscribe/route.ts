@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
 
     const result = await sendEmail({
       to: [email],
-      from: siteConfig.author.emails.personal,
+      from: siteConfig.author.emails.newsletter,
       subject: `Welcome to ${siteConfig.name}'s Newsletter! 🚀`,
       react: WelcomeToNewsletterEmail(),
     })

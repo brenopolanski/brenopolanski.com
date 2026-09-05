@@ -10,7 +10,13 @@ const DATASET_PREFIX = 'analytics'
 
 const toDataKey = (datasetKey: string) => {
   const suffix = datasetKey.slice(DATASET_PREFIX.length)
-  return suffix.charAt(0).toLowerCase() + suffix.slice(1)
+  const first = suffix[0]
+
+  if (!first) {
+    return suffix
+  }
+
+  return first.toLowerCase() + suffix.slice(1)
 }
 
 export const AnalyticsClickTracker = () => {
