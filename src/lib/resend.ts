@@ -4,10 +4,15 @@ import { Resend } from 'resend'
 
 import { ENV, isProd, validateEnv } from '@/config/env'
 
-validateEnv({ name: 'RESEND_API_KEY', value: ENV.RESEND.API_KEY })
-validateEnv({ name: 'RESEND_AUDIENCE_ID', value: ENV.RESEND.AUDIENCE_ID })
+const getResend = () => {
+  validateEnv({ name: 'RESEND_API_KEY', value: ENV.RESEND.API_KEY })
+  return new Resend(ENV.RESEND.API_KEY)
+}
 
-const resend = new Resend(ENV.RESEND.API_KEY)
+const getAudienceId = () => {
+  validateEnv({ name: 'RESEND_AUDIENCE_ID', value: ENV.RESEND.AUDIENCE_ID })
+  return ENV.RESEND.AUDIENCE_ID as string
+}
 
 const isAlreadySubscribedError = (error: { message?: string; statusCode?: number | null }) => {
   return error.statusCode === 409 || /already exists/i.test(error.message ?? '')
@@ -52,7 +57,7 @@ export const sendEmail = async ({ to, from, subject, react, scheduledAt }: SendE
     let data = null
 
     if (isProd) {
-      data = await resend.emails.send(msg)
+      data = await getResend().emails.send(msg)
     }
 
     console.log('Email sent successfully', JSON.stringify(data))
@@ -88,8 +93,8 @@ export const addContactToAudience = async (email: string) => {
       return { message: 'Contact added successfully', success: true }
     }
 
-    const { data, error } = await resend.contacts.create({
-      audienceId: ENV.RESEND.AUDIENCE_ID as string,
+    const { data, error } = await getResend().contacts.create({
+      audienceId: getAudienceId(),
       email,
       unsubscribed: false,
     })
