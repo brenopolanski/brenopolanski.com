@@ -5,6 +5,8 @@ import localFont from 'next/font/local'
 
 import { cn } from './utils'
 
+// geist/font/mono ships with adjustFontFallback: false, so LCP text waits on the woff2.
+// next/font/local only accepts 'Arial' | 'Times New Roman' (not true) for metric-adjusted fallback.
 const GeistMono = localFont({
   src: '../../node_modules/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2',
   variable: '--font-geist-mono',
