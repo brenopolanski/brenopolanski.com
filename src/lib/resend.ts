@@ -3,6 +3,7 @@
 import { Resend } from 'resend'
 
 import { ENV, isProd, validateEnv } from '@/config/env'
+import { getErrorMessage } from '@/lib/error'
 
 const getResend = () => {
   validateEnv({ name: 'RESEND_API_KEY', value: ENV.RESEND.API_KEY })
@@ -14,8 +15,13 @@ const getAudienceId = () => {
   return ENV.RESEND.AUDIENCE_ID as string
 }
 
-const isAlreadySubscribedError = (error: { message?: string; statusCode?: number | null }) => {
-  return error.statusCode === 409 || /already exists/i.test(error.message ?? '')
+const isAlreadySubscribedError = (error: unknown) => {
+  const statusCode =
+    typeof error === 'object' && error !== null && 'statusCode' in error
+      ? error.statusCode
+      : undefined
+
+  return statusCode === 409 || /already exists/i.test(getErrorMessage(error))
 }
 
 interface SendEmailParams {
@@ -63,16 +69,11 @@ export const sendEmail = async ({ to, from, subject, react, scheduledAt }: SendE
     console.log('Email sent successfully', JSON.stringify(data))
 
     return { message: 'Email sent successfully', success: true }
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error sending email:', error)
 
-    if (error.response?.body?.errors) {
-      console.error('Resend errors:', error.response.body.errors)
-    }
-
     return {
-      details: error.response?.body?.errors,
-      error: error.message,
+      error: getErrorMessage(error),
       success: false,
     }
   }
@@ -112,7 +113,7 @@ export const addContactToAudience = async (email: string) => {
     console.log('Contact added successfully', JSON.stringify(data))
 
     return { message: 'Contact added successfully', success: true }
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error adding contact:', error)
 
     if (isAlreadySubscribedError(error)) {
@@ -120,7 +121,7 @@ export const addContactToAudience = async (email: string) => {
     }
 
     return {
-      error: error.message,
+      error: getErrorMessage(error),
       success: false,
     }
   }
