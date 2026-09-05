@@ -56,6 +56,7 @@ export const sendEmail = async ({ to, from, subject, react, scheduledAt }: SendE
     }
 
     console.log('Email sent successfully', JSON.stringify(data))
+
     return { message: 'Email sent successfully', success: true }
   } catch (error: any) {
     console.error('Error sending email:', error)
@@ -76,6 +77,9 @@ export const sendEmail = async ({ to, from, subject, react, scheduledAt }: SendE
  * Adds an email to the Resend newsletter audience
  * @param email - The email address to add
  * @returns Object containing the result message and success status
+ * @example
+ * const result = await addContactToAudience('test@example.com')
+ * console.log(result) // { message: 'Contact added successfully', success: true }
  */
 export const addContactToAudience = async (email: string) => {
   try {
@@ -96,10 +100,12 @@ export const addContactToAudience = async (email: string) => {
       }
 
       console.error('Error adding contact:', error)
+
       return { error: error.message, success: false }
     }
 
     console.log('Contact added successfully', JSON.stringify(data))
+
     return { message: 'Contact added successfully', success: true }
   } catch (error: any) {
     console.error('Error adding contact:', error)
