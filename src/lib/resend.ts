@@ -67,7 +67,6 @@ export const sendEmail = async ({ to, from, subject, react, scheduledAt }: SendE
     }
 
     console.log('Email sent successfully', JSON.stringify(data))
-
     return { message: 'Email sent successfully', success: true }
   } catch (error) {
     console.error('Error sending email:', error)
@@ -106,12 +105,10 @@ export const addContactToAudience = async (email: string) => {
       }
 
       console.error('Error adding contact:', error)
-
       return { error: error.message, success: false }
     }
 
     console.log('Contact added successfully', JSON.stringify(data))
-
     return { message: 'Contact added successfully', success: true }
   } catch (error) {
     console.error('Error adding contact:', error)
