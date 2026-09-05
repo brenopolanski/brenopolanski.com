@@ -1,29 +1,9 @@
+import { GeistMono } from 'geist/font/mono'
 import { GeistPixelSquare } from 'geist/font/pixel'
 import { GeistSans } from 'geist/font/sans'
 import { Playfair_Display } from 'next/font/google'
-import localFont from 'next/font/local'
 
 import { cn } from './utils'
-
-// geist/font/mono ships with adjustFontFallback: false, so LCP text waits on the woff2.
-// next/font/local only accepts 'Arial' | 'Times New Roman' (not true) for metric-adjusted fallback.
-const GeistMono = localFont({
-  src: '../../node_modules/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2',
-  variable: '--font-geist-mono',
-  adjustFontFallback: 'Arial',
-  fallback: [
-    'ui-monospace',
-    'SFMono-Regular',
-    'Roboto Mono',
-    'Menlo',
-    'Monaco',
-    'Liberation Mono',
-    'DejaVu Sans Mono',
-    'Courier New',
-    'monospace',
-  ],
-  weight: '100 900',
-})
 
 const fontPlayfair = Playfair_Display({
   subsets: ['latin'],
