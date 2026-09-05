@@ -1,13 +1,11 @@
-import { ENV } from './env'
-
 const siteName = 'Breno Polanski'
-const description =
-  'Software Engineer. Indie hacker. Open source enthusiast. Always learning. Usually from my mistakes.'
+const siteUrl = 'https://brenopolanski.com'
 
 export const siteConfig = {
   name: siteName,
-  description,
-  url: ENV.SITE_URL,
+  description:
+    'Software Engineer. Indie hacker. Open source enthusiast. Always learning. Usually from my mistakes.',
+  url: siteUrl,
   themeColor: {
     light: '#FFFFFF',
     dark: '#09090B',
@@ -20,7 +18,7 @@ export const siteConfig = {
   author: {
     name: siteName,
     x: '@brenopolanski',
-    url: ENV.SITE_URL,
+    url: siteUrl,
     emails: {
       personal: 'breno.polanski@gmail.com',
       newsletter: 'hi@brenopolanski.com',
@@ -28,17 +26,18 @@ export const siteConfig = {
   },
   keywords: [
     siteName,
-    'Indie Hacker',
-    'Web3',
-    'Developer',
-    'Software Engineer',
-    'Full Stack Developer',
-    'Front-End Engineer',
-    'Open Source',
-    'JavaScript',
-    'TypeScript',
-    'React',
-    'Next.js',
-    'Node.js',
+    'portfolio',
+    'indie hacker',
+    'web3',
+    'developer',
+    'software engineer',
+    'full stack developer',
+    'front-end engineer',
+    'open source',
+    'javascript',
+    'typescript',
+    'react',
+    'next.js',
+    'node.js',
   ],
 } as const
