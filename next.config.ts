@@ -5,16 +5,6 @@ const nextConfig: NextConfig = {
   images: {
     qualities: [75, 95],
   },
-  async redirects() {
-    return [
-      {
-        source: '/portfolio',
-        destination:
-          'https://github.com/brenopolanski/brenopolanski.com/blob/dev/portfolio/README.md',
-        permanent: false,
-      },
-    ]
-  },
 }
 
 export default withEnvStyles(nextConfig, {
