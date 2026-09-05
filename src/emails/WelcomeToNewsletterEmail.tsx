@@ -17,7 +17,6 @@ import { siteConfig } from '@/config/site'
 export const WelcomeToNewsletterEmail = () => {
   return (
     <Html>
-      <Head />
       <Tailwind
         config={{
           theme: {
@@ -34,6 +33,7 @@ export const WelcomeToNewsletterEmail = () => {
           },
         }}
       >
+        <Head />
         <Body className="bg-background font-mono text-base">
           <Container className="mx-auto my-20">
             <Img
@@ -87,7 +87,7 @@ export const WelcomeToNewsletterEmail = () => {
                 { name: 'LinkedIn', url: siteConfig.links.linkedin },
               ].map(({ name, url }) => (
                 <li key={name} className="mb-20">
-                  <Link className="text-blue-500 hover:text-blue-600" href={url}>
+                  <Link className="text-blue-500" href={url}>
                     {name}
                   </Link>
                 </li>
