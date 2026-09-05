@@ -36,15 +36,15 @@ bun dev
 
 Open https://personal-website.localhost with your browser to see the result.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📬 Contact
+## Contact
 
 - Website: [brenopolanski.com](https://brenopolanski.com)
 - Twitter: [@brenopolanski](https://twitter.com/brenopolanski)
