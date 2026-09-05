@@ -1,4 +1,5 @@
 import {
+  AlunaSocialLogo,
   ArkEcosystemLogo,
   DefiMoneyLogo,
   LlamaFolioLogo,
@@ -34,6 +35,13 @@ export const prevWorksData: PrevWorkItem[] = [
     title: 'LlamaNodes',
     description: 'Fast and private RPC infra designed for Web3.',
     href: 'https://github.com/llamanodes',
+    isExternal: true,
+  },
+  {
+    icon: AlunaSocialLogo,
+    title: 'Aluna.Social',
+    description: 'Next-gen gamified social investing network.',
+    href: 'https://x.com/AlunaSocial',
     isExternal: true,
   },
   {
