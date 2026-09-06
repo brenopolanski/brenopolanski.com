@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Build both language versions of the resume into public/.
+# Build the resume PDFs into public/.
 #
-#   resume.yml                  -> public/resume_brenopolanski.pdf  (canonical)
-#   resume_pt.generated.yml     -> public/cv_brenopolanski.pdf      (pt-BR)
+#   resume.yml                  -> public/resume_brenopolanski.pdf     (EN, Tech stack)
+#   resume.yml                  -> public/ai/resume_brenopolanski.pdf  (EN, Keywords)
+#   resume_pt.generated.yml     -> public/cv_brenopolanski.pdf         (pt-BR)
 #
 # The Portuguese YAML is regenerated from resume.yml on every run, so resume.yml
 # stays the only place resume content is edited.
@@ -47,5 +48,8 @@ build_variant() {
 
 bun "$root/scripts/resume-translate.ts"
 
+mkdir -p "$root/public/ai"
+
 build_variant resume.yml resume_brenopolanski.pdf en
+build_variant resume.yml ai/resume_brenopolanski.pdf en-ai
 build_variant resume_pt.generated.yml cv_brenopolanski.pdf pt-br

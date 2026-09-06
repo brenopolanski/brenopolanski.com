@@ -23,10 +23,14 @@ from pathlib import Path
 # "Name: <level> \hfill Keywords: ..." where both labels are localised.
 SKILL_LEVEL = re.compile(r"(\\textbf\{[^}]+\}): [^\\]*\\hfill \\textbf\{[^}]+\}: ")
 
-# yamlresume labels each job's keyword list from its own locale. Brazilian
-# resumes conventionally head that list "Tecnologias" rather than the literal
-# "Palavras-chave", so the pt-BR build renames it. English keeps "Keywords".
-KEYWORDS_LABEL = {"pt-br": ("Palavras-chave", "Tecnologias")}
+# yamlresume labels each job's keyword list from its own locale. The site
+# English PDF uses "Tech stack"; the AI English copy keeps "Keywords".
+# Brazilian resumes conventionally head that list "Tecnologias" rather than
+# the literal "Palavras-chave".
+KEYWORDS_LABEL = {
+    "en": ("Keywords", "Tech stack"),
+    "pt-br": ("Palavras-chave", "Tecnologias"),
+}
 
 # The template underlines \href but leaves \url bare, which is why the header
 # website and the company links in EXPERIENCE were the only links without an

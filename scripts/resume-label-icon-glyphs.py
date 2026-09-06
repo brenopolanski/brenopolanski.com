@@ -35,6 +35,7 @@ LOCALES = {
         "0020": ": ",
     },
 }
+LOCALES["en-ai"] = LOCALES["en"]
 LABEL_LIMIT = 8
 ICON_FONT = b"FontAwesome"
 
