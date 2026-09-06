@@ -3,8 +3,8 @@ import { NextResponse } from 'next/server'
 
 import { siteConfig } from '@/config/site'
 import { WelcomeToNewsletterEmail } from '@/emails/WelcomeToNewsletterEmail'
+import { isValidEmail } from '@/lib/email'
 import { addContactToAudience, sendEmail } from '@/lib/resend'
-import { isValidEmail } from '@/lib/utils'
 
 export async function POST(request: NextRequest) {
   try {

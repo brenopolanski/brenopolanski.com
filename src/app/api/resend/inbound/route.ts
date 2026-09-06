@@ -8,6 +8,7 @@ interface ResendInboundEvent {
   type: string
   data?: {
     email_id?: string
+    from?: string
     to?: string[]
   }
 }
@@ -33,6 +34,7 @@ export async function POST(request: NextRequest) {
       emailId: event.data.email_id,
       from: siteConfig.author.emails.newsletter,
       to: siteConfig.author.emails.personal,
+      originalFrom: event.data.from,
     })
 
     if (!result.success) {

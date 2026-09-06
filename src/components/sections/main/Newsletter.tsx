@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { ANALYTICS_EVENTS, trackEvent } from '@/lib/analytics'
-import { isValidEmail } from '@/lib/utils'
+import { isValidEmail } from '@/lib/email'
 
 type StatusType = 'idle' | 'loading' | 'success' | 'error'
 

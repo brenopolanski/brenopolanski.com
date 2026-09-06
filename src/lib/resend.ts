@@ -5,6 +5,8 @@ import { Resend } from 'resend'
 import { ENV, isProd, validateEnv } from '@/config/env'
 import { getErrorMessage } from '@/lib/error'
 
+import { escapeHtml, formatForwardFrom, parseEmailAddress } from './email'
+
 const getResend = () => {
   validateEnv({ name: 'RESEND_API_KEY', value: ENV.RESEND.API_KEY })
   return new Resend(ENV.RESEND.API_KEY)
@@ -132,6 +134,7 @@ interface ForwardReceivedEmailParams {
   emailId: string
   from: string
   to: string
+  originalFrom?: string
 }
 
 /**
@@ -139,27 +142,83 @@ interface ForwardReceivedEmailParams {
  * @param emailId - The received email id from the `email.received` webhook
  * @param from - Address on the verified domain to send the forward from
  * @param to - Address to forward the email to
+ * @param originalFrom - Original sender, shown in Gmail and used as Reply-To
  * @returns Object containing the result message and success status
  * @example
  * const result = await forwardReceivedEmail({
  *   emailId: 'abc123',
  *   from: 'hi@example.com',
  *   to: 'me@gmail.com',
+ *   originalFrom: 'alice@example.com',
  * })
  * console.log(result) // { message: 'Email forwarded successfully', success: true }
  */
-export const forwardReceivedEmail = async ({ emailId, from, to }: ForwardReceivedEmailParams) => {
+export const forwardReceivedEmail = async ({
+  emailId,
+  from,
+  to,
+  originalFrom,
+}: ForwardReceivedEmailParams) => {
   try {
     if (!isProd) {
-      console.log('Skipped forwarding received email in non-prod', { emailId, from, to })
+      console.log('Skipped forwarding received email in non-prod', {
+        emailId,
+        from,
+        to,
+        originalFrom,
+      })
 
       return { message: 'Email forwarded successfully', success: true }
     }
 
-    const { data, error } = await getResend().emails.receiving.forward({
-      emailId,
-      from,
-      to,
+    const resend = getResend()
+    const { data: email, error: getError } = await resend.emails.receiving.get(emailId)
+
+    if (getError || !email) {
+      console.error('Error loading received email:', getError)
+
+      return { error: getError?.message ?? 'Failed to load received email', success: false }
+    }
+
+    const sender = originalFrom ?? email.from
+    const { email: replyTo } = parseEmailAddress(sender)
+    const senderLine = `From: ${sender}`
+    const text = email.text ? `${senderLine}\n\n${email.text}` : senderLine
+    const html = email.html
+      ? `<p>${escapeHtml(senderLine)}</p>${email.html}`
+      : `<p>${escapeHtml(senderLine)}</p>`
+
+    let attachments:
+      { filename?: string; content: Buffer; contentType: string; contentId?: string }[] | undefined
+
+    if (email.attachments.length > 0) {
+      const { data: list } = await resend.emails.receiving.attachments.list({ emailId })
+
+      if (list?.data.length) {
+        attachments = await Promise.all(
+          list.data.map(async (attachment) => {
+            const response = await fetch(attachment.download_url)
+            const content = Buffer.from(await response.arrayBuffer())
+
+            return {
+              filename: attachment.filename,
+              content,
+              contentType: attachment.content_type,
+              contentId: attachment.content_id,
+            }
+          }),
+        )
+      }
+    }
+
+    const { data, error } = await resend.emails.send({
+      from: formatForwardFrom(sender, from),
+      to: [to],
+      replyTo,
+      subject: email.subject || '(no subject)',
+      text,
+      html,
+      ...(attachments?.length ? { attachments } : {}),
     })
 
     if (error) {
