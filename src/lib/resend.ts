@@ -127,3 +127,56 @@ export const addContactToAudience = async (email: string) => {
     }
   }
 }
+
+interface ForwardReceivedEmailParams {
+  emailId: string
+  from: string
+  to: string
+}
+
+/**
+ * Forwards a received Resend inbound email to another address
+ * @param emailId - The received email id from the `email.received` webhook
+ * @param from - Address on the verified domain to send the forward from
+ * @param to - Address to forward the email to
+ * @returns Object containing the result message and success status
+ * @example
+ * const result = await forwardReceivedEmail({
+ *   emailId: 'abc123',
+ *   from: 'hi@example.com',
+ *   to: 'me@gmail.com',
+ * })
+ * console.log(result) // { message: 'Email forwarded successfully', success: true }
+ */
+export const forwardReceivedEmail = async ({ emailId, from, to }: ForwardReceivedEmailParams) => {
+  try {
+    if (!isProd) {
+      console.log('Skipped forwarding received email in non-prod', { emailId, from, to })
+
+      return { message: 'Email forwarded successfully', success: true }
+    }
+
+    const { data, error } = await getResend().emails.receiving.forward({
+      emailId,
+      from,
+      to,
+    })
+
+    if (error) {
+      console.error('Error forwarding received email:', error)
+
+      return { error: error.message, success: false }
+    }
+
+    console.log('Email forwarded successfully', JSON.stringify(data))
+
+    return { message: 'Email forwarded successfully', success: true }
+  } catch (error) {
+    console.error('Error forwarding received email:', error)
+
+    return {
+      error: getErrorMessage(error),
+      success: false,
+    }
+  }
+}
