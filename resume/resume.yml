@@ -38,6 +38,7 @@ content:
         - shadcn/ui
         - Socket.IO
         - Node.js
+        - Fastify
         - Turbo
         - pnpm
         - GitHub API
@@ -234,12 +235,12 @@ content:
       keywords:
         - JavaScript
         - TypeScript
+        - Go (learning)
     - name: Frontend
       level: Expert
       keywords:
         - React
         - Next.js
-        - React Native
         - Tailwind CSS
         - shadcn/ui
         - Radix UI
@@ -249,12 +250,15 @@ content:
       level: Intermediate
       keywords:
         - Node.js
+        - Fastify
+        - NestJS
     - name: APIs & Real-Time
       level: Intermediate
       keywords:
+        - REST APIs
         - WebSockets
         - Socket.IO
-        - API Integration
+        - API Design
     - name: State Management
       level: Advanced
       keywords:
@@ -287,11 +291,18 @@ content:
       keywords:
         - Electron
         - Tauri
+    - name: Mobile
+      level: Intermediate
+      keywords:
+        - React Native
+        - Flutter (learning)
     - name: Backend Services
       level: Intermediate
       keywords:
         - Firebase
         - Supabase
+        - Drizzle ORM
+        - Prisma
     - name: Testing
       level: Advanced
       keywords:
@@ -299,6 +310,7 @@ content:
         - React Testing Library
         - Vitest
         - Cypress
+        - Playwright
         - TestCafe
     - name: Tooling
       level: Advanced
@@ -311,7 +323,6 @@ content:
         - pnpm
         - Turbo
         - Vite
-        - Open Source
 
 locale:
   language: en

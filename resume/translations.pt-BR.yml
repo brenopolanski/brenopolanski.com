@@ -115,6 +115,7 @@ strings:
   'Blockchain': 'Blockchain'
   'Architecture': 'Arquitetura'
   'Desktop': 'Desktop'
+  'Mobile': 'Mobile'
   'Backend Services': 'Serviços Backend'
   'Testing': 'Testes'
   'Tooling': 'Ferramentas'
