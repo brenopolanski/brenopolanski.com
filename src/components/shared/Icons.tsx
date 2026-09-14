@@ -2,6 +2,8 @@ import type { LucideProps } from 'lucide-react'
 import {
   ArrowLeftIcon,
   CheckIcon,
+  DownloadIcon,
+  ExternalLinkIcon,
   FileTextIcon,
   MailIcon,
   QuoteIcon,
@@ -86,6 +88,8 @@ export {
   ArrowLeftIcon,
   BrightnessIcon,
   CheckIcon,
+  DownloadIcon,
+  ExternalLinkIcon,
   FileTextIcon,
   GithubIcon,
   LinkedInIcon,
