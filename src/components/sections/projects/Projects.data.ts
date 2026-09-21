@@ -26,7 +26,7 @@ export const projectData: ProjectItem[] = [
   {
     icon: PixenLogo,
     title: 'Pixen',
-    description: 'Open source desktop image editor',
+    description: 'The Fast, Simple Screenshot Editor',
     href: paths.pixen,
   },
   {
