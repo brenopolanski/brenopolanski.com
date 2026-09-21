@@ -6,17 +6,19 @@ platforms:
   - macOS
 requirement: Requires macOS 10.15 or later
 priceLabel: Paid or free
-priceNote: The App Store version is paid. The GitHub .dmg is free and unsigned.
+priceNote: 'The App Store version is paid. The source is free, and you build the `.dmg` yourself.'
 isMenuBarApp: true
 repoUrl: https://github.com/brenopolanski/pixen
 mainLinks:
-  'Download': https://github.com/brenopolanski/pixen/releases/latest
+  'Apple': https://apps.apple.com
 links:
   'Source': https://github.com/brenopolanski/pixen
   'How it works': https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md
 ---
 
-Pixen is a lightweight screenshot editor for macOS. Capture your screen, make quick edits, annotate important details, hide private information, and export the result. The editing engine is the [Unlayer Image Editor](https://unlayer.com/image-editor), inside a [Tauri](https://tauri.app) shell that owns the window, file dialogs, encoding, and keyboard shortcuts.
+Pixen is a lightweight screenshot editor for macOS.
+
+Capture your screen, make quick edits, annotate important details, hide private information, and export the result — all from one simple app.
 
 <br>
 
@@ -91,9 +93,9 @@ Copy the edited screenshot to the system clipboard with <kbd>⌘⇧C</kbd>.
 
 ## Tips
 
-### GitHub build
+### Build it yourself
 
-The download from GitHub is unsigned, so macOS blocks the first double-click. Right-click the app → **Open**, then confirm once. The App Store version does not need this.
+No `.dmg` is published. The source is free. Run `pnpm tauri:build` and the unsigned `.app` and `.dmg` land in `src-tauri/target/release/bundle/`. The first launch is right-click the app → **Open**. Requirements (pnpm, Node, Rust, and Xcode Command Line Tools) are in the [README](https://github.com/brenopolanski/pixen#build). The App Store version does not need this.
 
 ### Internet on first run
 
@@ -136,11 +138,11 @@ A capture from the menu bar uses the same session as one from the window, so it 
 
 #### Is it free?
 
-The GitHub release is free. It is an unsigned `.dmg`. The App Store version is paid.
+The App Store version is paid. The source is free. There is no downloadable `.dmg`. You build it with `pnpm tauri:build`.
 
 #### macOS says the app is damaged or from an unidentified developer {#gatekeeper}
 
-That is Gatekeeper on the unsigned GitHub build. Right-click the app → **Open** and confirm. This is a one-time step. The App Store version is signed and opens normally.
+That is Gatekeeper on the unsigned `.dmg` you build. Right-click the app → **Open** and confirm. This is a one-time step. The App Store version is signed and opens normally.
 
 #### Does it work offline?
 

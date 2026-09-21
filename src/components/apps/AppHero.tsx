@@ -1,20 +1,36 @@
 import Image from 'next/image'
 
 import {
+  AppleIcon,
   DownloadIcon,
   ExternalLinkIcon,
   FileTextIcon,
   GithubIcon,
-  StoreIcon,
 } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
 import type { App } from '@/lib/apps'
 
 const linkIcons: Record<string, React.ElementType> = {
-  'App Store': StoreIcon,
+  Apple: AppleIcon,
   Download: DownloadIcon,
   Source: GithubIcon,
   'How it works': FileTextIcon,
+}
+
+const InlineNote = ({ text }: { text: string }) => {
+  return text.split(/(`[^`]+`)/g).map((part, index) => {
+    const isCode = part.startsWith('`') && part.endsWith('`') && part.length > 2
+
+    if (!isCode) {
+      return <span key={index}>{part}</span>
+    }
+
+    return (
+      <code key={index} className="rounded-sm bg-muted px-[0.35em] py-[0.15em] font-normal">
+        {part.slice(1, -1)}
+      </code>
+    )
+  })
 }
 
 const Tag = ({ children }: { children: React.ReactNode }) => (
@@ -82,7 +98,9 @@ export const AppHero = ({ app }: AppHeroProps) => {
       )}
 
       {app.priceNote && (
-        <p className="max-w-md text-sm text-balance text-muted-foreground">{app.priceNote}</p>
+        <p className="max-w-md text-sm text-balance text-muted-foreground">
+          <InlineNote text={app.priceNote} />
+        </p>
       )}
     </div>
   )

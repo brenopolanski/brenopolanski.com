@@ -8,7 +8,6 @@ import {
   MailIcon,
   QuoteIcon,
   SendIcon,
-  StoreIcon,
   XIcon,
 } from 'lucide-react'
 
@@ -73,6 +72,18 @@ const LinkedInIcon = (props: LucideProps) => (
   </svg>
 )
 
+const AppleIcon = (props: LucideProps) => (
+  <svg
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden
+    {...props}
+  >
+    <path d="M12.2 6.9C11.2 6.9 9.7 5.9 8.2 5.9 6.2 5.9 4.2 7 3.2 8.9 1.2 12.5 2.7 17.9 4.7 20.9 5.8 22.5 7 24.2 8.6 24 10.1 24 10.6 23 12.5 23S14.8 24 16.5 24C18 24 19 22.5 20 21A13 13 0 0 0 21.8 17.6 5.3 5.3 0 0 1 21.2 8.2 6 6 0 0 0 16.8 5.8C14.8 5.6 13 7 12.2 7M15.5 3.9Q17 2.2 16.8 0C15.6 0 14 .8 13.2 1.8A5 5 0 0 0 12 5.5Q14 5.5 15.5 3.8" />
+  </svg>
+)
+
 const XTwitterIcon = (props: LucideProps) => (
   <svg
     fill="currentColor"
@@ -86,6 +97,7 @@ const XTwitterIcon = (props: LucideProps) => (
 )
 
 export {
+  AppleIcon,
   ArrowLeftIcon,
   BrightnessIcon,
   CheckIcon,
@@ -97,7 +109,6 @@ export {
   MailIcon,
   QuoteIcon,
   SendIcon,
-  StoreIcon,
   XIcon,
   XTwitterIcon,
 }
