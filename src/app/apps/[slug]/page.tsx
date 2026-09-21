@@ -73,6 +73,7 @@ const AppPage = async ({ params }: AppPageProps) => {
               alt={`${app.title} screenshot`}
               className="w-full rounded-xl border border-border"
               height={1440}
+              loading="eager"
               quality={95}
               sizes="(min-width: 768px) 42rem, 100vw"
               src={app.bannerUrl}
