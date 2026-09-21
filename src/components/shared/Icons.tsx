@@ -8,6 +8,7 @@ import {
   MailIcon,
   QuoteIcon,
   SendIcon,
+  StoreIcon,
   XIcon,
 } from 'lucide-react'
 
@@ -96,6 +97,7 @@ export {
   MailIcon,
   QuoteIcon,
   SendIcon,
+  StoreIcon,
   XIcon,
   XTwitterIcon,
 }

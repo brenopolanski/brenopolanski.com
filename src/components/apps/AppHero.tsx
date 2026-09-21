@@ -1,10 +1,17 @@
 import Image from 'next/image'
 
-import { DownloadIcon, ExternalLinkIcon, FileTextIcon, GithubIcon } from '@/components/shared/Icons'
+import {
+  DownloadIcon,
+  ExternalLinkIcon,
+  FileTextIcon,
+  GithubIcon,
+  StoreIcon,
+} from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
 import type { App } from '@/lib/apps'
 
 const linkIcons: Record<string, React.ElementType> = {
+  'App Store': StoreIcon,
   Download: DownloadIcon,
   Source: GithubIcon,
   'How it works': FileTextIcon,
@@ -43,7 +50,7 @@ export const AppHero = ({ app }: AppHeroProps) => {
           {app.platforms.map((platform) => (
             <Tag key={platform}>{platform}</Tag>
           ))}
-          <Tag>{app.isPaid ? 'Paid' : 'Free'}</Tag>
+          <Tag>{app.priceLabel ?? (app.isPaid ? 'Paid' : 'Free')}</Tag>
           {app.isMenuBarApp && <Tag>Menu bar</Tag>}
         </div>
 
@@ -51,7 +58,13 @@ export const AppHero = ({ app }: AppHeroProps) => {
       </div>
 
       {links.length > 0 && (
-        <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3">
+        <div
+          className={
+            links.length >= 4
+              ? 'grid w-full grid-cols-2 gap-4'
+              : 'grid w-full grid-cols-2 gap-4 sm:grid-cols-3'
+          }
+        >
           {links.map(([title, href]) => {
             const Icon = linkIcons[title] ?? ExternalLinkIcon
 
@@ -66,6 +79,10 @@ export const AppHero = ({ app }: AppHeroProps) => {
             )
           })}
         </div>
+      )}
+
+      {app.priceNote && (
+        <p className="max-w-md text-sm text-balance text-muted-foreground">{app.priceNote}</p>
       )}
     </div>
   )

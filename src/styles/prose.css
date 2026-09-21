@@ -48,6 +48,11 @@
   font-size: 0.9em;
 }
 
+.prose img {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+}
+
 /* GitHub-style alerts from remark-github-blockquote-alert. */
 .prose .markdown-alert {
   background-color: var(--muted);

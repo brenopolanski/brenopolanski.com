@@ -12,6 +12,8 @@ export interface AppFrontmatter {
   platforms: string[]
   requirement?: string
   isPaid?: boolean
+  priceLabel?: string
+  priceNote?: string
   isMenuBarApp?: boolean
   repoUrl?: string
   mainLinks?: Record<string, string>

@@ -1,11 +1,12 @@
 ---
 title: Pixen
-subtitle: An open-source desktop image editor, ideal for screenshots
+subtitle: Capture, edit, and refine screenshots on your Mac.
 pubDate: '2026-08-29'
 platforms:
   - macOS
 requirement: Requires macOS 10.15 or later
-isPaid: false
+priceLabel: Paid or free
+priceNote: The App Store version is paid. The GitHub .dmg is free and unsigned.
 isMenuBarApp: true
 repoUrl: https://github.com/brenopolanski/pixen
 mainLinks:
@@ -15,7 +16,7 @@ links:
   'How it works': https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md
 ---
 
-Crop, annotate, hide private information, and make quick edits. Pixen is a small desktop shell around the [Unlayer Image Editor](https://unlayer.com/image-editor), built with [Tauri](https://tauri.app). The editor does the editing. Pixen owns the window, the native file dialogs, the encoding, and the keyboard shortcuts.
+Pixen is a lightweight screenshot editor for macOS. Capture your screen, make quick edits, annotate important details, hide private information, and export the result. The editing engine is the [Unlayer Image Editor](https://unlayer.com/image-editor), inside a [Tauri](https://tauri.app) shell that owns the window, file dialogs, encoding, and keyboard shortcuts.
 
 <br>
 
@@ -24,46 +25,90 @@ Crop, annotate, hide private information, and make quick edits. Pixen is a small
 
 <br>
 
-#### Highlights
+## Features
 
-- Open PNG, JPEG and WebP by dropping on the window, pasting from the clipboard, or through a native file dialog
-- Capture a region of the screen straight into the editor, from the toolbar or the menu bar
-- Hide private data — an address, a token, a face — behind a mosaic, by dragging a box over it
-- Number a screenshot for a step-by-step guide: click each spot and the badge counts itself up
-- Point at what matters: drag an arrow towards it, as many as the guide needs
-- Cut the background away from the subject with a local segmentation model, previewing before it is applied
-- Crop, resize, filters, draw, text, shapes, stickers and frames
-- Save as PNG, JPEG or WebP, or copy the result to the clipboard
-- Light and dark theme, remembered between launches
+### Capture screenshots
 
-#### Tabs
+Capture any region of your screen directly into Pixen, from the toolbar, the menu bar, or <kbd>⌘⇧9</kbd>.
 
-A clean tab is replaced; a dirty one stays and a new tab opens. The tab strip's **+** always opens another tab. The last ten images are reopened from **File → Open Recent**.
+![Capture screenshots with Pixen](/apps/pixen/demo-feature-screenshot.png)
+
+### Edit screenshots
+
+Crop, resize, apply filters, draw, add text, shapes, stickers, and frames.
+
+![Edit screenshots with Pixen](/apps/pixen/demo-feature-editor.png)
+
+### Annotate with arrows
+
+Point out exactly what matters. Draw arrows anywhere on the screenshot and add as many as you need.
+
+![Add arrows to screenshots](/apps/pixen/demo-feature-arrows.png)
+
+### Add numbered steps
+
+Create step-by-step guides on the screenshot. Click each location and Pixen numbers the markers.
+
+![Add numbered steps to screenshots](/apps/pixen/demo-feature-numbered-steps.png)
+
+### Hide private information
+
+Pixelate addresses, tokens, faces, and other private data by dragging a box over it.
+
+![Pixelate private information](/apps/pixen/demo-feature-pixelize.png)
+
+### Remove backgrounds
+
+Remove the background with a local segmentation model. The result is previewed before it is applied, and the image never leaves your Mac.
+
+![Remove image backgrounds](/apps/pixen/feature-background-removal.png)
+
+### Menu bar
+
+Pixen stays in the Dock and adds a menu bar item. Left-click it to capture. Right-click it to start at login, open About, or quit, without leaving the app you are in.
+
+### Recent images
+
+Reopen the last ten images from **File → Open Recent**.
+
+### Tabs
+
+Work on more than one image. A clean tab is replaced when you open something new. A modified tab stays, and Pixen opens another one beside it.
+
+### Light and dark mode
+
+Choose light or dark in Settings. Pixen's chrome and the image editor follow that choice, and it is remembered between launches.
+
+### Export
+
+Save as PNG, JPEG, or WebP. <kbd>⌘S</kbd> saves, <kbd>⌘⇧S</kbd> saves a new copy. Pixen asks where to write the first time and reuses that destination afterwards.
+
+### Clipboard
+
+Copy the edited screenshot to the system clipboard with <kbd>⌘⇧C</kbd>.
 
 ---
 
 ## Tips
 
-### First launch
+### GitHub build
 
-Builds are unsigned, so macOS will not open the app on a double-click. Right-click the app → **Open**, then confirm once. After that it launches normally.
+The download from GitHub is unsigned, so macOS blocks the first double-click. Right-click the app → **Open**, then confirm once. The App Store version does not need this.
 
 ### Internet on first run
 
-Pixen loads the editor engine from `cdn.unlayer.com`, so the first launch needs an internet connection.
+Pixen loads the editor engine from `cdn.unlayer.com`, so the first launch needs an internet connection. Saving, screenshots, and the clipboard stay on your Mac after that.
 
 ### Menu bar
 
-Pixen keeps its Dock icon and editor window and adds a menu bar item next to them. Left-click it to capture, right-click it for the menu.
+| Item              | Action                              |
+| ----------------- | ----------------------------------- |
+| `Take Screenshot` | Capture into a tab (<kbd>⌘⇧9</kbd>) |
+| `Start at Login`  | Toggle launch at login              |
+| `About Pixen`     | Open the About window               |
+| `Quit Pixen`      | Quit while guarding unsaved work    |
 
-| Item              | Action                                      |
-| ----------------- | ------------------------------------------- |
-| `Take Screenshot` | Capture into a tab (<kbd>⌘⇧9</kbd>)         |
-| `Start at Login`  | Toggle launch at login (checked when on)    |
-| `About Pixen`     | Open the About window                       |
-| `Quit Pixen`      | Quit, still asking about unsaved work first |
-
-A capture from the tray goes through the same session as one from the toolbar, so it replaces a clean tab, opens a new one next to a dirty one, and asks before dropping unapplied marks.
+A capture from the menu bar uses the same session as one from the window, so it replaces a clean tab and opens a new one next to a dirty one.
 
 ### Keyboard shortcuts
 
@@ -74,26 +119,36 @@ A capture from the tray goes through the same session as one from the toolbar, s
 | <kbd>⌘O</kbd>  | Open an image                   |
 | <kbd>⌘V</kbd>  | Open the image on the clipboard |
 | <kbd>⌘⇧C</kbd> | Copy the image to the clipboard |
-| <kbd>⌘⇧9</kbd> | Take a screenshot, from any app |
+| <kbd>⌘⇧A</kbd> | Arrow                           |
+| <kbd>⌘⇧P</kbd> | Pixelize                        |
+| <kbd>⌘⇧N</kbd> | Numbered steps                  |
+| <kbd>⌘⇧B</kbd> | Remove background               |
+| <kbd>⌘⇧9</kbd> | Take a screenshot from any app  |
+| <kbd>⌘,</kbd>  | Open Settings                   |
+| <kbd>⌘?</kbd>  | Open keyboard shortcuts         |
 | <kbd>⌘Q</kbd>  | Quit, guarding unsaved work     |
+| <kbd>⌘W</kbd>  | Close the About window          |
+| `Escape`       | Close the About window          |
+
+<kbd>⌘⇧9</kbd> is registered system-wide, so it can capture while another app is in front. Change it in **Settings → Capture screenshot**. A custom shortcut must include <kbd>⌘</kbd>, and Pixen rejects ones it already uses, including Save, Copy Image, the tool shortcuts, and Quit.
 
 ## Frequently Asked Questions {#faq}
 
 #### Is it free?
 
-Yes. Pixen is open source under the MIT license. The [source is on GitHub](https://github.com/brenopolanski/pixen).
+The GitHub release is free. It is an unsigned `.dmg`. The App Store version is paid.
 
 #### macOS says the app is damaged or from an unidentified developer {#gatekeeper}
 
-Builds are unsigned, so Gatekeeper blocks the first double-click. Right-click the app → **Open** and confirm. This is a one-time step.
+That is Gatekeeper on the unsigned GitHub build. Right-click the app → **Open** and confirm. This is a one-time step. The App Store version is signed and opens normally.
 
 #### Does it work offline?
 
-Mostly. The editor engine is loaded from `cdn.unlayer.com` on first launch, so that run needs a connection. Saving, screenshots and the clipboard are all local.
+Mostly. The editor engine is loaded from `cdn.unlayer.com` on first launch, so that run needs a connection. Saving, screenshots, and the clipboard are all local.
 
 #### Where do my images go? {#privacy}
 
-Nowhere. Pixen reads and writes files on your Mac. There is no account, no upload and no telemetry. Background removal runs a local model, so that image never leaves the machine either.
+Nowhere. Pixen reads and writes files on your Mac. There is no account, no upload, and no telemetry. Background removal runs a local model, so that image never leaves the machine either.
 
 #### Why does `⌘⇧9` ask for Accessibility permission? {#accessibility}
 
@@ -105,7 +160,7 @@ No. Those tools flatten the image, the same way a save does, so the editor's und
 
 #### Why isn't drag and drop a normal web drop zone? {#drop}
 
-Tauri intercepts file drops before the webview sees them, so `dragover` and `drop` never fire. Pixen listens to the window's drop event instead and takes the first PNG, JPEG or WebP. See [how it works](https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md).
+Tauri intercepts file drops before the webview sees them, so `dragover` and `drop` never fire. Pixen listens to the window's drop event instead and takes the first PNG, JPEG, or WebP. See [how it works](https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md).
 
 #### Can you support Windows or Linux? {#platforms}
 
@@ -113,7 +168,7 @@ Not today. Screen capture goes through macOS's own `screencapture`, and the menu
 
 #### What is the license? {#license}
 
-Pixen's own source is MIT. Background removal uses [`@imgly/background-removal`](https://github.com/imgly/background-removal-js), which is **AGPL-3.0** — those terms apply to anyone distributing a build that includes it. IMG.LY sells a commercial licence for use that AGPL does not cover. Nothing else in the dependency tree is copyleft.
+Pixen is licensed under **AGPL-3.0**. Third-party pieces keep their own terms: [`@unlayer/react-image-editor`](https://github.com/unlayer/react-image-editor) is MIT, and [`@imgly/background-removal`](https://github.com/imgly/background-removal-js) is AGPL-3.0.
 
 #### How is it built? {#stack}
 
