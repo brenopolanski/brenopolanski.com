@@ -6,6 +6,7 @@ import {
   ExternalLinkIcon,
   FileTextIcon,
   GithubIcon,
+  ShieldIcon,
 } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
 import type { App } from '@/lib/apps'
@@ -15,6 +16,7 @@ const linkIcons: Record<string, React.ElementType> = {
   Download: DownloadIcon,
   Source: GithubIcon,
   'How it works': FileTextIcon,
+  'Privacy policy': ShieldIcon,
 }
 
 const InlineNote = ({ text }: { text: string }) => {
@@ -89,8 +91,8 @@ export const AppHero = ({ app }: AppHeroProps) => {
                 key={title}
                 href={href}
                 icon={<Icon className="size-5 shrink-0" />}
+                isExternal={!href.startsWith('/')}
                 title={title}
-                isExternal
               />
             )
           })}

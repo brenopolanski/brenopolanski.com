@@ -14,6 +14,7 @@ mainLinks:
 links:
   'Source': https://github.com/brenopolanski/pixen
   'How it works': https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md
+  'Privacy policy': /apps/pixen/privacy-policy
 ---
 
 Pixen is a lightweight screenshot editor for macOS.
@@ -150,7 +151,7 @@ Mostly. The editor engine is loaded from `cdn.unlayer.com` on first launch, so t
 
 #### Where do my images go? {#privacy}
 
-Nowhere. Pixen reads and writes files on your Mac. There is no account, no upload, and no telemetry. Background removal runs a local model, so that image never leaves the machine either.
+Nowhere. Pixen reads and writes files on your Mac. There is no account, no upload, and no telemetry. Background removal runs a local model, so that image never leaves the machine either. The [privacy policy](/apps/pixen/privacy-policy) has the short version.
 
 #### Why does `⌘⇧9` ask for Accessibility permission? {#accessibility}
 
