@@ -55,23 +55,23 @@ Create step-by-step guides directly on your screenshots. Click each location and
 
 ![Add numbered steps to screenshots](/apps/pixen/demo-feature-numbered-steps.png)
 
-### Hide private information
+### Hide Private Information
 
-Pixelate addresses, tokens, faces, and other private data by dragging a box over it.
+Protect sensitive information before sharing a screenshot. Pixelate addresses, tokens, faces, and other private data by simply dragging a box over it.
 
 ![Pixelate private information](/apps/pixen/demo-feature-pixelize.png)
 
-### Remove backgrounds
+### Remove Backgrounds
 
 Remove the background with a local segmentation model. The result is previewed before it is applied, and the image never leaves your Mac.
 
 ![Remove image backgrounds](/apps/pixen/feature-background-removal.png)
 
-### Menu bar
+### Menu Bar
 
 Pixen stays in the Dock and adds a menu bar item. Left-click it to capture. Right-click it to start at login, open About, or quit, without leaving the app you are in.
 
-### Recent images
+### Recent Images
 
 Reopen the last ten images from **File → Open Recent**.
 
@@ -79,11 +79,11 @@ Reopen the last ten images from **File → Open Recent**.
 
 Work on more than one image. A clean tab is replaced when you open something new. A modified tab stays, and Pixen opens another one beside it.
 
-### Light and dark mode
+### Light and Dark mode
 
 Choose light or dark in Settings. Pixen's chrome and the image editor follow that choice, and it is remembered between launches.
 
-### Export
+### Export Anywhere
 
 Save as PNG, JPEG, or WebP. <kbd>⌘S</kbd> saves, <kbd>⌘⇧S</kbd> saves a new copy. Pixen asks where to write the first time and reuses that destination afterwards.
 
