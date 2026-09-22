@@ -109,10 +109,6 @@ Copy your edited screenshot directly to the system clipboard with <kbd>⌘⇧C</
 
 ## Tips
 
-### Build it yourself
-
-No `.dmg` is published. The source is free. Run `pnpm tauri:build` and the unsigned `.app` and `.dmg` land in `src-tauri/target/release/bundle/`. The first launch is right-click the app → **Open**. Requirements (pnpm, Node, Rust, and Xcode Command Line Tools) are in the [README](https://github.com/brenopolanski/pixen#build). The App Store version does not need this.
-
 ### Internet on first run
 
 Pixen loads the editor engine from `cdn.unlayer.com`, so the first launch needs an internet connection. Saving, screenshots, and the clipboard stay on your Mac after that.
@@ -152,15 +148,15 @@ A capture from the menu bar uses the same session as one from the window, so it 
 
 ## Frequently Asked Questions {#faq}
 
-#### Is it free?
+#### Is it free? {#free}
 
-The App Store version is paid. The source is free. There is no downloadable `.dmg`. You build it with `pnpm tauri:build`.
+The App Store version is paid. The source is free. There is no downloadable `.dmg`. You need to build it following the instructions in the [README](https://github.com/brenopolanski/pixen#build) file.
 
 #### macOS says the app is damaged or from an unidentified developer {#gatekeeper}
 
 That is Gatekeeper on the unsigned `.dmg` you build. Right-click the app → **Open** and confirm. This is a one-time step. The App Store version is signed and opens normally.
 
-#### Does it work offline?
+#### Does it work offline? {#offline}
 
 Mostly. The editor engine is loaded from `cdn.unlayer.com` on first launch, so that run needs a connection. Saving, screenshots, and the clipboard are all local.
 
@@ -172,26 +168,14 @@ Nowhere. Pixen reads and writes files on your Mac. There is no account, no uploa
 
 The shortcut is registered system-wide so it can fire while another app is in front. During development macOS may ask for Accessibility permission so the terminal can register it. A released build asks for screen recording permission the first time you capture.
 
-#### Can I undo a mosaic or an arrow?
+#### Can I undo pixelize or an arrow? {#undo}
 
 No. Those tools flatten the image, the same way a save does, so the editor's undo history goes with them. The document survives — the save path and file name stay, so <kbd>⌘S</kbd> still writes where it wrote before.
-
-#### Why isn't drag and drop a normal web drop zone? {#drop}
-
-Tauri intercepts file drops before the webview sees them, so `dragover` and `drop` never fire. Pixen listens to the window's drop event instead and takes the first PNG, JPEG, or WebP. See [how it works](https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md).
 
 #### Can you support Windows or Linux? {#platforms}
 
 Not today. Screen capture goes through macOS's own `screencapture`, and the menu bar behavior is macOS-specific. Both would need a native equivalent first.
 
-#### What is the license? {#license}
+#### Can you add a feature? {#features}
 
-Pixen is licensed under **AGPL-3.0**. Third-party pieces keep their own terms: [`@unlayer/react-image-editor`](https://github.com/unlayer/react-image-editor) is MIT, and [`@imgly/background-removal`](https://github.com/imgly/background-removal-js) is AGPL-3.0.
-
-#### How is it built? {#stack}
-
-Tauri 2 for the native shell, React 19 + TypeScript + Vite for the UI, Tailwind CSS with shadcn/ui, and [`@unlayer/react-image-editor`](https://github.com/unlayer/react-image-editor) as the editing engine. The details, and why encoding lives in Rust, are in [how it works](https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md).
-
-#### Can you add a feature?
-
-Open an issue or a pull request on [GitHub](https://github.com/brenopolanski/pixen/issues).
+Open an issue, a pull request on [GitHub](https://github.com/brenopolanski/pixen/issues) or send an email to [breno.polanski@gmail.com](mailto:breno.polanski@gmail.com).

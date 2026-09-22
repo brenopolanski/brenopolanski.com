@@ -71,7 +71,7 @@ const AppPage = async ({ params }: AppPageProps) => {
 
             <Image
               alt={`${app.title} screenshot`}
-              className="w-full rounded-xl border border-border"
+              className="w-full"
               height={1440}
               loading="eager"
               quality={95}
