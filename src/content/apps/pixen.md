@@ -51,25 +51,33 @@ Point out exactly what matters. Draw arrows anywhere on the screenshot and add a
 
 ### Add Numbered Steps
 
-Create step-by-step guides directly on your screenshots. Click each location and Pixen automatically numbers the markers.
+Create step-by-step guides directly on your screenshots.
+
+Click each location, and Pixen automatically numbers the markers.
 
 ![Add numbered steps to screenshots](/apps/pixen/demo-feature-numbered-steps.png)
 
 ### Hide Private Information
 
-Protect sensitive information before sharing a screenshot. Pixelate addresses, tokens, faces, and other private data by simply dragging a box over it.
+Protect sensitive information before sharing a screenshot.
+
+Pixelate addresses, tokens, faces, and other private data by simply dragging a box over it.
 
 ![Pixelate private information](/apps/pixen/demo-feature-pixelize.png)
 
 ### Remove Backgrounds
 
-Remove the background with a local segmentation model. The result is previewed before it is applied, and the image never leaves your Mac.
+Remove the background with a local segmentation model.
+
+The result is previewed before it is applied, and the image never leaves your Mac.
 
 ![Remove image backgrounds](/apps/pixen/feature-background-removal.png)
 
 ### Menu Bar
 
-Pixen stays in the Dock and adds a menu bar item. Left-click it to capture. Right-click it to start at login, open About, or quit, without leaving the app you are in.
+Pixen stays in the Dock and adds a menu bar item.
+
+Left-click it to capture. Right-click it to start at login, open About, or quit, without leaving the app you are in.
 
 ### Recent Images
 
@@ -77,19 +85,25 @@ Reopen the last ten images from **File → Open Recent**.
 
 ### Tabs
 
-Work on more than one image. A clean tab is replaced when you open something new. A modified tab stays, and Pixen opens another one beside it.
+Work with multiple images at the same time.
+
+A clean tab can be replaced when opening an image, while a modified tab stays open and a new tab is created.
 
 ### Light and Dark mode
 
-Choose light or dark in Settings. Pixen's chrome and the image editor follow that choice, and it is remembered between launches.
+Choose between light and dark mode from Settings.
+
+Pixen's interface and image editor follow your preference, which is remembered between launches.
 
 ### Export Anywhere
 
-Save as PNG, JPEG, or WebP. <kbd>⌘S</kbd> saves, <kbd>⌘⇧S</kbd> saves a new copy. Pixen asks where to write the first time and reuses that destination afterwards.
+Save your work as PNG, JPEG, or WebP.
+
+Use <kbd>⌘S</kbd> to save and <kbd>⌘⇧S</kbd> to save a new copy. Pixen remembers the destination after the first save.
 
 ### Clipboard
 
-Copy the edited screenshot to the system clipboard with <kbd>⌘⇧C</kbd>.
+Copy your edited screenshot directly to the system clipboard with <kbd>⌘⇧C</kbd>.
 
 ---
 
