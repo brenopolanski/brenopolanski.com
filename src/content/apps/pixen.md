@@ -6,15 +6,14 @@ platforms:
   - macOS
 requirement: Requires macOS 10.15 or later
 priceLabel: Paid or free
-priceNote: 'The App Store version is paid. The source is free, and you build the `.dmg` yourself.'
 isMenuBarApp: true
 repoUrl: https://github.com/brenopolanski/pixen
 mainLinks:
   'Apple': https://apps.apple.com
 links:
   'Source': https://github.com/brenopolanski/pixen
-  'How it works': https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md
-  'Privacy policy': /apps/pixen/privacy-policy
+  'How it Works': https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md
+  'Privacy Policy': /apps/pixen/privacy-policy
 ---
 
 Pixen is a lightweight screenshot editor for macOS.
@@ -30,27 +29,29 @@ Capture your screen, make quick edits, annotate important details, hide private 
 
 ## Features
 
-### Capture screenshots
+### Capture Screenshots
 
 Capture any region of your screen directly into Pixen, from the toolbar, the menu bar, or <kbd>⌘⇧9</kbd>.
 
 ![Capture screenshots with Pixen](/apps/pixen/demo-feature-screenshot.png)
 
-### Edit screenshots
+### Edit Screenshots
+
+Edit your screenshots with a familiar image editor powered by [Unlayer Image Editor](https://unlayer.com/image-editor).
 
 Crop, resize, apply filters, draw, add text, shapes, stickers, and frames.
 
 ![Edit screenshots with Pixen](/apps/pixen/demo-feature-editor.png)
 
-### Annotate with arrows
+### Annotate with Arrows
 
 Point out exactly what matters. Draw arrows anywhere on the screenshot and add as many as you need.
 
 ![Add arrows to screenshots](/apps/pixen/demo-feature-arrows.png)
 
-### Add numbered steps
+### Add Numbered Steps
 
-Create step-by-step guides on the screenshot. Click each location and Pixen numbers the markers.
+Create step-by-step guides directly on your screenshots. Click each location and Pixen automatically numbers the markers.
 
 ![Add numbered steps to screenshots](/apps/pixen/demo-feature-numbered-steps.png)
 

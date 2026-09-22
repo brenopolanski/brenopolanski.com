@@ -15,8 +15,8 @@ const linkIcons: Record<string, React.ElementType> = {
   Apple: AppleIcon,
   Download: DownloadIcon,
   Source: GithubIcon,
-  'How it works': FileTextIcon,
-  'Privacy policy': ShieldIcon,
+  'How it Works': FileTextIcon,
+  'Privacy Policy': ShieldIcon,
 }
 
 const InlineNote = ({ text }: { text: string }) => {
