@@ -11,7 +11,7 @@ repoUrl: https://github.com/brenopolanski/pixen
 mainLinks:
   'Apple': https://apps.apple.com
 links:
-  'Source': https://github.com/brenopolanski/pixen
+  'GitHub': https://github.com/brenopolanski/pixen
   'How it Works': https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md
   'Privacy Policy': /apps/pixen/privacy-policy
 ---

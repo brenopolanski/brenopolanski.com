@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 import {
-  AppleIcon,
   DownloadIcon,
   ExternalLinkIcon,
   FileTextIcon,
@@ -11,10 +10,11 @@ import {
 import { LinkButton } from '@/components/shared/LinkButton'
 import type { App } from '@/lib/apps'
 
+import { AppStoreBadge } from './AppStoreBadge'
+
 const linkIcons: Record<string, React.ElementType> = {
-  Apple: AppleIcon,
   Download: DownloadIcon,
-  Source: GithubIcon,
+  GitHub: GithubIcon,
   'How it Works': FileTextIcon,
   'Privacy Policy': ShieldIcon,
 }
@@ -47,6 +47,8 @@ interface AppHeroProps {
 
 export const AppHero = ({ app }: AppHeroProps) => {
   const links = Object.entries({ ...app.mainLinks, ...app.links })
+  const appStoreHref = links.find(([title]) => title === 'Apple')?.[1]
+  const otherLinks = links.filter(([title]) => title !== 'Apple')
 
   return (
     <div className="flex flex-col items-center gap-6 text-center">
@@ -75,15 +77,17 @@ export const AppHero = ({ app }: AppHeroProps) => {
         {app.requirement && <p className="text-sm text-muted-foreground/80">{app.requirement}</p>}
       </div>
 
-      {links.length > 0 && (
+      {appStoreHref && <AppStoreBadge href={appStoreHref} />}
+
+      {otherLinks.length > 0 && (
         <div
           className={
-            links.length >= 4
+            otherLinks.length >= 4
               ? 'grid w-full grid-cols-2 gap-4'
               : 'grid w-full grid-cols-2 gap-4 sm:grid-cols-3'
           }
         >
-          {links.map(([title, href]) => {
+          {otherLinks.map(([title, href]) => {
             const Icon = linkIcons[title] ?? ExternalLinkIcon
 
             return (
