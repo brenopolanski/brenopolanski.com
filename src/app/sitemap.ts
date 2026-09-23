@@ -7,6 +7,7 @@ import { getAppSlugs } from '@/lib/apps'
 const entries = [
   { path: paths.home, priority: 1 },
   { path: paths.resume, priority: 0.8 },
+  { path: paths.appsTerms, priority: 0.5 },
 ]
 
 const sitemap = async (): Promise<MetadataRoute.Sitemap> => {

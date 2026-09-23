@@ -1,7 +1,7 @@
 ---
 title: Pixen
 subtitle: Capture, edit, and refine screenshots on your Mac.
-pubDate: '2026-08-29'
+pubDate: '2026-09-23'
 platforms:
   - macOS
 requirement: Requires macOS 10.15 or later
