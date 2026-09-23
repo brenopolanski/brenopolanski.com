@@ -5,6 +5,7 @@ import {
   PhootoAILogo,
   PixenLogo,
 } from '@/components/shared/Logos'
+import { paths } from '@/config/paths'
 
 export interface ProjectItem {
   title: string
@@ -25,9 +26,8 @@ export const projectData: ProjectItem[] = [
   {
     icon: PixenLogo,
     title: 'Pixen',
-    description: 'Open source desktop image editor',
-    href: 'https://github.com/brenopolanski/pixen',
-    isExternal: true,
+    description: 'The Fast, Simple Screenshot Editor',
+    href: paths.pixen,
   },
   {
     icon: PhootoAILogo,
