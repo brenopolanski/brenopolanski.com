@@ -155,7 +155,7 @@ The App Store version is paid. The source is free. There is no downloadable `.dm
 
 #### macOS says the app is damaged or from an unidentified developer {#gatekeeper}
 
-That is Gatekeeper on the unsigned `.dmg` you build. Right-click the app → **Open** and confirm. This is a one-time step. The App Store version is signed and opens normally.
+That is Gatekeeper on the unsigned `.dmg` you build. Right-click the **App → Open** and confirm. This is a one-time step. The App Store version is signed and opens normally.
 
 #### Does it work offline? {#offline}
 
@@ -179,4 +179,4 @@ Not today. Screen capture goes through macOS's own `screencapture`, and the menu
 
 #### Can you add a feature? {#features}
 
-Open an issue or a pull request on [GitHub](https://github.com/brenopolanski/pixen/issues). Alternatively, send an email to [breno.polanski@gmail.com](mailto:breno.polanski@gmail.com).
+If you have any questions or suggestions, do not hesitate to [contact me](mailto:breno.polanski@gmail.com).
