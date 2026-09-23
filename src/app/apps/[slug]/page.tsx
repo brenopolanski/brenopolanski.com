@@ -3,13 +3,14 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
 import { AppHero } from '@/components/apps/AppHero'
+import { FaqAccordion } from '@/components/apps/FaqAccordion'
 import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/header/Header'
 import { ArrowLeftIcon } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
 import { paths } from '@/config/paths'
 import { getApp, getAppSlugs } from '@/lib/apps'
-import { renderMarkdown } from '@/lib/markdown'
+import { renderAppMarkdown } from '@/lib/markdown'
 
 interface AppPageProps {
   params: Promise<{ slug: string }>
@@ -58,7 +59,7 @@ const AppPage = async ({ params }: AppPageProps) => {
     notFound()
   }
 
-  const html = await renderMarkdown(app.content)
+  const { html, faq } = await renderAppMarkdown(app.content)
 
   return (
     <div className="flex min-h-screen flex-col items-center bg-background p-4 text-foreground md:p-8">
@@ -81,10 +82,10 @@ const AppPage = async ({ params }: AppPageProps) => {
             />
 
             {/* Content is authored in this repo, not user input. */}
-            <div
-              className="prose max-w-none prose-zinc dark:prose-invert"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
+            <div className="prose max-w-none prose-zinc dark:prose-invert">
+              <div dangerouslySetInnerHTML={{ __html: html }} />
+              {faq.length > 0 && <FaqAccordion items={faq} />}
+            </div>
           </article>
 
           <LinkButton

@@ -5,6 +5,7 @@ import {
   ExternalLinkIcon,
   FileTextIcon,
   GithubIcon,
+  LifeBuoyIcon,
   ShieldIcon,
 } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
@@ -16,6 +17,7 @@ const linkIcons: Record<string, React.ElementType> = {
   Download: DownloadIcon,
   GitHub: GithubIcon,
   'How it Works': FileTextIcon,
+  Support: LifeBuoyIcon,
   'Privacy Policy': ShieldIcon,
 }
 

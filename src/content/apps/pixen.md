@@ -13,6 +13,7 @@ mainLinks:
 links:
   'GitHub': https://github.com/brenopolanski/pixen
   'How it Works': https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md
+  'Support': https://github.com/brenopolanski/pixen/issues
   'Privacy Policy': /apps/pixen/privacy-policy
 ---
 
@@ -178,4 +179,4 @@ Not today. Screen capture goes through macOS's own `screencapture`, and the menu
 
 #### Can you add a feature? {#features}
 
-Open an issue, a pull request on [GitHub](https://github.com/brenopolanski/pixen/issues) or send an email to [breno.polanski@gmail.com](mailto:breno.polanski@gmail.com).
+Open an issue or a pull request on [GitHub](https://github.com/brenopolanski/pixen/issues). Alternatively, send an email to [breno.polanski@gmail.com](mailto:breno.polanski@gmail.com).
