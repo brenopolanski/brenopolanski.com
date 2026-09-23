@@ -27,7 +27,7 @@ const htmlProcessor = unified()
 
 export interface FaqItem {
   id: string
-  question: string
+  questionHtml: string
   answerHtml: string
 }
 
@@ -41,24 +41,6 @@ const headingId = (heading: Heading) => {
   return data?.id
 }
 
-const phrasingText = (nodes: PhrasingContent[]): string => {
-  return nodes
-    .map((node) => {
-      if (node.type === 'text' || node.type === 'inlineCode') {
-        return node.value
-      }
-
-      if ('children' in node) {
-        return phrasingText(node.children)
-      }
-
-      return ''
-    })
-    .join('')
-}
-
-const headingText = (heading: Heading) => phrasingText(heading.children).trim()
-
 const isFaqHeading = (node: RootContent): node is Heading => {
   return node.type === 'heading' && node.depth === 2 && headingId(node) === 'faq'
 }
@@ -71,6 +53,11 @@ const nodesToHtml = async (nodes: RootContent[]) => {
   const tree: Root = { type: 'root', children: nodes }
   const transformed = await htmlProcessor.run(tree)
   return String(htmlProcessor.stringify(transformed))
+}
+
+const phrasingToHtml = async (nodes: PhrasingContent[]) => {
+  const html = await nodesToHtml([{ type: 'paragraph', children: nodes }])
+  return html.replace(/^<p>/, '').replace(/<\/p>\s*$/, '')
 }
 
 const toFaqItems = async (nodes: RootContent[]) => {
@@ -91,7 +78,7 @@ const toFaqItems = async (nodes: RootContent[]) => {
 
     items.push({
       id,
-      question: headingText(current.heading),
+      questionHtml: await phrasingToHtml(current.heading.children),
       answerHtml: await nodesToHtml(current.answer),
     })
     current = undefined

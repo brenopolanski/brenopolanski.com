@@ -38,8 +38,8 @@ export const FaqAccordion = ({ items }: FaqAccordionProps) => {
     <Accordion type="single" value={value} collapsible onValueChange={setValue}>
       {items.map((item) => (
         <AccordionItem key={item.id} value={item.id}>
-          <AccordionTrigger className="text-lg font-semibold" id={item.id}>
-            {item.question}
+          <AccordionTrigger className="text-lg font-semibold [&>svg]:stroke-4" id={item.id}>
+            <span dangerouslySetInnerHTML={{ __html: item.questionHtml }} />
           </AccordionTrigger>
           <AccordionContent className="text-base">
             <div dangerouslySetInnerHTML={{ __html: item.answerHtml }} />

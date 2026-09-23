@@ -127,23 +127,23 @@ A capture from the menu bar uses the same session as one from the window, so it 
 
 ### Keyboard shortcuts
 
-| Shortcut       | Action                          |
-| -------------- | ------------------------------- |
-| <kbd>⌘S</kbd>  | Save                            |
-| <kbd>⌘⇧S</kbd> | Save As                         |
-| <kbd>⌘O</kbd>  | Open an image                   |
-| <kbd>⌘V</kbd>  | Open the image on the clipboard |
-| <kbd>⌘⇧C</kbd> | Copy the image to the clipboard |
-| <kbd>⌘⇧A</kbd> | Arrow                           |
-| <kbd>⌘⇧P</kbd> | Pixelize                        |
-| <kbd>⌘⇧N</kbd> | Numbered steps                  |
-| <kbd>⌘⇧B</kbd> | Remove background               |
-| <kbd>⌘⇧9</kbd> | Take a screenshot from any app  |
-| <kbd>⌘,</kbd>  | Open Settings                   |
-| <kbd>⌘?</kbd>  | Open keyboard shortcuts         |
-| <kbd>⌘Q</kbd>  | Quit, guarding unsaved work     |
-| <kbd>⌘W</kbd>  | Close the About window          |
-| `Escape`       | Close the About window          |
+| Shortcut          | Action                          |
+| ----------------- | ------------------------------- |
+| <kbd>⌘S</kbd>     | Save                            |
+| <kbd>⌘⇧S</kbd>    | Save As                         |
+| <kbd>⌘O</kbd>     | Open an image                   |
+| <kbd>⌘V</kbd>     | Open the image on the clipboard |
+| <kbd>⌘⇧C</kbd>    | Copy the image to the clipboard |
+| <kbd>⌘⇧A</kbd>    | Arrow                           |
+| <kbd>⌘⇧P</kbd>    | Pixelize                        |
+| <kbd>⌘⇧N</kbd>    | Numbered steps                  |
+| <kbd>⌘⇧B</kbd>    | Remove background               |
+| <kbd>⌘⇧9</kbd>    | Take a screenshot from any app  |
+| <kbd>⌘,</kbd>     | Open Settings                   |
+| <kbd>⌘?</kbd>     | Open keyboard shortcuts         |
+| <kbd>⌘Q</kbd>     | Quit, guarding unsaved work     |
+| <kbd>⌘W</kbd>     | Close the About window          |
+| <kbd>Escape</kbd> | Close the About window          |
 
 <kbd>⌘⇧9</kbd> is registered system-wide, so it can capture while another app is in front. Change it in **Settings → Capture screenshot**. A custom shortcut must include <kbd>⌘</kbd>, and Pixen rejects ones it already uses, including Save, Copy Image, the tool shortcuts, and Quit.
 
@@ -165,7 +165,7 @@ Mostly. The editor engine is loaded from `cdn.unlayer.com` on first launch, so t
 
 Nowhere. Pixen reads and writes files on your Mac. There is no account, no upload, and no telemetry. Background removal runs a local model, so that image never leaves the machine either. The [privacy policy](/apps/pixen/privacy-policy) has the short version.
 
-#### Why does `⌘⇧9` ask for Accessibility permission? {#accessibility}
+#### Why does <kbd>⌘⇧9</kbd> ask for Accessibility permission? {#accessibility}
 
 The shortcut is registered system-wide so it can fire while another app is in front. During development macOS may ask for Accessibility permission so the terminal can register it. A released build asks for screen recording permission the first time you capture.
 
