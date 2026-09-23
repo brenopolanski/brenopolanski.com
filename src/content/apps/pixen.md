@@ -12,9 +12,9 @@ mainLinks:
   'Apple': https://apps.apple.com
 links:
   'GitHub': https://github.com/brenopolanski/pixen
-  'How it Works': https://github.com/brenopolanski/pixen/blob/main/docs/how-it-works.md
   'Support': https://github.com/brenopolanski/pixen/issues
   'Privacy Policy': /apps/pixen/privacy-policy
+  'Terms': /apps/terms
 ---
 
 Pixen is a lightweight screenshot editor for macOS.

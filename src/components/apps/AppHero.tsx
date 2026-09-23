@@ -16,9 +16,9 @@ import { AppStoreBadge } from './AppStoreBadge'
 const linkIcons: Record<string, React.ElementType> = {
   Download: DownloadIcon,
   GitHub: GithubIcon,
-  'How it Works': FileTextIcon,
   Support: LifeBuoyIcon,
   'Privacy Policy': ShieldIcon,
+  Terms: FileTextIcon,
 }
 
 const InlineNote = ({ text }: { text: string }) => {
