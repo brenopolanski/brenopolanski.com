@@ -145,7 +145,7 @@ A capture from the menu bar uses the same session as one from the window, so it 
 | <kbd>⌘W</kbd>     | Close the About window          |
 | <kbd>Escape</kbd> | Close the About window          |
 
-<kbd>⌘⇧9</kbd> is registered system-wide, so it can capture while another app is in front. Change it in **Settings → Capture screenshot**. A custom shortcut must include <kbd>⌘</kbd>, and Pixen rejects ones it already uses, including Save, Copy Image, the tool shortcuts, and Quit.
+<kbd>⌘⇧9</kbd> is registered system-wide, so it can capture while another app is in front. Change it in **Settings → Capture Screenshot**. A custom shortcut must include <kbd>⌘</kbd>, and Pixen rejects ones it already uses, including Save, Copy Image, the tool shortcuts, and Quit.
 
 ## Frequently Asked Questions {#faq}
 
