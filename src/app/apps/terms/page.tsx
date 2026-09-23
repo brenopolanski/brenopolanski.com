@@ -29,7 +29,16 @@ export const metadata: Metadata = {
   },
 }
 
-const TermsPage = () => {
+interface TermsPageProps {
+  searchParams: Promise<{ from?: string }>
+}
+
+const TermsPage = async ({ searchParams }: TermsPageProps) => {
+  const { from } = await searchParams
+  const fromPixen = from === 'pixen'
+  const backHref = fromPixen ? paths.pixen : paths.home
+  const backLabel = fromPixen ? 'Pixen' : 'home'
+
   return (
     <div className="flex min-h-screen flex-col items-center bg-background p-4 text-foreground md:p-8">
       <div className="mx-auto flex w-full flex-1 flex-col">
@@ -38,7 +47,7 @@ const TermsPage = () => {
         <main className="flex flex-1 flex-col items-center md:pt-8">
           <article className="prose w-full max-w-2xl prose-zinc dark:prose-invert">
             <p>
-              <Link href={paths.home}>← Back to home</Link>
+              <Link href={backHref}>← Back to {backLabel}</Link>
             </p>
 
             <h1>Apps — Terms of Use</h1>
@@ -135,9 +144,9 @@ const TermsPage = () => {
 
           <LinkButton
             className="mt-12 max-w-xs"
-            href={paths.home}
+            href={backHref}
             icon={<ArrowLeftIcon className="size-5 shrink-0" />}
-            title="Back to home"
+            title={`Back to ${backLabel}`}
           />
         </main>
 

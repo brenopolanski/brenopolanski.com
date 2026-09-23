@@ -14,7 +14,7 @@ links:
   'GitHub': https://github.com/brenopolanski/pixen
   'Support': https://github.com/brenopolanski/pixen/issues
   'Privacy Policy': /apps/pixen/privacy-policy
-  'Terms': /apps/terms
+  'Terms': /apps/terms?from=pixen
 ---
 
 Pixen is a lightweight screenshot editor for macOS.
@@ -180,3 +180,5 @@ Not today. Screen capture goes through macOS's own `screencapture`, and the menu
 #### Can you add a feature? {#features}
 
 If you have any questions or suggestions, do not hesitate to [contact me](mailto:breno.polanski@gmail.com).
+
+Feel free to create an issue on the [GitHub repository](https://github.com/brenopolanski/pixen/issues) or send a pull request.
