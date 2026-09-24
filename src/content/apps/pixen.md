@@ -12,7 +12,7 @@ mainLinks:
   'Apple': https://apps.apple.com
 links:
   'GitHub': https://github.com/brenopolanski/pixen
-  'Support': https://github.com/brenopolanski/pixen/issues
+  'Support': /apps/pixen/support
   'Privacy Policy': /apps/pixen/privacy-policy
   'Terms': /apps/terms?from=pixen
 ---
