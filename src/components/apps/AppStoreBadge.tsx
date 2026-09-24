@@ -9,7 +9,7 @@ interface AppStoreBadgeProps {
 export const AppStoreBadge = ({ href }: AppStoreBadgeProps) => {
   return (
     <Link
-      className="inline-flex items-center gap-2 rounded-lg border border-white/80 bg-black px-3 py-1.5 font-sans text-white md:h-[60px] md:w-[180px] md:gap-2.5 md:px-3.5 md:py-0"
+      className="inline-flex items-center gap-2 rounded-lg border border-white/80 bg-black px-3 py-1.5 font-sans text-white transition-transform hover:scale-110 md:h-[60px] md:w-[180px] md:gap-2.5 md:px-3.5 md:py-0"
       href={href}
       prefetch={false}
       rel="noopener noreferrer"
