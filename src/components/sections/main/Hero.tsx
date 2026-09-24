@@ -1,11 +1,10 @@
-import { MatrixText } from './MatrixText'
 import { QuoteTextButton } from './QuoteText/QuoteTextButton'
 
 export const Hero = () => {
   return (
     <div className="text-center">
       <div className="flex items-start justify-center gap-2">
-        <MatrixText text="Breno Polanski" textClassName="mb-2 text-3xl font-bold md:text-4xl" />{' '}
+        <h1 className="mb-2 text-3xl font-bold md:text-4xl">Breno Polanski</h1>
         <QuoteTextButton />
       </div>
       <p className="text-base text-muted-foreground">
