@@ -15,7 +15,7 @@ locale: pt-br
 sections:
   basics: RESUMO
   work: EXPERIÊNCIA
-  skills: SKILLS
+  skills: HABILIDADES
   education: FORMAÇÃO ACADÊMICA
   publications: PUBLICAÇÕES
   awards: PRÊMIOS
@@ -45,7 +45,7 @@ strings:
 
   # Summary
   'Software Engineer with 12+ years of experience building web applications, developer tools, AI products, SaaS applications, and Web3 platforms': 'Software Engineer com 12+ anos de experiência construindo aplicações web, developer tools, aplicações de inteligência artificial, aplicações SaaS e plataformas Web3'
-  'Strong experience with JavaScript, TypeScript, React, Next.js, and full-stack development': 'Sólida experiência em JavaScript, TypeScript, React, Next.js e desenvolvimento full-stack'
+  'Strong experience with JavaScript, TypeScript, React, Next.js, Node.js, APIs, and full-stack development': 'Sólida experiência em JavaScript, TypeScript, React, Next.js, Node.js, APIs e desenvolvimento full-stack'
   'Experience with software architecture, open source, and shipping products from concept to production': 'Experiência em arquitetura de software, open source e entrega de produtos do conceito à produção'
 
   # Dashfy

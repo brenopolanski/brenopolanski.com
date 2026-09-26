@@ -9,7 +9,7 @@ content:
     url: https://brenopolanski.com
     summary: |
       - Software Engineer with 12+ years of experience building web applications, developer tools, AI products, SaaS applications, and Web3 platforms
-      - Strong experience with JavaScript, TypeScript, React, Next.js, and full-stack development
+      - Strong experience with JavaScript, TypeScript, React, Next.js, Node.js, APIs, and full-stack development
       - Experience with software architecture, open source, and shipping products from concept to production
 
   profiles:
@@ -235,7 +235,9 @@ content:
       keywords:
         - JavaScript
         - TypeScript
+        - Python (basic)
         - Go (learning)
+        - Rust (learning)
     - name: Frontend
       level: Expert
       keywords:
