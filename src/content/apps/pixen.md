@@ -1,6 +1,8 @@
 ---
 title: Pixen
 subtitle: Capture, edit, and refine screenshots on your Mac.
+metaTitle: Pixen — Screenshot Editor for macOS
+metaDescription: Pixen is a lightweight screenshot editor for macOS. Capture any region, annotate details, hide private information, and export from one simple app.
 pubDate: '2026-09-23'
 platforms:
   - macOS

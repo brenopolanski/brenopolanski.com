@@ -9,6 +9,7 @@ import { Header } from '@/components/header/Header'
 import { ArrowLeftIcon } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
 import { paths } from '@/config/paths'
+import { siteConfig } from '@/config/site'
 import { getApp, getAppSlugs } from '@/lib/apps'
 import { renderAppMarkdown } from '@/lib/markdown'
 
@@ -30,23 +31,42 @@ export const generateMetadata = async ({ params }: AppPageProps): Promise<Metada
   }
 
   const url = `/apps/${app.slug}`
+  const title = app.metaTitle ?? app.title
+  const socialTitle = `${title} · ${siteConfig.name}`
+  const description = app.metaDescription ?? app.subtitle
+  const image = app.ogImageUrl
+    ? {
+        url: app.ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: `${app.title} screenshot editor on macOS`,
+        type: 'image/jpeg',
+      }
+    : {
+        url: app.bannerUrl,
+        alt: `${app.title} screenshot`,
+      }
 
   return {
-    title: app.title,
-    description: app.subtitle,
+    title,
+    description,
     alternates: { canonical: url },
     openGraph: {
       type: 'website',
+      locale: 'en_US',
+      siteName: siteConfig.name,
       url,
-      title: app.title,
-      description: app.subtitle,
-      images: [{ url: app.bannerUrl }],
+      title: { absolute: socialTitle },
+      description,
+      images: [image],
     },
     twitter: {
       card: 'summary_large_image',
-      title: app.title,
-      description: app.subtitle,
-      images: [app.bannerUrl],
+      site: siteConfig.author.x,
+      creator: siteConfig.author.x,
+      title: { absolute: socialTitle },
+      description,
+      images: [image],
     },
   }
 }

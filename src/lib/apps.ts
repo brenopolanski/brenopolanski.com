@@ -1,4 +1,4 @@
-import { readdir, readFile } from 'node:fs/promises'
+import { access, readdir, readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
 import matter from 'gray-matter'
@@ -18,6 +18,8 @@ export interface AppFrontmatter {
   repoUrl?: string
   mainLinks?: Record<string, string>
   links?: Record<string, string>
+  metaTitle?: string
+  metaDescription?: string
 }
 
 export interface App extends AppFrontmatter {
@@ -25,6 +27,7 @@ export interface App extends AppFrontmatter {
   content: string
   iconUrl: string
   bannerUrl: string
+  ogImageUrl?: string
 }
 
 const toApp = (slug: string, file: string): App => {
@@ -56,6 +59,15 @@ export const getApp = async (slug: string) => {
   }
 
   const file = await readFile(join(appsDir, `${slug}.md`), 'utf8')
+  const app = toApp(slug, file)
+  const ogFile = join(process.cwd(), 'public', 'apps', slug, 'og.jpg')
 
-  return toApp(slug, file)
+  try {
+    await access(ogFile)
+    app.ogImageUrl = `/apps/${slug}/og.jpg`
+  } catch {
+    // The page banner stays the share image when no Open Graph file exists.
+  }
+
+  return app
 }
