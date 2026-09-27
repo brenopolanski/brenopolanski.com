@@ -27,8 +27,20 @@ export const generateMetadata = async ({ params }: PrivacyPolicyPageProps): Prom
   }
 
   const title = `Privacy Policy for ${app.title}`
-  const description = `Privacy policy for ${app.title}.`
+  const description = `${app.title} does not collect, store, or send personal information. There is no account and no telemetry, and images stay on your Mac.`
   const url = `/apps/${app.slug}/privacy-policy`
+  const image = app.ogImageUrl
+    ? {
+        url: app.ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: `${app.title} screenshot editor on macOS`,
+        type: 'image/jpeg',
+      }
+    : {
+        url: app.bannerUrl,
+        alt: `${app.title} screenshot`,
+      }
 
   return {
     title,
@@ -36,14 +48,20 @@ export const generateMetadata = async ({ params }: PrivacyPolicyPageProps): Prom
     alternates: { canonical: url },
     openGraph: {
       type: 'website',
+      locale: 'en_US',
+      siteName: siteConfig.name,
       url,
       title,
       description,
+      images: [image],
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
+      site: siteConfig.author.x,
+      creator: siteConfig.author.x,
       title,
       description,
+      images: [image],
     },
   }
 }
