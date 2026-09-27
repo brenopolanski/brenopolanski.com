@@ -37,12 +37,12 @@ const Image = async () => {
       >
         <img
           alt={siteConfig.name}
-          height="160"
           src={photoSrc}
           style={{
-            borderRadius: '16px',
+            borderRadius: 16,
+            height: 160,
+            width: 160,
           }}
-          width="160"
         />
         <div
           style={{
