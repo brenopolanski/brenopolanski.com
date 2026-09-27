@@ -8,24 +8,38 @@ import { LinkButton } from '@/components/shared/LinkButton'
 import { paths } from '@/config/paths'
 import { siteConfig } from '@/config/site'
 
-const title = 'Terms of Use'
-const description = 'Terms of use for my apps.'
+const title = "Official Terms of Use for Breno Polanski's macOS Apps"
+const description =
+  "These terms cover how you may use Breno Polanski's apps, including permitted use, intellectual property, App Store purchases, liability, and support."
 const contactHref = `mailto:${siteConfig.author.emails.personal}`
+const image = {
+  url: '/opengraph-image',
+  width: 1200,
+  height: 630,
+  alt: siteConfig.name,
+  type: 'image/png',
+}
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: paths.apps.terms },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: siteConfig.name,
     url: paths.apps.terms,
-    title,
+    title: { absolute: title },
     description,
+    images: [image],
   },
   twitter: {
-    card: 'summary',
-    title,
+    card: 'summary_large_image',
+    site: siteConfig.author.x,
+    creator: siteConfig.author.x,
+    title: { absolute: title },
     description,
+    images: [image],
   },
 }
 
