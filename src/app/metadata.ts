@@ -1,14 +1,25 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 
+import { paths } from '@/config/paths'
 import { siteConfig } from '@/config/site'
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: siteConfig.themeColor.light },
+    { media: '(prefers-color-scheme: dark)', color: siteConfig.themeColor.dark },
+  ],
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name,
+    default: siteConfig.title,
     template: `%s · ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  alternates: {
+    canonical: paths.home,
+  },
   appleWebApp: {
     title: siteConfig.name,
     capable: true,
@@ -19,16 +30,17 @@ export const metadata: Metadata = {
   keywords: [...siteConfig.keywords],
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     siteName: siteConfig.name,
     url: siteConfig.url,
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.description,
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.description,
     creator: siteConfig.author.x,
-    site: siteConfig.url,
+    site: siteConfig.author.x,
   },
 }

@@ -9,7 +9,7 @@ import { getSiteJsonLd } from '@/lib/jsonld'
 import { cn } from '@/lib/utils'
 import { Providers } from '@/providers/Providers'
 
-export { metadata } from './metadata'
+export { metadata, viewport } from './metadata'
 
 interface RootLayoutProps {
   children: React.ReactNode

@@ -67,7 +67,7 @@ const Image = async () => {
               color: '#9F9FA9',
               fontSize: '28px',
               margin: 0,
-              maxWidth: '600px',
+              maxWidth: '800px',
             }}
           >
             {siteConfig.description}

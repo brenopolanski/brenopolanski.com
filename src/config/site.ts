@@ -1,8 +1,10 @@
 const siteName = 'Breno Polanski'
+const siteTagline = 'Software Engineer & Indie Hacker'
 const siteUrl = 'https://brenopolanski.com'
 
 export const siteConfig = {
   name: siteName,
+  title: `${siteName} - ${siteTagline}`,
   description:
     'Software Engineer. Indie hacker. Open source enthusiast. Always learning. Usually from my mistakes.',
   url: siteUrl,
