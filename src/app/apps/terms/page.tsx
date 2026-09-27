@@ -15,10 +15,10 @@ const contactHref = `mailto:${siteConfig.author.emails.personal}`
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: paths.appsTerms },
+  alternates: { canonical: paths.apps.terms },
   openGraph: {
     type: 'website',
-    url: paths.appsTerms,
+    url: paths.apps.terms,
     title,
     description,
   },
@@ -36,7 +36,7 @@ interface TermsPageProps {
 const TermsPage = async ({ searchParams }: TermsPageProps) => {
   const { from } = await searchParams
   const fromPixen = from === 'pixen'
-  const backHref = fromPixen ? paths.pixen : paths.home
+  const backHref = fromPixen ? paths.apps.pixen.home : paths.home
   const backLabel = fromPixen ? 'Pixen' : 'home'
 
   return (
