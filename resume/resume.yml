@@ -15,7 +15,7 @@ content:
   profiles:
     - network: LinkedIn
       username: brenopolanski
-      url: https://www.linkedin.com/in/brenopolanski/
+      url: https://linkedin.com/in/brenopolanski/
     - network: GitHub
       username: brenopolanski
       url: https://github.com/brenopolanski
@@ -192,7 +192,7 @@ content:
 
     - name: Indra Company
       position: Systems Analyst
-      url: https://www.indragroup.com
+      url: https://indragroup.com
       startDate: Jun 2013
       endDate: Sep 2014
       summary: |

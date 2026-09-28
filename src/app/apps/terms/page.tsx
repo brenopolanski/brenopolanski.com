@@ -94,7 +94,7 @@ const TermsPage = async ({ searchParams }: TermsPageProps) => {
             <p>
               If you get my apps from the App Store,{' '}
               <a
-                href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                href="https://apple.com/legal/internet-services/itunes/dev/stdeula/"
                 rel="noopener noreferrer"
                 target="_blank"
               >

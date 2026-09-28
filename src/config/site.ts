@@ -4,7 +4,7 @@ const siteUrl = 'https://brenopolanski.com'
 
 export const siteConfig = {
   name: siteName,
-  title: `${siteName} - ${siteTagline}`,
+  title: `${siteName} · ${siteTagline}`,
   description:
     'Software Engineer. Indie hacker. Open source enthusiast. Always learning. Usually from my mistakes.',
   url: siteUrl,

@@ -101,7 +101,6 @@ const AppPage = async ({ params }: AppPageProps) => {
               width={1920}
             />
 
-            {/* Content is authored in this repo, not user input. */}
             <div className="prose max-w-none prose-zinc dark:prose-invert">
               <div dangerouslySetInnerHTML={{ __html: html }} />
               {faq.length > 0 && <FaqAccordion items={faq} />}
