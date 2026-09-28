@@ -1,6 +1,7 @@
 import {
   BitcoinHojeLogo,
   DashfyLogo,
+  DefiLlamaLogo,
   DolarHojeLogo,
   PhootoAILogo,
   PixenLogo,
@@ -28,6 +29,13 @@ export const projectData: ProjectItem[] = [
     title: 'Pixen',
     description: 'The Fast, Simple Screenshot Editor',
     href: paths.apps.pixen.home,
+  },
+  {
+    icon: DefiLlamaLogo,
+    title: 'DefiLlama Search',
+    description: 'Unofficial DefiLlama Search for macOS',
+    href: 'https://github.com/brenopolanski/defillama-search',
+    isExternal: true,
   },
   {
     icon: PhootoAILogo,
