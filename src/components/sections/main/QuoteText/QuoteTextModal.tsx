@@ -1,8 +1,8 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
 
+import { ExternalLink } from '@/components/shared/ExternalLink'
 import { XIcon } from '@/components/shared/Icons'
 import { useEscapeKey } from '@/hooks/useEscapeKey'
 import { ANALYTICS_EVENTS } from '@/lib/analytics'
@@ -77,16 +77,14 @@ export const QuoteTextModal = ({ onClose }: QuoteTextModalProps) => {
           </p>
           <div className="space-y-2 text-right">
             <p className="font-['Playfair_Display'] text-xs italic sm:text-sm">- by Zeno & Carol</p>
-            <Link
+            <ExternalLink
               className="text-xs text-gray-400 transition-colors hover:text-white"
               data-analytics-event={ANALYTICS_EVENTS.quoteSourceClick}
               data-analytics-target="https://zenorocha.com/reminder"
               href="https://zenorocha.com/reminder"
-              rel="noopener noreferrer"
-              target="_blank"
             >
               Source: zenorocha.com/reminder
-            </Link>
+            </ExternalLink>
           </div>
         </div>
       </div>

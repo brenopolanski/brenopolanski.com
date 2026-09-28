@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/header/Header'
+import { ExternalLink } from '@/components/shared/ExternalLink'
 import { ArrowLeftIcon } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
 import { paths } from '@/config/paths'
@@ -93,13 +94,9 @@ const TermsPage = async ({ searchParams }: TermsPageProps) => {
             <h2>App Store</h2>
             <p>
               If you get my apps from the App Store,{' '}
-              <a
-                href="https://apple.com/legal/internet-services/itunes/dev/stdeula/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
+              <ExternalLink href="https://apple.com/legal/internet-services/itunes/dev/stdeula/">
                 Apple’s EULA
-              </a>{' '}
+              </ExternalLink>{' '}
               applies.
             </p>
 
@@ -135,13 +132,9 @@ const TermsPage = async ({ searchParams }: TermsPageProps) => {
             <h2>Refunds</h2>
             <p>
               For apps purchased on the Apple App Store, you can{' '}
-              <a
-                href="https://support.apple.com/en-us/HT204084"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
+              <ExternalLink href="https://support.apple.com/en-us/HT204084">
                 request a refund
-              </a>
+              </ExternalLink>
               . However, I would appreciate if you <a href={contactHref}>reached out</a> first. I
               may be able to resolve any problems you are having.
             </p>
