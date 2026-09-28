@@ -10,6 +10,7 @@ import { ArrowLeftIcon } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
 import { paths } from '@/config/paths'
 import { siteConfig } from '@/config/site'
+import { ANALYTICS_EVENTS } from '@/lib/analytics'
 import { getApp, getAppSlugs } from '@/lib/apps'
 import { renderAppMarkdown } from '@/lib/markdown'
 
@@ -103,12 +104,16 @@ const AppPage = async ({ params }: AppPageProps) => {
 
             <div className="prose max-w-none prose-zinc dark:prose-invert">
               <div dangerouslySetInnerHTML={{ __html: html }} />
-              {faq.length > 0 && <FaqAccordion items={faq} />}
+              {faq.length > 0 && <FaqAccordion app={app.slug} items={faq} />}
             </div>
           </article>
 
           <LinkButton
             className="mt-12 max-w-xs"
+            data-analytics-app={app.slug}
+            data-analytics-event={ANALYTICS_EVENTS.appLinkClick}
+            data-analytics-link="Back to home"
+            data-analytics-target={paths.home}
             href={paths.home}
             icon={<ArrowLeftIcon className="size-5 shrink-0" />}
             title="Back to home"

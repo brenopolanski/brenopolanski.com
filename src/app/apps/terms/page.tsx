@@ -8,6 +8,7 @@ import { ArrowLeftIcon } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
 import { paths } from '@/config/paths'
 import { siteConfig } from '@/config/site'
+import { ANALYTICS_EVENTS } from '@/lib/analytics'
 
 const title = "Official Terms of Use for Breno Polanski's macOS Apps"
 const description =
@@ -62,7 +63,15 @@ const TermsPage = async ({ searchParams }: TermsPageProps) => {
         <main className="flex flex-1 flex-col items-center md:pt-8">
           <article className="prose w-full max-w-2xl prose-zinc dark:prose-invert">
             <p>
-              <Link href={backHref}>← Back to {backLabel}</Link>
+              <Link
+                data-analytics-app={fromPixen ? 'pixen' : undefined}
+                data-analytics-event={ANALYTICS_EVENTS.appLinkClick}
+                data-analytics-link={`Back to ${backLabel}`}
+                data-analytics-target={backHref}
+                href={backHref}
+              >
+                ← Back to {backLabel}
+              </Link>
             </p>
 
             <h1>Apps — Terms of Use</h1>
@@ -94,7 +103,11 @@ const TermsPage = async ({ searchParams }: TermsPageProps) => {
             <h2>App Store</h2>
             <p>
               If you get my apps from the App Store,{' '}
-              <ExternalLink href="https://apple.com/legal/internet-services/itunes/dev/stdeula/">
+              <ExternalLink
+                data-analytics-event={ANALYTICS_EVENTS.contentLinkClick}
+                data-analytics-target="https://apple.com/legal/internet-services/itunes/dev/stdeula/"
+                href="https://apple.com/legal/internet-services/itunes/dev/stdeula/"
+              >
                 Apple’s EULA
               </ExternalLink>{' '}
               applies.
@@ -111,9 +124,17 @@ const TermsPage = async ({ searchParams }: TermsPageProps) => {
             <p>
               I am committed to making my apps accessible to everyone, including individuals with
               disabilities. If you encounter any accessibility issues while using my website or
-              apps, please <a href={contactHref}>contact me</a> to report them, and I will do my
-              best to address and resolve the concerns promptly. Accessibility improvements are
-              continuously being made to ensure a user-friendly experience for all.
+              apps, please{' '}
+              <a
+                data-analytics-event={ANALYTICS_EVENTS.contactClick}
+                data-analytics-location="terms"
+                href={contactHref}
+              >
+                contact me
+              </a>{' '}
+              to report them, and I will do my best to address and resolve the concerns promptly.
+              Accessibility improvements are continuously being made to ensure a user-friendly
+              experience for all.
             </p>
 
             <h2>Liability</h2>
@@ -132,11 +153,22 @@ const TermsPage = async ({ searchParams }: TermsPageProps) => {
             <h2>Refunds</h2>
             <p>
               For apps purchased on the Apple App Store, you can{' '}
-              <ExternalLink href="https://support.apple.com/en-us/HT204084">
+              <ExternalLink
+                data-analytics-event={ANALYTICS_EVENTS.contentLinkClick}
+                data-analytics-target="https://support.apple.com/en-us/HT204084"
+                href="https://support.apple.com/en-us/HT204084"
+              >
                 request a refund
               </ExternalLink>
-              . However, I would appreciate if you <a href={contactHref}>reached out</a> first. I
-              may be able to resolve any problems you are having.
+              . However, I would appreciate if you{' '}
+              <a
+                data-analytics-event={ANALYTICS_EVENTS.contactClick}
+                data-analytics-location="terms"
+                href={contactHref}
+              >
+                reached out
+              </a>{' '}
+              first. I may be able to resolve any problems you are having.
             </p>
 
             <h2>Support</h2>
@@ -151,6 +183,10 @@ const TermsPage = async ({ searchParams }: TermsPageProps) => {
 
           <LinkButton
             className="mt-12 max-w-xs"
+            data-analytics-app={fromPixen ? 'pixen' : undefined}
+            data-analytics-event={ANALYTICS_EVENTS.appLinkClick}
+            data-analytics-link={`Back to ${backLabel}`}
+            data-analytics-target={backHref}
             href={backHref}
             icon={<ArrowLeftIcon className="size-5 shrink-0" />}
             title={`Back to ${backLabel}`}

@@ -7,6 +7,7 @@ import { Header } from '@/components/header/Header'
 import { ArrowLeftIcon } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
 import { siteConfig } from '@/config/site'
+import { ANALYTICS_EVENTS } from '@/lib/analytics'
 import { getApp, getAppSlugs } from '@/lib/apps'
 
 interface PrivacyPolicyPageProps {
@@ -84,7 +85,15 @@ const PrivacyPolicyPage = async ({ params }: PrivacyPolicyPageProps) => {
         <main className="flex flex-1 flex-col items-center md:pt-8">
           <article className="prose w-full max-w-2xl prose-zinc dark:prose-invert">
             <p>
-              <Link href={appHref}>← Back to {app.title}</Link>
+              <Link
+                data-analytics-app={app.slug}
+                data-analytics-event={ANALYTICS_EVENTS.appLinkClick}
+                data-analytics-link={`Back to ${app.title}`}
+                data-analytics-target={appHref}
+                href={appHref}
+              >
+                ← Back to {app.title}
+              </Link>
             </p>
 
             <h1>Privacy Policy for {app.title}</h1>
@@ -106,12 +115,24 @@ const PrivacyPolicyPage = async ({ params }: PrivacyPolicyPageProps) => {
 
             <p>
               If you have any questions or suggestions regarding this privacy policy, do not
-              hesitate to <a href={`mailto:${siteConfig.author.emails.personal}`}>contact me</a>.
+              hesitate to{' '}
+              <a
+                data-analytics-event={ANALYTICS_EVENTS.contactClick}
+                data-analytics-location="privacy"
+                href={`mailto:${siteConfig.author.emails.personal}`}
+              >
+                contact me
+              </a>
+              .
             </p>
           </article>
 
           <LinkButton
             className="mt-12 max-w-xs"
+            data-analytics-app={app.slug}
+            data-analytics-event={ANALYTICS_EVENTS.appLinkClick}
+            data-analytics-link={`Back to ${app.title}`}
+            data-analytics-target={appHref}
             href={appHref}
             icon={<ArrowLeftIcon className="size-5 shrink-0" />}
             title={`Back to ${app.title}`}

@@ -9,6 +9,7 @@ import {
   ShieldIcon,
 } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
+import { ANALYTICS_EVENTS } from '@/lib/analytics'
 import type { App } from '@/lib/apps'
 import { generateReactKey } from '@/lib/utils'
 
@@ -91,7 +92,7 @@ export const AppHero = ({ app }: AppHeroProps) => {
         {app.requirement && <p className="text-sm text-muted-foreground/80">{app.requirement}</p>}
       </div>
 
-      {appStoreHref && <AppStoreBadge href={appStoreHref} />}
+      {appStoreHref && <AppStoreBadge app={app.slug} href={appStoreHref} />}
 
       {otherLinks.length > 0 && (
         <div
@@ -107,6 +108,10 @@ export const AppHero = ({ app }: AppHeroProps) => {
             return (
               <LinkButton
                 key={generateReactKey('link', title)}
+                data-analytics-app={app.slug}
+                data-analytics-event={ANALYTICS_EVENTS.appLinkClick}
+                data-analytics-link={title}
+                data-analytics-target={href}
                 href={href}
                 icon={<Icon className="size-5 shrink-0" />}
                 isExternal={!href.startsWith('/')}

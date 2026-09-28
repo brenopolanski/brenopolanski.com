@@ -1,3 +1,4 @@
+import type { Element } from 'hast'
 import type { Heading, PhrasingContent, Root, RootContent } from 'mdast'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeExternalLinks from 'rehype-external-links'
@@ -11,6 +12,18 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import { unified } from 'unified'
 
+import { ANALYTICS_EVENTS } from '@/lib/analytics'
+
+const externalLinkProperties = (element: Element) => {
+  const href = element.properties?.href
+  const target = typeof href === 'string' ? href : ''
+
+  return {
+    dataAnalyticsEvent: ANALYTICS_EVENTS.contentLinkClick,
+    dataAnalyticsTarget: target,
+  }
+}
+
 const markdownProcessor = unified()
   .use(remarkParse)
   .use(remarkGfm)
@@ -22,7 +35,11 @@ const htmlProcessor = unified()
   .use(rehypeRaw)
   .use(rehypeSlug)
   .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
-  .use(rehypeExternalLinks, { rel: ['noopener', 'noreferrer'], target: '_blank' })
+  .use(rehypeExternalLinks, {
+    properties: externalLinkProperties,
+    rel: ['noopener', 'noreferrer'],
+    target: '_blank',
+  })
   .use(rehypeStringify, { allowDangerousHtml: true })
 
 export interface FaqItem {

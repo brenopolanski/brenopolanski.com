@@ -15,6 +15,11 @@ export const ANALYTICS_EVENTS = {
   resumeClick: 'resume_click',
   projectClick: 'project_click',
   prevWorkClick: 'prev_work_click',
+  appLinkClick: 'app_link_click',
+  faqOpen: 'faq_open',
+  contentLinkClick: 'content_link_click',
+  contactClick: 'contact_click',
+  notFoundClick: 'not_found_click',
 } as const
 
 export type AnalyticsEventName = (typeof ANALYTICS_EVENTS)[keyof typeof ANALYTICS_EVENTS]

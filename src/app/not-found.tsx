@@ -5,6 +5,7 @@ import { Header } from '@/components/header/Header'
 import { ArrowLeftIcon, FileTextIcon } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
 import { paths } from '@/config/paths'
+import { ANALYTICS_EVENTS } from '@/lib/analytics'
 
 export const metadata: Metadata = {
   title: 'Page not found',
@@ -29,11 +30,15 @@ const NotFound = () => {
 
             <div className="grid w-full grid-cols-2 gap-4">
               <LinkButton
+                data-analytics-event={ANALYTICS_EVENTS.notFoundClick}
+                data-analytics-target={paths.home}
                 href={paths.home}
                 icon={<ArrowLeftIcon className="size-5 shrink-0" />}
                 title="Back to home"
               />
               <LinkButton
+                data-analytics-event={ANALYTICS_EVENTS.notFoundClick}
+                data-analytics-target={paths.resume}
                 href={paths.resume}
                 icon={<FileTextIcon className="size-5 shrink-0" />}
                 title="Resume"
