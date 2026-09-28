@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import './animations.css';
-@import './app.css';
 @import './prose.css';
+@import './app.css';
 
 @plugin '@tailwindcss/typography';
 

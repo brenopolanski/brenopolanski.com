@@ -22,7 +22,11 @@ const linkIcons: Record<string, React.ElementType> = {
   Terms: FileTextIcon,
 }
 
-const InlineNote = ({ text }: { text: string }) => {
+interface InlineNoteProps {
+  text: string
+}
+
+const InlineNote = ({ text }: InlineNoteProps) => {
   return text.split(/(`[^`]+`)/g).map((part, index) => {
     const isCode = part.startsWith('`') && part.endsWith('`') && part.length > 2
 
@@ -41,7 +45,11 @@ const InlineNote = ({ text }: { text: string }) => {
   })
 }
 
-const Tag = ({ children }: { children: React.ReactNode }) => (
+interface TagProps {
+  children: React.ReactNode
+}
+
+const Tag = ({ children }: TagProps) => (
   <span className="rounded-md border border-border bg-muted px-2 py-0.5 text-xs text-muted-foreground">
     {children}
   </span>
