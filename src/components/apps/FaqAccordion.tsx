@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import type { FaqItem } from '@/lib/markdown'
+import { generateReactKey } from '@/lib/utils'
 
 interface FaqAccordionProps {
   items: FaqItem[]
@@ -37,7 +38,7 @@ export const FaqAccordion = ({ items }: FaqAccordionProps) => {
   return (
     <Accordion type="single" value={value} collapsible onValueChange={setValue}>
       {items.map((item) => (
-        <AccordionItem key={item.id} value={item.id}>
+        <AccordionItem key={generateReactKey('faq', item.id)} value={item.id}>
           <AccordionTrigger className="text-lg font-semibold [&>svg]:stroke-4" id={item.id}>
             <span dangerouslySetInnerHTML={{ __html: item.questionHtml }} />
           </AccordionTrigger>

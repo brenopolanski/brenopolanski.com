@@ -10,6 +10,7 @@ import {
 } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/LinkButton'
 import type { App } from '@/lib/apps'
+import { generateReactKey } from '@/lib/utils'
 
 import { AppStoreBadge } from './AppStoreBadge'
 
@@ -26,11 +27,14 @@ const InlineNote = ({ text }: { text: string }) => {
     const isCode = part.startsWith('`') && part.endsWith('`') && part.length > 2
 
     if (!isCode) {
-      return <span key={index}>{part}</span>
+      return <span key={generateReactKey('inline-note', index)}>{part}</span>
     }
 
     return (
-      <code key={index} className="rounded-sm bg-muted px-[0.35em] py-[0.15em] font-normal">
+      <code
+        key={generateReactKey('inline-note', index)}
+        className="rounded-sm bg-muted px-[0.35em] py-[0.15em] font-normal"
+      >
         {part.slice(1, -1)}
       </code>
     )
@@ -70,7 +74,7 @@ export const AppHero = ({ app }: AppHeroProps) => {
 
         <div className="flex flex-wrap items-center justify-center gap-2">
           {app.platforms.map((platform) => (
-            <Tag key={platform}>{platform}</Tag>
+            <Tag key={generateReactKey('platform', platform)}>{platform}</Tag>
           ))}
           <Tag>{app.priceLabel ?? (app.isPaid ? 'Paid' : 'Free')}</Tag>
           {app.isMenuBarApp && <Tag>Menu bar</Tag>}
@@ -94,7 +98,7 @@ export const AppHero = ({ app }: AppHeroProps) => {
 
             return (
               <LinkButton
-                key={title}
+                key={generateReactKey('link', title)}
                 href={href}
                 icon={<Icon className="size-5 shrink-0" />}
                 isExternal={!href.startsWith('/')}

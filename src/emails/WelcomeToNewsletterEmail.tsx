@@ -13,6 +13,7 @@ import {
 } from '@react-email/components'
 
 import { siteConfig } from '@/config/site'
+import { generateReactKey } from '@/lib/utils'
 
 export const WelcomeToNewsletterEmail = () => {
   return (
@@ -68,7 +69,7 @@ export const WelcomeToNewsletterEmail = () => {
                 '🛠 Project updates and behind-the-scenes',
                 '💪 Career growth and personal development',
               ].map((item) => (
-                <li key={item} className="mb-20 text-base">
+                <li key={generateReactKey('newsletter', item)} className="mb-20 text-base">
                   {item}
                 </li>
               ))}
@@ -86,7 +87,7 @@ export const WelcomeToNewsletterEmail = () => {
                 { name: 'GitHub', url: siteConfig.links.github },
                 { name: 'LinkedIn', url: siteConfig.links.linkedin },
               ].map(({ name, url }) => (
-                <li key={name} className="mb-20">
+                <li key={generateReactKey('newsletter', name)} className="mb-20">
                   <Link className="text-blue-500" href={url}>
                     {name}
                   </Link>
