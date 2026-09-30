@@ -11,7 +11,7 @@ priceLabel: Paid or free
 isMenuBarApp: true
 repoUrl: https://github.com/brenopolanski/pixen
 mainLinks:
-  'Apple': https://apps.apple.com
+  'Apple': https://apps.apple.com/app/id6814540472
 links:
   'GitHub': https://github.com/brenopolanski/pixen
   'Support': /apps/pixen/support
