@@ -78,9 +78,9 @@ The result is previewed before it is applied, and the image never leaves your Ma
 
 ### Menu Bar
 
-Pixen stays in the Dock and adds a menu bar item.
+Closing the window leaves Pixen in the menu bar. The Dock icon comes back when the window does.
 
-Left-click it to capture. Right-click it to start at login, open About, or quit, without leaving the app you are in.
+Left-click the icon to capture. The window opens after a screenshot if it was closed. Right-click for **Open Pixen**, start at login, About, or quit. Quit is what removes the icon. Starting at login puts the menu bar up without opening the window.
 
 ### Recent Images
 
