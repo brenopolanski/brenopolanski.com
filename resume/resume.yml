@@ -235,7 +235,8 @@ content:
       keywords:
         - JavaScript
         - TypeScript
-        - Python (basic)
+        - Python
+        - PHP
         - Go (learning)
         - Rust (learning)
     - name: Frontend
@@ -254,6 +255,7 @@ content:
         - Node.js
         - Fastify
         - NestJS
+        - FastAPI
     - name: APIs & Real-Time
       level: Intermediate
       keywords:
