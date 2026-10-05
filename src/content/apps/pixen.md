@@ -184,4 +184,4 @@ Not today. Screen capture goes through macOS's own `screencapture`, and the menu
 
 If you have any questions or suggestions, do not hesitate to [contact me](mailto:breno.polanski@gmail.com).
 
-Feel free to create an issue on the [GitHub repository](https://github.com/brenopolanski/pixen/issues) or send a pull request.
+Feel free to create an issue on the [GitHub repository](/apps/pixen/support) or send a pull request.
