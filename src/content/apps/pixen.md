@@ -120,6 +120,7 @@ Pixen loads the editor engine from `cdn.unlayer.com`, so the first launch needs 
 
 | Item              | Action                              |
 | ----------------- | ----------------------------------- |
+| `Open Pixen`      | Show the editor without capturing   |
 | `Take Screenshot` | Capture into a tab (<kbd>⌘⇧9</kbd>) |
 | `Start at Login`  | Toggle launch at login              |
 | `About Pixen`     | Open the About window               |
