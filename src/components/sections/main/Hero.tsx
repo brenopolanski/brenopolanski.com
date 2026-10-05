@@ -8,8 +8,8 @@ export const Hero = () => {
         <QuoteTextButton />
       </div>
       <p className="text-base text-muted-foreground">
-        Software Engineer. Indie hacker. Open source enthusiast. Always learning. Usually from my
-        mistakes.
+        Software Engineer. Product Engineer. Open source enthusiast. Always learning. Usually from
+        my mistakes.
       </p>
     </div>
   )

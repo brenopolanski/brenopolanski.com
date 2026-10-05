@@ -237,8 +237,7 @@ content:
         - TypeScript
         - Python
         - PHP
-        - Go (learning)
-        - Rust (learning)
+        - 'learning: Go / Rust / Swift'
     - name: Frontend
       level: Expert
       keywords:

@@ -6,7 +6,7 @@ export const siteConfig = {
   name: siteName,
   title: `${siteName} · ${siteTagline}`,
   description:
-    'Software Engineer. Indie hacker. Open source enthusiast. Always learning. Usually from my mistakes.',
+    'Software Engineer. Product Engineer. Open source enthusiast. Always learning. Usually from my mistakes.',
   url: siteUrl,
   themeColor: {
     light: '#FFFFFF',
