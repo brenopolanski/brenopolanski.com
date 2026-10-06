@@ -97,9 +97,11 @@ export const AppHero = ({ app }: AppHeroProps) => {
       {otherLinks.length > 0 && (
         <div
           className={
-            otherLinks.length >= 4
-              ? 'grid w-full grid-cols-2 gap-4'
-              : 'grid w-full grid-cols-2 gap-4 sm:grid-cols-3'
+            otherLinks.length === 2
+              ? 'mx-auto grid w-full max-w-sm grid-cols-2 gap-4'
+              : otherLinks.length >= 4
+                ? 'grid w-full grid-cols-2 gap-4'
+                : 'grid w-full grid-cols-2 gap-4 sm:grid-cols-3'
           }
         >
           {otherLinks.map(([title, href]) => {

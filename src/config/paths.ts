@@ -5,6 +5,9 @@ export const paths = {
       home: '/apps/pixen',
       privacyPolicy: '/apps/pixen/privacy-policy',
     },
+    defillamaSearch: {
+      home: '/apps/defillama-search',
+    },
     terms: '/apps/terms',
   },
   resume: '/resume_brenopolanski.pdf', // English resume

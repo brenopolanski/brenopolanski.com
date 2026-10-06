@@ -34,8 +34,7 @@ export const projectData: ProjectItem[] = [
     icon: DefiLlamaLogo,
     title: 'DefiLlama Search',
     description: 'Unofficial DefiLlama Search for macOS',
-    href: 'https://github.com/brenopolanski/defillama-search',
-    isExternal: true,
+    href: paths.apps.defillamaSearch.home,
   },
   {
     icon: PhootoAILogo,
