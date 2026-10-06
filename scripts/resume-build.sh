@@ -5,8 +5,9 @@
 #   resume.yml                  -> public/resume_brenopolanski.pdf          (EN, Tech stack)
 #   resume.yml                  -> public/ai/resume_brenopolanski.pdf       (EN, Keywords)
 #   resume_pt.generated.yml          -> public/cv_brenopolanski.pdf              (pt-BR)
-#   resume_frontend.yml              -> public/resume_brenopolanski_frontend.pdf (EN, Tech stack)
-#   resume_frontend_pt.generated.yml -> public/cv_brenopolanski_frontend.pdf     (pt-BR)
+#   resume_frontend.yml              -> public/resume_brenopolanski_frontend.pdf    (EN, Tech stack)
+#   resume_frontend.yml              -> public/ai/resume_brenopolanski_frontend.pdf (EN, Keywords)
+#   resume_frontend_pt.generated.yml -> public/cv_brenopolanski_frontend.pdf        (pt-BR)
 #
 # The Portuguese YAML files are regenerated from the English sources on every
 # run, so resume.yml and resume_frontend.yml stay the only places content is edited.
@@ -56,4 +57,5 @@ build_variant resume.yml resume_brenopolanski.pdf en
 build_variant resume.yml ai/resume_brenopolanski.pdf en-ai
 build_variant resume_pt.generated.yml cv_brenopolanski.pdf pt-br
 build_variant resume_frontend.yml resume_brenopolanski_frontend.pdf en
+build_variant resume_frontend.yml ai/resume_brenopolanski_frontend.pdf en-ai
 build_variant resume_frontend_pt.generated.yml cv_brenopolanski_frontend.pdf pt-br
