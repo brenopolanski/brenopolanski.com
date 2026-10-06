@@ -3,6 +3,7 @@ import type { MetadataRoute } from 'next'
 import { paths } from '@/config/paths'
 import { siteConfig } from '@/config/site'
 import { getAppSlugs } from '@/lib/apps'
+import { getProjectSlugs } from '@/lib/projects'
 
 const entries = [
   { path: paths.home, priority: 1 },
@@ -11,13 +12,14 @@ const entries = [
 ]
 
 const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
-  const slugs = await getAppSlugs()
-  const apps = slugs.flatMap((slug) => [
+  const [appSlugs, projectSlugs] = await Promise.all([getAppSlugs(), getProjectSlugs()])
+  const apps = appSlugs.flatMap((slug) => [
     { path: `/apps/${slug}`, priority: 0.9 },
     { path: `/apps/${slug}/privacy-policy`, priority: 0.5 },
   ])
+  const projects = projectSlugs.map((slug) => ({ path: `/projects/${slug}`, priority: 0.9 }))
 
-  return [...entries, ...apps].map(({ path, priority }) => ({
+  return [...entries, ...apps, ...projects].map(({ path, priority }) => ({
     url: new URL(path, siteConfig.url).href,
     lastModified: new Date(),
     changeFrequency: 'monthly',

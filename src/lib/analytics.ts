@@ -16,6 +16,7 @@ export const ANALYTICS_EVENTS = {
   projectClick: 'project_click',
   prevWorkClick: 'prev_work_click',
   appLinkClick: 'app_link_click',
+  projectLinkClick: 'project_link_click',
   faqOpen: 'faq_open',
   contentLinkClick: 'content_link_click',
   contactClick: 'contact_click',
