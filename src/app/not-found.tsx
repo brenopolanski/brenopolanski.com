@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
-import { Footer } from '@/components/footer/Footer'
-import { Header } from '@/components/header/Header'
+import { Footer } from '@/components/navigation/footer/Footer'
+import { Header } from '@/components/navigation/header/Header'
 import { ArrowLeftIcon, FileTextIcon } from '@/components/shared/Icons'
 import { LinkButton } from '@/components/shared/link/LinkButton'
 import { paths } from '@/config/paths'

@@ -1,5 +1,5 @@
-import { Footer } from '@/components/footer/Footer'
-import { Header } from '@/components/header/Header'
+import { Footer } from '@/components/navigation/footer/Footer'
+import { Header } from '@/components/navigation/header/Header'
 import { Links } from '@/components/sections/links/Links'
 import { Hero } from '@/components/sections/main/Hero'
 import { Newsletter } from '@/components/sections/main/Newsletter'
