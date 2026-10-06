@@ -8,7 +8,7 @@ import {
   LifeBuoyIcon,
   ShieldIcon,
 } from '@/components/shared/Icons'
-import { LinkButton } from '@/components/shared/LinkButton'
+import { LinkButton } from '@/components/shared/link/LinkButton'
 import { ANALYTICS_EVENTS } from '@/lib/analytics'
 import type { App } from '@/lib/apps'
 import { generateReactKey } from '@/lib/utils'

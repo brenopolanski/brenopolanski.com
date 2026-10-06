@@ -1,4 +1,4 @@
-import { LinkButton } from '@/components/shared/LinkButton'
+import { LinkButton } from '@/components/shared/link/LinkButton'
 import { ANALYTICS_EVENTS } from '@/lib/analytics'
 import { cn, generateReactKey } from '@/lib/utils'
 

@@ -1,5 +1,5 @@
-import { ExternalLink } from '@/components/shared/ExternalLink'
 import { AppleIcon } from '@/components/shared/Icons'
+import { ExternalLink } from '@/components/shared/link/ExternalLink'
 import { ANALYTICS_EVENTS } from '@/lib/analytics'
 
 interface AppStoreBadgeProps {

@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 
-import { ExternalLink } from '@/components/shared/ExternalLink'
 import { XIcon } from '@/components/shared/Icons'
+import { ExternalLink } from '@/components/shared/link/ExternalLink'
 import { useEscapeKey } from '@/hooks/useEscapeKey'
 import { ANALYTICS_EVENTS } from '@/lib/analytics'
 

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Footer } from '@/components/footer/Footer'
 import { Header } from '@/components/header/Header'
 import { ArrowLeftIcon, FileTextIcon } from '@/components/shared/Icons'
-import { LinkButton } from '@/components/shared/LinkButton'
+import { LinkButton } from '@/components/shared/link/LinkButton'
 import { paths } from '@/config/paths'
 import { ANALYTICS_EVENTS } from '@/lib/analytics'
 
