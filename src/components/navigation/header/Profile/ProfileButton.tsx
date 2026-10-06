@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
+import { ArrowLeftIcon } from '@/components/shared/Icons'
 import { paths } from '@/config/paths'
 import { ANALYTICS_EVENTS } from '@/lib/analytics'
 
@@ -36,7 +37,7 @@ export const ProfileButton = ({ className, ...props }: React.ComponentProps<'div
         ) : (
           <Link
             aria-label="Go to home"
-            className="inline-block cursor-pointer transition-transform hover:scale-110"
+            className="group relative inline-block cursor-pointer transition-transform hover:scale-110"
             href={paths.home}
             prefetch={false}
           >
@@ -47,6 +48,9 @@ export const ProfileButton = ({ className, ...props }: React.ComponentProps<'div
               src="/breno-polanski.webp"
               width={32}
             />
+            <span className="absolute inset-0 flex items-center justify-center rounded-md bg-black/55 text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+              <ArrowLeftIcon className="size-4" strokeWidth={2.5} aria-hidden />
+            </span>
           </Link>
         )}
       </div>
