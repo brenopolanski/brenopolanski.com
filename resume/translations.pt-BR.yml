@@ -1,12 +1,12 @@
-# Brazilian Portuguese translation memory for resume.yml.
+# Brazilian Portuguese translation memory for resume.yml and resume_frontend.yml.
 #
-# resume.yml stays the single source of truth. This file only maps the English
-# strings it contains onto their pt-BR equivalents, and scripts/resume-translate.ts
-# applies it to produce resume_pt.generated.yml.
+# Those files stay the sources of truth. This file only maps the English strings
+# they contain onto their pt-BR equivalents, and scripts/resume-translate.ts
+# applies it to produce resume_pt.generated.yml and resume_frontend_pt.generated.yml.
 #
 # Every translatable string must appear here, including the ones deliberately
-# kept in English (mapped to themselves). A string added to resume.yml without
-# an entry here fails the build rather than silently shipping untranslated.
+# kept in English (mapped to themselves). A string added to either English resume
+# without an entry here fails the build rather than silently shipping untranslated.
 #
 # Technology names, company names, product names and URLs are never translated.
 
@@ -45,6 +45,7 @@ strings:
 
   # Summary
   'Software Engineer with 12+ years of experience building web applications, developer tools, AI products, SaaS applications, and Web3 platforms': 'Software Engineer com 12+ anos de experiência construindo aplicações web, developer tools, aplicações de inteligência artificial, aplicações SaaS e plataformas Web3'
+  'Front-End Engineer with 12+ years of experience building web applications, developer tools, AI products, SaaS applications, and Web3 platforms': 'Front-End Engineer com 12+ anos de experiência construindo aplicações web, developer tools, aplicações de inteligência artificial, aplicações SaaS e plataformas Web3'
   'Strong experience with JavaScript, TypeScript, React, Next.js, Node.js, APIs, and full-stack development': 'Sólida experiência em JavaScript, TypeScript, React, Next.js, Node.js, APIs e desenvolvimento full-stack'
   'Experience with software architecture, open source, and shipping products from concept to production': 'Experiência em arquitetura de software, open source e entrega de produtos do conceito à produção'
 

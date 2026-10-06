@@ -37,7 +37,7 @@ pnpm-debug.log*
 
 # resume (build artifacts, including the generated pt-BR resume; resume.yml is
 # the general source, resume_frontend.yml is the front-end source, and
-# translations.pt-BR.yml is the general resume's pt-BR wording)
+# translations.pt-BR.yml is the pt-BR wording for both)
 /resume/*
 !/resume/resume.yml
 !/resume/resume_frontend.yml
