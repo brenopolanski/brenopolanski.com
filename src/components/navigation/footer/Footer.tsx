@@ -1,7 +1,9 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
+import { paths } from '@/config/paths'
 import { cn } from '@/lib/utils'
 
 const Face = (props: React.ComponentProps<'svg'>) => {
@@ -77,7 +79,9 @@ export const Footer = ({ className, ...props }: React.ComponentProps<'footer'>) 
       <div className="relative size-5 [&>svg]:absolute [&>svg]:inset-0 [&>svg]:size-full">
         <Icon />
       </div>
-      <span className="text-base">by Breno Polanski</span>
+      <Link className="text-base underline underline-offset-4" href={paths.about}>
+        by Breno Polanski
+      </Link>
     </footer>
   )
 }

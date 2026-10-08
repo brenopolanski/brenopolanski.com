@@ -1,5 +1,6 @@
 export const paths = {
   home: '/',
+  about: '/about',
   apps: {
     pixen: {
       home: '/apps/pixen',
