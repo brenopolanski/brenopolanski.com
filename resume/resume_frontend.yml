@@ -252,6 +252,7 @@ content:
       level: Intermediate
       keywords:
         - Node.js
+        - Express.js
         - Fastify
         - NestJS
         - FastAPI
@@ -298,6 +299,7 @@ content:
       level: Intermediate
       keywords:
         - React Native
+        - Expo
         - Flutter (learning)
     - name: Backend Services
       level: Intermediate
@@ -305,7 +307,7 @@ content:
         - Firebase
         - Supabase
         - Drizzle ORM
-        - Prisma
+        - Prisma ORM
     - name: Testing
       level: Advanced
       keywords:
