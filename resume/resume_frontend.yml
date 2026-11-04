@@ -316,6 +316,7 @@ content:
         - Vitest
         - Cypress
         - Playwright
+        - Maestro
         - TestCafe
     - name: Tooling
       level: Advanced
