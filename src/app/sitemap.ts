@@ -6,6 +6,7 @@ import { getAppSlugs } from '@/lib/apps'
 
 const entries = [
   { path: paths.home, priority: 1 },
+  { path: paths.about, priority: 0.8 },
   { path: paths.resume, priority: 0.8 },
   { path: paths.apps.terms, priority: 0.5 },
 ]
