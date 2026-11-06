@@ -21,8 +21,7 @@ export const projectData: ProjectItem[] = [
     icon: DashfyLogo,
     title: 'Dashfy',
     description: 'Dashboards for developers',
-    href: 'https://dashfy.dev',
-    isExternal: true,
+    href: paths.projects.dashfy.home,
   },
   {
     icon: PixenLogo,
